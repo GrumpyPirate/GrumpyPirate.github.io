@@ -5,17 +5,21 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Router
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 
 // App
+import Navbar from './components/Navbar/Navbar.jsx'
 import App from './components/App/App.jsx'
 
 ReactDOM.render(
     (
-        <BrowserRouter>
-            <Route exact path="/">
+        <BrowserRouter
+            basename="/"
+        >
+            <div>
+                <Navbar />
                 <App who="world"/>
-            </Route>
+            </div>
         </BrowserRouter>
     ), document.getElementById('app-root')
-)
+) // /ReactDOM.render

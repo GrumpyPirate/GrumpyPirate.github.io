@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack -p",
+    "dev": "webpack-dev-server --progress",
+    "build": "webpack -p --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edward Cobbold <edward.cobbold@gmail.com>",

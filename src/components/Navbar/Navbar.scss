@@ -1,0 +1,10 @@
+@import 'mixins';
+
+.site-navbar {
+    background-color: red;
+    color: white;
+
+    &__link {
+        @include make-link-colour(white, $hover-colour: darken(white, 15%), $active-colour: white, $self: true);
+    } // /&__link
+} // /.site-navbar

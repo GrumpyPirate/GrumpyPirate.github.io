@@ -1,5 +1,11 @@
 // Vendor
 import React from 'react'
+import { Route } from 'react-router-dom'
+
+// Components
+import Home from '../Home/Home.jsx'
+import About from '../About/About.jsx'
+import DigitalArt from '../DigitalArt/DigitalArt.jsx'
 
 // Images
 import TestImage from './pack.png'
@@ -7,7 +13,7 @@ import TestImage from './pack.png'
 // SCSS
 import './App.scss'
 
-const Column = () => (
+const Column = (id) => (
     <div className="col-12 col-sm-4">
         <figure>
             <img src="https://unsplash.it/400/300/?random" alt="" className="img-fluid" srcSet="https://unsplash.it/400/300/?random 1x,https://unsplash.it/800/600/?random 2x"/>
@@ -20,11 +26,11 @@ const Column = () => (
 
 let columns = []
 for (let i = 0; i < 3; i++) {
-    columns.push(<Column/>)
+    columns.push(<Column key={i}/>)
 }
 
 // Define App
-export default class App extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props)
     } // /constructor(props)
@@ -32,13 +38,12 @@ export default class App extends React.Component {
     render() {
         return (
             <main>
-                <div className="container-fluid">
-                    <h1>Hello {this.props.who}!</h1>
-                    <div className="row">
-                        {columns}
-                    </div>
-                </div>
+                <Route exact path="/" component={Home}></Route>
+                <Route path="/about" component={About}></Route>
+                <Route path="/digital-art" component={DigitalArt}></Route>
             </main>
         )
     } // /render()
-} // /export default class App extends React.Component
+} // /class App extends React.Component
+
+export default App
