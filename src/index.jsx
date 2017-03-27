@@ -13,7 +13,9 @@ import App from './components/App/App.jsx'
 ReactDOM.render(
     (
         <BrowserRouter>
-            <App />
+            <Route exact path="/">
+                <App who="world"/>
+            </Route>
         </BrowserRouter>
     ), document.getElementById('app-root')
 )

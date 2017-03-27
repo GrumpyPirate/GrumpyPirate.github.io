@@ -63,8 +63,8 @@ $list-padding: 1em;
 
 // Font families
 $font-family-base: sans-serif;
-$body-font-family: 'Avenir', $font-family-base;
-$headings-font-family: 'sofia-pro', $font-family-base;
+$body-font-family: $font-family-base;
+$headings-font-family: $font-family-base;
 
 // Icon vertical align correction
 // Varies based on font-family used - use this value to centre icons properly with inline elements,
