@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Utility - images
+** ------------------------------------------------------------------------------------------------------------------ */
+// img-inline - the idea is to let images in block text elements (h2, p, etc.) to be treated as a
+// 'character', inheriting the line-height and height of the element's font-size. Useful for logos
+// .img-inline {
+//     display: inline-block;
+//     width: auto;
+//     height: 1em;
+// } // /.img-inline
+
+
+// image elements displayed as background-images
+// This does however rely on there being a minimum amount of content in the parent, or
+// a height being set.
+// ---------------------------------------------------------------------------------------------------------------------
+// By default, img-bg media will be centred. Apply the additional img-bg--ahcor-left/right classes
+// to control this.
+// ---------------------------------------------------------------------------------------------------------------------
+.img-bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img,
+    video,
+    picture {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    } // /img
+
+    &--anchor-right {
+        img,
+        video,
+        picture {
+            left: auto;
+            right: 0;
+            transform: translateY(-50%);
+        } // /img
+    } // /&--right
+
+    &--anchor-left {
+        img,
+        video,
+        picture {
+            left: 0;
+            transform: translateY(-50%);
+        } // /img
+    } // /&--right
+} // /.img-bg

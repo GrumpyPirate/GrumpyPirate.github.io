@@ -1,0 +1,24 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Global layout styles that apply to all document content
+** ------------------------------------------------------------------------------------------------------------------ */
+@import '../../sass/functions';
+@import '../../sass/bootstrap/variables';
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+// Bootstrap
+@import '../../sass/bootstrap/bootstrap-custom';
+
+// Vendor library theming
+@import '../../sass/vendor';
+
+// Core global
+@import '../../sass/type';
+@import '../../sass/animations';
+@import '../../sass/utility';
+@import '../../sass/forms';
+@import '../../sass/icons';
+
+body {
+    // overflow-x: hidden;
+} // /body

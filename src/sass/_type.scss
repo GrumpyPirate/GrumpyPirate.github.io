@@ -1,0 +1,94 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Typography
+** ------------------------------------------------------------------------------------------------------------------ */
+// Import webfonts
+// ---------------------------------------------------------------------------------------------------------------------
+// @import 'SomeWebfont';
+
+.osx {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} // /.osx
+
+body {
+    font-family: $body-font-family;
+    font-weight: weight(regular);
+    font-size: $font-size-base;
+    line-height: $line-height;
+    color: $body-color;
+} // /body
+
+p {
+    margin-bottom: $paragraph-margin-bottom;
+} // /p
+
+// Address
+// ---------------------------------------------------------------------------------------------------------------------
+address {
+    font-style: normal;
+    line-height: (23 / 16);
+    margin-bottom: $paragraph-margin-bottom;
+} // /address
+
+
+// Links
+// ---------------------------------------------------------------------------------------------------------------------
+a {
+    font-weight: $link-font-weight;
+    transition: color $anim-dur,
+                background $anim-dur;
+
+    &:focus {
+        outline: none;
+    } // /&:focus
+
+    // &:active,
+    // &.active {
+    //     color: $link-active-color;
+    // } // /active links
+} // /a
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+} // /button, input, optgroup, select, textarea
+
+// Text selection
+// ---------------------------------------------------------------------------------------------------------------------
+::selection {
+    background-color: palette(red);
+    color: $text-colour-light;
+} // /::selection
+
+
+// Lists
+// ---------------------------------------------------------------------------------------------------------------------
+ul,
+ol {
+    padding: 0 0 0 $list-padding;
+    margin-bottom: $paragraph-margin-bottom;
+} // /ol
+
+// Description lists
+dl {
+    margin-bottom: $dl-margin-bottom;
+} // /dl
+
+dt {
+    margin-bottom: $dt-margin-bottom;
+} // /dt
+
+dd {
+    color: palette(grey);
+} // /dd
+
+
+// Strong text
+// ---------------------------------------------------------------------------------------------------------------------
+strong,
+.strong {
+    font-weight: weight(heavy);
+} // /.strong

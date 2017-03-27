@@ -1,0 +1,83 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Keyframe definitions
+** ------------------------------------------------------------------------------------------------------------------ */
+// Fade
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+} // /@keyframes fadeIn
+
+// Medium fade
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes fadeInMed {
+    from { opacity: .5; }
+    to   { opacity: 1; }
+} // /@keyframes fadeInMed
+
+
+// Zoom
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes zoomIn {
+    from { transform: scale(.75); }
+    to   { transform: scale(1);   }
+} // /@keyframes zoomIn
+
+
+// Zoom
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes zoomOut {
+    from { transform: scale(1.25);   }
+    to   { transform: scale(1); }
+} // /@keyframes zoomOut
+
+
+// Move Up
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes moveUp {
+    from { transform: translateY(#{spacer(2)}); }
+    to   { transform: translateY(0); }
+} // /@keyframes moveUp
+
+// Move Down
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes moveDown {
+    from { transform: translateY(#{-(spacer(2))}); }
+    to   { transform: translateY(0); }
+} // /@keyframes moveDown
+
+// Move Left
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes moveRight {
+    from { transform: translateX(-#{spacer(2)}); }
+    to   { transform: translateX(0); }
+} // /@keyframes moveRight
+
+// Move Left
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes moveLeft {
+    from { transform: translateX(#{spacer(2)}); }
+    to   { transform: translateX(0); }
+} // /@keyframes moveLeft
+
+
+// RotateZ 360
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes rotate {
+    from { transform: rotateZ(0deg);   }
+    to   { transform: rotateZ(359deg); }
+} // /@keyframes moveLeft
+
+
+// Grow
+// ---------------------------------------------------------------------------------------------------------------------
+@keyframes grow {
+    from { transform: scale(1);   }
+    to   { transform: scale(1.1); }
+} // /@keyframes grow
+
+
+@keyframes whoWeAreBG {
+    from { background-position: 0 0; } // /from
+    to   { background-position: rem(36px) rem(63px); } // /to
+} // /@keyframes whoWeAreBG

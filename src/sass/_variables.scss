@@ -1,0 +1,414 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Application variables
+** ------------------------------------------------------------------------------------------------------------------ */
+// Static assets path (relative to generated CSS)
+$static-path: '..';
+
+// Colour palette
+// ---------------------------------------------------------------------------------------------------------------------
+$palette: (
+    // Greyscale
+    white:         #fff,
+    black:         #000,
+    grey:          #565656,
+    grey-medium:   #838383,
+    grey-light:    #9b9b9b,
+    grey-lighter:  #d1d1d1,
+    grey-pale:     #f1f3f4,
+    grey-paler:    #f9f8f8,
+    // Colour
+    red:           #ef0000,
+    red-faded:     #ed3e44,
+    // Social
+    googleplus:    #dd4b39,
+    twitter:       #55acee,
+    facebook:      #3b5998,
+    linkedin:      #0274b3,
+    instagram:     #bc2a8d,
+    youtube:       #b00,
+    pinterest:     #cb2027,
+    // Tangent
+    tangent-green: #00c795,
+);
+
+// Typography
+// ---------------------------------------------------------------------------------------------------------------------
+$font-path: '#{$static-path}/fonts';
+
+// Font weights
+$font-weights: (
+    thin:       100,
+    extralight: 200,
+    light:      300,
+    regular:    normal,
+    medium:     500,
+    semibold:   600,
+    bold:       bold,
+    extrabold:  800,
+    heavy:      900
+);
+
+$paragraph-margin-bottom: 1rem;
+
+$letter-spacing-titles: .2rem;
+
+
+// Text colours
+$text-colour-default: palette(black);
+$text-colour-light:   palette(white);
+
+$link-font-weight: weight(heavy);
+
+$list-padding: 1em;
+
+// Font families
+$font-family-base: sans-serif;
+$body-font-family: 'Avenir', $font-family-base;
+$headings-font-family: 'sofia-pro', $font-family-base;
+
+// Icon vertical align correction
+// Varies based on font-family used - use this value to centre icons properly with inline elements,
+// in conjunction with vertical-align: middle
+// $icon-bottom-correction: .125em;
+$icon-bottom-correction: 0;
+
+$dl-margin-bottom: $paragraph-margin-bottom;
+
+$dt-font-weight: weight(heavy);
+$dt-margin-bottom: $paragraph-margin-bottom;
+
+$dd-font-size: percentage(14 / 18);
+
+// Images
+// ---------------------------------------------------------------------------------------------------------------------
+// // Parent img dir
+// $img-path:         '#{$static-path}/img';
+// // Image type dirs
+// $background-path:  '#{$img-path}/backgrounds';
+// $icon-path:        '#{$img-path}/icons';
+// $logo-path:        '#{$img-path}/logos';
+
+
+// Animations
+// ---------------------------------------------------------------------------------------------------------------------
+$anim-dur: .15s;
+$anim-ease: ease;
+$easings: (
+    ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1),
+    ease-in-out-quart: cubic-bezier(.77, 0, .175, 1),
+    ease-out-expo: cubic-bezier(.19, 1, .22, 1) // A very harsh ease-out - http://easings.net/#easeOutExpo
+);
+
+// IE 9/10/11 support flags
+$ie-9-support: false;
+$ie-10-11-support: true;
+
+
+/* ---------------------------------------------------------------------------------------------------------------------
+** Bootstrap Customisation
+** ------------------------------------------------------------------------------------------------------------------ */
+// Brands
+$brand-success: palette(green);
+$brand-warning: palette(yellow);
+$brand-danger:  palette(red);
+
+// Typography
+$font-size-root: 16px;
+$font-size-base: rem(17px);
+$line-height: (29 / 17);
+
+$font-size-sm:   rem(14px);
+// $text-muted: palette(black);
+$hr-border-width: 1px;
+$hr-border-color: palette(black);
+
+
+// Headings
+$headings-margin-bottom: $paragraph-margin-bottom;
+$headings-line-height: 1.2;
+$headings-font-weight: weight(regular);
+$headings-letter-spacing: normal;
+
+// Desktop sizes
+$font-size-h1: rem(60px);
+    $line-height-h1: (64 / 60);
+
+$font-size-h2: rem(28px);
+    $line-height-h2: (36 / 28);
+
+$font-size-h3: rem(24px);
+    $line-height-h3: (32 / 24);
+
+$font-size-h4: rem(18px);
+    $line-height-h4: $headings-line-height;
+
+$font-size-h5: rem(16px);
+    $line-height-h5: $headings-line-height;
+
+$font-size-h6: rem(14px);
+    $line-height-h6: $headings-line-height;
+
+// // Headings - Mobile sizes
+$font-size-h1-mobile: rem(31px);
+$font-size-h2-mobile: rem(18px);
+$font-size-h3-mobile: $font-size-h3 * .75;
+$font-size-h4-mobile: 1rem;
+
+// $display-line-height: 1.28;
+
+$lead-font-size: rem(30px);
+$lead-font-size-mobile: $lead-font-size * .75;
+$lead-font-weight: weight(light);
+
+$small-font-size: percentage(14 / 17);
+
+// // Description lists
+// // $dt-font-weight: weight(heavy);
+
+// // Blockquotes
+// $blockquote-font-size: rem(35px);
+
+// Grid
+// ---------------------------------------------------------------------------------------------------------------------
+// Opt-into using Flexbox grid. Woohoo!
+$enable-flex: true;
+
+// // Custom breakpoints
+// $grid-breakpoints: (
+//     xs: 0,
+//     sm: 576px,
+//     md: 768px,
+//     lg: 992px,
+//     xl: 1200px
+// );
+
+// // Custom .container widths
+// $container-max-widths: (
+//     sm: 540px,
+//     md: 720px,
+//     lg: 960px,
+//     xl: 1140px
+// );
+
+$container-absolute-max-width: 1440px;
+
+$grid-columns:       12;
+$grid-gutter-width:  rem(40px);
+$grid-gutter-width-mobile: rem(24px);
+
+// Spacers
+$spacer:   1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+    0: (
+        x:   0,
+        y:   0
+    ),
+    1: (
+        x:   $spacer-x,
+        y:   $spacer-y
+    ),
+    2: (
+        x:   ($spacer-x * 2),
+        y:   ($spacer-y * 2)
+    ),
+    3: (
+        x:   ($spacer-x * 3),
+        y:   ($spacer-y * 3)
+    ),
+    4: (
+        x:   ($spacer-x * 4),
+        y:   ($spacer-y * 4)
+    )
+);
+
+$body-bg:    palette(white);
+// $content-bg: palette(white);
+
+$body-color: $text-colour-default;
+
+// Border radii
+$border-radius:    rem(4px);
+$border-radius-lg: rem(14px);
+// $border-radius-sm: rem(2px);
+
+// Transitions
+$transition-collapse: height ($anim-dur * 3) ease(ease-out-expo);
+
+
+// Links
+$link-color:        palette(red);
+$link-hover-color:  lighten($link-color, 15%);
+$link-active-color: darken($link-color, 15%);
+
+$link-decoration:       none;
+$link-hover-decoration: none;
+
+
+// We aren't using the BS4 .display-* classes at the moment
+// $display1-size: 6rem;   // 96px (default: 6rem)
+// $display2-size: 5rem;   // 80px (default: 5.5rem)
+// $display3-size: 4rem;   // 64px (default: 4.5rem)
+// $display4-size: 3rem;   // 48px (default: 3.5rem)
+
+// $display1-weight: weight(heavy);
+// $display2-weight: weight(regular);
+// $display3-weight: weight(regular);
+// $display4-weight: weight(regular);
+
+
+// Buttons
+$btn-primary-color:  palette(white);
+$btn-primary-bg:     palette(red);
+$btn-primary-border: palette(red);
+
+$btn-secondary-color:  palette(white);
+$btn-secondary-bg:     palette(black);
+$btn-secondary-border: palette(black);
+
+$btn-font-size: 1rem;
+$btn-line-height: (22 / 16);
+// $btn-letter-spacing: $letter-spacing-lg;
+$btn-font-weight: weight(heavy);
+$btn-padding-x: 1.5rem;
+$btn-padding-y: rem(8px);
+$btn-padding-x-lg: rem(32px);
+$btn-padding-y-lg: rem(24px);
+$btn-border-radius: 0;
+$btn-focus-box-shadow: none;
+
+// Buttons - small
+$btn-padding-x-sm: rem(16px);
+$btn-padding-y-sm: rem(10px);
+$btn-font-size-sm: rem(12px);
+$btn-border-radius-sm: $btn-border-radius;
+
+// Buttons - large
+$btn-border-radius-lg: $border-radius-lg;
+
+$btn-box-shadow-size:        rem(6px);
+$btn-box-shadow-size-hover:  rem(2px);
+$btn-box-shadow-size-active: 0;
+
+$btn-transition: all $anim-dur $anim-ease;
+
+
+// Forms
+$form-group-margin-bottom: 3rem;
+
+$form-feedback-margin-top: .75rem;
+
+$input-btn-border-width: 2px;
+$input-padding-x: rem(32px);
+$input-padding-y: rem(22px);
+
+$input-color: palette(grey);
+$input-color-placeholder: palette(grey-light);
+$input-border-color: transparent;
+$input-border-focus: palette(grey-lighter);
+$input-border-radius: 0;
+$input-box-shadow: none;
+$input-transition: color $anim-dur $anim-ease,
+                   border-color $anim-dur $anim-ease,
+                   background-color $anim-dur $anim-ease;
+
+// Custom forms - custom-select
+$custom-select-border-radius: 0;
+$custom-select-indicator-color: #040404;
+$custom-select-bg-size: rem(12px) rem(7px);
+$custom-select-padding-y: $input-padding-y;
+$custom-select-padding-x: $input-padding-x;
+$custom-select-indicator: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.66 8.11' fill='#{$custom-select-indicator-color}'%3E%3Cg%3E%3Cpath d='M11.2 0L6.33 5.19 1.46 0 0 1.37l6.33 6.74 6.33-6.74L11.2 0z'/%3E%3C/g%3E%3C/svg%3E"), "#", "%23");
+$custom-select-indicator-padding: $custom-select-padding-x * 2.5;
+$custom-select-border-color: $input-border-color;
+$custom-select-focus-border-color: $input-border-focus;
+$custom-select-color: $input-color;
+$custom-select-line-height: $input-line-height;
+
+// Custom checkboxes
+$custom-control-checked-indicator-color: palette(white);
+$custom-control-indicator-bg: transparent;
+$custom-control-active-indicator-bg: transparentize(palette(red), .5);
+$custom-control-checked-indicator-bg: palette(red);
+$custom-control-focus-indicator-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px palette(red);
+
+$custom-control-indicator-size: 1rem;
+
+// Dropdowns and Carets
+$dropdown-min-width: 8rem;
+$dropdown-border-color: $input-border-color;
+$dropdown-padding-x: $input-padding-x;
+
+$dropdown-item-padding-y: $input-padding-y;
+$dropdown-item-padding-x: $input-padding-x;
+
+$dropdown-link-hover-color:  palette(white);
+$dropdown-link-hover-bg:     palette(red);
+$dropdown-link-active-color: $dropdown-link-hover-color;
+$dropdown-link-active-bg:    $dropdown-link-hover-bg;
+
+$zindex-dropdown: 9;
+
+$caret-width: rem(12px);
+
+// Tables
+$table-bg-hover: transparentize(palette(black), .95);
+$table-cell-padding-x: 3rem;
+$table-cell-padding-y: 1.5rem;
+$table-border-color: palette(black);
+
+// Modals
+$modal-header-padding: 2.75rem 3.5rem;
+
+$modal-inner-padding: 3.5rem 0;
+
+$modal-content-bg: palette(grey-paler);
+$modal-backdrop-bg: palette(grey-pale);
+$modal-backdrop-opacity: .65;
+
+// Close
+$close-font-size: rem(30px);
+$close-font-weight: weight(heavy);
+$close-color: inherit;
+
+// Navs
+$nav-tabs-border-radius: $border-radius-lg;
+$nav-tabs-border-color: palette(black);
+// $nav-tabs-active-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-active-link-hover-color: $link-color;
+$nav-link-padding: rem(30px);
+
+// Pagination
+// $pagination-active-color: palette(red);
+$pagination-padding-y: .5rem;
+$pagination-padding-x: .5rem;
+$pagination-color: $link-color;
+$pagination-hover-color: $link-hover-color;
+$pagination-active-border: palette(red);
+$pagination-hover-bg: transparentize(palette(black), .95);
+// $pagination-hover-bg: transparentize(palette(yellow), .75);
+
+// Alerts
+$alert-border-radius: $border-radius-lg;
+
+/* -------------------------------------------------------------------------------------------------
+** Application content vars
+** ---------------------------------------------------------------------------------------------- */
+
+// Navigation
+// ---------------------------------------------------------------------------------------------------------------------
+$navbar-z-index:       10;
+$navbar-height:        rem(130px);
+$navbar-height-mobile: rem(85px);
+$navbar-bg:            palette(white);
+
+// $burger-bar-width:   spacer(1) * 1.5;
+// $burger-bar-height:  rem(2px);
+// $burger-bar-spacing: rem(8px);
+// $burger-bar-count:   3;
+
+// Content module vars
+// ---------------------------------------------------------------------------------------------------------------------

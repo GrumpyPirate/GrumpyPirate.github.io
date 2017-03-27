@@ -1,0 +1,99 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Utility - Typography utilities
+** ------------------------------------------------------------------------------------------------------------------ */
+// Font weight generator
+// E.g. font-weight-regular, font-weight-semibold, etc.
+// @each $weight in (light, regular, medium, bold) {
+//     .font-weight-#{$weight} {
+//         font-weight: weight($weight);
+//     } // /.font-weight-#{$weight}
+// } // /@each $weight in (regular, bold)
+
+// Font-family
+.font-family-body     { font-family: $body-font-family;     }
+.font-family-headings { font-family: $headings-font-family; }
+
+// Link variants
+// ---------------------------------------------------------------------------------------------------------------------
+.link-inherit {
+    color: inherit;
+    font-weight: inherit;
+
+    &:hover,
+    &:focus {
+        color: inherit;
+    } // /hover state
+} // /.link-inherit
+
+
+// Social media icon links
+// ---------------------------------------------------------------------------------------------------------------------
+// @each $network in (
+//     facebook,
+//     twitter,
+//     // instagram,
+//     // youtube,
+//     linkedin
+// ) {
+//     .link-#{$network} {
+//         @if $link-hover-decoration != 'none' {
+//             @include no-underline;
+//         } // /@if $link-hover-decoration != 'none'
+
+//         @include make-link-colour(
+//             inherit,
+//             $hover-colour: lighten(palette(#{$network}), 10%),
+//             $active-colour: darken(palette(#{$network}), 10%),
+//             $self: true
+//         );
+//     } // /.link-#{$network}
+// }
+
+// Text colouring
+// ---------------------------------------------------------------------------------------------------------------------
+.text-white        { color: $text-colour-light; }
+// .text-inherit { color: inherit; }
+
+// Line heights
+// ---------------------------------------------------------------------------------------------------------------------
+@each $lh in (0, 1, inherit) {
+    .line-height-#{$lh} { line-height: $lh; }
+} // /@each $lh in (1, inherit)
+
+
+// Horizontal rule
+// ---------------------------------------------------------------------------------------------------------------------
+// hr {
+//     // Colours
+//     // ---------------------------------------------------------------------------------------------
+//     @each $colour in (
+//         white,
+//         yellow,
+//     ) {
+//         &.#{$colour} { border-color: palette($colour); }
+//     }
+// } // /hr
+
+
+// Display child content using columns
+// ---------------------------------------------------------------------------------------------------------------------
+.copy-col {
+    $copy-col-basis: $font-size-base * 15;
+    column-gap: $grid-gutter-width;
+
+    @for $count from 2 through 3 {
+        &--#{$count} {
+            // sm up
+            @include media-breakpoint-up(sm) {
+                columns: $count $copy-col-basis;
+            } // /sm up
+        } // /&--#{$count}
+    } // /@for
+
+    // Fill mode
+    @each $fill-mode in (balance) {
+        &--#{$fill-mode} {
+            column-fill: $fill-mode;
+        } // /&--#{$fill-mode}
+    } // /@each $fill-mode in (balance)
+} // /.copy-col

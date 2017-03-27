@@ -1,0 +1,32 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Functions
+** ------------------------------------------------------------------------------------------------------------------ */
+// Get standard bootstrap rem spacer
+@function spacer($level: 1, $axis: y) {
+    @return map-get(map-get($spacers, $level), $axis);
+} // /@function spacer
+
+// Get a font weight
+@function weight($weight) {
+    @return map-get($font-weights, $weight);
+} // /@function weight
+
+// Get a colour from the global palette
+@function palette($colour-name) {
+	@return map-get($palette, $colour-name);
+} // /@function palette($colour-name)
+
+// PX to REM converter, based on $font-size-root. Supply a px value
+@function rem($px) {
+    @return ($px / 16px) * 1rem;
+} // /@function rem()
+
+// PX to EM converter, based on $font-size-root. Supply a px value
+@function em($px) {
+    @return ($px / $font-size-root) * 1em;
+} // /@function rem()
+
+// Get easing from $easings
+@function ease($easing) {
+    @return map-get($easings, $easing);
+} // /@function ease($easing)
