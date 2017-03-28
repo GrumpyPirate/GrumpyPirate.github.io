@@ -5,15 +5,21 @@
 $navbar-height: rem(72px);
 
 .site-navbar {
-    display: flex;
-    align-items: center;
-    height: $navbar-height;
-    border-bottom: solid 3px palette(theme-green);
-    box-shadow: 0 4px 2px -1px rgba(0, 0, 0, .2);
+    height: 100vh;
+    overflow-y: auto;
+    touch-action: pan-y;
+    border-right: solid 3px palette(theme-green);
+    box-shadow: $shadow-right-sm;
     font-family: $headings-font-family;
 
+    // lg up
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: center;
+        flex: 0 0 rem(320px);
+    } // /lg up
+
     &__link {
-        // @include make-link-colour(inherit, $hover-colour: $link-hover-color, $active-colour: $link-hover-color, $self: true);
         color: inherit;
         text-transform: uppercase;
         font-weight: weight(light);
@@ -22,11 +28,26 @@ $navbar-height: rem(72px);
     // Brand (Logo/Text)
     // -----------------------------------------------------------------------------------------------------------------
     &__brand {
-        // @include make-link-colour(white, $hover-colour: darken(white, 15%), $active-colour: white, $self: true);
-        color: inherit;
+        color: palette(theme-green);
         display: block;
         font-weight: weight(light);
         text-transform: uppercase;
-        line-height: 1em;
+        padding: .5rem 0;
+        font-size: $font-size-h3;
+        line-height: $headings-line-height;
+
+        &__image {
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            margin-right: .5rem;
+            box-shadow: $shadow-right-down-sm;
+        } // /&__image
+
+        &__text {
+            text-align: left;
+            display: inline-block;
+            vertical-align: middle;
+        } // /&__text
     } // /&__brand
 } // /.site-navbar

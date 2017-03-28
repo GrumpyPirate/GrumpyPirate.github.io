@@ -1,3 +1,4 @@
+@import '../../sass/bootstrap/variables';
 /* ---------------------------------------------------------------------------------------------------------------------
 ** Application variables
 ** ------------------------------------------------------------------------------------------------------------------ */
@@ -78,6 +79,17 @@ $easings: (
     ease-out-expo: cubic-bezier(.19, 1, .22, 1) // A very harsh ease-out - http://easings.net/#easeOutExpo
 );
 
+// Box Shadows
+// ---------------------------------------------------------------------------------------------------------------------
+$shadow-blur-sm: rem(2px);
+$shadow-spread-sm: rem(-1px);
+$shadow-distance-sm: rem(4px);
+$shadow-opacity: .2;
+
+$shadow-right-sm: $shadow-distance-sm 0 $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+$shadow-right-down-sm: $shadow-distance-sm $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+$shadow-down-sm: 0 $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+
 /* ---------------------------------------------------------------------------------------------------------------------
 ** Bootstrap Customisation
 ** ------------------------------------------------------------------------------------------------------------------ */
@@ -93,36 +105,25 @@ $line-height: 1.5;
 
 // Horizontal rule
 $hr-border-width: 1px;
-$hr-border-color: inherit;
+$hr-border-color: currentColor;
 
 // Headings
 $headings-margin-bottom: $paragraph-margin-bottom;
 $headings-line-height: 1.2;
-$headings-font-weight: weight(semibold);
+$headings-font-weight: weight(light);
 $headings-letter-spacing: .04em;
 
 // Desktop sizes
-$font-size-h1: rem(60px);
-    $line-height-h1: (64 / 60);
-
-$font-size-h2: rem(28px);
-    $line-height-h2: (36 / 28);
-
-$font-size-h3: rem(24px);
-    $line-height-h3: (32 / 24);
-
-$font-size-h4: rem(18px);
-    $line-height-h4: $headings-line-height;
-
-$font-size-h5: rem(16px);
-    $line-height-h5: $headings-line-height;
-
-$font-size-h6: rem(14px);
-    $line-height-h6: $headings-line-height;
+$font-size-h1: rem(80px);
+// $font-size-h2: 2rem;
+// $font-size-h3: 1.75rem;
+// $font-size-h4: 1.5rem;
+// $font-size-h5: 1.25rem;
+// $font-size-h6: 1rem;
 
 // // Headings - Mobile sizes
-$font-size-h1-mobile: rem(31px);
-$font-size-h2-mobile: rem(18px);
+$font-size-h1-mobile: $font-size-h1 * .75;
+$font-size-h2-mobile: $font-size-h2 * .75;
 $font-size-h3-mobile: $font-size-h3 * .75;
 $font-size-h4-mobile: 1rem;
 
@@ -261,22 +262,3 @@ $input-box-shadow: none;
 $input-transition: color $anim-dur $anim-ease,
                    border-color $anim-dur $anim-ease,
                    background-color $anim-dur $anim-ease;
-
-/* -------------------------------------------------------------------------------------------------
-** Application content vars
-** ---------------------------------------------------------------------------------------------- */
-
-// Navigation
-// ---------------------------------------------------------------------------------------------------------------------
-$navbar-z-index:       10;
-$navbar-height:        rem(130px);
-$navbar-height-mobile: rem(85px);
-$navbar-bg:            palette(white);
-
-// $burger-bar-width:   spacer(1) * 1.5;
-// $burger-bar-height:  rem(2px);
-// $burger-bar-spacing: rem(8px);
-// $burger-bar-count:   3;
-
-// Content module vars
-// ---------------------------------------------------------------------------------------------------------------------

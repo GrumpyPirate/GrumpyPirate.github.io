@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 
 // App
-import Navbar from './components/Navbar/Navbar.jsx'
 import App from './components/App/App.jsx'
 
 // Housekeeping
@@ -20,10 +19,7 @@ ReactDOM.render(
         <BrowserRouter
             basename="/"
         >
-            <div>
-                <Navbar />
-                <App who="world"/>
-            </div>
+            <App />
         </BrowserRouter>
     ), document.getElementById('app-root')
 ) // /ReactDOM.render

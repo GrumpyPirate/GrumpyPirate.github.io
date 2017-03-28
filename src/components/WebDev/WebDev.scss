@@ -1,0 +1,19 @@
+@import 'functions';
+@import 'mixins';
+@import 'variables';
+
+.portfolio {
+    &__list {
+        @include make-row;
+    } // /&__list
+
+    &__item {
+        display: block;
+        flex: 1 1 percentage(1 / 3);
+    } // /&__item
+
+    &__link {
+        display: block;
+        padding: 0 ($grid-gutter-width / 2);
+    } // /&__link
+} // /.portfolio

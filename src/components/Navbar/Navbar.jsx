@@ -16,30 +16,24 @@ export default class Navbar extends React.Component {
 
     render() {
         return (
-            <nav className="site-navbar">
+            <nav className="site-navbar text-lg-center">
                 <div className="container-fluid">
-                    <div className="row align-items-center">
-                        <div className="col-3 col-sm-2 col-lg-1">
-                            {/*<img src={Logo} srcSet={Logo2x} alt="" className="img-fluid" width="80" height="80"/>*/}
-
-                            <NavLink to="/" className="site-navbar__brand">
-                                Edward Cobbold
-                            </NavLink>
-                        </div>
-                        <div className="col-9 col-sm-10 col-lg-11">
-                            <ul className="list-unstyled list-inline text-right m-0">
-                                <li className="list-inline-item site-navbar__item">
-                                    <NavLink to="/" className="site-navbar__link">Home</NavLink>
-                                </li>
-                                <li className="list-inline-item site-navbar__item">
-                                    <NavLink to="/about" className="site-navbar__link">About</NavLink>
-                                </li>
-                                <li className="list-inline-item site-navbar__item">
-                                    <NavLink to="/digital-art" className="site-navbar__link">Digital art</NavLink>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <NavLink to="/" className="site-navbar__brand">
+                        <img className="site-navbar__brand__image" src="https://unsplash.it/100/100?random" srcSet="https://unsplash.it/200/200?random 2x" alt="" width="64" height="64"/>
+                        <span className="site-navbar__brand__text">Edward<br/>Cobbold</span>
+                    </NavLink>
+                    <hr/>
+                    <ul className="list-unstyled m-0">
+                        <li className="site-navbar__item">
+                            <NavLink to="/" className="site-navbar__link">About</NavLink>
+                        </li>
+                        <li className="site-navbar__item">
+                            <NavLink to="/webdev" className="site-navbar__link">Web Development</NavLink>
+                        </li>
+                        <li className="site-navbar__item">
+                            <NavLink to="/digital-art" className="site-navbar__link">Digital Art</NavLink>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         )

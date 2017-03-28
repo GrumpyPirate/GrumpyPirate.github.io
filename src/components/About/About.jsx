@@ -9,7 +9,7 @@ class About extends React.Component {
         return (
             <section className="about">
                 <div className="container-fluid">
-                    <h1>About</h1>
+                    <h1>Home</h1>
 
                     <div className="row">
                         <div className="col-12 col-sm-4">

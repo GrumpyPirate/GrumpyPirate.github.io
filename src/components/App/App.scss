@@ -2,7 +2,6 @@
 ** Global layout styles that apply to all document content
 ** ------------------------------------------------------------------------------------------------------------------ */
 @import '../../sass/functions';
-@import '../../sass/bootstrap/variables';
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
@@ -19,6 +18,22 @@
 @import '../../sass/forms';
 @import '../../sass/icons';
 
-body {
-    // overflow-x: hidden;
-} // /body
+.app {
+    // lg up
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+    } // /lg up
+} // /.app
+
+.viewport {
+    // lg up
+    @include media-breakpoint-up(lg) {
+        flex: 1 1 auto;
+        height: 100vh;
+        overflow-y: auto;
+        touch-action: pan-y;
+        padding-top: 2rem;
+    } // /lg up
+} // /.viewport

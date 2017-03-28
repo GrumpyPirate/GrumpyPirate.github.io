@@ -42,9 +42,9 @@ a {
     } // /&:focus
 
     // &:active,
-    // &.active {
-    //     color: $link-active-color;
-    // } // /active links
+    &.active {
+        color: $link-hover-color;
+    } // /active links
 } // /a
 
 button,
