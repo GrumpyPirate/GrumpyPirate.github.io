@@ -11,6 +11,10 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar.jsx'
 import App from './components/App/App.jsx'
 
+// Housekeeping
+document.documentElement.classList.remove('no-js')
+
+// Render App
 ReactDOM.render(
     (
         <BrowserRouter

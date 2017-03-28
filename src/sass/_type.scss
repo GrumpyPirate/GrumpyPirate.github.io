@@ -26,7 +26,6 @@ p {
 // ---------------------------------------------------------------------------------------------------------------------
 address {
     font-style: normal;
-    line-height: (23 / 16);
     margin-bottom: $paragraph-margin-bottom;
 } // /address
 
@@ -59,8 +58,8 @@ textarea {
 // Text selection
 // ---------------------------------------------------------------------------------------------------------------------
 ::selection {
-    background-color: palette(red);
-    color: $text-colour-light;
+    background-color: palette(theme-green);
+    color: palette(white);
 } // /::selection
 
 
@@ -81,14 +80,10 @@ dt {
     margin-bottom: $dt-margin-bottom;
 } // /dt
 
-dd {
-    color: palette(grey);
-} // /dd
-
 
 // Strong text
 // ---------------------------------------------------------------------------------------------------------------------
 strong,
 .strong {
-    font-weight: weight(heavy);
+    font-weight: weight(bold);
 } // /.strong

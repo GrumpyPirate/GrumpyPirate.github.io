@@ -6,6 +6,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 
   @each $breakpoint in map-keys($gutters) {
     @include media-breakpoint-up($breakpoint) {

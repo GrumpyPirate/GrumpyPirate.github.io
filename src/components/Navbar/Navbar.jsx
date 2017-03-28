@@ -20,10 +20,14 @@ export default class Navbar extends React.Component {
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-3 col-sm-2 col-lg-1">
-                            <img src={Logo} srcSet={Logo2x} alt="" className="img-fluid" width="80" height="80"/>
+                            {/*<img src={Logo} srcSet={Logo2x} alt="" className="img-fluid" width="80" height="80"/>*/}
+
+                            <NavLink to="/" className="site-navbar__brand">
+                                Edward Cobbold
+                            </NavLink>
                         </div>
                         <div className="col-9 col-sm-10 col-lg-11">
-                            <ul className="list-unstyled list-inline m-0">
+                            <ul className="list-unstyled list-inline text-right m-0">
                                 <li className="list-inline-item site-navbar__item">
                                     <NavLink to="/" className="site-navbar__link">Home</NavLink>
                                 </li>

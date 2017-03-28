@@ -1,10 +1,32 @@
+@import 'functions';
 @import 'mixins';
+@import 'variables';
+
+$navbar-height: rem(72px);
 
 .site-navbar {
-    background-color: red;
-    color: white;
+    display: flex;
+    align-items: center;
+    height: $navbar-height;
+    border-bottom: solid 3px palette(theme-green);
+    box-shadow: 0 4px 2px -1px rgba(0, 0, 0, .2);
+    font-family: $headings-font-family;
 
     &__link {
-        @include make-link-colour(white, $hover-colour: darken(white, 15%), $active-colour: white, $self: true);
+        // @include make-link-colour(inherit, $hover-colour: $link-hover-color, $active-colour: $link-hover-color, $self: true);
+        color: inherit;
+        text-transform: uppercase;
+        font-weight: weight(light);
     } // /&__link
+
+    // Brand (Logo/Text)
+    // -----------------------------------------------------------------------------------------------------------------
+    &__brand {
+        // @include make-link-colour(white, $hover-colour: darken(white, 15%), $active-colour: white, $self: true);
+        color: inherit;
+        display: block;
+        font-weight: weight(light);
+        text-transform: uppercase;
+        line-height: 1em;
+    } // /&__brand
 } // /.site-navbar

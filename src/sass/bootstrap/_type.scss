@@ -8,7 +8,9 @@ h1, h2, h3, h4, h5, h6,
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
+  letter-spacing: $headings-letter-spacing;
   color: $headings-color;
+  text-transform: uppercase;
 }
 
 h1, .h1 { font-size: $font-size-h1; }

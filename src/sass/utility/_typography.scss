@@ -10,8 +10,8 @@
 // } // /@each $weight in (regular, bold)
 
 // Font-family
-.font-family-body     { font-family: $body-font-family;     }
-.font-family-headings { font-family: $headings-font-family; }
+.font-family-b { font-family: $body-font-family;     }
+.font-family-h { font-family: $headings-font-family; }
 
 // Link variants
 // ---------------------------------------------------------------------------------------------------------------------
@@ -51,28 +51,8 @@
 
 // Text colouring
 // ---------------------------------------------------------------------------------------------------------------------
-.text-white        { color: $text-colour-light; }
+.text-white        { color: palette(white); }
 // .text-inherit { color: inherit; }
-
-// Line heights
-// ---------------------------------------------------------------------------------------------------------------------
-@each $lh in (0, 1, inherit) {
-    .line-height-#{$lh} { line-height: $lh; }
-} // /@each $lh in (1, inherit)
-
-
-// Horizontal rule
-// ---------------------------------------------------------------------------------------------------------------------
-// hr {
-//     // Colours
-//     // ---------------------------------------------------------------------------------------------
-//     @each $colour in (
-//         white,
-//         yellow,
-//     ) {
-//         &.#{$colour} { border-color: palette($colour); }
-//     }
-// } // /hr
 
 
 // Display child content using columns
