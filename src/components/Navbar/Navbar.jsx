@@ -6,8 +6,28 @@ import { NavLink } from 'react-router-dom'
 import './Navbar.scss'
 
 // Images
-import Logo from './logo.png'
-import Logo2x from './logo@2x.png'
+// import Logo from './avatar-ed--head-only.png'
+import Logo from './avatar-ed--head-only.png'
+
+// Component - Copyright
+// -------------------------------------------------------------------------------------------------
+const Copyright = () => {
+    const CREATION_YEAR = 2017
+    const CURR_YEAR     = new Date().getFullYear()
+
+    return (
+        <div className="sidebar__credits">
+            <div className="container-fluid">
+                <p>
+                    <small>&copy; {CURR_YEAR > CREATION_YEAR ?
+                        <span className="sidebar__credits__date">{CREATION_YEAR}&mdash;{CURR_YEAR}</span> :
+                        <span className="sidebar__credits__date">{CURR_YEAR}</span>
+                    }</small>
+                </p>
+            </div>
+        </div>
+    )
+} // /const Copyright = () =>
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -16,26 +36,31 @@ export default class Navbar extends React.Component {
 
     render() {
         return (
-            <nav className="site-navbar text-lg-center">
-                <div className="container-fluid">
-                    <NavLink to="/" className="site-navbar__brand">
-                        <img className="site-navbar__brand__image" src="https://unsplash.it/100/100?random" srcSet="https://unsplash.it/200/200?random 2x" alt="" width="64" height="64"/>
-                        <span className="site-navbar__brand__text">Edward<br/>Cobbold</span>
+            <aside className="sidebar text-right">
+                <div className="sidebar__content container-fluid">
+                    <NavLink to="/" className="sidebar__brand">
+                        <img className="sidebar__brand__image" src={Logo} alt="" width="64" height="64"/>
+                        <span className="sidebar__brand__name ml-1">Edward<br/>Cobbold<br/></span>
                     </NavLink>
+                    <span className="sidebar__brand__job-title">Frontend Developer</span>
+
                     <hr/>
-                    <ul className="list-unstyled m-0">
-                        <li className="site-navbar__item">
-                            <NavLink to="/" className="site-navbar__link">About</NavLink>
+
+                    <ul className="sidebar__nav list-unstyled m-0" role="navigation">
+                        <li className="sidebar__nav-item">
+                            <NavLink to="/" className="sidebar__nav-link">About</NavLink>
                         </li>
-                        <li className="site-navbar__item">
-                            <NavLink to="/webdev" className="site-navbar__link">Web Development</NavLink>
+                        <li className="sidebar__nav-item">
+                            <NavLink to="/webdev" className="sidebar__nav-link">Web Development</NavLink>
                         </li>
-                        <li className="site-navbar__item">
-                            <NavLink to="/digital-art" className="site-navbar__link">Digital Art</NavLink>
+                        <li className="sidebar__nav-item">
+                            <NavLink to="/digital-art" className="sidebar__nav-link">Digital Art</NavLink>
                         </li>
                     </ul>
                 </div>
-            </nav>
+
+                <Copyright />
+            </aside>
         )
     } // /render()
 } // /export default class Navbar extends React.Component

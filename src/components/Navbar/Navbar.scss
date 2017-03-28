@@ -4,50 +4,70 @@
 
 $navbar-height: rem(72px);
 
-.site-navbar {
+.sidebar {
+    position: relative;
     height: 100vh;
     overflow-y: auto;
     touch-action: pan-y;
-    border-right: solid 3px palette(theme-green);
-    box-shadow: $shadow-right-sm;
-    font-family: $headings-font-family;
+    border-right: solid 1px $sidebar-border-color;
+    background-color: palette(theme-green);
+    color: palette(theme-green-light);
 
     // lg up
-    @include media-breakpoint-up(lg) {
+    // @include media-breakpoint-up(lg) {
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
         flex: 0 0 rem(320px);
-    } // /lg up
+    // } // /lg up
 
-    &__link {
-        color: inherit;
+    &__credits {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        color: palette(theme-green-dull);
+    } // /&__credits
+
+    &__nav-link {
+        font-family: $headings-font-family;
+        // color: inherit;
         text-transform: uppercase;
         font-weight: weight(light);
-    } // /&__link
+    } // /&__nav-link
 
     // Brand (Logo/Text)
     // -----------------------------------------------------------------------------------------------------------------
     &__brand {
-        color: palette(theme-green);
+        font-family: $headings-font-family;
+        color: palette(theme-green-light);
         display: block;
         font-weight: weight(light);
         text-transform: uppercase;
-        padding: .5rem 0;
         font-size: $font-size-h3;
         line-height: $headings-line-height;
 
         &__image {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
             border-radius: 50%;
-            margin-right: .5rem;
-            box-shadow: $shadow-right-down-sm;
+            // box-shadow: $box-shadow-right-down-sm;
+            filter: drop-shadow(#{$filter-shadow-right-down-sm});
         } // /&__image
 
-        &__text {
-            text-align: left;
+        &__name {
             display: inline-block;
             vertical-align: middle;
-        } // /&__text
+            color: inherit;
+        } // /&__name
+
+        &__job-title {
+            text-transform: uppercase;
+            display: block;
+            margin-top: .5rem;
+            font-size: rem(12px);
+            color: palette(theme-green-dull);
+        } // /&__job-title
     } // /&__brand
 } // /.site-navbar

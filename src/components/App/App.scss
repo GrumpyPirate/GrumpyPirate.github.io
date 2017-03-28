@@ -20,20 +20,30 @@
 
 .app {
     // lg up
-    @include media-breakpoint-up(lg) {
+    // @include media-breakpoint-up(lg) {
         display: flex;
         flex-flow: row nowrap;
         align-items: stretch;
-    } // /lg up
+    // } // /lg up
 } // /.app
 
 .viewport {
     // lg up
-    @include media-breakpoint-up(lg) {
+    // @include media-breakpoint-up(lg) {
         flex: 1 1 auto;
         height: 100vh;
         overflow-y: auto;
         touch-action: pan-y;
-        padding-top: 2rem;
-    } // /lg up
+    // } // /lg up
 } // /.viewport
+
+.page-header {
+    padding: $grid-gutter-width 0;
+    margin-bottom: $grid-gutter-width;
+    border-bottom: solid 1px $sidebar-border-color;
+
+    &__title {
+        // color: lighten($body-color, 25%);
+        color: palette(theme-green-light);
+    } // /&__title
+} // /.page-header

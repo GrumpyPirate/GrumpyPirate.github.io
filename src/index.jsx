@@ -16,10 +16,8 @@ document.documentElement.classList.remove('no-js')
 // Render App
 ReactDOM.render(
     (
-        <BrowserRouter
-            basename="/"
-        >
-            <App />
+        <BrowserRouter basename="/">
+            <App/>
         </BrowserRouter>
     ), document.getElementById('app-root')
 ) // /ReactDOM.render

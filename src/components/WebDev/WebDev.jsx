@@ -14,7 +14,7 @@ class PortfolioListItem extends React.Component {
     render() {
         return (
             <li className="portfolio__item">
-                <Link to={this.props.to} className="portfolio__link">
+                <Link to="#" className="portfolio__link">
                     {this.props.children}
                 </Link>
             </li>
@@ -31,65 +31,81 @@ const PortfolioList = () => {
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum optio dignissimos officiis quaerat fuga adipisci velit? Harum labore id quo temporibus mollitia vel. Sequi!
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum optio dignissimos officiis quaerat fuga adipisci velit? Harum labore id quo temporibus mollitia vel. Sequi!
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-2`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem qui odio nesciunt, explicabo dolore impedit reprehenderit maiores soluta laudantium, in nisi? Ea, at, nihil.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem qui odio nesciunt, explicabo dolore impedit reprehenderit maiores soluta laudantium, in nisi? Ea, at, nihil.
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-3`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id similique laboriosam tempore, molestiae voluptatem ipsum deleniti quam cumque, quis maiores officiis dolores consectetur quidem.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id similique laboriosam tempore, molestiae voluptatem ipsum deleniti quam cumque, quis maiores officiis dolores consectetur quidem.
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-4`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, harum earum inventore quae fuga accusantium debitis reprehenderit quibusdam temporibus odio deserunt molestiae! In.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, harum earum inventore quae fuga accusantium debitis reprehenderit quibusdam temporibus odio deserunt molestiae! In.
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-5`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ipsa quod excepturi unde, possimus deleniti autem, consectetur omnis, dolorum maxime minus tempora eius. Distinctio.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ipsa quod excepturi unde, possimus deleniti autem, consectetur omnis, dolorum maxime minus tempora eius. Distinctio.
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-6`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatibus praesentium eaque unde maiores soluta, quidem deleniti aut aspernatur quis, voluptatum qui ut totam.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatibus praesentium eaque unde maiores soluta, quidem deleniti aut aspernatur quis, voluptatum qui ut totam.
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-7`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur et incidunt reprehenderit repellendus placeat error natus cumque voluptatibus illum consequuntur, magni, ea dolor necessitatibus.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur et incidunt reprehenderit repellendus placeat error natus cumque voluptatibus illum consequuntur, magni, ea dolor necessitatibus.
+                    </p>
+                </div>
             </PortfolioListItem>
             <PortfolioListItem to={`/webdev/test-8`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
-                <h3 className="h4">Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ad, quaerat adipisci soluta ex, hic dolorum et libero optio cum labore! Tenetur, quo perspiciatis.
-                </p>
+                <div className="portfolio__item__body">
+                    <h3 className="h4">Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ad, quaerat adipisci soluta ex, hic dolorum et libero optio cum labore! Tenetur, quo perspiciatis.
+                    </p>
+                </div>
             </PortfolioListItem>
         </ul>
     ) // /return
@@ -104,13 +120,22 @@ class WebDev extends React.Component {
 
     render() {
         return (
-            <section className="portfolio">
-                <div className="container-fluid">
-                    <h1>Doloremque</h1>
+            <div className="page">
+                <header className="page-header">
+                    <div className="container-fluid last-child-mb-0">
+                        <h1 className="page-header__title h2">Doloremque</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur, ipsa rerum. Cum reprehenderit nostrum voluptates tempore, rem illum dolor ad, quisquam omnis laudantium.
+                        </p>
+                    </div>
+                </header>
 
-                    <PortfolioList />
-                </div>
-            </section>
+                <section className="portfolio">
+                    <div className="container-fluid">
+                        <PortfolioList />
+                    </div>
+                </section>
+            </div>
         )
     }
 }

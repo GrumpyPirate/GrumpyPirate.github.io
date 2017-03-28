@@ -71,7 +71,7 @@ $icon-bottom-correction: 0;
 
 // Animations
 // ---------------------------------------------------------------------------------------------------------------------
-$anim-dur: .2s;
+$anim-dur: .15s;
 $anim-ease: ease-in-out;
 $easings: (
     ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1),
@@ -79,16 +79,22 @@ $easings: (
     ease-out-expo: cubic-bezier(.19, 1, .22, 1) // A very harsh ease-out - http://easings.net/#easeOutExpo
 );
 
-// Box Shadows
+// Shadows
 // ---------------------------------------------------------------------------------------------------------------------
 $shadow-blur-sm: rem(2px);
 $shadow-spread-sm: rem(-1px);
 $shadow-distance-sm: rem(4px);
 $shadow-opacity: .2;
 
-$shadow-right-sm: $shadow-distance-sm 0 $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
-$shadow-right-down-sm: $shadow-distance-sm $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
-$shadow-down-sm: 0 $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+// Box
+$box-shadow-right-sm: $shadow-distance-sm 0 $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+$box-shadow-right-down-sm: $shadow-distance-sm $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+$box-shadow-down-sm: 0 $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
+
+// Filter
+$filter-shadow-right-sm: $shadow-distance-sm 0 $shadow-blur-sm rgba(0, 0, 0, $shadow-opacity);
+$filter-shadow-right-down-sm: $shadow-distance-sm $shadow-distance-sm $shadow-blur-sm rgba(0, 0, 0, $shadow-opacity);
+$filter-shadow-down-sm: 0 $shadow-distance-sm $shadow-blur-sm rgba(0, 0, 0, $shadow-opacity);
 
 /* ---------------------------------------------------------------------------------------------------------------------
 ** Bootstrap Customisation
@@ -133,7 +139,7 @@ $lead-font-size: rem(30px);
 $lead-font-size-mobile: $lead-font-size * .75;
 $lead-font-weight: weight(light);
 
-$small-font-size: percentage(14 / 16);
+$small-font-size: percentage(12px / $font-size-root);
 
 // Grid
 // ---------------------------------------------------------------------------------------------------------------------
@@ -190,7 +196,8 @@ $spacers: (
 $body-bg:    palette(theme-grey);
 // $content-bg: palette(white);
 
-$body-color: lighten(desaturate(palette(theme-grey), 25%), 35%);
+$body-color: lighten(desaturate(palette(theme-grey), 25%), 50%);
+// $body-color: palette(theme-grey);
 
 // Border radii
 $border-radius-sm: rem(4px);
@@ -203,7 +210,7 @@ $transition-collapse: height ($anim-dur * 3) ease(ease-out-expo);
 
 // Links
 $link-color:        palette(theme-green-dull);
-$link-hover-color:  palette(theme-green);
+$link-hover-color:  palette(theme-green-light);
 $link-active-color: darken($link-hover-color, 15%);
 
 $link-decoration:       none;
@@ -262,3 +269,8 @@ $input-box-shadow: none;
 $input-transition: color $anim-dur $anim-ease,
                    border-color $anim-dur $anim-ease,
                    background-color $anim-dur $anim-ease;
+
+// App Components
+// ---------------------------------------------------------------------------------------------------------------------
+// Sidebar
+$sidebar-border-color: palette(theme-green-light);

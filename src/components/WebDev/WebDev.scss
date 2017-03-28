@@ -5,15 +5,61 @@
 .portfolio {
     &__list {
         @include make-row;
+        align-items: flex-start;
     } // /&__list
 
     &__item {
         display: block;
-        flex: 1 1 percentage(1 / 3);
+        flex: 0 0 percentage(1 / 3);
+        margin-bottom: $paragraph-margin-bottom * 2;
+        padding: 0 ($grid-gutter-width / 2);
+
+        &__media {
+            overflow: hidden;
+
+            img {
+                transition: transform $anim-dur $anim-ease;
+            } // /img
+        } // /&__media
+
+        &__body {
+            padding: $grid-gutter-width / 2;
+        } // /&__body
     } // /&__item
 
     &__link {
         display: block;
-        padding: 0 ($grid-gutter-width / 2);
+        font-weight: inherit;
+        background-color: lighten(desaturate($body-bg, 75%), 7.5%);
+        border-radius: $border-radius-sm;
+        border-bottom: solid 1px palette(theme-green);
+        overflow: hidden;
+        transition: border-color $anim-dur $anim-ease,
+                    transform $anim-dur $anim-ease;
+
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            color: $body-color;
+        } // all states
+
+        &:hover {
+            color: lighten($body-color, 25%);
+            transform: translateY(-.5rem);
+            border-bottom-color: palette(theme-orange);
+
+            .portfolio__item__media {
+                img {
+                    transform: scale(1.0625);
+                } // /img
+            } // /.portfolio__item__media img
+        } // hover state
+
+        &:active  {
+            transition: none;
+            transform: translateY(-.25rem);
+        } // /&:active
     } // /&__link
 } // /.portfolio
