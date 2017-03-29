@@ -18,7 +18,7 @@ $navbar-height: rem(72px);
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        flex: 0 0 rem(320px);
+        flex: 0 0 $sidebar-width;
     // } // /lg up
 
     &__credits {

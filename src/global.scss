@@ -1,0 +1,19 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Global layout styles that apply to all components
+** ------------------------------------------------------------------------------------------------------------------ */
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+// Bootstrap
+@import 'bootstrap/bootstrap-custom';
+
+// Vendor library theming
+@import 'vendor';
+
+// Core global
+@import 'type';
+@import 'animations';
+@import 'utility';
+@import 'forms';
+@import 'icons';

@@ -7,44 +7,14 @@ import {
     Route,
     NavLink
 } from 'react-router-dom'
+import Routes from '../../config/routes'
 
 // Components
 import Sidebar from '../Sidebar/Sidebar.jsx'
 import ContentContainer from '../ContentContainer/ContentContainer.jsx'
-import About from '../About/About.jsx'
-import WebDev from '../WebDev/WebDev.jsx'
-import DigitalArt from '../DigitalArt/DigitalArt.jsx'
 
 // SCSS
 import './App.scss'
-
-const ROUTES = [
-    // Route - index (use About)
-    {
-        path: '/',
-        exact: true,
-        name: 'About',
-        components: {
-            content: About
-        }
-    },
-    // Route - Web Development
-    {
-        path: '/webdev',
-        name: 'Web Development',
-        components: {
-            content: WebDev
-        }
-    },
-    // Route - Digital Art
-    {
-        path: '/digital-art',
-        name: 'Digital Art',
-        components: {
-            content: DigitalArt
-        }
-    }
-] // /const ROUTES
 
 // Define App
 class App extends React.Component {
@@ -58,8 +28,8 @@ class App extends React.Component {
         return (
             <Router>
                 <div className="app">
-                    <Sidebar routes={ROUTES} />
-                    <ContentContainer routes={ROUTES} />
+                    <Sidebar />
+                    <ContentContainer />
                 </div>
             </Router>
         )

@@ -1,6 +1,9 @@
 // React
 import React from 'react'
+
+// Routing
 import { NavLink, Link } from 'react-router-dom'
+import Routes from '../../config/routes'
 
 // SCSS
 import './Sidebar.scss'
@@ -9,32 +12,15 @@ import './Sidebar.scss'
 // import Logo from './avatar-ed--head-only.png'
 import Logo from './avatar-ed--head-only.png'
 
-// Component - Copyright
-// -------------------------------------------------------------------------------------------------
-const Copyright = () => {
-    const CREATION_YEAR = 2017
-    const CURR_YEAR     = new Date().getFullYear()
-
-    return (
-        <div className="sidebar__credits">
-            <div className="container-fluid">
-                <p>
-                    <small>&copy; {CURR_YEAR > CREATION_YEAR ?
-                        <span className="sidebar__credits__date">{CREATION_YEAR}&mdash;{CURR_YEAR}</span> :
-                        <span className="sidebar__credits__date">{CURR_YEAR}</span>
-                    }</small>
-                </p>
-            </div>
-        </div>
-    )
-} // /const Copyright = () =>
-
 export default class Sidebar extends React.Component {
     constructor(props) {
         super(props)
     } // /constructor(props)
 
     render() {
+        const CREATION_YEAR = 2017
+        const CURR_YEAR     = new Date().getFullYear()
+
         return (
             <aside className="sidebar text-right">
                 <div className="sidebar__content container-fluid">
@@ -47,9 +33,9 @@ export default class Sidebar extends React.Component {
                     <hr/>
 
                     <ul className="sidebar__nav list-unstyled m-0" role="navigation">
-                        {this.props.routes.map((route, index) =>
+                        {Routes.map((route, index) =>
                             (
-                                <li className="sidebar__nav-item">
+                                <li className="sidebar__nav-item" key={index}>
                                     <NavLink to={route.path} exact={route.exact} className="sidebar__nav-link">
                                         {route.name}
                                     </NavLink>
@@ -59,7 +45,16 @@ export default class Sidebar extends React.Component {
                     </ul>
                 </div>
 
-                <Copyright />
+                <div className="sidebar__credits">
+                    <div className="container-fluid">
+                        <p>
+                            <small>&copy; {CURR_YEAR > CREATION_YEAR ?
+                                <span className="sidebar__credits__date">{CREATION_YEAR}&mdash;{CURR_YEAR}</span> :
+                                <span className="sidebar__credits__date">{CURR_YEAR}</span>
+                            }</small>
+                        </p>
+                    </div>
+                </div>
             </aside>
         )
     } // /render()

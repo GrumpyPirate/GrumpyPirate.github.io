@@ -5,19 +5,6 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-// Bootstrap
-@import '../../sass/bootstrap/bootstrap-custom';
-
-// Vendor library theming
-@import '../../sass/vendor';
-
-// Core global
-@import '../../sass/type';
-@import '../../sass/animations';
-@import '../../sass/utility';
-@import '../../sass/forms';
-@import '../../sass/icons';
-
 .app {
     // lg up
     // @include media-breakpoint-up(lg) {

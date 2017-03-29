@@ -1,7 +1,14 @@
+// React
 import React from 'react'
 
+// React Modal
+import ReactModal from 'react-modal'
+import Modal from '../Modal/Modal.jsx'
+
+// Routing
 import { Link } from 'react-router-dom'
 
+// Style
 import './WebDev.scss'
 
 // Component - PortfolioListItem
@@ -9,14 +16,41 @@ import './WebDev.scss'
 class PortfolioListItem extends React.Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            modalIsActive: false
+        }
+
+        this.handleOpenModal  = this.handleOpenModal.bind(this)
+        this.handleCloseModal = this.handleCloseModal.bind(this)
     } // /constructor(props)
+
+    handleOpenModal(e) {
+        e.preventDefault()
+
+        this.setState({ modalIsActive: true })
+    } // /handleOpenModal()
+
+    handleCloseModal() {
+        this.setState({ modalIsActive: false })
+    } // /handleCloseModal()
 
     render() {
         return (
             <li className="portfolio__item">
-                <Link to={this.props.to} className="portfolio__link">
+                <Link to={this.props.to} className="portfolio__link" onClick={this.handleOpenModal}>
                     {this.props.children}
                 </Link>
+
+                <Modal
+                    isOpen={this.state.modalIsActive}
+                    onRequestClose={this.handleCloseModal}
+                    contentLabel="Test Modal"
+                >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam animi molestiae et consequuntur voluptas ut qui, similique facilis quibusdam velit asperiores beatae, tempora eius porro. Temporibus voluptatem quisquam illum excepturi.
+                    </p>
+                </Modal>
             </li>
         )
     } // /render()
@@ -25,6 +59,7 @@ class PortfolioListItem extends React.Component {
 // Component - PortfolioList
 // ---------------------------------------------------------------------------------------------------------------------
 const PortfolioList = (props) => {
+    // NEEDTO: Trigger Modal Content for each PortfolioListItem
     return (
         <ul className="portfolio__list list-unstyled">
             <PortfolioListItem to={`${props.match.url}/test-1`}>

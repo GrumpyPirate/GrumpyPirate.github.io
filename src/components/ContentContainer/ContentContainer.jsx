@@ -1,7 +1,11 @@
+// React
 import React from 'react'
 
+// Routing
 import { Route } from 'react-router-dom'
+import Routes from '../../config/routes'
 
+// Component
 import './ContentContainer.scss'
 
 class ContentContainer extends React.Component {
@@ -12,8 +16,8 @@ class ContentContainer extends React.Component {
     render() {
         return (
             <main className="content-container">
-                {this.props.routes.map((route, index) =>
-                    <Route path={route.path} exact={route.exact} component={route.components.content} />
+                {Routes.map((route, index) =>
+                    <Route key={index} path={route.path} exact={route.exact} component={route.components.content} />
                 )}
             </main>
         )
