@@ -14,7 +14,7 @@ class PortfolioListItem extends React.Component {
     render() {
         return (
             <li className="portfolio__item">
-                <Link to="#" className="portfolio__link">
+                <Link to={this.props.to} className="portfolio__link">
                     {this.props.children}
                 </Link>
             </li>
@@ -24,10 +24,10 @@ class PortfolioListItem extends React.Component {
 
 // Component - PortfolioList
 // ---------------------------------------------------------------------------------------------------------------------
-const PortfolioList = () => {
+const PortfolioList = (props) => {
     return (
         <ul className="portfolio__list list-unstyled">
-            <PortfolioListItem to={`/webdev/test-1`}>
+            <PortfolioListItem to={`${props.match.url}/test-1`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -37,7 +37,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-2`}>
+            <PortfolioListItem to={`${props.match.url}/test-2`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -47,7 +47,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-3`}>
+            <PortfolioListItem to={`${props.match.url}/test-3`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -57,7 +57,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-4`}>
+            <PortfolioListItem to={`${props.match.url}/test-4`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -67,7 +67,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-5`}>
+            <PortfolioListItem to={`${props.match.url}/test-5`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -77,7 +77,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-6`}>
+            <PortfolioListItem to={`${props.match.url}/test-6`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -87,7 +87,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-7`}>
+            <PortfolioListItem to={`${props.match.url}/test-7`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -97,7 +97,7 @@ const PortfolioList = () => {
                     </p>
                 </div>
             </PortfolioListItem>
-            <PortfolioListItem to={`/webdev/test-8`}>
+            <PortfolioListItem to={`${props.match.url}/test-8`}>
                 <figure className="portfolio__item__media">
                     <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x" className="w-100 img-fluid" />
                 </figure>
@@ -132,7 +132,7 @@ class WebDev extends React.Component {
 
                 <section className="portfolio">
                     <div className="container-fluid">
-                        <PortfolioList />
+                        <PortfolioList {...this.props} />
                     </div>
                 </section>
             </div>

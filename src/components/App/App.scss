@@ -27,20 +27,10 @@
     // } // /lg up
 } // /.app
 
-.viewport {
-    // lg up
-    // @include media-breakpoint-up(lg) {
-        flex: 1 1 auto;
-        height: 100vh;
-        overflow-y: auto;
-        touch-action: pan-y;
-    // } // /lg up
-} // /.viewport
-
 .page-header {
     padding: $grid-gutter-width 0;
     margin-bottom: $grid-gutter-width;
-    border-bottom: solid 1px $sidebar-border-color;
+    // border-bottom: solid 1px $sidebar-border-color;
 
     &__title {
         // color: lighten($body-color, 25%);

@@ -1,9 +1,9 @@
 // React
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 // SCSS
-import './Navbar.scss'
+import './Sidebar.scss'
 
 // Images
 // import Logo from './avatar-ed--head-only.png'
@@ -29,7 +29,7 @@ const Copyright = () => {
     )
 } // /const Copyright = () =>
 
-export default class Navbar extends React.Component {
+export default class Sidebar extends React.Component {
     constructor(props) {
         super(props)
     } // /constructor(props)
@@ -38,24 +38,24 @@ export default class Navbar extends React.Component {
         return (
             <aside className="sidebar text-right">
                 <div className="sidebar__content container-fluid">
-                    <NavLink to="/" className="sidebar__brand">
+                    <Link to="/" className="sidebar__brand">
                         <img className="sidebar__brand__image" src={Logo} alt="" width="64" height="64"/>
                         <span className="sidebar__brand__name ml-1">Edward<br/>Cobbold<br/></span>
-                    </NavLink>
+                    </Link>
                     <span className="sidebar__brand__job-title">Frontend Developer</span>
 
                     <hr/>
 
                     <ul className="sidebar__nav list-unstyled m-0" role="navigation">
-                        <li className="sidebar__nav-item">
-                            <NavLink to="/" className="sidebar__nav-link">About</NavLink>
-                        </li>
-                        <li className="sidebar__nav-item">
-                            <NavLink to="/webdev" className="sidebar__nav-link">Web Development</NavLink>
-                        </li>
-                        <li className="sidebar__nav-item">
-                            <NavLink to="/digital-art" className="sidebar__nav-link">Digital Art</NavLink>
-                        </li>
+                        {this.props.routes.map((route, index) =>
+                            (
+                                <li className="sidebar__nav-item">
+                                    <NavLink to={route.path} exact={route.exact} className="sidebar__nav-link">
+                                        {route.name}
+                                    </NavLink>
+                                </li>
+                            )
+                        )}
                     </ul>
                 </div>
 
@@ -63,4 +63,4 @@ export default class Navbar extends React.Component {
             </aside>
         )
     } // /render()
-} // /export default class Navbar extends React.Component
+} // /export default class Sidebar extends React.Component
