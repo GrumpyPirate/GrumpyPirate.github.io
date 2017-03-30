@@ -26,9 +26,9 @@ export default class Sidebar extends React.Component {
                 <div className="sidebar__content container-fluid">
                     <Link to="/" className="sidebar__brand">
                         <img className="sidebar__brand__image" src={Logo} alt="" width="64" height="64"/>
-                        <span className="sidebar__brand__name ml-1">Edward<br/>Cobbold<br/></span>
+                        <span className="sidebar__brand__name ml-1">Doloribus<br/>expedita</span>
                     </Link>
-                    <span className="sidebar__brand__job-title">Frontend Developer</span>
+                    <span className="sidebar__brand__job-title">Sapiente ducimus</span>
 
                     <hr/>
 

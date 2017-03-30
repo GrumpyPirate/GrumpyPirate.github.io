@@ -9,17 +9,22 @@ $navbar-height: rem(72px);
     height: 100vh;
     overflow-y: auto;
     touch-action: pan-y;
-    border-right: solid 1px $sidebar-border-color;
-    background-color: palette(theme-green);
-    color: palette(theme-green-light);
+    border-right: solid $hr-border-width $sidebar-border-color;
+    background-color: palette(theme-accent-1);
+    color: palette(theme-light);
 
     // lg up
-    // @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        flex: 0 0 $sidebar-width;
-    // } // /lg up
+        flex: 0 0 ($sidebar-width * .85);
+    } // /lg up
+
+    // xl up
+    @include media-breakpoint-up(xl) {
+        flex-basis: $sidebar-width;
+    } // /xl up
 
     &__credits {
         position: absolute;
@@ -27,10 +32,11 @@ $navbar-height: rem(72px);
         left: 0;
         right: 0;
         width: 100%;
-        color: palette(theme-green-dull);
+        color: palette(theme-mid);
     } // /&__credits
 
     &__nav-link {
+        @include lasers($direction: out);
         font-family: $headings-font-family;
         // color: inherit;
         text-transform: uppercase;
@@ -41,7 +47,7 @@ $navbar-height: rem(72px);
     // -----------------------------------------------------------------------------------------------------------------
     &__brand {
         font-family: $headings-font-family;
-        color: palette(theme-green-light);
+        color: palette(theme-light);
         display: block;
         font-weight: weight(light);
         text-transform: uppercase;
@@ -67,7 +73,7 @@ $navbar-height: rem(72px);
             display: block;
             margin-top: .5rem;
             font-size: rem(12px);
-            color: palette(theme-green-dull);
+            color: palette(theme-light);
         } // /&__job-title
     } // /&__brand
 } // /.site-navbar

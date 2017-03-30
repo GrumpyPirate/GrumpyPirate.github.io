@@ -3,9 +3,7 @@ import React from 'react'
 
 // Router
 import {
-    BrowserRouter as Router,
-    Route,
-    NavLink
+    BrowserRouter as Router
 } from 'react-router-dom'
 import Routes from '../../config/routes'
 

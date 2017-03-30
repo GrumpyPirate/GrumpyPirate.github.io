@@ -5,22 +5,21 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
+body {
+    background-color: palette(theme-accent-2);
+} // /body
+
 .app {
-    // lg up
-    // @include media-breakpoint-up(lg) {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: stretch;
-    // } // /lg up
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
 } // /.app
 
 .page-header {
-    padding: $grid-gutter-width 0;
+    padding-top: $grid-gutter-width;
     margin-bottom: $grid-gutter-width;
-    // border-bottom: solid 1px $sidebar-border-color;
 
     &__title {
-        // color: lighten($body-color, 25%);
-        color: palette(theme-green-light);
+        color: palette(theme-accent-2);
     } // /&__title
 } // /.page-header

@@ -118,7 +118,7 @@
 // Mixin: give a link a custom animated underline
 // If $animate is passed as false, the resulting effect is a simple static customiseable underline
 // ---------------------------------------------------------------------------------------------------------------------
-@mixin lasers($display: inline-block, $bottom: 0, $laser-colour: currentColor, $laser-height: 1px, $animate: true, $duration: $anim-dur) {
+@mixin lasers($display: inline-block, $bottom: 0, $laser-colour: currentColor, $laser-height: 1px, $animate: true, $duration: $anim-dur, $direction: ltr) {
     @include no-underline;
     position: relative;
     display: $display;
@@ -137,7 +137,6 @@
     @if $animate {
         &::before {
             transform: scaleX(0);
-            transform-origin: left center;
             transition: transform $duration ease;
         } // /&::before
 
@@ -151,6 +150,49 @@
                 transform: scaleX(1);
             } // /&::before
         } // /.active
+
+        @if $direction == ltr {
+            &::before {
+                transform-origin: left center;
+            } // /&::before
+        } @else if $direction == rtl {
+            &::before {
+                transform-origin: right center;
+            } // /&::before
+        } @else if $direction == out {
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: $bottom;
+                display: block;
+                background-color: $laser-colour;
+                width: 50%;
+                height: $laser-height;
+                transform: scaleX(0);
+                transition: transform $duration ease;
+            } // /&::before
+
+            &::before {
+                left: 0;
+                transform-origin: right center;
+            } // /&::before
+
+            &::after {
+                right: 0;
+                transform-origin: left center;
+            } // /&::before
+
+            &:focus,
+            &:hover,
+            &:active,
+            &.active {
+                &::before,
+                &::after {
+                    transform: scaleX(1);
+                } // /&::before
+            } // /.active
+        }
     } // /@if $animate
 } // /@mixin lasers
 

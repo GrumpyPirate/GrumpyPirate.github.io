@@ -12,12 +12,25 @@ $palette: (
     white:         #fff,
     black:         #000,
     grey:          #666,
-    // Colour
-    theme-grey:        #1d2527,
-    theme-green:       #1e9859,
-    theme-green-dull:  #c1c395,
-    theme-green-light: #f8efb6,
-    theme-orange:      #d65d2b,
+    // Colour Themes
+    // Dark Green/Orange
+    // theme-dark:     #1d2527,
+    // theme-mid:      #c1c395,
+    // theme-light:    #f8efb6,
+    // theme-accent-1: #1e9859,
+    // theme-accent-2: #d65d2b,
+    // Pink/Blue
+    // theme-dark:     #293e44,
+    // theme-mid:      #a5ceeb,
+    // theme-light:    #f6ecf0,
+    // theme-accent-1: #e76569,
+    // theme-accent-2: #56b9b7,
+    // Blue/Green/Cream
+    theme-dark:     #354143,
+    theme-mid:      #4c5b69,
+    theme-light:    #fef9b4,
+    theme-accent-1: #2b978a,
+    theme-accent-2: #cbda57,
     // Social
     googleplus:    #dd4b39,
     twitter:       #55acee,
@@ -116,12 +129,12 @@ $hr-border-color: currentColor;
 // Headings
 $headings-margin-bottom: $paragraph-margin-bottom;
 $headings-line-height: 1.2;
-$headings-font-weight: weight(light);
-$headings-letter-spacing: .04em;
+$headings-font-weight: weight(extralight);
+$headings-letter-spacing: .25em;
 
 // Desktop sizes
 $font-size-h1: rem(80px);
-// $font-size-h2: 2rem;
+$font-size-h2: rem(56px);
 // $font-size-h3: 1.75rem;
 // $font-size-h4: 1.5rem;
 // $font-size-h5: 1.25rem;
@@ -193,11 +206,11 @@ $spacers: (
     )
 );
 
-$body-bg:    palette(theme-grey);
+$body-bg:    palette(theme-dark);
 // $content-bg: palette(white);
 
-$body-color: lighten(desaturate(palette(theme-grey), 25%), 50%);
-// $body-color: palette(theme-grey);
+$body-color: lighten(desaturate(palette(theme-dark), 25%), 50%);
+// $body-color: palette(theme-dark);
 
 // Border radii
 $border-radius-sm: rem(4px);
@@ -209,8 +222,8 @@ $transition-collapse: height ($anim-dur * 3) ease(ease-out-expo);
 
 
 // Links
-$link-color:        palette(theme-green-dull);
-$link-hover-color:  palette(theme-green-light);
+$link-color:        palette(theme-mid);
+$link-hover-color:  palette(theme-light);
 $link-active-color: darken($link-hover-color, 15%);
 
 $link-decoration:       none;
@@ -218,12 +231,12 @@ $link-hover-decoration: none;
 
 // Buttons
 $btn-primary-color:  palette(white);
-$btn-primary-bg:     palette(theme-green);
-$btn-primary-border: palette(theme-green);
+$btn-primary-bg:     palette(theme-accent-1);
+$btn-primary-border: palette(theme-accent-1);
 
 $btn-secondary-color:  palette(white);
-$btn-secondary-bg:     lighten(palette(theme-grey), 15%);
-$btn-secondary-border: lighten(palette(theme-grey), 15%);
+$btn-secondary-bg:     lighten(palette(theme-dark), 15%);
+$btn-secondary-border: lighten(palette(theme-dark), 15%);
 
 $btn-font-size: 1rem;
 $btn-line-height: (22 / 16);
@@ -274,4 +287,8 @@ $input-transition: color $anim-dur $anim-ease,
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
 $sidebar-width: rem(320px);
-$sidebar-border-color: palette(theme-green-light);
+$sidebar-border-color: palette(theme-light);
+
+// Modal
+$modal-padding: 1rem;
+$modal-header-size: rem(80px);

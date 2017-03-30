@@ -30,8 +30,10 @@
     "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.0",
+    "svg-sprite-loader": "^0.3.0",
     "webpack": "^2.3.2",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-svgstore-plugin": "^4.0.0"
   },
   "dependencies": {
     "axios": "^0.15.3",

@@ -51,8 +51,9 @@
 
 // Text colouring
 // ---------------------------------------------------------------------------------------------------------------------
-.text-white        { color: palette(white); }
-// .text-inherit { color: inherit; }
+.text-white    { color: palette(white); }
+.text-accent-1 { color: palette(theme-accent-1); }
+.text-accent-2 { color: palette(theme-accent-2); }
 
 
 // Display child content using columns

@@ -7,7 +7,8 @@ const Routes = [
     {
         path: '/',
         exact: true,
-        name: 'About',
+        // name: 'About',
+        name: 'Lorem',
         components: {
             content: About
         }
@@ -15,7 +16,7 @@ const Routes = [
     // Route - Web Development
     {
         path: '/webdev',
-        name: 'Web Development',
+        name: 'Asperiores eius',
         components: {
             content: WebDev
         }
@@ -23,7 +24,7 @@ const Routes = [
     // Route - Digital Art
     {
         path: '/digital-art',
-        name: 'Digital Art',
+        name: 'Totam eligendi',
         components: {
             content: DigitalArt
         }

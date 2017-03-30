@@ -12,7 +12,7 @@
 
 body {
     font-family: $body-font-family;
-    font-weight: weight(regular);
+    font-weight: weight(light);
     font-size: $font-size-base;
     line-height: $line-height;
     color: $body-color;
@@ -58,7 +58,7 @@ textarea {
 // Text selection
 // ---------------------------------------------------------------------------------------------------------------------
 ::selection {
-    background-color: palette(theme-green);
+    background-color: palette(theme-accent-1);
     color: palette(white);
 } // /::selection
 
