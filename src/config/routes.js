@@ -1,5 +1,8 @@
+// Pages
 import About from '../components/About/About.jsx'
 import WebDev from '../components/WebDev/WebDev.jsx'
+    // Portfolio projects
+    import TestProject from '../components/TestProject/TestProject.jsx'
 import DigitalArt from '../components/DigitalArt/DigitalArt.jsx'
 
 const Routes = [
@@ -7,8 +10,8 @@ const Routes = [
     {
         path: '/',
         exact: true,
-        // name: 'About',
-        name: 'Lorem',
+        name: 'About',
+        // name: 'Lorem',
         components: {
             content: About
         }
@@ -16,15 +19,26 @@ const Routes = [
     // Route - Web Development
     {
         path: '/webdev',
-        name: 'Asperiores eius',
+        name: 'Web Development',
+        // name: 'Asperiores eius',
         components: {
             content: WebDev
-        }
+        },
+        routes: [
+            {
+                path: '/test-project',
+                name: 'Test Project',
+                components: {
+                    content: TestProject
+                }
+            }
+        ]
     },
     // Route - Digital Art
     {
         path: '/digital-art',
-        name: 'Totam eligendi',
+        name: 'Digital Art',
+        // name: 'Totam eligendi',
         components: {
             content: DigitalArt
         }

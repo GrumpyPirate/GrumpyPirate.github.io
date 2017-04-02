@@ -3,13 +3,13 @@ import React from 'react'
 
 // Router
 import {
-    BrowserRouter as Router
+    BrowserRouter as Router,
+    Route
 } from 'react-router-dom'
 import Routes from '../../config/routes'
 
 // Components
 import Sidebar from '../Sidebar/Sidebar.jsx'
-import ContentContainer from '../ContentContainer/ContentContainer.jsx'
 
 // SCSS
 import './App.scss'
@@ -27,7 +27,16 @@ class App extends React.Component {
             <Router>
                 <div className="app">
                     <Sidebar />
-                    <ContentContainer />
+                    <main className="content-container">
+                        {Routes.map((route, index) =>
+                            <Route
+                                key={index}
+                                path={route.path}
+                                exact={route.exact}
+                                component={route.components.content}
+                            />
+                        )}
+                    </main>
                 </div>
             </Router>
         )

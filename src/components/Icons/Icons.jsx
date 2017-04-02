@@ -7,7 +7,7 @@ import './Icons.scss'
 // SVGStore plugin - load all SVGs
 const __svg__ = {
     path: './svg/**/*.svg',
-    name: '~images/svg-sprite/[hash].logos.svg'
+    name: 'images/svg-sprite/[hash].logos.svg'
 }
 require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
 

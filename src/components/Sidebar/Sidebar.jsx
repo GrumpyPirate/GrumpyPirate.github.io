@@ -9,8 +9,7 @@ import Routes from '../../config/routes'
 import './Sidebar.scss'
 
 // Images
-// import Logo from './avatar-ed--head-only.png'
-import Logo from './avatar-ed--head-only.png'
+import Logo from '../../images/avatar-ed--head-only.png'
 
 export default class Sidebar extends React.Component {
     constructor(props) {
@@ -26,9 +25,10 @@ export default class Sidebar extends React.Component {
                 <div className="sidebar__content container-fluid">
                     <Link to="/" className="sidebar__brand">
                         <img className="sidebar__brand__image" src={Logo} alt="" width="64" height="64"/>
-                        <span className="sidebar__brand__name ml-1">Doloribus<br/>expedita</span>
+                        {/*<span className="sidebar__brand__name ml-1">Doloribus<br/>expedita</span>*/}
+                        <span className="sidebar__brand__name ml-1">Edward<br/>Cobbold</span>
                     </Link>
-                    <span className="sidebar__brand__job-title">Sapiente ducimus</span>
+                    <span className="sidebar__brand__job-title">Frontend Developer</span>
 
                     <hr/>
 
