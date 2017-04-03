@@ -33,7 +33,7 @@ class WebDev extends React.Component {
                     <div className="row justify-content-center">
                         <div className="col-12 col-xl-10">
                             <header className="page-header last-child-mb-0">
-                                <h1 className="page-header__title">Doloremque</h1>
+                                <h1 className="page-header__title">Web Development</h1>
                                 <hr className="my-2"/>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur, ipsa rerum. Cum reprehenderit nostrum voluptates tempore, rem illum dolor ad, quisquam omnis laudantium.

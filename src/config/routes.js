@@ -12,25 +12,19 @@ const Routes = [
         exact: true,
         name: 'About',
         // name: 'Lorem',
-        components: {
-            content: About
-        }
+        component: About
     },
     // Route - Web Development
     {
         path: '/webdev',
         name: 'Web Development',
         // name: 'Asperiores eius',
-        components: {
-            content: WebDev
-        },
+        component: WebDev,
         routes: [
             {
                 path: '/test-project',
                 name: 'Test Project',
-                components: {
-                    content: TestProject
-                }
+                component: TestProject
             }
         ]
     },
@@ -39,9 +33,7 @@ const Routes = [
         path: '/digital-art',
         name: 'Digital Art',
         // name: 'Totam eligendi',
-        components: {
-            content: DigitalArt
-        }
+        component: DigitalArt
     }
 ] // /export default const Routes
 

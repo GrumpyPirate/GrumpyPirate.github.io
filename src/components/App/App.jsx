@@ -33,7 +33,7 @@ class App extends React.Component {
                                 key={index}
                                 path={route.path}
                                 exact={route.exact}
-                                component={route.components.content}
+                                component={route.component}
                             />
                         )}
                     </main>

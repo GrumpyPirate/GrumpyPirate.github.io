@@ -19,9 +19,9 @@ class TestProject extends Component {
     // Render
     // -----------------------------------------------------------------------------------------------------------------
     render() {
-        // return (
-
-        // )
+        return (
+            <h1>TEST</h1>
+        )
     } // /render()
 
     // componentDidUpdate

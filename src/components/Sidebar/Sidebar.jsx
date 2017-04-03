@@ -21,11 +21,10 @@ export default class Sidebar extends React.Component {
         const CURR_YEAR     = new Date().getFullYear()
 
         return (
-            <aside className="sidebar text-right">
+            <aside className="sidebar text-lg-right">
                 <div className="sidebar__content container-fluid">
                     <Link to="/" className="sidebar__brand">
-                        <img className="sidebar__brand__image" src={Logo} alt="" width="64" height="64"/>
-                        {/*<span className="sidebar__brand__name ml-1">Doloribus<br/>expedita</span>*/}
+                        <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>
                         <span className="sidebar__brand__name ml-1">Edward<br/>Cobbold</span>
                     </Link>
                     <span className="sidebar__brand__job-title">Frontend Developer</span>

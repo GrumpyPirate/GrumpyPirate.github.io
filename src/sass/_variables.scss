@@ -130,15 +130,15 @@ $hr-border-color: currentColor;
 $headings-margin-bottom: $paragraph-margin-bottom;
 $headings-line-height: 1.2;
 $headings-font-weight: weight(extralight);
-$headings-letter-spacing: .25em;
+$headings-letter-spacing: .2em;
 
 // Desktop sizes
 $font-size-h1: rem(80px);
 $font-size-h2: rem(56px);
-// $font-size-h3: 1.75rem;
-// $font-size-h4: 1.5rem;
-// $font-size-h5: 1.25rem;
-// $font-size-h6: 1rem;
+$font-size-h3: rem(48px);
+$font-size-h4: rem(24px);
+$font-size-h5: 1rem;
+$font-size-h6: rem(14px);
 
 // // Headings - Mobile sizes
 $font-size-h1-mobile: $font-size-h1 * .75;
@@ -286,8 +286,10 @@ $input-transition: color $anim-dur $anim-ease,
 // App Components
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
+$sidebar-height-mobile: rem(72px);
 $sidebar-width: rem(320px);
 $sidebar-border-color: palette(theme-light);
+$sidebar-zindex: 10;
 
 // Modal
 $modal-padding: 1rem;

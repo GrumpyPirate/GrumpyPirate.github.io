@@ -10,19 +10,25 @@ body {
 } // /body
 
 .app {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
+    padding-top: $sidebar-height-mobile;
+
+    // lg up
+    @include media-breakpoint-up(lg) {
+        padding-top: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+    } // /lg up
 } // /.app
 
 .content-container {
     // lg up
-    // @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
         flex: 1 1 auto;
         height: 100vh;
         overflow-y: auto;
         touch-action: pan-y;
-    // } // /lg up
+    } // /lg up
 } // /.content-container
 
 .page-header {
@@ -31,5 +37,10 @@ body {
 
     &__title {
         color: palette(theme-accent-2);
+
+        // md down
+        @include media-breakpoint-down(md) {
+            word-break: break-all;
+        } // /md down
     } // /&__title
 } // /.page-header
