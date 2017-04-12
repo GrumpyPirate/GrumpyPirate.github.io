@@ -206,11 +206,12 @@ $spacers: (
     )
 );
 
-$body-bg:    palette(theme-dark);
+// $body-bg:    palette(theme-light);
+$body-bg: darken(palette(white), 5%);
 // $content-bg: palette(white);
 
-$body-color: lighten(desaturate(palette(theme-dark), 25%), 50%);
-// $body-color: palette(theme-dark);
+// $body-color: lighten(desaturate(palette(theme-dark), 25%), 50%);
+$body-color: palette(theme-dark);
 
 // Border radii
 $border-radius-sm: rem(4px);

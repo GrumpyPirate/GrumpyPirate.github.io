@@ -94,13 +94,22 @@ module.exports = {
                     use: [
                         {
                             loader: 'css-loader',
-                            options: { importLoaders: 1 }
+                            options: {
+                                 importLoaders: 1,
+                                 sourceMap: true
+                            }
                         },
-                        'postcss-loader',
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: 'inline'
+                            }
+                        },
                         {
                             loader: 'sass-loader',
                             options: {
-                                includePaths: [__dirname + '/src/sass']
+                                includePaths: [__dirname + '/src/sass'],
+                                sourceMap: true
                             }
                         }
                     ],
