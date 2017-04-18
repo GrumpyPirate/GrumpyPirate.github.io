@@ -74,6 +74,11 @@ module.exports = {
     },
     // Resolve SCSS image (url('...')s)
     resolve: {
+        extensions: [
+            '.js',
+            '.jsx',
+            '.json'
+        ],
         alias: {
             'images': __dirname + '/public/images'
         }

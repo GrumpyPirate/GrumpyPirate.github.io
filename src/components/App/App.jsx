@@ -4,12 +4,14 @@ import React from 'react'
 // Router
 import {
     BrowserRouter as Router,
+    Switch,
     Route
 } from 'react-router-dom'
 import Routes from '../../config/routes'
 
 // Components
 import Sidebar from '../Sidebar/Sidebar.jsx'
+import HTTPNotFound from '../404/404.jsx'
 
 // SCSS
 import './App.scss'
@@ -27,15 +29,19 @@ class App extends React.Component {
             <Router>
                 <div className="app">
                     <Sidebar />
+
                     <main className="content-container">
-                        {Routes.map((route, index) =>
-                            <Route
-                                key={index}
-                                path={route.path}
-                                exact={route.exact}
-                                component={route.component}
-                            />
-                        )}
+                        <Switch>
+                            {Routes.map((route, index) =>
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={route.component}
+                                />
+                            )}
+                            <Route component={HTTPNotFound}/>
+                        </Switch>
                     </main>
                 </div>
             </Router>

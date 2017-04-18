@@ -1,0 +1,20 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+** Global layout styles that apply to all document content
+** ------------------------------------------------------------------------------------------------------------------ */
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+.page-header {
+    margin-bottom: $grid-gutter-width;
+
+    &__title {
+        // color: palette(theme-dark);
+        color: $headings-color;
+
+        // md down
+        @include media-breakpoint-down(md) {
+            word-break: break-all;
+        } // /md down
+    } // /&__title
+} // /.page-header

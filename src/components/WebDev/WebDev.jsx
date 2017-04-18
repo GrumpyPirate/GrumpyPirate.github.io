@@ -1,7 +1,9 @@
 // React
 import React from 'react'
 
-import PageContainer from '../PageContainer/PageContainer.jsx'
+import PageContainer     from '../PageContainer/PageContainer.jsx'
+import PageContent       from '../PageContent/PageContent.jsx'
+import PageHeader        from '../PageHeader/PageHeader.jsx'
 import TestPortfolioItem from '../TestPortfolioItem/TestPortfolioItem.jsx'
 
 // Style
@@ -29,23 +31,13 @@ class WebDev extends React.Component {
     render() {
         return (
             <PageContainer>
-                <div className="container-fluid">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-xl-10">
-                            <header className="page-header last-child-mb-0">
-                                <h1 className="page-header__title">Web Development</h1>
-                                <hr className="my-2"/>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur, ipsa rerum. Cum reprehenderit nostrum voluptates tempore, rem illum dolor ad, quisquam omnis laudantium.
-                                </p>
-                            </header>
+                <PageContent>
+                    <section className="portfolio">
+                        <PageHeader title="Libero Aspernatur" subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur, ipsa rerum. Cum reprehenderit nostrum voluptates tempore, rem illum dolor ad, quisquam omnis laudantium." />
 
-                            <section className="portfolio">
-                                <PortfolioList {...this.props} />
-                            </section>
-                        </div>
-                    </div>
-                </div>
+                        <PortfolioList {...this.props} />
+                    </section>
+                </PageContent>
             </PageContainer>
         )
     } // /render()

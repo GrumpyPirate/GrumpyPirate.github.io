@@ -24,10 +24,13 @@ export default class Sidebar extends React.Component {
             <aside className="sidebar text-lg-right">
                 <div className="sidebar__content container-fluid">
                     <Link to="/" className="sidebar__brand">
-                        <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>
-                        <span className="sidebar__brand__name ml-1">Edward<br/>Cobbold</span>
+                        {/*<img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>*/}
+                        <img className="sidebar__brand__image" src="https://placehold.it/52x52/cc33cc/ffffff" alt="" width="52" height="52"/>
+                        {/*<span className="sidebar__brand__name ml-1">Edward<br/>Cobbold</span>*/}
+                        <span className="sidebar__brand__name ml-1">Deserunt<br/>commodi</span>
                     </Link>
-                    <span className="sidebar__brand__job-title">Frontend Developer</span>
+                    {/*<span className="sidebar__brand__job-title">Frontend Developer</span>*/}
+                    <span className="sidebar__brand__job-title">Architecto quasi</span>
 
                     <hr/>
 

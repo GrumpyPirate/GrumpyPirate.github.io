@@ -30,17 +30,3 @@ body {
         touch-action: pan-y;
     } // /lg up
 } // /.content-container
-
-.page-header {
-    padding-top: $grid-gutter-width;
-    margin-bottom: $grid-gutter-width;
-
-    &__title {
-        color: palette(theme-accent-2);
-
-        // md down
-        @include media-breakpoint-down(md) {
-            word-break: break-all;
-        } // /md down
-    } // /&__title
-} // /.page-header

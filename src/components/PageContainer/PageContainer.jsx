@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 // SCSS
-// import './PageContainer.scss'
+import './PageContainer.scss'
 
 // Component
 class PageContainer extends Component {

@@ -41,6 +41,9 @@ $palette: (
     pinterest:     #cb2027
 );
 
+// $headings-color: mix(palette(theme-accent-2), palette(theme-dark), 12.5%);
+$headings-color: desaturate(palette(theme-accent-2), 50%);
+
 // Typography
 // ---------------------------------------------------------------------------------------------------------------------
 $font-path: '#{$static-path}/fonts';
@@ -288,7 +291,7 @@ $input-transition: color $anim-dur $anim-ease,
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
 $sidebar-height-mobile: rem(72px);
-$sidebar-width: rem(320px);
+$sidebar-width: rem(260px);
 $sidebar-border-color: palette(theme-light);
 $sidebar-zindex: 10;
 
