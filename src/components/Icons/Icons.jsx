@@ -4,17 +4,17 @@ import React, { Component } from 'react'
 // SCSS
 import './Icons.scss'
 
-// SVGStore plugin - load all SVGs
-const __svg__ = {
-    path: './svg/**/*.svg',
-    name: 'images/svg-sprite/[hash].logos.svg'
+// Import icon SVGs
+import close from './svg/close.svg'
+
+const icons = {
+  close
 }
-require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
 
 // Component
-const Icon = ({glyph, className = 'icon'}) => (
-    <svg className={className}>
-        <use xlinkHref={`#icon-${glyph}`} />
+const Icon = ({glyph, className = 'icon', width = 32, height= 32}) => (
+    <svg className={className} width={width} height={height}>
+        <use xlinkHref={icons[glyph]} />
     </svg>
 )
 
