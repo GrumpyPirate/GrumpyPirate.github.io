@@ -20,7 +20,7 @@ class AboutSection extends Component {
           ? <h2 className="h4 about__section__title about__section__title--has-icon">
             {this.props.title}
             <figure className="about__section__title-icon">
-              <Icon glyph="laptopMac" />
+              <Icon glyph={this.props.icon} />
             </figure>
           </h2>
           : <h2 className="h4 about__section__title">{this.props.title}</h2>

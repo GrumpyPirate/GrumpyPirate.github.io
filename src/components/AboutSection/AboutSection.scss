@@ -51,11 +51,16 @@
 
       &__icon {
         display: block;
-        font-size: rem(80px);
+        font-size: $font-size-h3;
         text-align: center;
-        flex: 1;
-        padding: 0 rem(10px);
+        flex: 0 1 auto;
+        padding: 0 ($grid-gutter-width / 2);
         margin-bottom: $paragraph-margin-bottom;
+
+        // md up
+        @include media-breakpoint-up(md) {
+          font-size: $font-size-h1;
+        } // /md up
       } // /&__icon
     } // /&__graphic
 
@@ -63,6 +68,11 @@
       margin-bottom: $paragraph-margin-bottom;
       padding-bottom: $paragraph-margin-bottom;
       border-bottom: solid $hr-border-width $section-border-color;
+
+      // md up
+      @include media-breakpoint-up(md) {
+        margin-bottom: 3rem;
+      } // /md up
     } // /&:not(:last-of-type)
   } // /&__section
 } // /.about

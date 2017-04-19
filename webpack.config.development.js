@@ -1,7 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HTMLWebpackPlugin = require('html-webpack-plugin')
-var FaviconsPlugin = require('favicons-webpack-plugin')
-var CleanPlugin = require('clean-webpack-plugin')
+var FaviconsPlugin    = require('favicons-webpack-plugin')
+var CleanPlugin       = require('clean-webpack-plugin')
 
 // Paths
 const paths = {
@@ -39,7 +39,7 @@ const config = {
       // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
       background: '#2b978a',
       // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-      title: 'Edward Cobbold - Portfolio',
+      title: 'Edward Cobbold - Frontend Developer',
 
       // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
       icons: {
@@ -134,9 +134,9 @@ module.exports = {
               },
               optipng: {
                 optimizationLevel: 3
-              },
+              }/*,
               gifsicle: {},
-              svgo: {}
+              svgo: {}*/
             }
           }
         ],

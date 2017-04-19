@@ -42,6 +42,42 @@ class About extends Component {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quisquam repellendus libero, ab dolore labore. Amet consectetur, blanditiis consequatur debitis sint tempore sit animi!
             </p>
           </AboutSection>
+
+          <AboutSection title="Nihil magni ipsa maxime recusandae" icon="code">
+            <figure className="about__section__graphic about__section__graphic--languages">
+              <div className="about__section__graphic__icon">
+                <Icon glyph="html5" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="javascript" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="sass" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="less" />
+              </div>
+            </figure>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+            </p>
+          </AboutSection>
+
+          <AboutSection title="Nihil magni ipsa maxime recusandae" icon="palette">
+            <figure className="about__section__graphic about__section__graphic--design">
+              <div className="about__section__graphic__icon">
+                <Icon glyph="photoshop" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="illustrator" />
+              </div>
+            </figure>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+            </p>
+          </AboutSection>
         </PageContent>
       </PageContainer>
     )

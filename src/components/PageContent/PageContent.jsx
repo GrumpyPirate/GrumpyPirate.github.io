@@ -16,7 +16,7 @@ class PageContent extends Component {
       <div className={`page__content${alignClass}`}>
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-12 col-xl-10">
+            <div className="col-12 col-sm-10 col-lg-12 col-xl-10">
               {this.props.children}
             </div>
           </div>
