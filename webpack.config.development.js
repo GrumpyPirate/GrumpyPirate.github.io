@@ -66,7 +66,7 @@ const config = {
 // Export
 module.exports = {
   entry: [
-    './src/index.jsx'
+    `${paths.src}/index.jsx`
   ],
   output: {
     path: paths.build,
@@ -140,13 +140,19 @@ module.exports = {
             }
           }
         ],
-        exclude: paths.componentSrc
+        exclude: [
+          paths.componentSrc,
+          /node_modules/
+        ]
       },
       // SVG Sprites
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
-        include: paths.componentSrc,
+        include: [
+          paths.componentSrc,
+          /node_modules/
+        ],
         exclude: paths.imgSrc
       }
     ]

@@ -1,8 +1,10 @@
 - Frontend developer from Essex, currently working in London.
 
 MACHINE
-	- Currently work on a Mac
 	- Comfortable with Mac and Windows
+		- Currently work on a Mac
+	- I use Sublime Text 3
+		- Have used Atom
 
 WHAT I CAN DO
 	I'm comfortable with these languages:
@@ -28,20 +30,32 @@ WHAT I CAN DO
 		- Bootstrap 3 - 8/10
 		- Foundation -  5/10
 
+	Application Frameworks I've worked with:
+		- Django
+		- React
+		- Laravel
+		- Angular 1
+		- MEAN stack
+
+THINGS I'M GETTING INTO
 	I'm currently learning:
 		- React
 		- Express
 
-	I'd love to work more closely with:
+	In future, I'd love to work more closely with:
 		- Node
 		- React
 		- Redux
+		- Flux
 		- Angular 2
 		- Express
 		- Bulma CSS
 
 WHEN I'M NOT AT MY DESK
 	- Running at the gym
+	- Reading fantasy
+		- Robin Hobb, Rain Wild Chronicles
+		- Patrick Rothfuss, Name of the Wind
 	- Music
 	- PC/PS4 games
 		- Stardew Valley
