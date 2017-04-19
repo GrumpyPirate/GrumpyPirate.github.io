@@ -10,8 +10,8 @@ import {
 import Routes from '../../config/routes'
 
 // Components
-import Sidebar from '../Sidebar/Sidebar.jsx'
-import HTTPNotFound from '../404/404.jsx'
+import Sidebar from '../Sidebar/Sidebar'
+import HTTPNotFound from '../404/404'
 
 // SCSS
 import './App.scss'

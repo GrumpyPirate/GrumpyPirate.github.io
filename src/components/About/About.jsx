@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import PageContainer from '../PageContainer/PageContainer'
 import PageContent   from '../PageContent/PageContent'
 import PageHeader    from '../PageHeader/PageHeader'
-import AboutSection  from '../AboutSection/AboutSection'
+// import AboutSection  from '../AboutSection/AboutSection'
 
 class About extends React.Component {
     constructor(props) {
@@ -17,8 +17,6 @@ class About extends React.Component {
             <PageContainer>
                 <PageContent>
                     <PageHeader title="Hello"/>
-
-                    <AboutSection />
                 </PageContent>
             </PageContainer>
         )

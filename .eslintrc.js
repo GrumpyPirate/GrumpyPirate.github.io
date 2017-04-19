@@ -1,4 +1,4 @@
-{
+module.exports = {
     "env": {
         "browser": true,
         "commonjs": true,
@@ -31,7 +31,6 @@
         "semi": [
             "error",
             "never"
-        ],
-        "no-console": false
+        ]
     }
-}
+};
