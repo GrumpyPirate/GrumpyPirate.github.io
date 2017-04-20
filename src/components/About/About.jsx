@@ -78,6 +78,80 @@ class About extends Component {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
             </p>
           </AboutSection>
+
+          <AboutSection title="Nihil magni ipsa maxime recusandae" icon="settingsApplications">
+            <figure className="about__section__graphic about__section__graphic--design">
+              <div className="about__section__graphic__icon">
+                <Icon glyph="code" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="webpack" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="gulp" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="grunt" />
+              </div>
+            </figure>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+            </p>
+          </AboutSection>
+
+          <AboutSection title="Nihil magni ipsa maxime recusandae" icon="palette">
+            <figure className="about__section__graphic about__section__graphic--design">
+              <div className="about__section__graphic__icon">
+                <Icon glyph="bootstrap" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="foundation" />
+              </div>
+            </figure>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+            </p>
+          </AboutSection>
+
+          <AboutSection title="Nihil magni ipsa maxime recusandae" icon="code">
+            <figure className="about__section__graphic about__section__graphic--design">
+              <div className="about__section__graphic__icon">
+                <Icon glyph="django" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="react" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="laravel" />
+              </div>
+              <div className="about__section__graphic__icon">
+                <Icon glyph="angular" />
+              </div>
+            </figure>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+            </p>
+          </AboutSection>
+
+          <AboutSection title="Nihil magni ipsa maxime recusandae" icon="code">
+            <div className="row align-items-md-center">
+              <div className="col-12 col-md-4 push-md-8">
+                <figure className="about__section__graphic about__section__graphic--design">
+                  <div className="about__section__graphic__icon about__section__graphic__icon--large">
+                    <Icon glyph="react" />
+                  </div>
+                </figure>
+              </div>
+              <div className="col-12 col-md-8 pull-md-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+                </p>
+              </div>
+            </div>
+          </AboutSection>
         </PageContent>
       </PageContainer>
     )
