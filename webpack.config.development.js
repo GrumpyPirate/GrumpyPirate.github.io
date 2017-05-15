@@ -83,6 +83,7 @@ module.exports = {
       'images': paths.imgSrc
     }
   },
+  devtool: 'cheap-module-eval-source-map',
   module: {
     loaders: [
       // React JSX
@@ -159,10 +160,11 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
+    // hot: true,
     port: 3000,
     overlay: true,
-    // open: true,
-    historyApiFallback: true
+    open: true,
+    // historyApiFallback: true
   },
   plugins: [
     new CleanPlugin(['./dist'], config.plugins.clean),

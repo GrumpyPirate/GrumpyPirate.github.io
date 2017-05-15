@@ -18,6 +18,7 @@ import atom        from './svg/editors/atom.svg'
 import sublime     from './svg/editors/sublime.svg'
 
 import javascript  from './svg/development/js/javascript.svg'
+import babel       from './svg/development/js/babel.svg'
 import react       from './svg/development/js/react.svg'
 import angular     from './svg/development/js/angular.svg'
 import express     from './svg/development/js/express.svg'
@@ -40,6 +41,7 @@ import laravel     from './svg/development/laravel.svg'
 
 import photoshop   from './svg/design/photoshop.svg'
 import illustrator from './svg/design/illustrator.svg'
+import sketch      from './svg/design/sketch.svg'
 
 
 const icons = {
@@ -55,6 +57,7 @@ const icons = {
   apple,
   html5,
   javascript,
+  babel,
   sass,
   less,
   webpack,
@@ -67,6 +70,7 @@ const icons = {
   laravel,
   angular,
   photoshop,
+  sketch,
   illustrator
 } // /const icons
 

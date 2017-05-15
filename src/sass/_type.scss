@@ -41,9 +41,9 @@ a {
         outline: none;
     } // /&:focus
 
-    // &:active,
+    &:active,
     &.active {
-        color: $link-hover-color;
+        color: $link-color;
     } // /active links
 } // /a
 

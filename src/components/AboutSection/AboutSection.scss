@@ -60,7 +60,7 @@
 
         // md up
         @include media-breakpoint-up(md) {
-          font-size: $font-size-h1;
+          font-size: $font-size-h1 * 1.5;
         } // /md up
 
         // Variant - large

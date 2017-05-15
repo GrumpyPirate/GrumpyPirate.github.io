@@ -50,6 +50,10 @@ $navbar-height: rem(72px);
         // color: inherit;
         text-transform: uppercase;
         font-weight: weight(light);
+
+        &.active {
+          color: $link-hover-color;
+        } // /&.active
     } // /&__nav-link
 
     // Brand (Logo/Text)
