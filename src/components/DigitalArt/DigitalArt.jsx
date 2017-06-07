@@ -21,7 +21,7 @@ class DigitalArt extends React.Component {
                         <div className="row">
                             <div className="col-12 col-sm-4">
                                 <figure>
-                                    <img src="https://unsplash.it/400/300/?random" alt="" className="img-fluid w-100" srcSet="https://unsplash.it/400/300/?random 1x, https://unsplash.it/800/600/?random 2x"/>
+                                    <img src="https://unsplash.it/400/300/?random" alt="" width="400" height="300" className="img-fluid w-100" srcSet="https://unsplash.it/400/300/?random 1x, https://unsplash.it/800/600/?random 2x"/>
                                 </figure>
                                 <h2 className="h4">Lorem ipsum dolor sit.
                                 </h2>
@@ -29,7 +29,7 @@ class DigitalArt extends React.Component {
                             </div>
                             <div className="col-12 col-sm-4">
                                 <figure>
-                                    <img src="https://unsplash.it/400/300/?random" alt="" className="img-fluid w-100" srcSet="https://unsplash.it/400/300/?random 1x, https://unsplash.it/800/600/?random 2x"/>
+                                    <img src="https://unsplash.it/400/300/?random" alt="" width="400" height="300" className="img-fluid w-100" srcSet="https://unsplash.it/400/300/?random 1x, https://unsplash.it/800/600/?random 2x"/>
                                 </figure>
                                 <h2 className="h4">Dolore, dolorum! Numquam, facilis.
                                 </h2>
@@ -37,7 +37,7 @@ class DigitalArt extends React.Component {
                             </div>
                             <div className="col-12 col-sm-4">
                                 <figure>
-                                    <img src="https://unsplash.it/400/300/?random" alt="" className="img-fluid w-100" srcSet="https://unsplash.it/400/300/?random 1x, https://unsplash.it/800/600/?random 2x"/>
+                                    <img src="https://unsplash.it/400/300/?random" alt="" width="400" height="300" className="img-fluid w-100" srcSet="https://unsplash.it/400/300/?random 1x, https://unsplash.it/800/600/?random 2x"/>
                                 </figure>
                                 <h2 className="h4">Aperiam est accusantium quam?
                                 </h2>

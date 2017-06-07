@@ -3,7 +3,9 @@ import React from 'react'
 
 // Routing
 import { NavLink, Link } from 'react-router-dom'
-import Routes from '../../config/routes'
+
+// Components
+import Sitenav from 'components/Sitenav/Sitenav.jsx'
 
 // SCSS
 import './Sidebar.scss'
@@ -11,43 +13,61 @@ import './Sidebar.scss'
 // Images
 import Logo from 'images/avatar-ed--head-only.png'
 
-export default class Sidebar extends React.Component {
+class Sidebar extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      navMenuOpen: false
+    }
+
+    // Lexical this binding
+    this.toggleMenu = this.toggleMenu.bind(this)
   } // /constructor(props)
+
+  toggleMenu() {
+    this.setState({
+      navMenuOpen: !this.state.navMenuOpen
+    })
+  } // /openMenu()
 
   render() {
     const CREATION_YEAR = 2017
     const CURR_YEAR     = new Date().getFullYear()
+    const navMenuOpen   = this.state.navMenuOpen
 
     return (
       <aside className="sidebar text-lg-right">
         <div className="sidebar__content container-fluid">
           <Link to="/" className="sidebar__brand">
-            {/*<img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>*/}
-            <img className="sidebar__brand__image" src="https://placehold.it/52x52" alt="" width="52" height="52"/>
-            {/*<span className="sidebar__brand__name ml-1">Edward<br/>Cobbold</span>*/}
-            <span className="sidebar__brand__name ml-1">Deserunt<br/>commodi</span>
+            <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>
+            <span className="sidebar__brand__name ml-1">Edward Cobbold</span>
           </Link>
-          {/*<span className="sidebar__brand__job-title">Frontend Developer</span>*/}
-          <span className="sidebar__brand__job-title">Architecto quasi</span>
+          <span className="sidebar__brand__job-title hidden-md-down">Frontend Developer</span>
 
-          <hr/>
+          <hr className="hidden-md-down"/>
 
-          <ul className="sidebar__nav list-unstyled m-0" role="navigation">
-            {Routes.map((route, index) =>
-              (
-                <li className="sidebar__nav-item" key={index}>
-                  <NavLink to={route.path} exact={route.exact} className="sidebar__nav-link">
-                    {route.name}
-                  </NavLink>
-                </li>
-              )
-            )}
-          </ul>
+          {/* Mobile nav */}
+          <div className="hidden-md-up">
+            <button type="button" className="sidebar__btn-sitenav" onClick={this.toggleMenu} aria-expanded={navMenuOpen}>
+              <span className="burger-bar"></span>
+              <span className="sr-only">Toggle menu</span>
+            </button>
+
+            <menu className="sidebar__menu" hidden={!navMenuOpen}>
+              <div className="container-fluid">
+                <Sitenav/>
+              </div>
+            </menu>
+          </div>
+
+          {/* Tablet+ nav */}
+          <div className="hidden-sm-down">
+            <Sitenav/>
+          </div>
         </div>
 
-        <div className="sidebar__credits">
+        <div className="sidebar__credits hidden-md-down">
           <div className="container-fluid">
             <p>
               <small>&copy; {CURR_YEAR > CREATION_YEAR ?
@@ -61,3 +81,5 @@ export default class Sidebar extends React.Component {
     )
   } // /render()
 } // /export default class Sidebar extends React.Component
+
+export default Sidebar

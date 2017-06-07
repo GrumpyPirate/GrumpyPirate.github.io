@@ -10,15 +10,15 @@ const Routes = [
   {
     path: '/',
     exact: true,
-    // name: 'About',
-    name: 'Lorem',
+    name: 'About',
+    // name: 'Lorem',
     component: About
   },
   // Route - Web Development
   {
     path: '/webdev',
-    // name: 'Web Development',
-    name: 'Asperiores eius',
+    name: 'Web Development',
+    // name: 'Asperiores eius',
     component: WebDev,
     routes: [
       {
@@ -31,8 +31,8 @@ const Routes = [
   // Route - Digital Art
   {
     path: '/digital-art',
-    // name: 'Digital Art',
-    name: 'Totam eligendi',
+    name: 'Digital Art',
+    // name: 'Totam eligendi',
     component: DigitalArt
   }
 ] // /export default const Routes

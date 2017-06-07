@@ -132,7 +132,7 @@ $hr-border-color: currentColor;
 // Headings
 $headings-margin-bottom: $paragraph-margin-bottom;
 $headings-line-height: 1.2;
-$headings-font-weight: weight(extralight);
+$headings-font-weight: weight(light);
 $headings-letter-spacing: .2em;
 
 // Desktop sizes
@@ -227,7 +227,7 @@ $transition-collapse: height ($anim-dur * 3) ease(ease-out-expo);
 
 // Links
 $link-color:        palette(theme-mid);
-$link-hover-color:  palette(theme-light);
+$link-hover-color:  palette(theme-accent-1);
 $link-active-color: darken($link-hover-color, 15%);
 
 $link-decoration:       none;
@@ -290,6 +290,7 @@ $input-transition: color $anim-dur $anim-ease,
 // App Components
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
+$sidebar-height: rem(72px);
 $sidebar-height-mobile: rem(72px);
 $sidebar-width: rem(260px);
 $sidebar-border-color: palette(theme-light);

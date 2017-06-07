@@ -80,6 +80,7 @@ module.exports = {
       '.json'
     ],
     alias: {
+      'components': paths.componentSrc,
       'images': paths.imgSrc
     }
   },
