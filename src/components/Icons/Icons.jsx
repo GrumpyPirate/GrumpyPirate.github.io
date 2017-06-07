@@ -65,6 +65,7 @@ const icons = {
   grunt,
   bootstrap,
   foundation,
+  bulma,
   django,
   react,
   laravel,

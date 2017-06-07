@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 // Components
-import Icon from '../Icons/Icons'
+// import Icon from '../Icons/Icons'
 
 // SCSS
 import './AboutSection.scss'
@@ -16,15 +16,7 @@ class AboutSection extends Component {
   render() {
     return (
       <div className="about__section">
-        {this.props.icon
-          ? <h2 className="h4 about__section__title about__section__title--has-icon">
-            {this.props.title}
-            <figure className="about__section__title-icon">
-              <Icon glyph={this.props.icon} />
-            </figure>
-          </h2>
-          : <h2 className="h4 about__section__title">{this.props.title}</h2>
-        }
+        <h2 className="h3 about__section__title mb-3">{this.props.title}</h2>
 
         {this.props.children}
       </div>

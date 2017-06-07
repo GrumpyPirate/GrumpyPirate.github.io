@@ -84,7 +84,7 @@ module.exports = {
       'images': paths.imgSrc
     }
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   module: {
     loaders: [
       // React JSX
