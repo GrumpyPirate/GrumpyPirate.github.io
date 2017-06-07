@@ -63,12 +63,13 @@
         line-height: 1;
         text-align: center;
         flex: 0 1 auto;
-        padding: 0 ($grid-gutter-width / 2);
+        padding: 0 ($grid-gutter-width / 4);
         margin-bottom: $paragraph-margin-bottom;
 
         // lg up
         @include media-breakpoint-up(lg) {
           font-size: $font-size-h1 * 1.5;
+          padding: 0 ($grid-gutter-width / 2);
         } // /lg up
 
         // Variant - large
