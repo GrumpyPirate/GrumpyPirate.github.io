@@ -1,5 +1,6 @@
 // React
 import React, { Component } from 'react'
+import ClassNames from 'classnames'
 
 // Routing
 import { NavLink } from 'react-router-dom'
@@ -15,9 +16,10 @@ import Icon          from '../Icons/Icons'
 import './About.scss'
 
 const AboutIcon = ({ iconName, largeIcon }) => {
-  const iconClass = largeIcon
-    ? 'about__section__graphic__icon about__section__graphic__icon--large'
-    : 'about__section__graphic__icon'
+  const iconClass = ClassNames({
+    'about__section__graphic__icon--large': largeIcon ? true : false,
+    'about__section__graphic__icon': true,
+  })
 
   return (
     <div className={iconClass}>
