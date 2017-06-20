@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom'
 import App from './components/App/App.jsx'
 
 // Styles
-import './global.scss'
+import './sass/global.scss'
 
 // Housekeeping
 document.documentElement.classList.remove('no-js')

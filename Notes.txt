@@ -18,6 +18,7 @@ WHAT I CAN DO
 		- Photoshop - 8/10
 		- Illustrator - 7/10
 		- Sketch - 6/10
+		- Zeplin - 6/10
 
 	I use the following build tools during dev:
 		- Command line (bash) - 6/10
