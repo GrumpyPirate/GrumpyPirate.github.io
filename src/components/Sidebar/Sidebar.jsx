@@ -41,9 +41,11 @@ class Sidebar extends React.Component {
         <div className="sidebar__content container-fluid">
           <Link to="/" className="sidebar__brand">
             <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>
-            <span className="sidebar__brand__name ml-1">Edward Cobbold</span>
+            {/*<span className="sidebar__brand__name ml-1">Edward Cobbold</span>*/}
+            <span className="sidebar__brand__name ml-1">Lorem Ipsum</span>
           </Link>
-          <span className="sidebar__brand__job-title hidden-md-down">Frontend Developer</span>
+          {/*<span className="sidebar__brand__job-title hidden-md-down">Frontend Developer</span>*/}
+          <span className="sidebar__brand__job-title hidden-md-down">Culpa similique</span>
 
           <hr className="hidden-md-down"/>
 

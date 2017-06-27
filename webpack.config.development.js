@@ -7,7 +7,7 @@ var CleanPlugin       = require('clean-webpack-plugin')
 const paths = {
   src:          `${__dirname}/src`,
   build:        `${__dirname}/dist`,
-  imgSrc:       `${__dirname}/src/images`,
+  imgSrc:       `${__dirname}/public/images`,
   sassSrc:      `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`
 } // /const paths
@@ -113,6 +113,7 @@ module.exports = {
                 sourceMap: 'inline'
               }
             },
+            'resolve-url-loader',
             {
               loader: 'sass-loader',
               options: {

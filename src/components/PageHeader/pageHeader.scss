@@ -17,4 +17,20 @@
             word-break: break-all;
         } // /md down
     } // /&__title
+
+    &__hex {
+      width: rem(300px);
+      height: rem(300px);
+      margin: 0 auto;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        mask-image: url('images/mask-hex.svg#shape');
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+      } // /img
+    } // /&__hex
 } // /.page-header
