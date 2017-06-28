@@ -1,36 +1,59 @@
-/* ---------------------------------------------------------------------------------------------------------------------
-** Global layout styles that apply to all document content
-** ------------------------------------------------------------------------------------------------------------------ */
 @import 'functions';
 @import 'variables';
 @import 'mixins';
 
 .page-header {
-    margin-bottom: $grid-gutter-width;
+  margin: 0 0 ($paragraph-margin-bottom * 2);
+  position: relative;
 
-    &__title {
-        // color: palette(theme-dark);
-        color: $headings-color;
+  // md up
+  @include media-breakpoint-up(md) {
+    margin-bottom: $paragraph-margin-bottom * 4;
+  } // /md up
 
-        // md down
-        @include media-breakpoint-down(md) {
-            word-break: break-all;
-        } // /md down
-    } // /&__title
+  &__hex {
+    width: rem(200px);
+    height: rem(200px);
+    margin: 0 auto;
 
-    &__hex {
+    // md up
+    @include media-breakpoint-up(md) {
       width: rem(300px);
       height: rem(300px);
-      margin: 0 auto;
+    } // /md up
 
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        mask-image: url('images/mask-hex.svg#shape');
-        mask-size: contain;
-        mask-position: center;
-        mask-repeat: no-repeat;
-      } // /img
-    } // /&__hex
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      mask-image: url('images/mask-hex.svg#shape');
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: palette(theme-dark);
+    } // /img
+  } // /&__hex
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    color: $headings-color;
+    background-color: $body-bg;
+
+    &::first-letter {
+      margin-left: $headings-letter-spacing + .05em;
+    } // /&::first-letter
+
+    // md down
+    @include media-breakpoint-down(md) {
+      word-break: break-all;
+    } // /md down
+  } // /&__title
+
+  // &__subtitle {
+
+  // } // /&__subtitle
 } // /.page-header

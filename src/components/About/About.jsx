@@ -1,39 +1,21 @@
 // React
 import React, { Component } from 'react'
-import ClassNames from 'classnames'
 
 // Routing
 import { NavLink } from 'react-router-dom'
 
 // Components
-import PageContainer from '../PageContainer/PageContainer'
-import PageContent   from '../PageContent/PageContent'
-import PageHeader    from '../PageHeader/PageHeader'
-import AboutSection  from '../AboutSection/AboutSection'
-import Icon          from '../Icons/Icons'
+import PageContainer from 'components/PageContainer/PageContainer'
+import PageContent from 'components/PageContent/PageContent'
+import PageHeader from 'components/PageHeader/PageHeader'
+import AboutSection from 'components/AboutSection/AboutSection'
+import AboutIcon from 'components/AboutIcon/AboutIcon'
 
 // SCSS
 import './About.scss'
 
-const AboutIcon = ({ iconName, largeIcon }) => {
-  const iconClass = ClassNames({
-    'about__section__graphic__icon--large': largeIcon ? true : false,
-    'about__section__graphic__icon': true,
-  })
-
-  return (
-    <div className={iconClass}>
-      <Icon glyph={iconName} />
-    </div>
-  )
-} // /const AboutIcon = (iconName)
-
 class About extends Component {
-  constructor(props) {
-    super(props)
-  } // /constructor(props)
-
-  render() {
+  render () {
     return (
       <PageContainer>
         <PageContent>
@@ -46,7 +28,7 @@ class About extends Component {
             Now that's out of the way, <NavLink to="/webdev">check out my portfolio</NavLink>.
           </p>
 
-          {/*<AboutSection title="Languages I work with" icon="code">*/}
+          {/* <AboutSection title="Languages I work with" icon="code"> */}
           <AboutSection title="Languages">
             <figure className="about__section__graphic about__section__graphic--languages">
               <AboutIcon iconName="html5" />
@@ -68,7 +50,7 @@ class About extends Component {
             </div>
           </AboutSection>
 
-          {/*<AboutSection title="Design software I use" icon="palette">*/}
+          {/* <AboutSection title="Design software I use" icon="palette"> */}
           <AboutSection title="Design software">
             <figure className="about__section__graphic about__section__graphic--design">
               <AboutIcon iconName="photoshop" />
@@ -89,7 +71,7 @@ class About extends Component {
             </div>
           </AboutSection>
 
-          {/*<AboutSection title="Build tools I make apps with" icon="settingsApplications">*/}
+          {/* <AboutSection title="Build tools I make apps with" icon="settingsApplications"> */}
           <AboutSection title="Build tools">
             <figure className="about__section__graphic about__section__graphic--design">
               <AboutIcon iconName="code" />
@@ -107,7 +89,7 @@ class About extends Component {
             </div>
           </AboutSection>
 
-          {/*<AboutSection title="CSS frameworks I like" icon="palette">*/}
+          {/* <AboutSection title="CSS frameworks I like" icon="palette"> */}
           <AboutSection title="CSS frameworks">
             <figure className="about__section__graphic about__section__graphic--design">
               <AboutIcon iconName="bootstrap" />
@@ -132,7 +114,7 @@ class About extends Component {
             </div>
           </AboutSection>
 
-          {/*<AboutSection title="Application framework experience" icon="code">*/}
+          {/* <AboutSection title="Application framework experience" icon="code"> */}
           <AboutSection title="Application frameworks">
             <figure className="about__section__graphic about__section__graphic--design">
               <AboutIcon iconName="django" />
@@ -150,7 +132,7 @@ class About extends Component {
             </div>
           </AboutSection>
 
-          {/*<AboutSection title="Currently learning" icon="code">*/}
+          {/* <AboutSection title="Currently learning" icon="code"> */}
           <AboutSection title="Currently learning">
             <div className="row justify-content-center">
               <div className="col-12 col-md-8">

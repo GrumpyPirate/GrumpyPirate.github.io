@@ -13,7 +13,7 @@ class AboutSection extends Component {
     super(props)
   } // /constructor(props)
 
-  render() {
+  render () {
     return (
       <div className="about__section">
         <h2 className="h3 about__section__title mb-3">{this.props.title}</h2>

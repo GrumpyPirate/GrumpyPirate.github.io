@@ -1,14 +1,14 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HTMLWebpackPlugin = require('html-webpack-plugin')
-var FaviconsPlugin    = require('favicons-webpack-plugin')
-var CleanPlugin       = require('clean-webpack-plugin')
+var FaviconsPlugin = require('favicons-webpack-plugin')
+var CleanPlugin = require('clean-webpack-plugin')
 
 // Paths
 const paths = {
-  src:          `${__dirname}/src`,
-  build:        `${__dirname}/dist`,
-  imgSrc:       `${__dirname}/public/images`,
-  sassSrc:      `${__dirname}/src/sass`,
+  src: `${__dirname}/src`,
+  build: `${__dirname}/dist`,
+  imgSrc: `${__dirname}/src/public/images`,
+  sassSrc: `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`
 } // /const paths
 
@@ -43,16 +43,16 @@ const config = {
 
       // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
       icons: {
-        android:      true,
-        appleIcon:    true,
+        android: true,
+        appleIcon: true,
         appleStartup: true,
-        coast:        true,
-        favicons:     true,
-        firefox:      true,
-        opengraph:    true,
-        twitter:      true,
-        yandex:       true,
-        windows:      true
+        coast: true,
+        favicons: true,
+        firefox: true,
+        opengraph: true,
+        twitter: true,
+        yandex: true,
+        windows: true
       }
     },
     // clean-webpack-plugin
@@ -140,7 +140,7 @@ module.exports = {
                 optimizationLevel: 3
               }/*,
               gifsicle: {},
-              svgo: {}*/
+              svgo: {} */
             }
           }
         ],
@@ -166,8 +166,7 @@ module.exports = {
     // hot: true,
     port: 3000,
     overlay: true,
-    open: true,
-    // historyApiFallback: true
+    open: true
   },
   plugins: [
     new CleanPlugin(['./dist'], config.plugins.clean),

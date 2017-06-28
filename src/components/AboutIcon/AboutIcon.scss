@@ -1,0 +1,35 @@
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+.about__section__graphic {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: palette(theme-accent-1);
+
+  &__icon {
+    display: block;
+    font-size: $font-size-h3;
+    line-height: 1;
+    text-align: center;
+    flex: 0 1 auto;
+    padding: 0 ($grid-gutter-width / 4);
+    margin-bottom: $paragraph-margin-bottom;
+
+    // lg up
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-h1 * 1.5;
+      padding: 0 ($grid-gutter-width / 2);
+    } // /lg up
+
+    // Variant - large
+    &--large {
+      @include media-breakpoint-up(md) {
+        font-size: $font-size-h1 * 2;
+      } // /md up
+    } // /&--large
+  } // /&__icon
+} // /&__graphic
