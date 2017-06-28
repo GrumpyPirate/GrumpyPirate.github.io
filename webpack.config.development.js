@@ -7,7 +7,7 @@ var CleanPlugin = require('clean-webpack-plugin')
 const paths = {
   src: `${__dirname}/src`,
   build: `${__dirname}/dist`,
-  imgSrc: `${__dirname}/src/public/images`,
+  imgSrc: `${__dirname}/public/images`,
   sassSrc: `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`
 } // /const paths

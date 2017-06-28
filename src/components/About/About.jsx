@@ -40,11 +40,11 @@ class About extends Component {
             <div className="row justify-content-center">
               <div className="col-12 col-md-8">
                 <p>
-                  I care about creating accessible, quality web apps. More recently I've been working in ES6 JS, using a variety of build tools. I use Babel to transpile ES6 into ES5.
+                  I care about creating accessible, quality web apps. More recently I've been working in <strong>ES6</strong> JS, using a variety of build tools. I use <strong>Babel</strong> to transpile ES6 into ES5.
                 </p>
 
                 <p>
-                  I love <a href="http://sass-lang.com/" target="_blank">SASS</a>, but have worked with LESS and Stylus.
+                  I love <a href="http://sass-lang.com/" target="_blank">SASS</a>, but have worked with <strong>LESS</strong> and <strong>Stylus</strong>.
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ class About extends Component {
             <div className="row justify-content-center">
               <div className="col-12 col-md-8 col-lg-6">
                 <p>
-                  I'm comfortable using the industry standard software suites - though given a choice, I prefer to use Illustrator when editing/exporting SVGs.
+                  I'm comfortable using the industry standard software suites - <strong>Photoshop</strong>, <strong>Illustrator</strong> and <strong>Sketch</strong> - though given a choice, I prefer to use <strong>Illustrator</strong> when editing/exporting SVGs.
                 </p>
 
                 <p>
@@ -100,7 +100,7 @@ class About extends Component {
             <div className="row justify-content-center">
               <div className="col-12 col-md-8 col-lg-6">
                 <p>
-                  Bootstrap and Foundation are personal faves. I'm a huge fan of Bootstrap 4, and I incorporate it into my SASS build when given the chance. Of course, I only <code>@import</code> what's necessary!
+                  <strong>Bootstrap</strong> and <strong>Foundation</strong> are personal faves. I'm a huge fan of <strong>Bootstrap 4</strong>, and I incorporate it into my SASS build when given the chance. Of course, I only <code>@import</code> what's necessary!
                 </p>
 
                 <p>
@@ -115,7 +115,7 @@ class About extends Component {
           </AboutSection>
 
           {/* <AboutSection title="Application framework experience" icon="code"> */}
-          <AboutSection title="Application frameworks">
+          <AboutSection title="App frameworks">
             <figure className="about__section__graphic about__section__graphic--design">
               <AboutIcon iconName="django" />
               <AboutIcon iconName="react" />
@@ -126,7 +126,11 @@ class About extends Component {
             <div className="row justify-content-center">
               <div className="col-12 col-md-8 col-lg-6">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque nemo modi odit ex ipsum distinctio, aspernatur voluptate ut, vero asperiores tempora quidem incidunt eligendi?
+                  I've have a good number of <strong>Django/Django CMS</strong> projects under my belt, and have assisted development with a few <strong>React</strong> apps.
+                </p>
+
+                <p>
+                  In the past, I've dabbled in <strong>Laravel (as well as Lumen)</strong>, and once made a few small <strong>Angular</strong> (v1) apps.
                 </p>
               </div>
             </div>
