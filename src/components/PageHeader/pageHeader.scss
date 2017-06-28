@@ -3,54 +3,67 @@
 @import 'mixins';
 
 .page-header {
+  $page-padding: 3rem;
+  $header-bg: darken($body-bg, 3%);
+  $hex-size: rem(400px);
+
   margin: 0 0 ($paragraph-margin-bottom * 2);
-  position: relative;
+  padding: ($page-padding / 2) 0;
+  background-color: $header-bg;
 
   // md up
   @include media-breakpoint-up(md) {
     margin-bottom: $paragraph-margin-bottom * 4;
+    padding: $page-padding 0;
   } // /md up
 
-  &__hex {
-    width: rem(200px);
-    height: rem(200px);
-    margin: 0 auto;
-
-    // md up
-    @include media-breakpoint-up(md) {
-      width: rem(300px);
-      height: rem(300px);
-    } // /md up
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      mask-image: url('images/mask-hex.svg#shape');
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
-      background-color: palette(theme-dark);
-    } // /img
-  } // /&__hex
-
   &__title {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    transform: translateY(-50%);
-    color: $headings-color;
-    background-color: $body-bg;
+    position: relative;
 
-    &::first-letter {
-      margin-left: $headings-letter-spacing + .05em;
-    } // /&::first-letter
+    &__text {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translateY(-50%);
+      color: $headings-color;
+      background-color: $header-bg;
+      user-select: none;
+      cursor: default;
+      margin: 0;
 
-    // md down
-    @include media-breakpoint-down(md) {
-      word-break: break-all;
-    } // /md down
+      &::first-letter {
+        margin-left: $headings-letter-spacing + .05em;
+      } // /&::first-letter
+
+      // md down
+      // @include media-breakpoint-down(md) {
+      //   word-break: break-all;
+      // } // /md down
+    } // /&__text
+
+    &__hex {
+      width: $hex-size / 2;
+      height: $hex-size / 2;
+      margin: 0 auto;
+
+      // md up
+      @include media-breakpoint-up(md) {
+        width: $hex-size;
+        height: $hex-size;
+      } // /md up
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        mask-image: url('images/mask-hex.svg#shape');
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-color: palette(theme-dark);
+      } // /img
+    } // /&__hex
   } // /&__title
 
   // &__subtitle {

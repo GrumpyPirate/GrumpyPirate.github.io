@@ -6,11 +6,11 @@ import './PageContainer.scss'
 
 // Component
 class PageContainer extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
   } // /constructor(props)
 
-  render() {
+  render () {
     return (
       <div className="page">
         {this.props.children}

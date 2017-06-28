@@ -136,7 +136,7 @@ $headings-font-weight: weight(light);
 $headings-letter-spacing: .2em;
 
 // Desktop sizes
-$font-size-h1: rem(80px);
+$font-size-h1: rem(72px);
 $font-size-h2: rem(56px);
 $font-size-h3: rem(48px);
 $font-size-h4: rem(24px);
@@ -144,7 +144,7 @@ $font-size-h5: 1rem;
 $font-size-h6: rem(14px);
 
 // // Headings - Mobile sizes
-$font-size-h1-mobile: $font-size-h1 * .75;
+$font-size-h1-mobile: $font-size-h1 * .55;
 $font-size-h2-mobile: $font-size-h2 * .75;
 $font-size-h3-mobile: $font-size-h3 * .75;
 $font-size-h4-mobile: 1rem;
@@ -291,7 +291,7 @@ $input-transition: color $anim-dur $anim-ease,
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
 $sidebar-height: rem(72px);
-$sidebar-height-mobile: rem(72px);
+$sidebar-height-mobile: rem(56px);
 $sidebar-width: rem(260px);
 $sidebar-border-color: palette(theme-light);
 $sidebar-zindex: 10;

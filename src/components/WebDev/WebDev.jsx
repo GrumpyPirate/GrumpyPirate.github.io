@@ -30,14 +30,17 @@ class WebDev extends React.Component {
 
   render() {
     return (
-      <PageContainer>
-        <PageContent>
-          <section className="portfolio">
-            <PageHeader title="Web Development" subtitle="Stuff I've worked on" />
-            <PortfolioList {...this.props} />
-          </section>
-        </PageContent>
-      </PageContainer>
+      <div>
+        <PageHeader title="Web Dev" subtitle="Stuff I've worked on" />
+
+        <PageContainer>
+          <PageContent>
+            <section className="portfolio">
+              <PortfolioList {...this.props} />
+            </section>
+          </PageContent>
+        </PageContainer>
+      </div>
     )
   } // /render()
 } // /class WebDev extends React.Component
