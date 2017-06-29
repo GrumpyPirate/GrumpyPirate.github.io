@@ -1,5 +1,6 @@
 // React
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // SCSS
 import './Icons.scss'
@@ -10,6 +11,7 @@ import './Icons.scss'
 // Generic
 import close from './svg/x.svg'
 import settingsApplications from './svg/settings.svg'
+import heart from './svg/heart.svg'
 
 // App icons
 import apple from './svg/brands/apple.svg'
@@ -46,8 +48,9 @@ import sketch from './svg/design/sketch.svg'
 import palette from './svg/design/image.svg'
 
 const icons = {
-  // material-design-icons
+  // feather-icons (generic)
   close,
+  heart,
   laptopMac,
   code,
   settingsApplications,
@@ -77,10 +80,18 @@ const icons = {
 } // /const icons
 
 // Component
-const Icon = ({glyph, className = 'icon', width = 48, height= 48}) => (
-    <svg className={className} width={width} height={height}>
-        <use xlinkHref={icons[glyph]} />
-    </svg>
+const Icon = ({ glyph, className = 'icon', width = 48, height = 48, altText }) => (
+  <svg className={className} width={width} height={height} aria-label={altText}>
+    <use xlinkHref={icons[glyph]} />
+  </svg>
 )
+
+Icon.propTypes = {
+  glyph: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  altText: PropTypes.string
+}
 
 export default Icon

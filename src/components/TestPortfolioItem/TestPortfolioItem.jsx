@@ -9,20 +9,20 @@ class TestPortfolioItem extends Component {
     super(props)
   } // /constructor(props)
 
-  render() {
+  render () {
     return (
       <PortfolioListItem to={`${this.props.match.url}/test-portfolio-item`}>
         <figure className="portfolio__item__media">
           <img src="https://unsplash.it/300/200?random" alt="" srcSet="https://unsplash.it/600/400?random 2x"  />
         </figure>
-        <div className="portfolio__item__body last-child-mb-0">
+        <div className="portfolio__item__body last-child-mb0">
           <h3 className="h4">Lorem ipsum dolor</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum optio dignissimos officiis quaerat fuga adipisci velit? Harum labore id quo temporibus mollitia vel. Sequi!
           </p>
         </div>
       </PortfolioListItem>
     )
-  } // /render()
+  } // /render ()
 } // /class TestPortfolioItem extends Component
 
 export default TestPortfolioItem

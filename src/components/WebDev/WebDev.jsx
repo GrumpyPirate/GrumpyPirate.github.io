@@ -28,7 +28,7 @@ class WebDev extends React.Component {
     super(props)
   } // /constructor(props)
 
-  render() {
+  render () {
     return (
       <div>
         <PageHeader title="Web Dev" subtitle="Stuff I've worked on" />
@@ -42,7 +42,7 @@ class WebDev extends React.Component {
         </PageContainer>
       </div>
     )
-  } // /render()
+  } // /render ()
 } // /class WebDev extends React.Component
 
 export default WebDev

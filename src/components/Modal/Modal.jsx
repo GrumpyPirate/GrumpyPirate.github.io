@@ -10,7 +10,7 @@ class Modal extends React.Component {
     super(props)
   } // /constructor(props)
 
-  render() {
+  render () {
     return (
       <ReactModal
         {...this.props}
@@ -37,7 +37,7 @@ class Modal extends React.Component {
         </div>
       </ReactModal>
     )
-  } // /render()
+  } // /render ()
 } // /class Modal extends React.Component
 
 export default Modal

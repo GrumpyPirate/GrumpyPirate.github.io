@@ -21,7 +21,7 @@ class AboutSection extends Component {
         {this.props.children}
       </div>
     )
-  } // /render()
+  } // /render ()
 } // /class AboutSection extends React.Component
 
 export default AboutSection

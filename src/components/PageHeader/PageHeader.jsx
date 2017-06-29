@@ -13,7 +13,7 @@ import HeaderImage1x from 'images/header-images/2.jpeg'
 // Component
 const PageHeader = ({ title, subtitle }) => {
   return (
-    <header className="page-header text-center last-child-mb-0">
+    <header className="page-header text-center last-child-mb0">
       <div className="container-fluid">
         <div className="page-header__title">
           <figure className="page-header__title__hex">

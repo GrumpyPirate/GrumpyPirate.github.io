@@ -1,0 +1,28 @@
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  background-color: palette(theme-dark);
+  color: mix(palette(theme-light), palette(theme-dark), 40%);
+  padding: 1.5rem 0;
+  font-size: $small-font-size;
+
+  // md up
+  @include media-breakpoint-up(md) {
+    padding: 2rem 0;
+  } // /md up
+
+  // Credits
+  // &__credits {
+  // } // /&__credits
+
+  &__icon {
+    vertical-align: middle;
+    font-size: 175%;
+
+    .icon {
+      bottom: .125em;
+    } // /.icon
+  } // /&__icon
+} // /.footer

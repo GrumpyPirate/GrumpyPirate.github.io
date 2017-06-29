@@ -34,7 +34,7 @@ export default class PortfolioListItem extends React.Component {
     this.setState({ modalIsActive: false })
   } // /handleCloseModal()
 
-  render() {
+  render () {
     return (
       <li className="portfolio__item">
         <Link to={this.props.to} className="portfolio__link" onClick={this.handleOpenModal}>
@@ -73,5 +73,5 @@ export default class PortfolioListItem extends React.Component {
         </Modal>
       </li>
     )
-  } // /render()
+  } // /render ()
 } // /class PortfolioListItem extends React.Component

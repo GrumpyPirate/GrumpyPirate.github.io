@@ -27,8 +27,8 @@
     flex-wrap: wrap;
     flex: 0 0 ($sidebar-width * .85);
     padding: 0;
-    border-bottom: 0;
-    border-right: solid $hr-border-width $sidebar-border-color;
+    border: 0;
+    // border-right: solid $hr-border-width $sidebar-border-color;
   } // /lg up
 
   // xl up
@@ -124,18 +124,6 @@
       opacity: .65;
     } // /&__job-title
   } // /&__brand
-
-  // Copyright
-  // -------------------------------------------------------------------------------------------------
-  &__credits {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    // color: palette(theme-mid);
-    opacity: .65;
-  } // /&__credits
 
   // Menu
   // -------------------------------------------------------------------------------------------------

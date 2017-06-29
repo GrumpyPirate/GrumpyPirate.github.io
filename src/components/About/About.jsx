@@ -150,7 +150,11 @@ class About extends Component {
                     </div>
                     <div className="col-12 col-md-8 pull-md-4">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi quam, reiciendis eos optio, ipsam aliquid ex eveniet sunt. Eaque libero blanditiis dolorum. Voluptas enim tenetur alias doloribus debitis! Amet quos, sapiente.
+                        I'm currently learning how to develop web apps with <strong>React</strong>, and find it wonderfully refreshing. It's a hefty gear-shift, but one that makes a ton of sense.
+                      </p>
+
+                      <p>
+                        I'm looking forward to creating some more complex React apps in the future.
                       </p>
                     </div>
                   </div>
@@ -161,7 +165,7 @@ class About extends Component {
         </PageContainer>
       </div>
     )
-  } // /render()
+  } // /render ()
 } // /class About extends Component
 
 export default About

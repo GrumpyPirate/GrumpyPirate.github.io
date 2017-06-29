@@ -15,7 +15,7 @@ class HTTPNotFound extends Component {
         super(props)
     } // /constructor(props)
 
-    render() {
+    render () {
         return (
 			<PageContainer>
 				<PageContent>
@@ -29,7 +29,7 @@ class HTTPNotFound extends Component {
 				</PageContent>
 			</PageContainer>
     	)
-    } // /render()
+    } // /render ()
 } // /class HTTPNotFound extends React.Component
 
 export default HTTPNotFound;

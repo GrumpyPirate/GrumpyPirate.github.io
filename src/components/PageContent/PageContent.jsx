@@ -7,7 +7,7 @@ class PageContent extends Component {
     super(props)
   } // /constructor(props)
 
-  render() {
+  render () {
     const alignClass = this.props.align
       ? ` text-${this.props.align}`
       : ''
@@ -23,7 +23,7 @@ class PageContent extends Component {
         </div>
       </div>
     )
-  } // /render()
+  } // /render ()
 } // /class PageContent extends Component
 
 export default PageContent

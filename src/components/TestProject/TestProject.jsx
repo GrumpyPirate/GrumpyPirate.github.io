@@ -18,11 +18,11 @@ class TestProject extends Component {
 
     // Render
     // -----------------------------------------------------------------------------------------------------------------
-    render() {
+    render () {
         return (
             <h1>TEST</h1>
         )
-    } // /render()
+    } // /render ()
 
     // componentDidUpdate
     // componentWillUnmount

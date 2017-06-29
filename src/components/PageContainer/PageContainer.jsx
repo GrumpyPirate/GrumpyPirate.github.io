@@ -16,7 +16,7 @@ class PageContainer extends Component {
         {this.props.children}
       </div>
     )
-  } // /render()
+  } // /render ()
 } // /class PageContainer extends Component
 
 export default PageContainer
