@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom'
 import PageContainer from 'components/PageContainer/PageContainer'
 import PageContent from 'components/PageContent/PageContent'
 import PageHeader from 'components/PageHeader/PageHeader'
+import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
 import AboutSection from 'components/AboutSection/AboutSection'
 import AboutIcon from 'components/AboutIcon/AboutIcon'
 
@@ -18,18 +19,19 @@ class About extends Component {
   render () {
     return (
       <div>
-        <PageHeader title="Hello" />
+        <PageHeader title="Hello">
+          <PageHeaderSubtitle>
+            I'm a Frontend developer from Essex, working in London. I like coffee, video games, and cheese.
+          </PageHeaderSubtitle>
+
+          <PageHeaderSubtitle>
+            <hr className="mt-0"/>
+            Now that's out of the way, <NavLink to="/webdev">check out my portfolio</NavLink>.
+          </PageHeaderSubtitle>
+        </PageHeader>
 
         <PageContainer>
           <PageContent>
-            <p>
-              I'm a Frontend developer from Essex, working in London. I like coffee, video games, and cheese.
-            </p>
-
-            <p className="mb-3">
-              Now that's out of the way, <NavLink to="/webdev">check out my portfolio</NavLink>.
-            </p>
-
             {/* <AboutSection title="Languages I work with" icon="code"> */}
             <AboutSection title="Languages">
               <figure className="about__section__graphic about__section__graphic--languages">

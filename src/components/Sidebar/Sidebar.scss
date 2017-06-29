@@ -11,7 +11,7 @@
   padding: ($grid-gutter-width / 4) 0;
   width: 100%;
   background-color: palette(theme-accent-1);
-  border-bottom: solid $hr-border-width $sidebar-border-color;
+  // border-bottom: solid $hr-border-width $sidebar-border-color;
   text-transform: uppercase;
   color: palette(theme-light);
   z-index: $sidebar-zindex;

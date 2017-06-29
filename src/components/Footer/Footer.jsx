@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="footer text-center">
       <div className="footer__credits">
         <div className="container-fluid">
-          <div className="last-child-mb0">
+          <div className="last-child-mb-0">
             <p className="mb-0">
               Made with <a href="https://facebook.github.io/react/" target="_blank" className="footer__icon link-inherit"><Icon glyph="react" altText="React"/></a>, <a href="http://sass-lang.com/" target="_blank" className="footer__icon link-inherit"><Icon glyph="sass" altText="SASS"/></a>, <a href="https://webpack.js.org/" target="_blank" className="footer__icon link-inherit"><Icon glyph="webpack" altText="Webpack 2"/></a> and <span className="footer__icon"><Icon glyph="heart" altText="love"/></span>
             </p>

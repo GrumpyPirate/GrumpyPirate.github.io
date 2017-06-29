@@ -1,16 +1,13 @@
 // React
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Component
 class PageContent extends Component {
-  constructor(props) {
-    super(props)
-  } // /constructor(props)
-
   render () {
     const alignClass = this.props.align
       ? ` text-${this.props.align}`
-      : ''
+      : null
 
     return (
       <div className={`page__content${alignClass}`}>
@@ -25,5 +22,13 @@ class PageContent extends Component {
     )
   } // /render ()
 } // /class PageContent extends Component
+
+PageContent.propTypes = {
+  align: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+}
 
 export default PageContent

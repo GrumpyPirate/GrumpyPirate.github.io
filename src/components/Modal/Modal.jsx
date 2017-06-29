@@ -6,7 +6,7 @@ import Icon from '../Icons/Icons.jsx'
 import './Modal.scss'
 
 class Modal extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
   } // /constructor(props)
 

@@ -1,15 +1,12 @@
 // React
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 // SCSS
 import './PageContainer.scss'
 
-// Component
-class PageContainer extends Component {
-  constructor (props) {
-    super(props)
-  } // /constructor(props)
-
+// PureComponent
+class PageContainer extends PureComponent {
   render () {
     return (
       <div className="page">
@@ -18,5 +15,12 @@ class PageContainer extends Component {
     )
   } // /render ()
 } // /class PageContainer extends Component
+
+PageContainer.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+}
 
 export default PageContainer
