@@ -9,7 +9,7 @@ import Routes from '../../config/routes'
 // // Styles
 import './Sitenav.scss'
 
-const Sitenav = ({ closeMenu }) => {
+const Sitenav = ({ closeMenu, closeMenuDelay = 150 }) => {
   return (
     <ul className="sitenav list-unstyled m-0" role="navigation">
       {Routes.map((route, index) =>
@@ -26,7 +26,8 @@ const Sitenav = ({ closeMenu }) => {
 } // /const Sitenav
 
 Sitenav.propTypes = {
-  closeMenu: PropTypes.func.isRequired
+  closeMenu: PropTypes.func.isRequired,
+  closeMenuDelay: PropTypes.number
 }
 
 export default Sitenav
