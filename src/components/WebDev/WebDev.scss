@@ -2,3 +2,12 @@
 @import 'mixins';
 @import 'variables';
 
+.portfolio {
+  &__list {
+    // md up
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-flow: row wrap;
+    } // /md up
+  } // /&__list
+} // /.portfolio
