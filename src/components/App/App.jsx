@@ -7,11 +7,13 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import Routes from '../../config/routes'
 
 // Components
 import Sidebar from 'components/Sidebar/Sidebar'
 import Footer from 'components/Footer/Footer'
+import About from 'components/About/About.jsx'
+import WebDev from 'components/WebDev/WebDev.jsx'
+import DigitalArt from 'components/DigitalArt/DigitalArt.jsx'
 import HTTPNotFound from 'components/404/404'
 
 // SCSS
@@ -26,14 +28,23 @@ const App = () => {
 
         <main className="content-container">
           <Switch>
-            {Routes.map((route, index) =>
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                component={route.component}
-              />
-            )}
+            <Route
+              exact
+              path="/"
+              component={About}
+            />
+
+            <Route
+              path="/webdev"
+              component={WebDev}
+            />
+
+            <Route
+              path="/digital-art"
+              component={DigitalArt}
+            />
+
+            {/* Fallback to 404 */}
             <Route component={HTTPNotFound}/>
           </Switch>
 

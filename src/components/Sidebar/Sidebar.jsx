@@ -1,9 +1,13 @@
 // React
 import React from 'react'
-// import PropTypes from 'prop-types'
 
 // Routing
 import { Link } from 'react-router-dom'
+
+// Config
+import { duration } from 'config/animation'
+
+import ClassNames from 'classnames'
 
 // Components
 import Sitenav from 'components/Sitenav/Sitenav.jsx'
@@ -19,7 +23,8 @@ class Sidebar extends React.Component {
     super(props)
 
     this.state = {
-      navMenuOpen: false
+      navMenuOpen: false,
+      isClosing: false
     }
 
     // Lexical this binding
@@ -27,16 +32,38 @@ class Sidebar extends React.Component {
     this.closeMenu = this.closeMenu.bind(this)
   } // /constructor(props)
 
-  toggleMenu () {
-    this.setState({ navMenuOpen: !this.state.navMenuOpen })
-  } // /toggleMenu
-
   closeMenu () {
-    this.setState({ navMenuOpen: false })
-  } // /closeMenu
+    this.setState({ isClosing: true })
+
+    window.clearTimeout(this.menuCloseTimeout)
+    this.menuCloseTimeout = window.setTimeout(() => {
+      this.setState({
+        navMenuOpen: false,
+        isClosing: false
+      })
+    }, duration)
+  }
+
+  toggleMenu () {
+    if (this.state.navMenuOpen) {
+      this.closeMenu()
+    } else {
+      this.setState({ navMenuOpen: true })
+    }
+  } // /toggleMenu
 
   render () {
     const navMenuOpen = this.state.navMenuOpen
+    const isClosing = this.state.isClosing
+    const isClosed = !this.state.navMenuOpen
+    const isOpen = (this.state.navMenuOpen && !this.state.isClosing)
+
+    const mobileMenuClassNames = ClassNames({
+      'sidebar__menu hidden-md-up': true,
+      'is--closing': isClosing,
+      'is--closed': isClosed,
+      'is--open': isOpen
+    })
 
     return (
       <aside className="sidebar text-lg-right">
@@ -57,19 +84,19 @@ class Sidebar extends React.Component {
               <span className="burger-bar"></span>
               <span className="sr-only">Toggle menu</span>
             </button>
-
-            <menu className="sidebar__menu" hidden={!navMenuOpen}>
-              <div className="container-fluid">
-                <Sitenav closeMenu={this.closeMenu}/>
-              </div>
-            </menu>
           </div>
 
           {/* Tablet+ nav */}
           <div className="hidden-sm-down">
-            <Sitenav closeMenu={this.closeMenu}/>
+            <Sitenav/>
           </div>
         </div>
+
+        <menu className={mobileMenuClassNames} onClick={this.closeMenu}>
+          <div className="container-fluid">
+            <Sitenav/>
+          </div>
+        </menu>
       </aside>
     )
   } // /render ()

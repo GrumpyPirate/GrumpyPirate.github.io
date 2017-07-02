@@ -2,19 +2,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// React Router
+import { Link } from 'react-router-dom'
+
 // SCSS
 import './PortfolioItem.scss'
 
 // Define PortfolioItem
 const PortfolioItem = ({ item }) => {
   return (
-    <div className="portfolio__item" role="listitem">
+    <Link to="/" className="portfolio__item" role="listitem">
       {/* Item image, 8:5 */}
       <figure className="portfolio__item__media">
         <picture>
-          <source media="(min-width: 576px)" srcSet="https://placehold.it/576x360 1x, https://placehold.it/1152x720 2x"/>
-          <source srcSet="https://placehold.it/320x200 1x, https://placehold.it/640x400 2x"/>
-          <img src="https://placehold.it/320x200" srcSet="https://placehold.it/640x400 2x" alt=""/>
+          <source media="(min-width: 576px)" srcSet="https://unsplash.it/576/360/?random 1x, https://unsplash.it/1152/720/?random 2x"/>
+          <source srcSet="https://unsplash.it/320/200/?random 1x, https://unsplash.it/640/400/?random 2x"/>
+          <img src="https://unsplash.it/320/200/?random" srcSet="https://unsplash.it/640/400/?random 2x" alt=""/>
         </picture>
       </figure>
 
@@ -31,7 +34,7 @@ const PortfolioItem = ({ item }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

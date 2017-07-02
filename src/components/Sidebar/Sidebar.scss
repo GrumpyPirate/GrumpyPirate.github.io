@@ -8,7 +8,6 @@
   top: 0;
   right: 0;
   left: 0;
-  padding: ($grid-gutter-width / 4) 0;
   width: 100%;
   background-color: palette(theme-accent-1);
   // border-bottom: solid $hr-border-width $sidebar-border-color;
@@ -38,13 +37,21 @@
 
   &__content {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: $grid-gutter-width / 4;
+    padding-bottom: $grid-gutter-width / 4;
+    background-color: palette(theme-accent-1);
+    z-index: $sidebar-zindex;
 
-    // md down
-    @include media-breakpoint-down(md) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    } // /md down
+    // lg up
+    @include media-breakpoint-up(lg) {
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0;
+      background: 0;
+    } // /lg up
   } // /&__content
 
   // .sitenav {
@@ -146,17 +153,15 @@
 
     // Menu active
     &[aria-expanded='true'] {
-
-
       .burger-bar {
         background-color: transparent;
 
         &::before {
-          transform: rotate(45deg);
+          transform: rotate(-135deg);
         } // /&::before
 
         &::after {
-          transform: rotate(-45deg);
+          transform: rotate(135deg);
         } // /&::before
       } // /.burger-bar
     } // /&[aria-expanded='true']
@@ -195,14 +200,31 @@
   } // /&__btn-sitenav
 
   &__menu {
-    animation: fadeIn $anim-dur ease 0s 1 forwards;
-    position: absolute;
-    top: calc(100% + #{($grid-gutter-width / 4)});
+    position: fixed;
+    top: rem(55px);
     left: 0;
     width: 100%;
     margin: 0;
     padding: .5rem 0;
     background-color: palette(theme-accent-1);
     border-bottom: solid $hr-border-width $sidebar-border-color;
+    z-index: $sidebar-zindex - 1;
+    transition: opacity $anim-dur ease,
+                transform $anim-dur ease,
+                visibility $anim-dur ease;
+
+    &.is--closing,
+    &.is--closed {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-50%);
+    } // /&.is--closing
+
+    &.is--open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    } // /&.is--open
   } // /&__menu
-} // /.site-navbar
+} // /.sidebar

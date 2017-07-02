@@ -9,7 +9,8 @@ const paths = {
   build: `${__dirname}/dist`,
   imgSrc: `${__dirname}/public/images`,
   sassSrc: `${__dirname}/src/sass`,
-  componentSrc: `${__dirname}/src/components`
+  componentSrc: `${__dirname}/src/components`,
+  configSrc: `${__dirname}/src/config`
 } // /const paths
 
 // Plugin Config
@@ -81,7 +82,8 @@ module.exports = {
     ],
     alias: {
       'components': paths.componentSrc,
-      'images': paths.imgSrc
+      'images': paths.imgSrc,
+      'config': paths.configSrc
     }
   },
   devtool: 'source-map',

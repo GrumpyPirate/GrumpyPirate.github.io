@@ -1,33 +1,28 @@
 // React
 import React from 'react'
-import PropTypes from 'prop-types'
 
 // Routing
 import { NavLink } from 'react-router-dom'
-import Routes from '../../config/routes'
 
 // // Styles
 import './Sitenav.scss'
 
-const Sitenav = ({ closeMenu, closeMenuDelay = 150 }) => {
+const Sitenav = () => {
   return (
     <ul className="sitenav list-unstyled m-0" role="navigation">
-      {Routes.map((route, index) =>
-        (
-          <li className="sitenav__nav-item" key={index}>
-            <NavLink to={route.path} exact={route.exact} className="sitenav__nav-link" onClick={closeMenu}>
-              {route.name}
-            </NavLink>
-          </li>
-        )
-      )}
+      <li className="sitenav__nav-item">
+        <NavLink to="/" exact={true} className="sitenav__nav-link">About</NavLink>
+      </li>
+
+      <li className="sitenav__nav-item">
+        <NavLink to="/webdev" className="sitenav__nav-link">Web Development</NavLink>
+      </li>
+
+      <li className="sitenav__nav-item">
+        <NavLink to="/digital-art" className="sitenav__nav-link">Digital Art</NavLink>
+      </li>
     </ul>
   )
 } // /const Sitenav
-
-Sitenav.propTypes = {
-  closeMenu: PropTypes.func.isRequired,
-  closeMenuDelay: PropTypes.number
-}
 
 export default Sitenav

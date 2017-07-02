@@ -4,7 +4,6 @@
 
 .page-header {
   $page-padding: 3rem;
-  // $header-bg: mix(desaturate(palette(theme-accent-2), 35%), $body-bg, 15%);
   $header-bg: palette(theme-dark);
   $hex-size: 40vmin;
   background-color: $header-bg;
@@ -16,7 +15,6 @@
 
     // md up
     @include media-breakpoint-up(md) {
-      // padding: ($grid-gutter-width / 2) 0;
       padding-top: 2rem;
     } // /md up
 
