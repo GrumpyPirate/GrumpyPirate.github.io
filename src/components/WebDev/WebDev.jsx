@@ -3,7 +3,7 @@ import React from 'react'
 
 import PageHeader from '../PageHeader/PageHeader.jsx'
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
-import PortfolioItem from 'components/PortfolioItem/PortfolioItem'
+import PortfolioListingItem from 'components/PortfolioListingItem/PortfolioListingItem'
 
 // Style
 import './WebDev.scss'
@@ -11,7 +11,16 @@ import './WebDev.scss'
 // Component - WebDev page
 class WebDev extends React.Component {
   componentWillMount () {
-    const portfolioItems = [{}, {}, {}, {}, {}, {}, {}, {}]
+    const portfolioItems = [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 },
+      { id: 7 },
+      { id: 8 }
+    ]
 
     this.setState({
       portfolioItems: portfolioItems
@@ -29,9 +38,9 @@ class WebDev extends React.Component {
         </PageHeader>
 
         <section className="portfolio">
-          <div className="portfolio__list" role="listbox">
+          <div className="pf__list" role="listbox">
             {this.state.portfolioItems.map((item, i) => (
-              <PortfolioItem item={item} key={i} />
+              <PortfolioListingItem portfolioItem={item} key={i} />
             ))}
           </div>
         </section>

@@ -4,8 +4,8 @@
 
 .page-header {
   $page-padding: 3rem;
-  $header-bg: palette(theme-dark);
   $hex-size: 40vmin;
+  $header-bg: palette(theme-dark);
   background-color: $header-bg;
 
   &__title {

@@ -71,7 +71,7 @@ module.exports = {
   ],
   output: {
     path: paths.build,
-    filename: 'bundle.js'
+    filename: 'app-[hash].js'
   },
   // Resolve SCSS image (url('...')s)
   resolve: {
@@ -165,6 +165,9 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
+    historyApiFallback: {
+      index: '/'
+    },
     // hot: true,
     port: 3000,
     overlay: true,
@@ -173,7 +176,7 @@ module.exports = {
   plugins: [
     new CleanPlugin(['./dist'], config.plugins.clean),
     new FaviconsPlugin(config.plugins.favicons),
-    new ExtractTextPlugin('css/app.css'),
+    new ExtractTextPlugin('css/app-[hash].css'),
     new HTMLWebpackPlugin(config.plugins.html)
   ]
 }
