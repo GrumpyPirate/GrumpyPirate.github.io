@@ -1,6 +1,9 @@
 // React
 import React from 'react'
 
+// Router
+import { Link } from 'react-router-dom'
+
 // PropTypes
 import PropTypes from 'prop-types'
 
@@ -14,9 +17,13 @@ const PortfolioPageHeader = ({ bgImage, title }) => {
         <img src={bgImage} alt={title} />
       </figure>
 
-      <div className="pf-page-header__title">
-        <div className="container-fluid">
-          <h1>{title}</h1>
+      <div className="pf-page-header__copy">
+        <div>
+          <Link to="/webdev" className="pf-page-header__back h6 mb-0">&lt; Portfolio</Link>
+        </div>
+
+        <div>
+          <h1 className="pf-page-header__title">{title}</h1>
         </div>
       </div>
     </header>

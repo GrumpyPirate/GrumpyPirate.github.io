@@ -60,7 +60,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 .copy-col {
     $copy-col-basis: $font-size-base * 15;
-    column-gap: $grid-gutter-width;
+    column-gap: $grid-gutter-width-base;
 
     @for $count from 2 through 3 {
         &--#{$count} {

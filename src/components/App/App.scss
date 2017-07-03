@@ -6,27 +6,27 @@
 @import '../../sass/mixins';
 
 body {
-    background-color: palette(theme-accent-2);
+  background-color: palette(theme-accent-2);
 } // /body
 
 .app {
-    padding-top: $sidebar-height-mobile;
+  padding-top: $sidebar-height-mobile;
 
-    // lg up
-    @include media-breakpoint-up(lg) {
-        padding-top: 0;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: stretch;
-    } // /lg up
+  // lg up
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+  } // /lg up
 } // /.app
 
 .content-container {
-    // lg up
-    @include media-breakpoint-up(lg) {
-        flex: 1 1 auto;
-        height: 100vh;
-        overflow-y: auto;
-        touch-action: pan-y;
-    } // /lg up
+  // lg up
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 auto;
+    height: 100vh;
+    overflow-y: auto;
+    touch-action: pan-y;
+  } // /lg up
 } // /.content-container

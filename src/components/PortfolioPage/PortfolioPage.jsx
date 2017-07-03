@@ -25,7 +25,8 @@ class PortfolioPage extends PureComponent {
   render () {
     return (
       <div className="pf-page">
-        <PortfolioPageHeader bgImage={imageXL} title="MissFits Nutrition"/>
+        {/* <PortfolioPageHeader bgImage={imageXL} title="MissFits Nutrition"/> */}
+        <PortfolioPageHeader bgImage={imageXL} title="Vitae maxime"/>
       </div>
     )
   } // /render()

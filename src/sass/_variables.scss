@@ -178,9 +178,15 @@ $small-font-size: percentage(12px / $font-size-root);
 
 $container-absolute-max-width: 1440px;
 
-$grid-columns:       12;
-$grid-gutter-width:  rem(40px);
-$grid-gutter-width-mobile: rem(24px);
+$grid-columns: 12;
+$grid-gutter-width-base: 30px;
+$grid-gutter-widths: (
+  xs: 24px,
+  sm: 24px,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+);
 
 // Spacers
 $spacer:   1rem;
@@ -291,7 +297,7 @@ $input-transition: color $anim-dur $anim-ease,
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
 $sidebar-height: rem(72px);
-$sidebar-height-mobile: rem(55px);
+$sidebar-height-mobile: rem(50px);
 $sidebar-width: rem(260px);
 $sidebar-border-color: palette(theme-light);
 $sidebar-zindex: 10;
