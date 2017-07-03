@@ -58,7 +58,7 @@ const config = {
     },
     // clean-webpack-plugin
     clean: {
-      dry: true,
+      dry: false,
       watch: true
     }
   } // /plugins
