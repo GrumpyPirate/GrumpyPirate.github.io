@@ -13,8 +13,9 @@ import close from './svg/x.svg'
 import settingsApplications from './svg/settings.svg'
 import heart from './svg/heart.svg'
 
-// App icons
+// Brand icons
 import apple from './svg/brands/apple.svg'
+import shopify from './svg/brands/shopify.svg'
 import atom from './svg/editors/atom.svg'
 import sublime from './svg/editors/sublime.svg'
 
@@ -59,6 +60,7 @@ const icons = {
   atom,
   sublime,
   apple,
+  shopify,
   html5,
   javascript,
   babel,

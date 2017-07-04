@@ -9,24 +9,26 @@ import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/Portfo
 
 // Images
 import imageXL from 'images/portfolio/missfitsnutrition.com-xl.jpg'
-import imageMD from 'images/portfolio/missfitsnutrition.com-md.jpg'
-import imageXS from 'images/portfolio/missfitsnutrition.com-xs.jpg'
+// import imageMD from 'images/portfolio/missfitsnutrition.com-md.jpg'
+// import imageXS from 'images/portfolio/missfitsnutrition.com-xs.jpg'
 
 class PortfolioPage extends PureComponent {
   componentWillMount () {
     this.setState({
       portfolioItem: {
         id: 1,
-        title: 'Consectetur adipisicing elit'
-      }
+        title: 'Vitae maxime',
+        tech: [
+          'shopify'
+        ]
+      } // /portfolioItem
     })
-  }
+  } // /componentWillMount ()
 
   render () {
     return (
       <div className="pf-page">
-        {/* <PortfolioPageHeader bgImage={imageXL} title="MissFits Nutrition"/> */}
-        <PortfolioPageHeader bgImage={imageXL} title="Vitae maxime"/>
+        <PortfolioPageHeader bgImage={imageXL} title={this.state.portfolioItem.title} tech={this.state.portfolioItem.tech}/>
       </div>
     )
   } // /render()

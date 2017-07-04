@@ -4,7 +4,12 @@
 @each $colour in (
     white,
     grey,
-    grey-pale
+    grey-pale,
+    theme-dark,
+    theme-mid,
+    theme-light,
+    theme-accent-1,
+    theme-accent-2
 ) {
     .bg-#{$colour} {
         background-color: palette($colour);
