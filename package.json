@@ -53,6 +53,7 @@
     "fbemitter": "^2.1.1",
     "feather-icons": "^2.4.0",
     "modernizr": "^3.4.0",
+    "normalize-scss": "^7.0.0",
     "prop-types": "^15.5.10",
     "resolve-url-loader": "^2.1.0"
   }

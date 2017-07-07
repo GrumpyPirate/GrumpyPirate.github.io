@@ -19,6 +19,7 @@ import DigitalArt from 'components/DigitalArt/DigitalArt.jsx'
 import HTTPNotFound from 'components/404/404'
 
 // SCSS
+// import 'node-normalize-scss/_normalize.scss'
 import './App.scss'
 
 // Define App

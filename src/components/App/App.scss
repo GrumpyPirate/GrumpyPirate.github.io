@@ -1,9 +1,7 @@
-/* ---------------------------------------------------------------------------------------------------------------------
-** Global layout styles that apply to all document content
-** ------------------------------------------------------------------------------------------------------------------ */
-@import '../../sass/functions';
-@import '../../sass/variables';
-@import '../../sass/mixins';
+// Global layout styles that apply to all document content
+@import 'functions';
+@import 'variables';
+@import 'mixins';
 
 body {
   background-color: palette(theme-accent-2);

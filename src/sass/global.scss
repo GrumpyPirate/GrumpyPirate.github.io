@@ -1,9 +1,11 @@
-/* ---------------------------------------------------------------------------------------------------------------------
-** Global layout styles that apply to all components
-** ------------------------------------------------------------------------------------------------------------------ */
+// Global layout styles that apply to all components
 @import 'functions';
 @import 'variables';
 @import 'mixins';
+
+// Normalize
+@import '~normalize-scss';
+@include normalize;
 
 // Bootstrap
 @import 'bootstrap/bootstrap-custom';
