@@ -1,0 +1,4 @@
+
+var sprite = require("/Users/ecobbold/Desktop/Dev/Personal/Portfolio/portfolio-2017/node_modules/svg-sprite-loader/lib/web/global-sprite");
+var image = "<symbol viewBox=\"0 0 24 24\" id=\"x\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <path d=\"M13.41,12l5.29-5.29c0.39-0.39,0.39-1.02,0-1.41s-1.02-0.39-1.41,0L12,10.59L6.71,5.29c-0.39-0.39-1.02-0.39-1.41,0\n\ts-0.39,1.02,0,1.41L10.59,12l-5.29,5.29c-0.39,0.39-0.39,1.02,0,1.41C5.49,18.9,5.74,19,6,19s0.51-0.1,0.71-0.29L12,13.41l5.29,5.29\n\tC17.49,18.9,17.74,19,18,19s0.51-0.1,0.71-0.29c0.39-0.39,0.39-1.02,0-1.41L13.41,12z\"/> </symbol>";
+module.exports = sprite.add(image, "x");
