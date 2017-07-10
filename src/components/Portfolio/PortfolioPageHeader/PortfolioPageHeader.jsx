@@ -34,8 +34,8 @@ const PortfolioPageHeader = (props) => {
 
           {props.tech.length &&
             <ul className="pf-page-header__tech__list">
-              {props.tech.map((techItem) => (
-                <li>
+              {props.tech.map((techItem, index) => (
+                <li key={index}>
                   <Icon glyph={techItem.icon} altText={techItem.name} />
                 </li>
               ))}
@@ -50,7 +50,7 @@ const PortfolioPageHeader = (props) => {
 PortfolioPageHeader.propTypes = {
   bgImage: PropTypes.any,
   title: PropTypes.string.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.string)
+  tech: PropTypes.arrayOf(PropTypes.object)
 } // /PortfolioPageHeader.propTypes
 
 export default PortfolioPageHeader

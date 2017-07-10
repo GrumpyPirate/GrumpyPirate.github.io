@@ -18,7 +18,7 @@ const Carousel = (props) => {
 }
 
 Carousel.propTypes = {
-  children: PropTypes.oneOf(
+  children: PropTypes.oneOfType(
     [
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node

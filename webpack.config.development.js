@@ -10,6 +10,7 @@ const paths = {
   imgSrc: `${__dirname}/public/images`,
   sassSrc: `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`,
+  iconSrc: `${__dirname}/src/components/Icons`,
   configSrc: `${__dirname}/src/config`
 } // /const paths
 
@@ -164,7 +165,6 @@ module.exports = {
           }
         ],
         exclude: [
-          paths.componentSrc,
           /node_modules/
         ]
       },
@@ -173,7 +173,7 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
         include: [
-          paths.componentSrc,
+          paths.iconSrc,
           /node_modules/
         ],
         exclude: paths.imgSrc

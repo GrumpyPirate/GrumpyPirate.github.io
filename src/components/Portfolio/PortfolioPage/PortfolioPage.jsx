@@ -1,21 +1,18 @@
 // React
 import React, { PureComponent } from 'react'
 
-// Settings
-import { animation } from 'config/animation'
-
 // Styles
 // import './PortfolioPage.scss'
 
 // Components
 import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader.jsx'
 import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent.jsx'
-import Carousel from 'components/Carousel/Carousel.jsx'
+import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel.jsx'
 
 // Images
 import imageXL from 'images/portfolio/missfitsnutrition.com-xl.jpg'
-// import imageMD from 'images/portfolio/missfitsnutrition.com-md.jpg'
-// import imageXS from 'images/portfolio/missfitsnutrition.com-xs.jpg'
+import imageMD from 'images/portfolio/missfitsnutrition.com-md.jpg'
+import imageXS from 'images/portfolio/missfitsnutrition.com-xs.jpg'
 
 class PortfolioPage extends PureComponent {
   componentWillMount () {
@@ -29,7 +26,12 @@ class PortfolioPage extends PureComponent {
             name: 'Shopify',
             icon: 'shopify'
           }
-        ]
+        ],
+        previews: {
+          desktop: imageXL,
+          tablet: imageMD,
+          mobile: imageXS
+        }
       } // /portfolioItem
     })
   } // /componentWillMount ()
@@ -41,44 +43,12 @@ class PortfolioPage extends PureComponent {
 
         {/* Content */}
         <PortfolioPageContent>
-          {/*
-            showArrows
-            showStatus
-            showIndicators
-            showThumbs
-            infiniteLoop
-            selectedItem
-            axis
-            onChange
-            onClickItem
-            onClickThumb
-            width
-            useKeyboardArrows
-            autoPlay
-            stopOnHover
-            interval
-            transitionTime
-            swipeScrollTolerance
-            direction
-            dynamicHeight
-            axis
-            emulateTouch
-            statusFormatter
-          */}
-          <Carousel showStatus={false} showThumbs={false} infiniteLoop={true} useKeyboardArrows={true} transitionTime={animation.duration} dynamicHeight={true}>
-            {[1, 2, 3].map((value, index) =>
-              <div key={index}>
-                <figure>
-                  <img src="https://placehold.it/480x320" alt="" className="w-100" />
-                </figure>
-              </div>
-            )}
-          </Carousel>
-        </PortfolioPageContent>
-
-        <PortfolioPageContent>
           <div className="container-fluid">
             <div className="row justify-content-center align-items-center">
+              <div className="col-12 col-sm-10">
+                <PortfolioCarousel desktop={this.state.portfolioItem.previews.desktop} tablet={this.state.portfolioItem.previews.tablet} mobile={this.state.portfolioItem.previews.mobile} />
+              </div>
+
               <div className="col-12 col-sm-10 col-md-5">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae enim quisquam exercitationem doloremque porro veritatis repellat ea, mollitia maxime, ullam aliquam! Deleniti, blanditiis nostrum.
                 </p>
