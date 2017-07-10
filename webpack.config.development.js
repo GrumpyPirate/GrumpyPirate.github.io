@@ -127,6 +127,23 @@ module.exports = {
           fallback: 'style-loader'
         })
       },
+      // CSS
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                sourceMap: true,
+                url: false
+              }
+            }
+          ],
+          fallback: 'style-loader'
+        })
+      },
       // All images
       {
         test: /\.(gif|png|jpe?g|svg)$/i,

@@ -14,7 +14,7 @@ import Sidebar from 'components/Sidebar/Sidebar'
 import Footer from 'components/Footer/Footer'
 import About from 'components/About/About.jsx'
 import WebDev from 'components/WebDev/WebDev.jsx'
-import PortfolioPage from 'components/PortfolioPage/PortfolioPage.jsx'
+import PortfolioPage from 'components/Portfolio/PortfolioPage/PortfolioPage.jsx'
 import DigitalArt from 'components/DigitalArt/DigitalArt.jsx'
 import HTTPNotFound from 'components/404/404'
 

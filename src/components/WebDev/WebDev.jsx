@@ -3,7 +3,7 @@ import React from 'react'
 
 import PageHeader from '../PageHeader/PageHeader.jsx'
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
-import PortfolioListingItem from 'components/PortfolioListingItem/PortfolioListingItem'
+import PortfolioListingItem from 'components/Portfolio/PortfolioListingItem/PortfolioListingItem'
 
 // Style
 import './WebDev.scss'

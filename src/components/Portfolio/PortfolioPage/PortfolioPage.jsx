@@ -1,24 +1,21 @@
 // React
 import React, { PureComponent } from 'react'
 
+// Settings
+import { animation } from 'config/animation'
+
 // Styles
 // import './PortfolioPage.scss'
 
 // Components
 import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader.jsx'
+import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent.jsx'
+import Carousel from 'components/Carousel/Carousel.jsx'
 
 // Images
 import imageXL from 'images/portfolio/missfitsnutrition.com-xl.jpg'
 // import imageMD from 'images/portfolio/missfitsnutrition.com-md.jpg'
 // import imageXS from 'images/portfolio/missfitsnutrition.com-xs.jpg'
-
-const PortfolioPageContent = ({ children }) => {
-  return (
-    <div className="pf-page__content py-2 py-md-4">
-      {children}
-    </div>
-  ) // /return
-} // /const PortfolioPageContent
 
 class PortfolioPage extends PureComponent {
   componentWillMount () {
@@ -28,7 +25,10 @@ class PortfolioPage extends PureComponent {
         title: 'Vitae maxime',
         url: 'https://google.co.uk/',
         tech: [
-          'shopify'
+          {
+            name: 'Shopify',
+            icon: 'shopify'
+          }
         ]
       } // /portfolioItem
     })
@@ -40,6 +40,42 @@ class PortfolioPage extends PureComponent {
         <PortfolioPageHeader bgImage={imageXL} title={this.state.portfolioItem.title} tech={this.state.portfolioItem.tech}/>
 
         {/* Content */}
+        <PortfolioPageContent>
+          {/*
+            showArrows
+            showStatus
+            showIndicators
+            showThumbs
+            infiniteLoop
+            selectedItem
+            axis
+            onChange
+            onClickItem
+            onClickThumb
+            width
+            useKeyboardArrows
+            autoPlay
+            stopOnHover
+            interval
+            transitionTime
+            swipeScrollTolerance
+            direction
+            dynamicHeight
+            axis
+            emulateTouch
+            statusFormatter
+          */}
+          <Carousel showStatus={false} showThumbs={false} infiniteLoop={true} useKeyboardArrows={true} transitionTime={animation.duration} dynamicHeight={true}>
+            {[1, 2, 3].map((value, index) =>
+              <div key={index}>
+                <figure>
+                  <img src="https://placehold.it/480x320" alt="" className="w-100" />
+                </figure>
+              </div>
+            )}
+          </Carousel>
+        </PortfolioPageContent>
+
         <PortfolioPageContent>
           <div className="container-fluid">
             <div className="row justify-content-center align-items-center">

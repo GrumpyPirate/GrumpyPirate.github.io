@@ -34,9 +34,9 @@ const PortfolioPageHeader = (props) => {
 
           {props.tech.length &&
             <ul className="pf-page-header__tech__list">
-              {props.tech.map((techName) => (
+              {props.tech.map((techItem) => (
                 <li>
-                  <Icon glyph={techName} altText={techName} />
+                  <Icon glyph={techItem.icon} altText={techItem.name} />
                 </li>
               ))}
             </ul>
