@@ -46,7 +46,7 @@ const App = () => {
             />
 
             <Route
-              path="/webdev/:portfolioItemId"
+              path="/webdev/:portfolioItemSlug"
               component={PortfolioPage}
             />
 

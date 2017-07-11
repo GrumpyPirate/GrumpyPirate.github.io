@@ -11,7 +11,7 @@ import './PortfolioListingItem.scss'
 // Define PortfolioItem
 const PortfolioItem = ({ portfolioItem }) => {
   return (
-    <Link to={`/webdev/${portfolioItem.id}`} className="pf__item" role="listitem">
+    <Link to={`/webdev/${portfolioItem.slug}`} className="pf__item" role="listitem">
       {/* Item image, 8:5 */}
       <figure className="pf__item__media">
         <img src={portfolioItem.headerImgSrc} alt=""/>

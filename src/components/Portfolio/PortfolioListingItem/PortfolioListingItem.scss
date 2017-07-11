@@ -5,14 +5,18 @@
   position: relative;
   text-align: left;
   overflow: hidden;
-  border: solid .75rem palette(theme-accent-2);
-  border-style: solid none;
-  margin-bottom: -.75rem;
+  border: solid (map-get($grid-gutter-widths, xs) / 2) palette(theme-accent-2);
+  border-style: none none solid;
 
   // md up
   @include media-breakpoint-up(md) {
     flex: 1 0 50%;
   } // /md up
+
+  // lg up
+  @include media-breakpoint-up(lg) {
+    border-bottom-width: map-get($grid-gutter-widths, lg) / 2;
+  } // /lg up
 
   &:hover,
   &:focus {
