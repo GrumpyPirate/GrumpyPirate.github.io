@@ -14,18 +14,12 @@ const PortfolioItem = ({ portfolioItem }) => {
     <Link to={`/webdev/${portfolioItem.id}`} className="pf__item" role="listitem">
       {/* Item image, 8:5 */}
       <figure className="pf__item__media">
-        <picture>
-          <source media="(min-width: 576px)" srcSet="https://unsplash.it/576/360/?random 1x, https://unsplash.it/1152/720/?random 2x"/>
-          <source srcSet="https://unsplash.it/320/200/?random 1x, https://unsplash.it/640/400/?random 2x"/>
-          <img src="https://unsplash.it/320/200/?random" srcSet="https://unsplash.it/640/400/?random 2x" alt=""/>
-        </picture>
+        <img src={portfolioItem.headerImgSrc} alt=""/>
       </figure>
 
       <div className="pf__item__copy">
         {/* Item title */}
-        <h3 className="h5 pf__item__title">
-          Excepturi maiores
-        </h3>
+        <h3 className="h5 pf__item__title">{portfolioItem.title}</h3>
 
         {/* Item description */}
         <div className="last-child-mb-0">

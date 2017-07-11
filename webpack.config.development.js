@@ -10,6 +10,7 @@ const paths = {
   imgSrc: `${__dirname}/public/images`,
   sassSrc: `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`,
+  servicesSrc: `${__dirname}/src/services`,
   iconSrc: `${__dirname}/src/icons`,
   configSrc: `${__dirname}/src/config`
 } // /const paths
@@ -83,6 +84,7 @@ module.exports = {
     ],
     alias: {
       'components': paths.componentSrc,
+      'services': paths.servicesSrc,
       'images': paths.imgSrc,
       'icons': paths.iconSrc,
       'config': paths.configSrc
@@ -121,7 +123,10 @@ module.exports = {
             {
               loader: 'sass-loader',
               options: {
-                includePaths: [paths.sassSrc],
+                includePaths: [
+                  paths.sassSrc,
+                  paths.imgSrc
+                ],
                 sourceMap: true
               }
             }

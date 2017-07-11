@@ -1,30 +1,40 @@
 // React
-import React from 'react'
+import React, { Component } from 'react'
 
+// Components
 import PageHeader from '../PageHeader/PageHeader.jsx'
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
-import PortfolioListingItem from 'components/Portfolio/PortfolioListingItem/PortfolioListingItem'
+import PortfolioList from 'components/Portfolio/PortfolioList/PortfolioList'
+import Loader from 'components/Loader/Loader'
+
+// Services
+import ContentService from 'services/ContentService'
 
 // Style
 import './WebDev.scss'
 
 // Component - WebDev page
-class WebDev extends React.Component {
-  componentWillMount () {
-    const portfolioItems = [
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-      { id: 4 },
-      { id: 5 },
-      { id: 6 },
-      { id: 7 },
-      { id: 8 }
-    ]
+class WebDev extends Component {
+  constructor () {
+    super()
 
-    this.setState({
-      portfolioItems: portfolioItems
-    })
+    this.state = {
+      contentService: new ContentService(),
+      portfolioItems: null
+    }
+  }
+
+  componentWillMount () {
+    this.state.contentService
+      .getPortfolioItems()
+      .then((items) => {
+        this.setState({
+          portfolioItems: items
+        })
+      })
+      .catch((e) => {
+        console.error(e)
+      })
   } // /componentWillMount
 
   render () {
@@ -38,11 +48,14 @@ class WebDev extends React.Component {
         </PageHeader>
 
         <section className="portfolio">
-          <div className="pf__list" role="listbox">
-            {this.state.portfolioItems.map((item, i) => (
-              <PortfolioListingItem portfolioItem={item} key={i} />
-            ))}
-          </div>
+          {this.state.portfolioItems
+            ? (<PortfolioList items={this.state.portfolioItems}/>)
+            : (
+               <div className="container-fluid">
+                 <Loader />
+               </div>
+            )
+          }
         </section>
       </div>
     )

@@ -9,44 +9,47 @@ import './Icons.scss'
 // feather-icons
 
 // Generic
-import close from './svg/x.svg'
-import settingsApplications from './svg/settings.svg'
-import heart from './svg/heart.svg'
+import close from 'icons/svg/x.svg'
+import settingsApplications from 'icons/svg/settings.svg'
+import heart from 'icons/svg/heart.svg'
 
 // Brand icons
-import apple from './svg/brands/apple.svg'
-import shopify from './svg/brands/shopify.svg'
-import atom from './svg/editors/atom.svg'
-import sublime from './svg/editors/sublime.svg'
+import apple from 'icons/svg/brands/apple.svg'
+import shopify from 'icons/svg/brands/shopify.svg'
+import atom from 'icons/svg/editors/atom.svg'
+import sublime from 'icons/svg/editors/sublime.svg'
 
-import javascript from './svg/development/js/javascript.svg'
-import babel from './svg/development/js/babel.svg'
-import react from './svg/development/js/react.svg'
-import angular from './svg/development/js/angular.svg'
-import code from './svg/development/hash.svg'
-import laptopMac from './svg/development/airplay.svg'
-// import express from './svg/development/js/express.svg'
-// import nodejs from './svg/development/js/nodejs.svg'
-// import redux from './svg/development/js/redux.svg'
+import javascript from 'icons/svg/development/js/javascript.svg'
+import babel from 'icons/svg/development/js/babel.svg'
+import react from 'icons/svg/development/js/react.svg'
+import angular from 'icons/svg/development/js/angular.svg'
+import code from 'icons/svg/development/hash.svg'
+import laptopMac from 'icons/svg/development/airplay.svg'
+// import express from 'icons/svg/development/js/express.svg'
+// import nodejs from 'icons/svg/development/js/nodejs.svg'
+// import redux from 'icons/svg/development/js/redux.svg'
 
-import webpack from './svg/development/devtool/webpack.svg'
-import gulp from './svg/development/devtool/gulp.svg'
-import grunt from './svg/development/devtool/grunt.svg'
+import webpack from 'icons/svg/development/devtool/webpack.svg'
+import gulp from 'icons/svg/development/devtool/gulp.svg'
+import grunt from 'icons/svg/development/devtool/grunt.svg'
 
-import sass from './svg/development/css/sass.svg'
-import less from './svg/development/css/less.svg'
-import bootstrap from './svg/development/css/bootstrap.svg'
-import foundation from './svg/development/css/foundation.svg'
-import bulma from './svg/development/css/bulma.svg'
+import sass from 'icons/svg/development/css/sass.svg'
+import less from 'icons/svg/development/css/less.svg'
+import bootstrap from 'icons/svg/development/css/bootstrap.svg'
+import foundation from 'icons/svg/development/css/foundation.svg'
+import bulma from 'icons/svg/development/css/bulma.svg'
 
-import html5 from './svg/development/html5.svg'
-import django from './svg/development/django.svg'
-import laravel from './svg/development/laravel.svg'
+import html5 from 'icons/svg/development/html5.svg'
+import django from 'icons/svg/development/django.svg'
+import laravel from 'icons/svg/development/laravel.svg'
 
-import photoshop from './svg/design/photoshop.svg'
-import illustrator from './svg/design/illustrator.svg'
-import sketch from './svg/design/sketch.svg'
-import palette from './svg/design/image.svg'
+import photoshop from 'icons/svg/design/photoshop.svg'
+import illustrator from 'icons/svg/design/illustrator.svg'
+import sketch from 'icons/svg/design/sketch.svg'
+import palette from 'icons/svg/design/image.svg'
+
+// Utils
+import loader from 'icons/svg/loader.svg'
 
 const icons = {
   // feather-icons (generic)
@@ -78,7 +81,9 @@ const icons = {
   angular,
   photoshop,
   sketch,
-  illustrator
+  illustrator,
+  // Utils
+  loader
 } // /const icons
 
 // Component

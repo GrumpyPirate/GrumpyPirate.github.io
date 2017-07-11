@@ -201,7 +201,7 @@
 
   &__menu {
     position: fixed;
-    top: rem(55px);
+    top: $sidebar-height-mobile;
     left: 0;
     width: 100%;
     margin: 0;

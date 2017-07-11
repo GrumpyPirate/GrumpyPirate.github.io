@@ -1,4 +1,0 @@
-
-var sprite = require("/Users/ecobbold/Desktop/Dev/Personal/Portfolio/portfolio-2017/node_modules/svg-sprite-loader/lib/web/global-sprite");
-var image = "<symbol viewBox=\"0 0 24 24\" id=\"airplay\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <g> <path d=\"M20,2H4C2.35,2,1,3.35,1,5v10c0,1.65,1.35,3,3,3h1c0.55,0,1-0.45,1-1s-0.45-1-1-1H4c-0.55,0-1-0.45-1-1V5\n\t\tc0-0.55,0.45-1,1-1h16c0.55,0,1,0.45,1,1v10c0,0.55-0.45,1-1,1h-1c-0.55,0-1,0.45-1,1s0.45,1,1,1h1c1.65,0,3-1.35,3-3V5\n\t\tC23,3.35,21.65,2,20,2z\"/> <path d=\"M12.77,14.36c-0.38-0.46-1.16-0.46-1.54,0l-5,6c-0.25,0.3-0.3,0.71-0.14,1.06C6.26,21.78,6.61,22,7,22h10\n\t\tc0.39,0,0.74-0.22,0.91-0.58c0.17-0.35,0.11-0.77-0.14-1.06L12.77,14.36z M9.14,20L12,16.56L14.87,20H9.14z\"/> </g> </symbol>";
-module.exports = sprite.add(image, "airplay");

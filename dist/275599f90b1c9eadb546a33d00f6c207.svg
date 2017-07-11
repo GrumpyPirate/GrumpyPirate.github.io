@@ -1,4 +1,0 @@
-
-var sprite = require("/Users/ecobbold/Desktop/Dev/Personal/Portfolio/portfolio-2017/node_modules/svg-sprite-loader/lib/web/global-sprite");
-var image = "<symbol viewBox=\"0 0 95.81 86\" id=\"sketch\" ><title>sketch</title><path class=\"a\" d=\"M20.9,2.83,47.9,0l27,2.83,20.9,27.83L47.9,86,0,30.67Z\"/></symbol>";
-module.exports = sprite.add(image, "sketch");

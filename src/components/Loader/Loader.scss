@@ -1,0 +1,21 @@
+@import 'core';
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  } // /from
+
+  to {
+    transform: rotate(1turn);
+  } // /to
+} // /@keyframes loader
+
+.loader {
+  &__icon {
+    .icon {
+      display: block;
+      margin: 0 auto;
+      animation: loader ($anim-dur * 15) linear 0s infinite forwards;
+    } // /.icon
+  }
+} // /.loader

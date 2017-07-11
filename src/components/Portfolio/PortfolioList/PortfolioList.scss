@@ -1,0 +1,9 @@
+@import 'core';
+
+.pf__list {
+  // md up
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-flow: row wrap;
+  } // /md up
+} // /.pf__list

@@ -69,8 +69,8 @@ class Sidebar extends React.Component {
       <aside className="sidebar text-lg-right">
         <div className="sidebar__content container-fluid">
           <Link to="/" className="sidebar__brand">
-            {/* <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/> */}
-            <img className="sidebar__brand__image" src="https://placehold.it/104x104" alt="" width="52" height="52"/>
+            <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>
+            {/* <img className="sidebar__brand__image" src="https://placehold.it/104x104" alt="" width="52" height="52"/> */}
             {/* <span className="sidebar__brand__name ml-1">Edward Cobbold</span> */}
             <span className="sidebar__brand__name ml-1">Lorem Ipsum</span>
           </Link>
