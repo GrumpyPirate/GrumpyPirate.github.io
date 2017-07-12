@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 import PageHeader from '../PageHeader/PageHeader.jsx'
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
 import PortfolioList from 'components/Portfolio/PortfolioList/PortfolioList'
-import Loader from 'components/Loader/Loader'
 
 // Services
 import ContentService from 'services/ContentService'
@@ -15,24 +14,30 @@ import './WebDev.scss'
 
 // Component - WebDev page
 class WebDev extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
     this.state = {
       contentService: new ContentService(),
       portfolioItems: null
-    }
-  }
+    } // /this.state
+  } // /constructor
 
   componentWillMount () {
+    this.props.emitter.emit('startLoading')
+
     this.state.contentService
       .getPortfolioItems()
       .then((items) => {
         this.setState({
           portfolioItems: items
         })
+        window.setTimeout(() => {
+          this.props.emitter.emit('stopLoading')
+        })
       })
       .catch((e) => {
+        this.props.emitter.emit('stopLoading')
         console.error(e)
       })
   } // /componentWillMount
@@ -48,13 +53,8 @@ class WebDev extends Component {
         </PageHeader>
 
         <section className="portfolio">
-          {this.state.portfolioItems
-            ? (<PortfolioList items={this.state.portfolioItems}/>)
-            : (
-               <div className="container-fluid">
-                 <Loader />
-               </div>
-            )
+          {this.state.portfolioItems &&
+            <PortfolioList items={this.state.portfolioItems}/>
           }
         </section>
       </div>

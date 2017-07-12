@@ -1,5 +1,5 @@
 // React
-import React from 'react'
+import React, { Component } from 'react'
 
 // Router
 import {
@@ -9,8 +9,12 @@ import {
   Route
 } from 'react-router-dom'
 
+// Vendor
+import { EventEmitter } from 'fbemitter'
+
 // Components
 import Sidebar from 'components/Sidebar/Sidebar'
+import MainContainer from 'components/MainContainer/MainContainer'
 import Footer from 'components/Footer/Footer'
 import About from 'components/About/About.jsx'
 import WebDev from 'components/WebDev/WebDev.jsx'
@@ -23,48 +27,66 @@ import HTTPNotFound from 'components/404/404'
 import './App.scss'
 
 // Define App
-const App = () => {
-  return (
-    <Router>
-      <div className="app">
-        <Sidebar/>
+class App extends Component {
+  constructor () {
+    super()
 
-        <main className="content-container">
-          <Switch>
-            {/* About */}
-            <Route
-              exact
-              path="/"
-              component={About}
-            />
+    this.state = {
+      emitter: new EventEmitter()
+    } // /this.state
+  } // /constructor ()
 
-            {/* Web Development */}
-            <Route
-              exact
-              path="/webdev"
-              component={WebDev}
-            />
+  render () {
+    return (
+      <Router>
+        <div className="app">
+          <Sidebar/>
 
-            <Route
-              path="/webdev/:portfolioItemSlug"
-              component={PortfolioPage}
-            />
+          <MainContainer emitter={this.state.emitter}>
+            <Switch>
+              {/* About */}
+              <Route
+                exact
+                path="/"
+                component={About}
+              />
 
-            {/* Digital Art */}
-            <Route
-              path="/digital-art"
-              component={DigitalArt}
-            />
+              {/* Web Development */}
+              <Route
+                exact
+                path="/webdev"
+                render={(props) => {
+                  return (
+                    <WebDev emitter={this.state.emitter} />
+                  )
+                }}
+              />
 
-            {/* Fallback to 404 */}
-            <Route component={HTTPNotFound}/>
-          </Switch>
+              <Route
+                path="/webdev/:portfolioItemSlug"
+                render={(props) => {
+                  return (
+                    <PortfolioPage emitter={this.state.emitter} {...props} />
+                  )
+                }}
+              />
 
-          <Footer />
-        </main>
-      </div>
-    </Router>
-  )
-}
+              {/* Digital Art */}
+              <Route
+                path="/digital-art"
+                component={DigitalArt}
+              />
+
+              {/* Fallback to 404 */}
+              <Route component={HTTPNotFound}/>
+            </Switch>
+
+            <Footer />
+          </MainContainer>
+        </div>
+      </Router>
+    )
+  } // /render ()
+} // /class App extends Component
 
 export default App

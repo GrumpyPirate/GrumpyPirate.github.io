@@ -19,13 +19,3 @@ body {
     align-items: stretch;
   } // /lg up
 } // /.app
-
-.content-container {
-  // lg up
-  @include media-breakpoint-up(lg) {
-    flex: 1 1 auto;
-    height: 100vh;
-    overflow-y: auto;
-    touch-action: pan-y;
-  } // /lg up
-} // /.content-container

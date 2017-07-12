@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    flex: 0 0 ($sidebar-width * .85);
+    flex: 0 0 $sidebar-width-lg;
     padding: 0;
     border: 0;
     // border-right: solid $hr-border-width $sidebar-border-color;
