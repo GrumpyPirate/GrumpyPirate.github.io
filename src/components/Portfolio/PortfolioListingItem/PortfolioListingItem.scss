@@ -5,7 +5,7 @@
   position: relative;
   text-align: left;
   overflow: hidden;
-  border: solid (map-get($grid-gutter-widths, xs) / 2) palette(theme-accent-2);
+  border: solid (map-get($grid-gutter-widths, xs) / 4) palette(theme-accent-2);
   border-style: none none solid;
 
   // md up
@@ -15,7 +15,7 @@
 
   // lg up
   @include media-breakpoint-up(lg) {
-    border-bottom-width: map-get($grid-gutter-widths, lg) / 2;
+    border-bottom-width: map-get($grid-gutter-widths, lg) / 4;
   } // /lg up
 
   &:hover,

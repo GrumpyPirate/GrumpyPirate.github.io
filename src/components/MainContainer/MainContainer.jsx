@@ -1,7 +1,11 @@
 // React
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
+// Util
 import ClassNames from 'classnames'
+import PropTypes from 'prop-types'
+import { EventEmitter } from 'fbemitter'
 
 // Config
 import { animation } from 'config/animation'
@@ -26,6 +30,7 @@ class MainContainer extends Component {
     this.handleLoadStop = this.handleLoadStop.bind(this)
   } // /constructor(props)
 
+  // INTERNAL
   handleLoadStart () {
     this.setState({
       isLoading: true,
@@ -47,10 +52,19 @@ class MainContainer extends Component {
     }, (animation.duration * 2))
   }
 
+  // COMPONENT LIFECYCLE
   componentWillMount () {
     this.props.emitter.addListener('startLoading', this.handleLoadStart)
     this.props.emitter.addListener('stopLoading', this.handleLoadStop)
   } // /componentWillMount ()
+
+  componentDidUpdate (prevProps) {
+    // Scroll both the window, and the container element back to top
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+      this._container.scrollTop = 0
+    } // /if (this.props.location !== prevProps.location)
+  } // /componentDidUpdate (prevProps)
 
   render () {
     const classNames = ClassNames({
@@ -59,7 +73,7 @@ class MainContainer extends Component {
     })
 
     return (
-      <main className={classNames}>
+      <main className={classNames} ref={(container) => this._container = container}>
         {this.props.children}
 
         {!this.state.isLoadingComplete &&
@@ -76,4 +90,14 @@ class MainContainer extends Component {
   } // /render()
 } // /class MainContainer extends React.Component
 
-export default MainContainer
+MainContainer.propTypes = {
+  children: PropTypes.oneOf([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  emitter: PropTypes.instanceOf(EventEmitter).isRequired,
+  location: PropTypes.object.isRequired
+}
+
+// export with router, to allow access to Router's props (particularly location, which we need)
+export default withRouter(MainContainer)

@@ -11,6 +11,7 @@ import marked from 'marked'
 import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader.jsx'
 import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent.jsx'
 import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel.jsx'
+import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup.jsx'
 
 // Services
 import ContentService from 'services/ContentService'
@@ -90,8 +91,21 @@ class PortfolioPage extends PureComponent {
 
                     <hr/>
 
-                    {/* Device Carousel */}
-                    <PortfolioCarousel desktop={this.state.portfolioItem.previews.desktop} tablet={this.state.portfolioItem.previews.tablet} mobile={this.state.portfolioItem.previews.mobile} />
+                    {/* Device Carousel, for mobile (sm-) only */}
+                    <div className="hidden-md-up">
+                      <PortfolioCarousel
+                        desktop={this.state.portfolioItem.previews.desktop}
+                        tablet={this.state.portfolioItem.previews.tablet}
+                        mobile={this.state.portfolioItem.previews.mobile} />
+                    </div>
+
+                    {/* Device Lineup, for tablet up */}
+                    <div className="hidden-sm-down">
+                      <PortfolioDeviceLineup
+                        desktop={this.state.portfolioItem.previews.desktop}
+                        tablet={this.state.portfolioItem.previews.tablet}
+                        mobile={this.state.portfolioItem.previews.mobile} />
+                    </div>
 
                     <hr/>
 

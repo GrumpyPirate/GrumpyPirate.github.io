@@ -23,7 +23,6 @@ import DigitalArt from 'components/DigitalArt/DigitalArt.jsx'
 import HTTPNotFound from 'components/404/404'
 
 // SCSS
-// import 'node-normalize-scss/_normalize.scss'
 import './App.scss'
 
 // Define App
@@ -48,7 +47,9 @@ class App extends Component {
               <Route
                 exact
                 path="/"
-                component={About}
+                render={(props) => {
+                  return <About />
+                }}
               />
 
               {/* Web Development */}
@@ -74,7 +75,9 @@ class App extends Component {
               {/* Digital Art */}
               <Route
                 path="/digital-art"
-                component={DigitalArt}
+                component={(props) => {
+                  return <DigitalArt />
+                }}
               />
 
               {/* Fallback to 404 */}

@@ -8,9 +8,9 @@ import Carousel from 'components/Carousel/Carousel.jsx'
 import './PortfolioCarousel.scss'
 
 // images
-import frameMobile from './frame-mobile.svg'
-import frameTablet from './frame-tablet.svg'
-import frameLaptop from './frame-laptop.svg'
+import frameMobile from 'images/device-frames/frame-mobile.svg'
+import frameTablet from 'images/device-frames/frame-tablet.svg'
+import frameLaptop from 'images/device-frames/frame-laptop.svg'
 
 // Settings
 import { animation } from 'config/animation'
