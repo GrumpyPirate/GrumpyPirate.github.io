@@ -18,6 +18,8 @@ import apple from 'icons/svg/brands/apple.svg'
 import shopify from 'icons/svg/brands/shopify.svg'
 import atom from 'icons/svg/editors/atom.svg'
 import sublime from 'icons/svg/editors/sublime.svg'
+import divio from 'icons/svg/brands/divio.svg'
+import contentful from 'icons/svg/brands/contentful.svg'
 
 import javascript from 'icons/svg/development/js/javascript.svg'
 import babel from 'icons/svg/development/js/babel.svg'
@@ -62,6 +64,8 @@ const icons = {
   // App
   atom,
   sublime,
+  divio,
+  contentful,
   apple,
   shopify,
   html5,
