@@ -3,7 +3,7 @@ const express = require('express')
 const appDir = 'dist'
 const publicDir = 'public'
 
-const port = process.env.port || 8000
+const port = process.env.PORT || 3000
 
 // App setup
 const app = express()
