@@ -6,3 +6,7 @@ yarn-error.log
 
 # Project
 /dist
+
+# Design
+.ai
+.psd
