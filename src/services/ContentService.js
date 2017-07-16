@@ -2,11 +2,6 @@
 import { createClient } from 'contentful'
 import ContentfulSettings from 'config/contentful'
 
-// Images
-import imageXL from 'images/portfolio/missfitsnutrition.com-xl.jpg'
-import imageMD from 'images/portfolio/missfitsnutrition.com-md.jpg'
-import imageXS from 'images/portfolio/missfitsnutrition.com-xs.jpg'
-
 class ContentService {
   constructor () {
     this.contentfulClient = createClient({
@@ -34,6 +29,7 @@ class ContentService {
       id: contentfulItem.sys.id,
       slug: contentfulItem.fields.slug,
       title: contentfulItem.fields.title,
+      descriptionShort: contentfulItem.fields.descriptionShort,
       description: contentfulItem.fields.description,
       url: contentfulItem.fields.url,
       tech: contentfulItem.fields.tech,

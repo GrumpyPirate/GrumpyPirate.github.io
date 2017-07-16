@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react'
 import marked from 'marked'
 
 // Styles
-// import './PortfolioPage.scss'
+import './PortfolioPage.scss'
 
 // Components
 import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader.jsx'
@@ -68,24 +68,19 @@ class PortfolioPage extends PureComponent {
                     {this.state.portfolioItem.supportingImageSrc
                       ? (
                         <div className="row align-items-lg-center">
-                          <div className="col-12 col-md" dangerouslySetInnerHTML={{__html: this.getDescription(this.state.portfolioItem.description)}}></div>
+                          <div className="col-12 col-md col-xl-6" dangerouslySetInnerHTML={{__html: this.getDescription(this.state.portfolioItem.description)}}></div>
 
-                          <div className="col-12 col-md-6 col-xl-5">
+                          <div className="col-12 col-md-6 col-xl-5 push-xl-1">
                             {/* Supporting image 1 */}
                             <hr className="mt-1 hidden-md-up"/>
                             <figure className="mb-0">
-                              <img src={this.state.portfolioItem.supportingImageSrc} alt="" className="w-100" />
+                              <img src={this.state.portfolioItem.supportingImageSrc} alt="" className="pf-page__supporting-image w-100" />
                             </figure>
                           </div>
                         </div>
                       )
                       : (
-                        <div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae enim quisquam exercitationem doloremque porro veritatis repellat ea, mollitia maxime, ullam aliquam! Deleniti, blanditiis nostrum.
-                          </p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, deserunt. Iste reiciendis magnam temporibus quidem, quis hic libero molestiae. Cum facere, recusandae reiciendis corrupti ipsa placeat quas explicabo rem debitis quod magnam sequi. Minus pariatur totam, maxime deleniti a ullam cum rem praesentium, minima reiciendis, ad quaerat repudiandae.
-                          </p>
-                        </div>
+                        <div dangerouslySetInnerHTML={{__html: this.getDescription(this.state.portfolioItem.description)}}></div>
                       )
                     }
 

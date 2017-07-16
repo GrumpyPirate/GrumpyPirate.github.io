@@ -8,3 +8,5 @@ yarn-error.log
 .psd
 
 package-lock.json
+
+/dist

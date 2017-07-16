@@ -1,7 +1,9 @@
 @import 'core';
 
 .pf__item {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   text-align: left;
   overflow: hidden;
@@ -35,10 +37,6 @@
     margin: 0;
     transition: transform ($anim-dur * 3) ease;
 
-    // picture {
-    //   display: block;
-    // } // /picture
-
     img {
       position: absolute;
       top: 0;
@@ -53,11 +51,16 @@
 
   // Copy
   &__copy {
-    $copy-padding: $grid-gutter-width-base/ 2;
+    $copy-padding: $grid-gutter-width-base / 2;
     position: relative;
     padding: 15vmax $copy-padding $copy-padding;
     color: palette(white);
-    background-image: linear-gradient(to top, transparentize(palette(theme-dark), .4), transparentize(palette(theme-dark), .9) 75%);
+    background-image: linear-gradient(
+      to top,
+      transparentize(palette(theme-dark), .2),
+      transparentize(palette(theme-dark), .6) 40%,
+      transparentize(palette(theme-dark), 1)
+    );
     z-index: 1;
   } // /&__copy
 } // /.pf__item

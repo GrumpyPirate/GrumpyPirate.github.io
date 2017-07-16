@@ -24,7 +24,7 @@ const PortfolioItem = ({ portfolioItem }) => {
         {/* Item description */}
         <div className="last-child-mb-0">
           <p className="pf__item__desc">
-            Maxime aperiam beatae accusamus ullam in, reiciendis veritatis incidunt eveniet doloremque, minima quis ipsum ipsam rem esse velit.
+            {portfolioItem.descriptionShort}
           </p>
         </div>
       </div>
