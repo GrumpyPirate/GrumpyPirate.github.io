@@ -8,8 +8,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server -d --progress --config ./webpack.config.development.js",
-    "build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.production.js",
+    "dev": "NODE_ENV=development webpack-dev-server -d --progress --config webpack.config.development.js",
+    "build": "NODE_ENV=production webpack -p --progress --config webpack.config.production.js",
     "start": "NODE_ENV=production node server.js",
     "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
