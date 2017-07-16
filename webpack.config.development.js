@@ -1,17 +1,17 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HTMLWebpackPlugin = require('html-webpack-plugin')
 var FaviconsPlugin = require('favicons-webpack-plugin')
-var CleanPlugin = require('clean-webpack-plugin')
 
 // Paths
 const paths = {
   src: `${__dirname}/src`,
   build: `${__dirname}/dist`,
+  public: `${__dirname}/public`,
   imgSrc: `${__dirname}/public/images`,
+  iconSrc: `${__dirname}/public/icons`,
   sassSrc: `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`,
   servicesSrc: `${__dirname}/src/services`,
-  iconSrc: `${__dirname}/src/icons`,
   configSrc: `${__dirname}/src/config`
 } // /const paths
 
@@ -57,11 +57,6 @@ const config = {
         yandex: true,
         windows: true
       }
-    },
-    // clean-webpack-plugin
-    clean: {
-      dry: false,
-      watch: true
     }
   } // /plugins
 } // /config
@@ -75,7 +70,6 @@ module.exports = {
     path: paths.build,
     filename: 'app-[hash].js'
   },
-  // Resolve SCSS image (url('...')s)
   resolve: {
     extensions: [
       '.js',
@@ -124,8 +118,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  paths.sassSrc,
-                  paths.imgSrc
+                  paths.sassSrc
                 ],
                 sourceMap: true
               }
@@ -193,10 +186,10 @@ module.exports = {
     // hot: true,
     port: 3000,
     overlay: true,
+    contentBase: paths.public,
     open: true
   },
   plugins: [
-    new CleanPlugin(['./dist'], config.plugins.clean),
     new FaviconsPlugin(config.plugins.favicons),
     new ExtractTextPlugin('css/app-[hash].css'),
     new HTMLWebpackPlugin(config.plugins.html)

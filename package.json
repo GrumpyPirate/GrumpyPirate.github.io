@@ -2,10 +2,11 @@
   "name": "ecobbold-portfolio-2017",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --progress --config ./webpack.config.development.js",
     "build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.production.js",
+    "start": "NODE_ENV=production node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edward Cobbold <edward.cobbold@gmail.com>",
@@ -29,6 +30,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^3.0.1",
+    "express": "^4.15.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "favicons-webpack-plugin": "^0.0.7",
     "fbemitter": "^2.1.1",

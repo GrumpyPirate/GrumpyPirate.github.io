@@ -8,10 +8,10 @@ const paths = {
   src: `${__dirname}/src`,
   build: `${__dirname}/dist`,
   imgSrc: `${__dirname}/public/images`,
+  iconSrc: `${__dirname}/public/icons`,
   sassSrc: `${__dirname}/src/sass`,
   componentSrc: `${__dirname}/src/components`,
   servicesSrc: `${__dirname}/src/services`,
-  iconSrc: `${__dirname}/src/icons`,
   configSrc: `${__dirname}/src/config`
 } // /const paths
 
@@ -61,7 +61,7 @@ const config = {
     // clean-webpack-plugin
     clean: {
       dry: false,
-      watch: true
+      watch: false
     }
   } // /plugins
 } // /config
@@ -75,7 +75,6 @@ module.exports = {
     path: paths.build,
     filename: 'app-[hash].js'
   },
-  // Resolve SCSS image (url('...')s)
   resolve: {
     extensions: [
       '.js',
@@ -119,13 +118,17 @@ module.exports = {
                 sourceMap: 'inline'
               }
             },
-            'resolve-url-loader',
+            // {
+            //   loader: 'resolve-url-loader',
+            //   options: {
+            //     sourceMap: true
+            //   }
+            // },
             {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  paths.sassSrc,
-                  paths.imgSrc
+                  paths.sassSrc
                 ],
                 sourceMap: true
               }
@@ -184,16 +187,6 @@ module.exports = {
         ]
       }
     ]
-  },
-  devServer: {
-    host: '0.0.0.0',
-    historyApiFallback: {
-      index: '/'
-    },
-    // hot: true,
-    port: 3000,
-    overlay: true,
-    open: true
   },
   plugins: [
     new CleanPlugin(['./dist'], config.plugins.clean),

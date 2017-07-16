@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 
 // Router
 import {
-  HashRouter as Router,
   // HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
