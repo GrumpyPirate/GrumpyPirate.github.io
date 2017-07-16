@@ -45,10 +45,9 @@ class WebDev extends Component {
   render () {
     return (
       <div>
-        {/* <PageHeader title="Web Dev" subtitle="Stuff I've worked on" /> */}
-        <PageHeader title="Quis iure">
+        <PageHeader title="Web Development">
           <PageHeaderSubtitle>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
+            Stuff I've worked on
           </PageHeaderSubtitle>
         </PageHeader>
 

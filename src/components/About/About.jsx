@@ -24,7 +24,7 @@ class About extends Component {
           </PageHeaderSubtitle>
 
           <PageHeaderSubtitle>
-            <hr className="mt-0"/>
+            <hr className="mt-0 mb-1 mb-md-2"/>
             Now that's out of the way, <NavLink to="/webdev">check out my portfolio</NavLink>.
           </PageHeaderSubtitle>
         </PageHeader>

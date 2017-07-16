@@ -16,7 +16,7 @@ import Sitenav from 'components/Sitenav/Sitenav.jsx'
 import './Sidebar.scss'
 
 // Images
-import Logo from 'images/avatar-ed--head-only.png'
+import Logo from 'images/avatar-ed--head-only-2.png'
 
 class Sidebar extends React.Component {
   constructor (props) {
@@ -70,12 +70,9 @@ class Sidebar extends React.Component {
         <div className="sidebar__content container-fluid">
           <Link to="/" className="sidebar__brand">
             <img className="sidebar__brand__image" src={Logo} alt="" width="52" height="52"/>
-            {/* <img className="sidebar__brand__image" src="https://placehold.it/104x104" alt="" width="52" height="52"/> */}
-            {/* <span className="sidebar__brand__name ml-1">Edward Cobbold</span> */}
-            <span className="sidebar__brand__name ml-1">Lorem Ipsum</span>
+            <span className="sidebar__brand__name ml-1">Edward Cobbold</span>
           </Link>
-          {/* <span className="sidebar__brand__job-title hidden-md-down">Frontend Developer</span> */}
-          <span className="sidebar__brand__job-title hidden-md-down">Culpa similique</span>
+          <span className="sidebar__brand__job-title hidden-md-down">Frontend Developer</span>
 
           <hr className="hidden-md-down"/>
 

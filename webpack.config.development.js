@@ -113,7 +113,6 @@ module.exports = {
                 sourceMap: 'inline'
               }
             },
-            'resolve-url-loader',
             {
               loader: 'sass-loader',
               options: {
@@ -183,10 +182,8 @@ module.exports = {
     historyApiFallback: {
       index: '/'
     },
-    // hot: true,
     port: 3000,
     overlay: true,
-    contentBase: paths.public,
     open: true
   },
   plugins: [

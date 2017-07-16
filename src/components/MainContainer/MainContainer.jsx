@@ -91,7 +91,7 @@ class MainContainer extends Component {
 } // /class MainContainer extends React.Component
 
 MainContainer.propTypes = {
-  children: PropTypes.oneOf([
+  children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),

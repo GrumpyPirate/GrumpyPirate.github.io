@@ -6,3 +6,5 @@ yarn-error.log
 # Design
 .ai
 .psd
+
+package-lock.json
