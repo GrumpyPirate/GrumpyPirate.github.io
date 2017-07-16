@@ -1,12 +1,16 @@
 {
   "name": "ecobbold-portfolio-2017",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.11.x",
+    "npm": "5.0.x"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --progress --config ./webpack.config.development.js",
     "build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.production.js",
-    "start": "NODE_ENV=production node ./server.js",
+    "start": "NODE_ENV=production node server.js",
     "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -58,8 +62,5 @@
     "svg-sprite-loader": "^0.3.0",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
-  },
-  "engines": {
-    "node": "6.11.0"
   }
 }
