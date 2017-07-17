@@ -1,25 +1,28 @@
 const express = require('express')
+const path = require('path')
+const morgan = require('morgan')
 
-const appDir = 'dist'
-const publicDir = 'public'
+const appDir = path.join(__dirname, '/dist')
+const publicDir = path.join(__dirname, '/public')
 
 const port = process.env.PORT || 3000
 
 // App setup
 const app = express()
-app.use(express.static(`${__dirname}/${publicDir}`))
-app.use(express.static(`${__dirname}/${appDir}`))
+
+// Logging
+app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'))
+
+// Static dirs
+app.use(express.static(publicDir))
+app.use('/dist/', express.static(appDir))
 
 // Catch-all
-app.route('*')
-  .get((req, res) => {
-    res.sendFile('index.html', {
-      root: `${__dirname}/${appDir}`,
-      headers: {
-        'Content-Type': 'text/html'
-      } // /headers
-    })
+app.get('*', (req, res) => {
+  res.sendFile('index.html', {
+    root: appDir
   })
+})
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`)

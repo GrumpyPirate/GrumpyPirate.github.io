@@ -43,6 +43,7 @@
     padding-top: $grid-gutter-width-base/ 4;
     padding-bottom: $grid-gutter-width-base/ 4;
     background-color: palette(theme-accent-1);
+    height: $sidebar-height-mobile;
     z-index: $sidebar-zindex;
 
     // lg up
@@ -51,6 +52,7 @@
       padding-top: 0;
       padding-bottom: 0;
       background: 0;
+      height: auto;
     } // /lg up
   } // /&__content
 

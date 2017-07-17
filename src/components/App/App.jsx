@@ -37,7 +37,7 @@ class App extends Component {
 
   render () {
     return (
-      <Router>
+      <Router basename="/">
         <div className="app">
           <Sidebar/>
 
@@ -75,7 +75,7 @@ class App extends Component {
               {/* Digital Art */}
               <Route
                 path="/digital-art"
-                component={(props) => {
+                render={(props) => {
                   return <DigitalArt />
                 }}
               />

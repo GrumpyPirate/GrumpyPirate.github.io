@@ -2,17 +2,18 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HTMLWebpackPlugin = require('html-webpack-plugin')
 var FaviconsPlugin = require('favicons-webpack-plugin')
 
+var path = require('path')
+
 // Paths
 const paths = {
-  src: `${__dirname}/src`,
-  build: `${__dirname}/dist`,
-  public: `${__dirname}/public`,
-  imgSrc: `${__dirname}/public/images`,
-  iconSrc: `${__dirname}/public/icons`,
-  sassSrc: `${__dirname}/src/sass`,
-  componentSrc: `${__dirname}/src/components`,
-  servicesSrc: `${__dirname}/src/services`,
-  configSrc: `${__dirname}/src/config`
+  src: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'dist'),
+  imgSrc: path.join(__dirname, 'public/images'),
+  iconSrc: path.join(__dirname, 'public/icons'),
+  sassSrc: path.join(__dirname, 'src/sass'),
+  componentSrc: path.join(__dirname, 'src/components'),
+  servicesSrc: path.join(__dirname, 'src/services'),
+  configSrc: path.join(__dirname, 'src/config')
 } // /const paths
 
 // Plugin Config
@@ -20,20 +21,20 @@ const config = {
   plugins: {
     // html-webpack-plugin
     html: {
-      template: `${paths.src}/index.html`,
-      filename: 'index.html',
-      inject: 'body'
+      template: path.join(paths.src, 'index.html'),
+      inject: 'body',
+      hash: true
     },
     // favicons-webpack-plugin
     favicons: {
       // Your source logo
-      logo: `${paths.imgSrc}/favicon-master.png`,
+      logo: path.join(paths.imgSrc, 'favicon-master.png'),
       // The prefix for all image files (might be a folder or a name)
-      prefix: 'icons-[hash]/',
+      prefix: 'icons/',
       // Emit all stats of the generated icons
-      emitStats: true,
+      emitStats: false,
       // The name of the json containing all favicon information
-      statsFilename: 'iconstats-[hash].json',
+      statsFilename: 'iconstats.json',
       // Generate a cache file with control hashes and
       // don't rebuild the favicons until those hashes change
       persistentCache: true,
@@ -68,7 +69,8 @@ module.exports = {
   ],
   output: {
     path: paths.build,
-    filename: 'app-[hash].js'
+    publicPath: '/',
+    filename: 'app.js'
   },
   resolve: {
     extensions: [
@@ -178,7 +180,7 @@ module.exports = {
     ]
   },
   devServer: {
-    host: '0.0.0.0',
+    host: '192.168.1.65',
     historyApiFallback: {
       index: '/'
     },
@@ -188,7 +190,7 @@ module.exports = {
   },
   plugins: [
     new FaviconsPlugin(config.plugins.favicons),
-    new ExtractTextPlugin('css/app-[hash].css'),
+    new ExtractTextPlugin('css/app.css'),
     new HTMLWebpackPlugin(config.plugins.html)
   ]
 }

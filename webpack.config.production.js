@@ -1,18 +1,21 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var HTMLWebpackPlugin = require('html-webpack-plugin')
-var FaviconsPlugin = require('favicons-webpack-plugin')
-var CleanPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+// const FaviconsPlugin = require('favicons-webpack-plugin')
+const CleanPlugin = require('clean-webpack-plugin')
+const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
+
+const path = require('path')
 
 // Paths
 const paths = {
-  src: `${__dirname}/src`,
-  build: `${__dirname}/dist`,
-  imgSrc: `${__dirname}/public/images`,
-  iconSrc: `${__dirname}/public/icons`,
-  sassSrc: `${__dirname}/src/sass`,
-  componentSrc: `${__dirname}/src/components`,
-  servicesSrc: `${__dirname}/src/services`,
-  configSrc: `${__dirname}/src/config`
+  src: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'dist'),
+  imgSrc: path.join(__dirname, 'public/images'),
+  iconSrc: path.join(__dirname, 'public/icons'),
+  sassSrc: path.join(__dirname, 'src/sass'),
+  componentSrc: path.join(__dirname, 'src/components'),
+  servicesSrc: path.join(__dirname, 'src/services'),
+  configSrc: path.join(__dirname, 'src/config')
 } // /const paths
 
 // Plugin Config
@@ -20,43 +23,23 @@ const config = {
   plugins: {
     // html-webpack-plugin
     html: {
-      template: `${paths.src}/index.html`,
-      filename: 'index.html',
-      inject: 'body'
+      template: path.join(paths.src, 'index.html'),
+      inject: 'body',
+      hash: true
     },
-    // favicons-webpack-plugin
-    favicons: {
-      // Your source logo
-      logo: `${paths.imgSrc}/favicon-master.png`,
-      // The prefix for all image files (might be a folder or a name)
-      prefix: 'icons-[hash]/',
-      // Emit all stats of the generated icons
-      emitStats: true,
-      // The name of the json containing all favicon information
-      statsFilename: 'iconstats-[hash].json',
-      // Generate a cache file with control hashes and
-      // don't rebuild the favicons until those hashes change
-      persistentCache: true,
-      // Inject the html into the html-webpack-plugin
-      inject: true,
-      // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-      background: '#2b978a',
-      // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-      title: 'Edward Cobbold - Frontend Developer',
-
-      // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
-      icons: {
-        android: true,
-        appleIcon: true,
-        appleStartup: true,
-        coast: true,
-        favicons: true,
-        firefox: true,
-        opengraph: true,
-        twitter: true,
-        yandex: true,
-        windows: true
-      }
+    webpackPwaManifest: {
+      name: 'Edward Cobbold :: Portfolio',
+      short_name: 'Edward Cobbold :: Portfolio',
+      description: 'Personal portfolio website of Edward Cobbold, a Frontend Web Developer',
+      display: 'standalone',
+      background_color: '#2b978a',
+      icons: [
+        {
+          src: path.resolve(paths.imgSrc, 'favicon-master.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: 'icons'
+        }
+      ]
     },
     // clean-webpack-plugin
     clean: {
@@ -73,7 +56,8 @@ module.exports = {
   ],
   output: {
     path: paths.build,
-    filename: 'app-[hash].js'
+    publicPath: '/dist/',
+    filename: 'app.js'
   },
   resolve: {
     extensions: [
@@ -183,9 +167,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanPlugin(['./dist'], config.plugins.clean),
-    new FaviconsPlugin(config.plugins.favicons),
-    new ExtractTextPlugin('css/app-[hash].css'),
-    new HTMLWebpackPlugin(config.plugins.html)
+    new CleanPlugin([paths.build], config.plugins.clean),
+    // new FaviconsPlugin(config.plugins.favicons),
+    new ExtractTextPlugin('css/app.css'),
+    new HTMLWebpackPlugin(config.plugins.html),
+    new WebpackPwaManifestPlugin(config.plugins.webpackPwaManifest)
   ]
 }
