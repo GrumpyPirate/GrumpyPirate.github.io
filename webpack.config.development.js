@@ -1,6 +1,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HTMLWebpackPlugin = require('html-webpack-plugin')
-var FaviconsPlugin = require('favicons-webpack-plugin')
+const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
 
 var path = require('path')
 
@@ -25,39 +25,19 @@ const config = {
       inject: 'body',
       hash: true
     },
-    // favicons-webpack-plugin
-    favicons: {
-      // Your source logo
-      logo: path.join(paths.imgSrc, 'favicon-master.png'),
-      // The prefix for all image files (might be a folder or a name)
-      prefix: 'icons/',
-      // Emit all stats of the generated icons
-      emitStats: false,
-      // The name of the json containing all favicon information
-      statsFilename: 'iconstats.json',
-      // Generate a cache file with control hashes and
-      // don't rebuild the favicons until those hashes change
-      persistentCache: true,
-      // Inject the html into the html-webpack-plugin
-      inject: true,
-      // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-      background: '#2b978a',
-      // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-      title: 'Edward Cobbold - Frontend Developer',
-
-      // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
-      icons: {
-        android: true,
-        appleIcon: true,
-        appleStartup: true,
-        coast: true,
-        favicons: true,
-        firefox: true,
-        opengraph: true,
-        twitter: true,
-        yandex: true,
-        windows: true
-      }
+    webpackPwaManifest: {
+      name: 'Edward Cobbold :: Portfolio',
+      short_name: 'Portfolio',
+      description: 'Personal portfolio website of Edward Cobbold, a Frontend Web Developer',
+      display: 'standalone',
+      background_color: '#2b978a',
+      icons: [
+        {
+          src: path.resolve(paths.imgSrc, 'favicon-master.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: 'icons'
+        }
+      ]
     }
   } // /plugins
 } // /config
@@ -69,7 +49,7 @@ module.exports = {
   ],
   output: {
     path: paths.build,
-    publicPath: '/',
+    publicPath: '/dist/',
     filename: 'app.js'
   },
   resolve: {
@@ -182,15 +162,15 @@ module.exports = {
   devServer: {
     host: '192.168.1.65',
     historyApiFallback: {
-      index: '/'
+      index: '/dist/'
     },
     port: 3000,
     overlay: true,
     open: true
   },
   plugins: [
-    new FaviconsPlugin(config.plugins.favicons),
     new ExtractTextPlugin('css/app.css'),
-    new HTMLWebpackPlugin(config.plugins.html)
+    new HTMLWebpackPlugin(config.plugins.html),
+    new WebpackPwaManifestPlugin(config.plugins.webpackPwaManifest)
   ]
 }
