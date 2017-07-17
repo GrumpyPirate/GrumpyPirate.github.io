@@ -1,8 +1,9 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var HTMLWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-var path = require('path')
+const path = require('path')
 
 // Paths
 const paths = {
@@ -31,6 +32,7 @@ const config = {
       description: 'Personal portfolio website of Edward Cobbold, a Frontend Web Developer',
       display: 'standalone',
       background_color: '#2b978a',
+      theme_color: '#2b978a',
       icons: [
         {
           src: path.resolve(paths.imgSrc, 'favicon-master.png'),
@@ -38,7 +40,39 @@ const config = {
           destination: 'icons'
         }
       ]
+    },
+    favicons: {
+      // Your source logo
+      logo: path.join(paths.imgSrc, 'favicon-master.png'),
+      // The prefix for all image files (might be a folder or a name)
+      prefix: 'icons/',
+      // Emit all stats of the generated icons
+      emitStats: false,
+      // Generate a cache file with control hashes and
+      // don't rebuild the favicons until those hashes change
+      persistentCache: true,
+      // Inject the html into the html-webpack-plugin
+      inject: true,
+      // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
+      background: '#2b978a',
+      // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
+      title: 'Edward Cobbold - Frontend Developer',
+
+      // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: true,
+        favicons: true,
+        firefox: true,
+        opengraph: true,
+        twitter: true,
+        yandex: true,
+        windows: true
+      }
     }
+
   } // /plugins
 } // /config
 
@@ -161,6 +195,7 @@ module.exports = {
   },
   devServer: {
     host: '192.168.1.65',
+    contentBase: 'public/',
     historyApiFallback: {
       index: '/dist/'
     },
@@ -171,6 +206,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('css/app.css'),
     new HTMLWebpackPlugin(config.plugins.html),
+    new FaviconsWebpackPlugin(config.plugins.favicons),
     new WebpackPwaManifestPlugin(config.plugins.webpackPwaManifest)
   ]
 }
