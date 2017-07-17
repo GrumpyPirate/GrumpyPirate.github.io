@@ -29,7 +29,7 @@ const config = {
     },
     webpackPwaManifest: {
       name: 'Edward Cobbold :: Portfolio',
-      short_name: 'Edward Cobbold :: Portfolio',
+      short_name: 'Portfolio',
       description: 'Personal portfolio website of Edward Cobbold, a Frontend Web Developer',
       display: 'standalone',
       background_color: '#2b978a',
