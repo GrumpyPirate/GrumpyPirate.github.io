@@ -71,9 +71,9 @@
                     color: $hover-colour;
                 } @else {
                     @if $lighten {
-                        color: lighten($colour, 15%);
+                        color: lighten($colour, 10%);
                     } @else {
-                        color: darken($colour, 15%);
+                        color: darken($colour, 10%);
                     }
                 }
             } // /&:hover, &:focus
@@ -83,7 +83,7 @@
                 @if $active-colour {
                     color: $active-colour;
                 } @else {
-                    color: darken($colour, 20%);
+                    color: darken($colour, 10%);
                 }
             } // /&:active
         } // /a
@@ -96,9 +96,9 @@
                 color: $hover-colour;
             } @else {
                 @if $lighten {
-                    color: lighten($colour, 15%);
+                    color: lighten($colour, 10%);
                 } @else {
-                    color: darken($colour, 15%);
+                    color: darken($colour, 10%);
                 }
             }
         } // /&:hover, &:focus
@@ -108,7 +108,7 @@
             @if $active-colour {
                 color: $active-colour;
             } @else {
-                color: darken($colour, 20%);
+                color: darken($colour, 10%);
             }
         } // /&:active
     } // /} @else

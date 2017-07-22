@@ -9,15 +9,15 @@ import './Icons.scss'
 // feather-icons
 
 // Generic
-import close from 'icons/svg/x.svg'
-import settingsApplications from 'icons/svg/settings.svg'
+// import close from 'icons/svg/x.svg'
+// import settingsApplications from 'icons/svg/settings.svg'
 import heart from 'icons/svg/heart.svg'
 
 // Brand icons
-import apple from 'icons/svg/brands/apple.svg'
+// import apple from 'icons/svg/brands/apple.svg'
 import shopify from 'icons/svg/brands/shopify.svg'
-import atom from 'icons/svg/editors/atom.svg'
-import sublime from 'icons/svg/editors/sublime.svg'
+// import atom from 'icons/svg/editors/atom.svg'
+// import sublime from 'icons/svg/editors/sublime.svg'
 import divio from 'icons/svg/brands/divio.svg'
 import contentful from 'icons/svg/brands/contentful.svg'
 
@@ -36,7 +36,7 @@ import gulp from 'icons/svg/development/devtool/gulp.svg'
 import grunt from 'icons/svg/development/devtool/grunt.svg'
 
 import sass from 'icons/svg/development/css/sass.svg'
-import less from 'icons/svg/development/css/less.svg'
+// import less from 'icons/svg/development/css/less.svg'
 import bootstrap from 'icons/svg/development/css/bootstrap.svg'
 import foundation from 'icons/svg/development/css/foundation.svg'
 import bulma from 'icons/svg/development/css/bulma.svg'
@@ -55,24 +55,24 @@ import loader from 'icons/svg/loader.svg'
 
 const icons = {
   // feather-icons (generic)
-  close,
+  // close,
   heart,
   laptopMac,
   code,
-  settingsApplications,
+  // settingsApplications,
   palette,
   // App
-  atom,
-  sublime,
+  // atom,
+  // sublime,
   divio,
   contentful,
-  apple,
+  // apple,
   shopify,
   html5,
   javascript,
   babel,
   sass,
-  less,
+  // less,
   webpack,
   gulp,
   grunt,

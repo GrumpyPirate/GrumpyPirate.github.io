@@ -69,6 +69,7 @@
   } // /&__title
 
   &__subtitle {
+    @include make-link-colour(palette(theme-accent-1), $lighten: true);
     color: mix(palette(theme-light), palette(theme-dark), 40%);
   } // /&__subtitle
 } // /.page-header

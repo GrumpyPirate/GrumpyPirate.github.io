@@ -1,5 +1,8 @@
 // React
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+import { EventEmitter } from 'fbemitter'
 
 // Components
 import PageHeader from '../PageHeader/PageHeader.jsx'
@@ -17,8 +20,9 @@ class WebDev extends Component {
   constructor (props) {
     super(props)
 
+    this.contentService = new ContentService()
+
     this.state = {
-      contentService: new ContentService(),
       portfolioItems: null
     } // /this.state
   } // /constructor
@@ -26,7 +30,7 @@ class WebDev extends Component {
   componentWillMount () {
     this.props.emitter.emit('startLoading')
 
-    this.state.contentService
+    this.contentService
       .getPortfolioItems()
       .then((items) => {
         this.setState({
@@ -60,5 +64,9 @@ class WebDev extends Component {
     )
   } // /render ()
 } // /class WebDev extends React.Component
+
+WebDev.propTypes = {
+  emitter: PropTypes.instanceOf(EventEmitter)
+}
 
 export default WebDev

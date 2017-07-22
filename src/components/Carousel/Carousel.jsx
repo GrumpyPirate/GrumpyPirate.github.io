@@ -9,13 +9,11 @@ import './Carousel.scss'
 import { Carousel as ReactCarousel } from 'react-responsive-carousel'
 
 // Define Carousel
-const Carousel = (props) => {
-  return (
-    <ReactCarousel {...props}>
-      {props.children}
-    </ReactCarousel>
-  )
-}
+const Carousel = (props) => (
+  <ReactCarousel {...props}>
+    {props.children}
+  </ReactCarousel>
+) // /const Carousel
 
 Carousel.propTypes = {
   children: PropTypes.oneOfType(

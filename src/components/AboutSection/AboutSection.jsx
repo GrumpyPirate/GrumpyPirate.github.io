@@ -1,5 +1,6 @@
 // React
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // Components
 // import Icon from '../Icons/Icons'
@@ -8,20 +9,19 @@ import React, { Component } from 'react'
 import './AboutSection.scss'
 
 // Define AboutSection
-class AboutSection extends Component {
-  constructor(props) {
-    super(props)
-  } // /constructor(props)
+const AboutSection = ({ title, children }) => (
+  <div className="about__section">
+    <h2 className="h3 about__section__title mb-3">{title}</h2>
+    {children}
+  </div>
+)
 
-  render () {
-    return (
-      <div className="about__section">
-        <h2 className="h3 about__section__title mb-3">{this.props.title}</h2>
-
-        {this.props.children}
-      </div>
-    )
-  } // /render ()
-} // /class AboutSection extends React.Component
+AboutSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+}
 
 export default AboutSection

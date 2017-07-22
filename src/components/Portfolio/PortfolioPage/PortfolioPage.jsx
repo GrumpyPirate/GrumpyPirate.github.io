@@ -1,5 +1,8 @@
 // React
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+
+import { EventEmitter } from 'fbemitter'
 
 // Vendor
 import marked from 'marked'
@@ -20,10 +23,10 @@ class PortfolioPage extends PureComponent {
   constructor (props) {
     super(props)
 
+    this.contentService = new ContentService()
+
     this.state = {
-      contentService: new ContentService(),
-      portfolioItem: null,
-      portfolioItemSlug: this.props.match.params.portfolioItemSlug
+      portfolioItem: null
     }
   }
 
@@ -38,8 +41,8 @@ class PortfolioPage extends PureComponent {
   componentWillMount () {
     this.props.emitter.emit('startLoading')
 
-    this.state.contentService
-      .getSinglePortfolioItem(this.state.portfolioItemSlug)
+    this.contentService
+      .getSinglePortfolioItem(this.props.match.params.portfolioItemSlug)
       .then((item) => {
         this.setState({
           portfolioItem: item
@@ -117,5 +120,10 @@ class PortfolioPage extends PureComponent {
     )
   } // /render()
 } // /class PortfolioPage extends Component
+
+PortfolioPage.propTypes = {
+  emitter: PropTypes.instanceOf(EventEmitter).isRequired,
+  match: PropTypes.object.isRequired
+}
 
 export default PortfolioPage

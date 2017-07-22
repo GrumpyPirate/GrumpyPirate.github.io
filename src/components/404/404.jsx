@@ -1,30 +1,31 @@
 // React
-import React, { Component } from 'react'
+import React from 'react'
 
 // Routing
 import { Link } from 'react-router-dom'
 
 // Components
-import PageContainer from '../PageContainer/PageContainer'
-import PageHeader from '../PageHeader/PageHeader'
+import PageContainer from 'components/PageContainer/PageContainer'
+import PageHeader from 'components/PageHeader/PageHeader'
+import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
 
 // Define HTTPNotFound
-class HTTPNotFound extends Component {
-  render () {
-    return (
-      <div>
-        <PageHeader title="404 - Not Found" subtitle="That page doesn't seem to exist." />
+const HTTPNotFound = () => (
+  <div>
+    <PageHeader title="404">
+      <PageHeaderSubtitle>Not Found</PageHeaderSubtitle>
+    </PageHeader>
 
-        <PageContainer>
-          <section className="404">
-            <p>
-              <Link to="/" className="btn btn-primary">Home</Link>
-            </p>
-          </section>
-        </PageContainer>
-      </div>
-    )
-  } // /render ()
-} // /class HTTPNotFound extends React.Component
+    <PageContainer>
+      <section className="404">
+        <p>That page doesn't exist. （╯°□°）╯︵( .o.)</p>
+
+        <p>
+          <Link to="/" className="btn btn-primary">Home</Link>
+        </p>
+      </section>
+    </PageContainer>
+  </div>
+) // /const HTTPNotFound
 
 export default HTTPNotFound
