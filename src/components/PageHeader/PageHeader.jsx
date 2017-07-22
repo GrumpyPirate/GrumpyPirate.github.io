@@ -6,10 +6,7 @@ import PropTypes from 'prop-types'
 import './PageHeader.scss'
 
 // Images
-// import HeaderImage1x from 'images/header-images/1.jpeg'
-import HeaderImage1x from 'images/header-images/2.jpeg'
-// import HeaderImage1x from 'images/header-images/ehud-neuhaus-191867_cropped.jpg'
-// import HeaderImage1x from 'images/header-images/mark-daynes-35088_cropped.jpg'
+import HeaderImage1x from 'images/portfolio/header-images/2.jpeg'
 
 // Component
 const PageHeader = ({ title, children }) => {

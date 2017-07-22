@@ -45,7 +45,7 @@ class WebDev extends Component {
   render () {
     return (
       <div>
-        <PageHeader title="Web Development">
+        <PageHeader title="Portfolio">
           <PageHeaderSubtitle>
             Stuff I've worked on
           </PageHeaderSubtitle>

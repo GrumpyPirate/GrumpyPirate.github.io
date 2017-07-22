@@ -49,7 +49,8 @@
     background: palette(theme-dark);
     color: palette(theme-accent-2);
     padding: .25rem (map-get($grid-gutter-widths, xs) / 2);
-    word-break: break-all;
+    box-decoration-break: clone;
+    // word-break: break-all;
 
     // sm up
     @include media-breakpoint-up(sm) {
@@ -84,11 +85,15 @@
   } // /&__back
 
   &__tech {
-    display: inline-flex;
-    align-items: baseline;
     background: palette(theme-dark);
     color: palette(white);
     padding: 0 (map-get($grid-gutter-widths, xs) / 2);
+
+    // sm up
+    @include media-breakpoint-up(sm) {
+      display: inline-flex;
+      align-items: baseline;
+    } // /sm up
 
     // md up
     @include media-breakpoint-up(md) {
@@ -98,9 +103,13 @@
     &__list {
       @include list-unstyled;
       margin: 0;
-      padding-left: 1rem;
-      border-left: solid 1px palette(theme-accent-1);
-      margin-left: 1rem;
+
+      // sm up
+      @include media-breakpoint-up(sm) {
+        padding-left: 1rem;
+        border-left: solid 1px palette(theme-accent-1);
+        margin-left: 1rem;
+      } // /sm up
 
       li {
         display: inline-block;

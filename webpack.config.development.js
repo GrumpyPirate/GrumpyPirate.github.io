@@ -40,7 +40,7 @@ const config = {
           destination: 'icons'
         }
       ]
-    },
+    }, // /webpackPwaManifest
     favicons: {
       // Your source logo
       logo: path.join(paths.imgSrc, 'favicon-master.png'),
@@ -71,8 +71,7 @@ const config = {
         yandex: true,
         windows: true
       }
-    }
-
+    } // /favicons
   } // /plugins
 } // /config
 
@@ -194,7 +193,7 @@ module.exports = {
     ]
   },
   devServer: {
-    host: '192.168.1.65',
+    host: '0.0.0.0',
     contentBase: 'public/',
     historyApiFallback: {
       index: '/dist/'
