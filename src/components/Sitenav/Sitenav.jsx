@@ -18,9 +18,9 @@ const Sitenav = () => {
         <NavLink to="/webdev" className="sitenav__nav-link">Portfolio</NavLink>
       </li>
 
-      {/*<li className="sitenav__nav-item">
+      {/* <li className="sitenav__nav-item">
         <NavLink to="/digital-art" className="sitenav__nav-link">Digital Art</NavLink>
-      </li>*/}
+      </li> */}
     </ul>
   )
 } // /const Sitenav

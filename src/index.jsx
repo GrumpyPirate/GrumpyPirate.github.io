@@ -3,6 +3,7 @@
 // React
 import React from 'react'
 import ReactDOM from 'react-dom'
+import registerServiceWorker from './registerServiceWorker'
 
 // App
 import App from './components/App/App.jsx'
@@ -17,3 +18,6 @@ document.documentElement.classList.remove('no-js')
 ReactDOM.render(
     (<App />), document.getElementById('app-root')
 ) // /ReactDOM.render
+
+// Service worker
+registerServiceWorker()

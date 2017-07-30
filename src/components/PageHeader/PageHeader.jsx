@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import './PageHeader.scss'
 
 // Images
-import HeaderImage1x from 'images/portfolio/header-images/2.jpeg'
+import HeaderImage1x from './2.jpeg'
 
 // Component
 const PageHeader = ({ title, children }) => (

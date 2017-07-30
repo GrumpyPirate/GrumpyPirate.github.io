@@ -18,7 +18,7 @@ const HTTPNotFound = () => (
 
     <PageContainer>
       <section className="404">
-        <p>That page doesn't exist. （╯°□°）╯︵( .o.)</p>
+        <p>That page doesn&#039;t exist. &#xff08;&#x256f;&deg;&#x25a1;&deg;&#xff09;&#x256f;&#xfe35;( .o.)</p>
 
         <p>
           <Link to="/" className="btn btn-primary">Home</Link>

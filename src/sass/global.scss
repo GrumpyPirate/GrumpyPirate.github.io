@@ -2,8 +2,7 @@
 @import 'core';
 
 // Normalize
-@import '~normalize-scss';
-@include normalize;
+@import 'normalize';
 
 // Bootstrap
 @import 'bootstrap/bootstrap-custom';

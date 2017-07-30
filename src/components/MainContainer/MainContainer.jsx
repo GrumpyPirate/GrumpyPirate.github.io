@@ -73,7 +73,7 @@ class MainContainer extends Component {
     })
 
     return (
-      <main className={classNames} ref={(container) => this._container = container}>
+      <main className={classNames} ref={(container) => { this._container = container }}>
         {this.props.children}
 
         {!this.state.isLoadingComplete &&

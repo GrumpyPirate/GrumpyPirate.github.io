@@ -5,7 +5,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Config
-import { duration } from 'config/animation'
+import { animation } from 'config/animation'
 
 import ClassNames from 'classnames'
 
@@ -16,7 +16,7 @@ import Sitenav from 'components/Sitenav/Sitenav.jsx'
 import './Sidebar.scss'
 
 // Images
-import Logo from 'images/avatar-ed--head-only-2.png'
+import Logo from './avatar-ed--head-only-2.png'
 
 class Sidebar extends React.Component {
   constructor (props) {
@@ -41,7 +41,7 @@ class Sidebar extends React.Component {
         navMenuOpen: false,
         isClosing: false
       })
-    }, duration)
+    }, animation.duration)
   }
 
   toggleMenu () {

@@ -51,7 +51,7 @@ class WebDev extends Component {
       <div>
         <PageHeader title="Portfolio">
           <PageHeaderSubtitle>
-            Stuff I've worked on
+            Stuff I&#039;ve worked on
           </PageHeaderSubtitle>
         </PageHeader>
 

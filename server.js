@@ -2,8 +2,7 @@ const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
 
-const appDir = path.join(__dirname, '/dist')
-const publicDir = path.join(__dirname, '/public')
+const appDir = path.join(__dirname, '/build')
 
 const port = process.env.PORT || 3000
 
@@ -14,8 +13,7 @@ const app = express()
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'))
 
 // Static dirs
-app.use(express.static(publicDir))
-app.use('/dist/', express.static(appDir))
+app.use(express.static(appDir))
 
 // Catch-all
 app.get('*', (req, res) => {
