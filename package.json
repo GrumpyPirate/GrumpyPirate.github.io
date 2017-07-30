@@ -90,6 +90,7 @@
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
     ],
+    "modulePathIgnorePatterns": ["<rootDir>\/(?!src).*\/.*"],
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
@@ -99,6 +100,10 @@
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleDirectories": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/"
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
