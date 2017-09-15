@@ -18,7 +18,7 @@ const About = () => (
   <div>
     <PageHeader title="Hello">
       <PageHeaderSubtitle>
-        I&#039;m a Frontend developer from Essex, working in London. I like coffee, video games, and cheese.
+        I&#039;m a Frontend developer from Maidstone, working in London. I like coffee and video games.
       </PageHeaderSubtitle>
 
       <PageHeaderSubtitle>
