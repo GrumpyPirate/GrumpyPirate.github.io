@@ -45,6 +45,7 @@
     "html-webpack-plugin": "2.29.0",
     "image-webpack-loader": "^3.3.1",
     "jest": "20.0.4",
+    "jquery": "3",
     "marked": "^0.3.6",
     "moment": "^2.18.1",
     "morgan": "^1.8.2",
@@ -54,7 +55,7 @@
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",
-    "react": "15.6.1",
+    "react": "^15",
     "react-dev-utils": "^3.0.2",
     "react-dom": "15.6.1",
     "react-error-overlay": "^1.0.9",
@@ -71,7 +72,11 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.3",
+    "react-test-renderer": "15"
+  },
   "scripts": {
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -83,6 +88,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
@@ -90,7 +96,9 @@
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>\/(?!src).*\/.*"],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/(?!src).*/.*"
+    ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
