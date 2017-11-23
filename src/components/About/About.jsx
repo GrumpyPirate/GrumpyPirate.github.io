@@ -102,13 +102,12 @@ const About = () => (
                     <p>
                       <strong>Bootstrap</strong> and <strong>Foundation</strong> are personal faves. I&#039;m a huge fan of <strong>Bootstrap 4</strong>, and I incorporate it into my SASS build when given the chance. Of course, I only <code>@import</code> what&#039;s necessary!
                     </p>
-
                     <p>
-                      Having said that, I&#039;m confident in scaffolding my own CSS framework depending on the application needs and limitations.
+                      I&#039;m always open to trying out new CSS frameworks, and seeing what the do differently/better. I&#039;ve used <a href="http://bulma.io/" target="_blank" rel="noreferrer noopener">Bulma</a> on a couple of projects, but I don&#039;t think I&#039;d use it again.
                     </p>
 
                     <p>
-                      I&#039;m looking to give <a href="http://bulma.io/" target="_blank" rel="noreferrer noopener">Bulma</a> a go in the future.
+                      Having said that, I&#039;m confident in scaffolding my own CSS framework depending on the application needs and limitations.
                     </p>
                   </div>
                 </div>
