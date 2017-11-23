@@ -31,7 +31,12 @@ const PortfolioItem = ({ portfolioItem }) => (
 )
 
 PortfolioItem.propTypes = {
-  portfolioItem: PropTypes.object.isRequired
+  portfolioItem: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
+    headerImgSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    descriptionShort: PropTypes.string.isRequired
+  }).isRequired
 }
 
 export default PortfolioItem

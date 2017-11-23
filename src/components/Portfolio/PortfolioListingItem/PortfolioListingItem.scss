@@ -1,18 +1,39 @@
 @import 'core';
 
 .pf__item {
+  flex: 1 1 calc(100% - #{map-get($grid-gutter-widths, sm) / 2});
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   text-align: left;
-  overflow: hidden;
   border: solid (map-get($grid-gutter-widths, xs) / 4) palette(theme-accent-2);
   border-style: none none solid;
+  margin-right: map-get($grid-gutter-widths, xs) / 4;
+  margin-left: map-get($grid-gutter-widths, xs) / 4;
+  overflow: hidden;
+
+  // xs only
+  @include media-breakpoint-only(xs) {
+    &:not(:last-child) {
+      margin-bottom: rem(map-get($grid-gutter-widths, xs) / 2);
+    } // /&:not(:last-child)
+  } // /xs only
+
+  // sm up
+  @include media-breakpoint-up(sm) {
+    flex-basis: calc(50% - #{map-get($grid-gutter-widths, sm) / 2});
+    margin-right: map-get($grid-gutter-widths, sm) / 4;
+    margin-left: map-get($grid-gutter-widths, sm) / 4;
+    margin-bottom: rem(map-get($grid-gutter-widths, sm) / 2);
+  } // /sm up
 
   // md up
   @include media-breakpoint-up(md) {
-    flex: 1 0 50%;
+    flex-basis: calc(50% - #{map-get($grid-gutter-widths, md) / 2});
+    margin-right: map-get($grid-gutter-widths, md) / 4;
+    margin-left: map-get($grid-gutter-widths, md) / 4;
+    margin-bottom: rem(map-get($grid-gutter-widths, md) / 2);
   } // /md up
 
   // lg up
@@ -35,7 +56,7 @@
     bottom: 0;
     left: 0;
     margin: 0;
-    transition: transform ($anim-dur * 3) ease;
+    transition: transform $anim-dur ease;
 
     img {
       position: absolute;

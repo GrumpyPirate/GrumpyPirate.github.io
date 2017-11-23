@@ -1,13 +1,12 @@
 // React
 import React from 'react'
-
-// Routing
 import { Link } from 'react-router-dom'
+
+// Vendor
+import ClassNames from 'classnames'
 
 // Config
 import { animation } from 'config/animation'
-
-import ClassNames from 'classnames'
 
 // Components
 import Sitenav from 'components/Sitenav/Sitenav.jsx'
@@ -19,18 +18,18 @@ import './Sidebar.scss'
 import Logo from './avatar-ed--head-only-2.png'
 
 class Sidebar extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
 
     this.state = {
       navMenuOpen: false,
       isClosing: false
-    }
+    } // /state
 
-    // Lexical this binding
+    // this binding
     this.toggleMenu = this.toggleMenu.bind(this)
     this.closeMenu = this.closeMenu.bind(this)
-  } // /constructor(props)
+  } // /constructor()
 
   closeMenu () {
     this.setState({ isClosing: true })
@@ -52,6 +51,7 @@ class Sidebar extends React.Component {
     }
   } // /toggleMenu
 
+  // Lifecycle
   render () {
     const navMenuOpen = this.state.navMenuOpen
     const isClosing = this.state.isClosing
@@ -86,13 +86,13 @@ class Sidebar extends React.Component {
 
           {/* Tablet+ nav */}
           <div className="hidden-sm-down">
-            <Sitenav/>
+            <Sitenav />
           </div>
         </div>
 
         <menu className={mobileMenuClassNames} onClick={this.closeMenu}>
           <div className="container-fluid">
-            <Sitenav/>
+            <Sitenav />
           </div>
         </menu>
       </aside>

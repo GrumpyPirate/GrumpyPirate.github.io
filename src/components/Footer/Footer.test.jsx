@@ -1,9 +1,9 @@
-// Test - 404.jsx
+// React
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import FourOhFour from './404'
+import Footer from './Footer'
 
 it('renders without crashing', () => {
-  shallow(<FourOhFour />)
+  shallow(<Footer />)
 })

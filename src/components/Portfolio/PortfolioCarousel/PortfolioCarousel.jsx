@@ -18,7 +18,17 @@ import { animation } from 'config/animation'
 const PortfolioCarousel = ({ desktop, tablet, mobile }) => {
   return (
     <div className="pf-carousel">
-      <Carousel showStatus={false} showThumbs={false} infiniteLoop={true} useKeyboardArrows={true} transitionTime={animation.duration * 2} dynamicHeight showArrows={false} emulateTouch swipeScrollTolerance={75}>
+      <Carousel
+        showStatus={false}
+        showThumbs={false}
+        infiniteLoop={true}
+        useKeyboardArrows={true}
+        transitionTime={animation.duration * 2}
+        dynamicHeight
+        showArrows={false}
+        emulateTouch
+        swipeScrollTolerance={75}
+      >
           {mobile &&
             <div className="pf-carousel__slide pf-carousel__slide--mobile">
               <figure className="pf-carousel__figure pf-carousel__figure--mobile">

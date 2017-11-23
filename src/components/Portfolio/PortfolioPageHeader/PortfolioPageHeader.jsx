@@ -46,9 +46,12 @@ const PortfolioPageHeader = (props) => (
 ) // /const PortfolioPageHeader
 
 PortfolioPageHeader.propTypes = {
-  bgImage: PropTypes.any,
+  bgImage: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.object)
+  tech: PropTypes.arrayOf(PropTypes.shape({
+    icon: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+  }))
 } // /PortfolioPageHeader.propTypes
 
 export default PortfolioPageHeader

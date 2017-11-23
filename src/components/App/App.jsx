@@ -32,7 +32,7 @@ const App = () => {
   return (
     <Router basename="/">
       <div className="app">
-        <Sidebar/>
+        <Sidebar />
 
         <MainContainer emitter={emitter}>
           <Switch>

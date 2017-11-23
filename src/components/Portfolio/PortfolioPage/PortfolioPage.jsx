@@ -23,27 +23,29 @@ class PortfolioPage extends PureComponent {
   constructor (props) {
     super(props)
 
+    // Service instances
     this.contentService = new ContentService()
 
     this.state = {
       portfolioItem: null
-    }
-  }
+    } // /state
+  } // /constructor
 
   getDescription (markdownDescription) {
-    const markedOptions = {
-      sanitize: true
-    }
-
+    const markedOptions = { sanitize: true }
     return marked(this.state.portfolioItem.description, markedOptions)
-  }
+  } // /getDescription
 
+  getPortfolioItem (slug) {
+    return this.contentService.getSinglePortfolioItem(slug)
+  } // /getPortfolioItem
+
+  // Lifecycle
   componentWillMount () {
     this.props.emitter.emit('startLoading')
 
-    this.contentService
-      .getSinglePortfolioItem(this.props.match.params.portfolioItemSlug)
-      .then((item) => {
+    this.getPortfolioItem(this.props.match.params.portfolioItemSlug)
+      .then(item => {
         this.setState({
           portfolioItem: item
         })
@@ -61,7 +63,11 @@ class PortfolioPage extends PureComponent {
       <div className="pf-page">
         {this.state.portfolioItem &&
           <div>
-            <PortfolioPageHeader bgImage={this.state.portfolioItem.headerImgSrc} title={this.state.portfolioItem.title} tech={this.state.portfolioItem.tech}/>
+            <PortfolioPageHeader
+              bgImage={this.state.portfolioItem.headerImgSrc}
+              title={this.state.portfolioItem.title}
+              tech={this.state.portfolioItem.tech}
+            />
 
             {/* Content */}
             <PortfolioPageContent>
@@ -71,7 +77,12 @@ class PortfolioPage extends PureComponent {
                     {this.state.portfolioItem.supportingImageSrc
                       ? (
                         <div className="row align-items-lg-center">
-                          <div className="col-12 col-md col-xl-6" dangerouslySetInnerHTML={{__html: this.getDescription(this.state.portfolioItem.description)}}></div>
+                          <div
+                            className="col-12 col-md col-xl-6"
+                            dangerouslySetInnerHTML={{
+                              __html: this.getDescription(this.state.portfolioItem.description)
+                            }}
+                          />
 
                           <div className="col-12 col-md-6 col-xl-5 push-xl-1">
                             {/* Supporting image 1 */}
@@ -83,7 +94,9 @@ class PortfolioPage extends PureComponent {
                         </div>
                       )
                       : (
-                        <div dangerouslySetInnerHTML={{__html: this.getDescription(this.state.portfolioItem.description)}}></div>
+                        <div dangerouslySetInnerHTML={{
+                          __html: this.getDescription(this.state.portfolioItem.description)}}
+                        />
                       )
                     }
 
@@ -123,7 +136,11 @@ class PortfolioPage extends PureComponent {
 
 PortfolioPage.propTypes = {
   emitter: PropTypes.instanceOf(EventEmitter).isRequired,
-  match: PropTypes.object.isRequired
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      portfolioItemSlug: PropTypes.string.isRequired
+    })
+  })
 }
 
 export default PortfolioPage

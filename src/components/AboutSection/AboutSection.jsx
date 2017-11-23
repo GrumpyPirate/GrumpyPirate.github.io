@@ -2,9 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Components
-// import Icon from '../Icons/Icons'
-
 // SCSS
 import './AboutSection.scss'
 

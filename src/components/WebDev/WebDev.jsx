@@ -27,11 +27,16 @@ class WebDev extends Component {
     } // /this.state
   } // /constructor
 
+  // Class methods
+  getPortfolioItems () {
+    return this.contentService.getPortfolioItems()
+  } // /getPortfolioItems
+
+  // Lifecycle
   componentWillMount () {
     this.props.emitter.emit('startLoading')
 
-    this.contentService
-      .getPortfolioItems()
+    this.getPortfolioItems()
       .then((items) => {
         this.setState({
           portfolioItems: items

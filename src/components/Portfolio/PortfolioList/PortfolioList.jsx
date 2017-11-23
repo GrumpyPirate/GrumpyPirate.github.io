@@ -7,10 +7,12 @@ import './PortfolioList.scss'
 
 const PortfolioList = ({ items }) => {
   return (
-    <div className="pf__list" role="listbox">
-      {items.map((item, i) => (
-        <PortfolioListingItem portfolioItem={item} key={i} />
-      ))}
+    <div className="container-fluid">
+      <div className="pf__list" role="listbox">
+        {items.map((item, i) => (
+          <PortfolioListingItem portfolioItem={item} key={i} />
+        ))}
+      </div>
     </div>
   )
 } // /const PortfolioList

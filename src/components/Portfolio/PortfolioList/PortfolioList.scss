@@ -1,9 +1,14 @@
 @import 'core';
 
 .pf__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: rem(map-get($grid-gutter-widths, xs) / 2);
+  margin: 0 rem(map-get($grid-gutter-widths, xs) / -4);
+
   // md up
   @include media-breakpoint-up(md) {
-    display: flex;
-    flex-flow: row wrap;
+    padding-top: rem(map-get($grid-gutter-widths, md) / 2);
+    margin: 0 rem(map-get($grid-gutter-widths, md) / -4);
   } // /md up
 } // /.pf__list
