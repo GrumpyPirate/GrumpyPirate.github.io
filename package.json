@@ -2,7 +2,7 @@
   "name": "ecobbold-portfolio-2017",
   "version": "1.0.0",
   "engines": {
-    "node": "6.11.x",
+    "node": "8.x",
     "npm": "5.0.x"
   },
   "description": "Personal portfolio website of Edward Cobbold, a Frontend Web Developer",
@@ -25,17 +25,13 @@
     "css-loader": "0.28.4",
     "devicon": "^2.0.0",
     "dotenv": "4.0.0",
-    "eslint": "3.19.0",
     "eslint-config-react-app": "^1.0.5",
-    "eslint-config-standard": "^10.2.1",
     "eslint-loader": "1.7.1",
     "eslint-plugin-flowtype": "2.34.0",
-    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jasmine": "^2.9.1",
+    "eslint-plugin-jest": "^21.3.2",
     "eslint-plugin-jsx-a11y": "5.0.3",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "7.1.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-react": "^7.5.1",
     "express": "^4.15.3",
     "extract-text-webpack-plugin": "2.1.2",
     "fbemitter": "^2.1.1",
@@ -52,6 +48,7 @@
     "node-normalize-scss": "^3.0.0",
     "node-sass": "^4.5.3",
     "object-assign": "4.1.1",
+    "popper.js": "^1.12.3",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",
@@ -75,6 +72,12 @@
   "devDependencies": {
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-15": "^1.0.3",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "react-test-renderer": "15"
   },
   "scripts": {
@@ -132,11 +135,22 @@
   },
   "eslintConfig": {
     "plugins": [
-      "react"
+      "react",
+      "jest",
+      "jasmine"
     ],
-    "extends": [
-      "standard",
-      "plugin:react/recommended"
-    ]
+    "extends": ["standard", "plugin:react/recommended"],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "globals": {
+      "fetch": true
+    },
+    "env": {
+      "jest/globals": true,
+      "jasmine": true
+    }
   }
 }
