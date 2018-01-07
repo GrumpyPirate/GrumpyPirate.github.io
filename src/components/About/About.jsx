@@ -47,7 +47,7 @@ const About = () => (
                     </p>
 
                     <p>
-                      I love <a href="http://sass-lang.com/" target="_blank" rel="noreferrer noopener">SASS</a>, but have worked with <strong>LESS</strong> and <strong>Stylus</strong>.
+                      I love writing styles in <a href="http://sass-lang.com/" target="_blank" rel="noreferrer noopener">SASS</a>, but am also proficient in <strong>LESS</strong> and <strong>Stylus</strong>.
                     </p>
                   </div>
                 </div>
