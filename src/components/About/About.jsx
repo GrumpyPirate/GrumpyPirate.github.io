@@ -18,12 +18,12 @@ const About = () => (
   <div>
     <PageHeader title="Hello">
       <PageHeaderSubtitle>
-        I&#039;m a Frontend developer from Maidstone, working in London. I like coffee and video games.
+        I&#039;m a Frontend developer from Maidstone, working in London. I like ☕, 🎮 and 🍺.
       </PageHeaderSubtitle>
 
       <PageHeaderSubtitle>
         <hr className="mt-0 mb-1 mb-md-2"/>
-        Now that&#039;s out of the way, <NavLink to="/webdev">check out my portfolio</NavLink>.
+        <NavLink to="/webdev">Check out my portfolio</NavLink>.
       </PageHeaderSubtitle>
     </PageHeader>
 
@@ -124,7 +124,7 @@ const About = () => (
                 <div className="row justify-content-center">
                   <div className="col-12 col-md-8 col-lg-6">
                     <p>
-                      I&#039;ve have a good number of <strong>Django/Django CMS</strong> projects under my belt, and have assisted development with <strong>React</strong> apps.
+                      I&#039;ve have a good number of <strong>Django/Django CMS</strong> projects under my belt, and have created a few <strong>React</strong> apps of varying complexity and size.
                     </p>
 
                     <p>
@@ -140,16 +140,12 @@ const About = () => (
                     <div className="row align-items-md-center">
                       <div className="col-12 col-md-4 push-md-8">
                         <figure className="about__section__graphic about__section__graphic--design">
-                          <AboutIcon iconName="react" largeIcon={true} />
+                          <AboutIcon iconName="redux" largeIcon={true} />
                         </figure>
                       </div>
                       <div className="col-12 col-md-8 pull-md-4">
                         <p>
-                          I&#039;m currently learning how to develop web apps with <strong>React</strong>, and find it wonderfully refreshing. It&#039;s a hefty gear-shift, but one that makes a ton of sense.
-                        </p>
-
-                        <p>
-                          I&#039;m looking forward to creating some more complex React apps in the future.
+                          I&#039;m currently learning how to develop React apps with a number of key third-party libraries - particularly <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer">Redux</a> for application state management, and <a href="https://www.styled-components.com/" target="_blank" rel="noopener noreferrer">styled components</a> for managing component styles.
                         </p>
                       </div>
                     </div>

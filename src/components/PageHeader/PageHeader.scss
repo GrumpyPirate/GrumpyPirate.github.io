@@ -25,16 +25,16 @@
     } // /md up
 
     &__text {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
-      transform: translateY(-50%);
+      // position: absolute;
+      // top: 50%;
+      // right: 0;
+      // left: 0;
+      // transform: translateY(-50%);
       // color: $headings-color;
       // color: palette(theme-accent-2);
       font-size: $hex-size * .25;
       font-weight: weight(extralight);
-      background-color: $header-bg;
+      // background-color: $header-bg;
       user-select: none;
       cursor: default;
       margin: 0;

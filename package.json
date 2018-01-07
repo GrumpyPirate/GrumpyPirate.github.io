@@ -25,13 +25,21 @@
     "css-loader": "0.28.4",
     "devicon": "^2.0.0",
     "dotenv": "4.0.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.3",
+    "eslint": "^3.19.0",
     "eslint-config-react-app": "^1.0.5",
+    "eslint-config-standard": "^10.2.1",
     "eslint-loader": "1.7.1",
     "eslint-plugin-flowtype": "2.34.0",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jasmine": "^2.9.1",
     "eslint-plugin-jest": "^21.3.2",
     "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
     "express": "^4.15.3",
     "extract-text-webpack-plugin": "2.1.2",
     "fbemitter": "^2.1.1",
@@ -58,6 +66,7 @@
     "react-error-overlay": "^1.0.9",
     "react-responsive-carousel": "^3.1.24",
     "react-router-dom": "^4.1.2",
+    "react-test-renderer": "15",
     "sass-loader": "^6.0.6",
     "style-loader": "0.18.2",
     "svg-sprite-loader": "^3.0.8",
@@ -68,17 +77,6 @@
     "webpack-dev-server": "2.5.0",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
-  },
-  "devDependencies": {
-    "enzyme": "^3.1.0",
-    "enzyme-adapter-react-15": "^1.0.3",
-    "eslint": "^3.19.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "react-test-renderer": "15"
   },
   "scripts": {
     "dev": "node scripts/start.js",
@@ -139,7 +137,10 @@
       "jest",
       "jasmine"
     ],
-    "extends": ["standard", "plugin:react/recommended"],
+    "extends": [
+      "standard",
+      "plugin:react/recommended"
+    ],
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true

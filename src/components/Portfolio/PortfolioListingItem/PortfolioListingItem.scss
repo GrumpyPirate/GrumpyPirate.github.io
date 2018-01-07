@@ -15,9 +15,7 @@
 
   // xs only
   @include media-breakpoint-only(xs) {
-    &:not(:last-child) {
-      margin-bottom: rem(map-get($grid-gutter-widths, xs) / 2);
-    } // /&:not(:last-child)
+    margin-bottom: rem(map-get($grid-gutter-widths, xs) / 2);
   } // /xs only
 
   // sm up

@@ -30,7 +30,7 @@ import code from 'images/icons/svg/development/hash.svg'
 import laptopMac from 'images/icons/svg/development/airplay.svg'
 // import express from 'images/icons/svg/development/js/express.svg'
 // import nodejs from 'images/icons/svg/development/js/nodejs.svg'
-// import redux from 'images/icons/svg/development/js/redux.svg'
+import redux from 'images/icons/svg/development/js/redux.svg'
 
 import webpack from 'images/icons/svg/development/devtool/webpack.svg'
 import gulp from 'images/icons/svg/development/devtool/gulp.svg'

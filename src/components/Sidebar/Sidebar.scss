@@ -106,17 +106,23 @@
     } // /lg up
 
     &__image {
-      max-width: rem(32px);
-      height: auto;
       display: inline-block;
-      border-radius: 50%;
+      vertical-align: middle;
+      width: rem(32px);
+      height: rem(32px);
+      margin-bottom: 0;
+      background: url('./head-sprite.png') top left no-repeat transparent;
+      background-size: rem(32px) rem(64px);
+      image-rendering: pixelated;
       filter: drop-shadow(#{$filter-shadow-right-down-sm});
 
       // lg up
       @include media-breakpoint-up(lg) {
         display: block;
         margin-left: auto;
-        max-width: none;
+        width: rem(48px);
+        height: rem(48px);
+        background-size: rem(48px) rem(96px);
       } // /lg up
     } // /&__image
 
@@ -132,6 +138,19 @@
       color: palette(theme-light);
       opacity: .65;
     } // /&__job-title
+
+    &:hover,
+    &:focus {
+      .sidebar__brand__image {
+        background-position: bottom left;
+      }
+    }
+
+    &:active {
+      .sidebar__brand__image {
+        transform: scale(#{1 - (1 / 8)});
+      }
+    }
   } // /&__brand
 
   // Menu
