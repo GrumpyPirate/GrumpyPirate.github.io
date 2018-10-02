@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    "react",
+    "jest",
+    "jasmine"
+  ],
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "fetch": true
+  },
+  "env": {
+    "jest/globals": true,
+    "jasmine": true
+  }
+}
