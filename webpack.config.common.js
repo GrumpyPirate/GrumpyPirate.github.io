@@ -33,13 +33,30 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false
+              url: false,
+              importLoaders: 2,
+              sourceMaps: true
             }
           },
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
-              includePaths: ['client/src/sass']
+              includePaths: ['client/src/sass'],
+              sourceMaps: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
             }
           }
         ]

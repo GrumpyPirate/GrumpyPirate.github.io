@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom'
 
 import App from './components/App/App'
 
-// import './sass/global.scss'
+import 'sanitize.css';
+import './sass/global.scss'
 
 // Render App
 ReactDOM.render(

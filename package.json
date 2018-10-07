@@ -32,6 +32,7 @@
     "react-dom": "16.5.2",
     "react-responsive-carousel": "3.1.42",
     "react-router-dom": "4.3.1",
+    "sanitize.css": "^7.0.3",
     "whatwg-fetch": "3.0.0"
   },
   "devDependencies": {
@@ -70,11 +71,11 @@
     "image-webpack-loader": "4.3.1",
     "jest": "23.6.0",
     "mini-css-extract-plugin": "^0.4.3",
-    "node-normalize-scss": "8.0.0",
     "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-flexbugs-fixes": "4.1.0",
-    "postcss-loader": "3.0.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.0.10",
     "react-dev-utils": "6.0.3",
     "react-error-overlay": "5.0.3",
     "react-test-renderer": "16.5.2",

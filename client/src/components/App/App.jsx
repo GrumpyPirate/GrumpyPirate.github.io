@@ -21,7 +21,7 @@ import './App.scss'
 const App = () => (
   <Router basename="/">
     <div className="app">
-      {/* <Sidebar /> */}
+      <Sidebar />
       {/* <MainContainer> */}
       {/*   <Switch> */}
       {/*     <ScrollToTop> */}

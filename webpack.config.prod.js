@@ -22,6 +22,7 @@ const prodConfig = {
               url: false
             }
           },
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
