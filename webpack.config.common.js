@@ -61,7 +61,16 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
+        exclude: [path.resolve('client/src/images/icons')],
         use: ['file-loader']
+      },
+      {
+        test: /\.svg$/,
+        include: [path.resolve('client/src/images/icons')],
+        use: [
+          'svg-sprite-loader',
+          'image-webpack-loader'
+        ],
       }
     ]
   },

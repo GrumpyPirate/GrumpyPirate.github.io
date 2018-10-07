@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Components
 import Sidebar from 'components/Sidebar/Sidebar'
-// import MainContainer from 'components/MainContainer/MainContainer'
-// import Footer from 'components/Footer/Footer'
+import MainContainer from 'components/MainContainer/MainContainer'
+import Footer from 'components/Footer/Footer'
 // import About from 'components/About/About'
 // import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 // import WebDev from 'components/WebDev/WebDev'
@@ -22,7 +22,7 @@ const App = () => (
   <Router basename="/">
     <div className="app">
       <Sidebar />
-      {/* <MainContainer> */}
+      <MainContainer>
       {/*   <Switch> */}
       {/*     <ScrollToTop> */}
       {/*       <div> */}
@@ -33,8 +33,8 @@ const App = () => (
       {/*       </div> */}
       {/*     </ScrollToTop> */}
       {/*   </Switch> */}
-      {/*   <Footer /> */}
-      {/* </MainContainer> */}
+        <Footer />
+      </MainContainer>
     </div>
   </Router>
 )
