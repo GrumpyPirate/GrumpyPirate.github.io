@@ -9,7 +9,7 @@ import classnames from 'classnames'
 import animation from 'config/animation'
 
 // Components
-import Sitenav from 'components/Sitenav/Sitenav.jsx'
+import Sitenav from 'components/Sitenav/Sitenav'
 
 // SCSS
 import './Sidebar.scss'

@@ -67,10 +67,7 @@ module.exports = {
       {
         test: /\.svg$/,
         include: [path.resolve('client/src/images/icons')],
-        use: [
-          'svg-sprite-loader',
-          'image-webpack-loader'
-        ],
+        use: ['svg-sprite-loader'],
       }
     ]
   },
@@ -100,7 +97,7 @@ module.exports = {
     })
   ],
   resolve: {
-    modules: [path.resolve(__dirname, 'client/src'), 'node_modules'],
+    modules: ['client/src', 'node_modules'],
     extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx']
   }
 }

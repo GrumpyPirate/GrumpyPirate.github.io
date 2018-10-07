@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 // Components
-import Icon from 'components/Icons/Icons'
+import Icon from 'components/Icon/Icon'
 
 // SCSS
 import './PortfolioPageHeader.scss'

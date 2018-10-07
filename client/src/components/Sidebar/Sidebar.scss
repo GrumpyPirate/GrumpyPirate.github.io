@@ -27,21 +27,20 @@
     flex: 0 0 $sidebar-width-lg;
     padding: 0;
     border: 0;
-    // border-right: solid $hr-border-width $sidebar-border-color;
-  } // /lg up
+  }
 
   // xl up
   @include media-breakpoint-up(xl) {
     flex-basis: $sidebar-width;
-  } // /xl up
+  }
 
   &__content {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: $grid-gutter-width-base/ 4;
-    padding-bottom: $grid-gutter-width-base/ 4;
+    padding-top: $grid-gutter-width-base / 4;
+    padding-bottom: $grid-gutter-width-base / 4;
     background-color: palette(theme-accent-1);
     height: $sidebar-height-mobile;
     z-index: $sidebar-zindex;
@@ -53,11 +52,8 @@
       padding-bottom: 0;
       background: 0;
       height: auto;
-    } // /lg up
-  } // /&__content
-
-  // .sitenav {
-  // } // /.sitenav__nav
+    }
+  }
 
   .sitenav__nav-item {
     // md only
@@ -66,9 +62,9 @@
 
       &:not(:last-child) {
         margin-right: 1rem;
-      } // /&:not(:last-child)
-    } // /md only
-  } // /.sitenav__nav-item
+      }
+    }
+  }
 
   .sitenav__nav-link {
     @include lasers($direction: out, $display: block);
@@ -82,13 +78,13 @@
     @include media-breakpoint-up(md) {
       padding: 0;
       margin: 0;
-    } // /md up
+    }
 
     // lg up
     @include media-breakpoint-up(lg) {
       display: inline-block;
-    } // /lg up
-  } // /.sitenav__nav-link
+    }
+  }
 
   // Brand (Logo/Text)
   // -----------------------------------------------------------------------------------------------------------------
@@ -103,7 +99,7 @@
     // lg up
     @include media-breakpoint-up(lg) {
       font-size: $font-size-h4;
-    } // /lg up
+    }
 
     &__image {
       display: inline-block;
@@ -123,21 +119,21 @@
         width: rem(48px);
         height: rem(48px);
         background-size: rem(48px) rem(96px);
-      } // /lg up
-    } // /&__image
+      }
+    }
 
     &__name {
       display: inline-block;
       vertical-align: middle;
       color: inherit;
-    } // /&__name
+    }
 
     &__job-title {
       display: block;
       font-size: rem(12px);
       color: palette(theme-light);
       opacity: .65;
-    } // /&__job-title
+    }
 
     &:hover,
     &:focus {
@@ -151,7 +147,7 @@
         transform: scale(#{1 - (1 / 8)});
       }
     }
-  } // /&__brand
+  }
 
   // Menu
   // -------------------------------------------------------------------------------------------------
@@ -170,7 +166,7 @@
     // Clicked
     &:active {
       transform: scale(#{1 - (1 / 10)});
-    } // /&:active
+    }
 
     // Menu active
     &[aria-expanded='true'] {
@@ -179,13 +175,13 @@
 
         &::before {
           transform: rotate(-135deg);
-        } // /&::before
+        }
 
         &::after {
           transform: rotate(135deg);
-        } // /&::before
-      } // /.burger-bar
-    } // /&[aria-expanded='true']
+        }
+      }
+    }
 
     .burger-bar {
       top: calc(50% - #{($burger-bar-height / 2)});
@@ -201,7 +197,7 @@
         background-color: palette(theme-light);
         transition: transform $anim-dur ease,
                     background-color $anim-dur ease;
-      } // /all bars
+      }
 
       &::before,
       &::after {
@@ -210,15 +206,13 @@
 
       &::before {
         transform: translateY(-#{$burger-bar-height + $burger-bar-spacing});
-        // transform-origin: bottom left;
-      } // /&::before
+      }
 
       &::after {
         transform: translateY(#{$burger-bar-height + $burger-bar-spacing});
-        // transform-origin: top left;
-      } // /&::before
-    } // /.burger-bar
-  } // /&__btn-sitenav
+      }
+    }
+  }
 
   &__menu {
     position: fixed;
@@ -240,12 +234,12 @@
       visibility: hidden;
       pointer-events: none;
       transform: translateY(-50%);
-    } // /&.is--closing
+    }
 
     &.is--open {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
-    } // /&.is--open
-  } // /&__menu
-} // /.sidebar
+    }
+  }
+}

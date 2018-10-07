@@ -1,11 +1,15 @@
-{
+module.exports = {
   "plugins": [
     "react",
     "jest",
-    "jasmine"
+    "jsx-a11y",
+    "promise",
+    "import",
+    "node"
   ],
   "extends": [
     "standard",
+    "react-app",
     "plugin:react/recommended"
   ],
   "parserOptions": {
@@ -17,7 +21,6 @@
     "fetch": true
   },
   "env": {
-    "jest/globals": true,
-    "jasmine": true
+    "jest/globals": true
   }
 }

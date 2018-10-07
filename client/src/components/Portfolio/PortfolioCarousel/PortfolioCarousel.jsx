@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Components
-import Carousel from 'components/Carousel/Carousel.jsx'
+import Carousel from 'components/Carousel/Carousel'
 
 // Style
 import './PortfolioCarousel.scss'

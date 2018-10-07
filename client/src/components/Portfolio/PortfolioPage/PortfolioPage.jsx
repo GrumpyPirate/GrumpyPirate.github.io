@@ -11,10 +11,10 @@ import marked from 'marked'
 import './PortfolioPage.scss'
 
 // Components
-import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader.jsx'
-import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent.jsx'
-import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel.jsx'
-import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup.jsx'
+import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader'
+import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent'
+import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel'
+import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup'
 
 // Services
 import ContentService from 'services/ContentService'

@@ -1,0 +1,23 @@
+@import 'core';
+
+@keyframes loader {
+  from { transform: rotate(0); }
+  to { transform: rotate(1turn); }
+}
+
+.main {
+  position: relative;
+
+  // lg up
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 auto;
+    height: 100vh;
+    overflow-y: auto;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &.is--loading {
+    overflow: hidden;
+  }
+}

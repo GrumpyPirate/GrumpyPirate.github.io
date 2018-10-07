@@ -1,7 +1,7 @@
 // React
 import React from 'react'
 
-import Icon from 'components/Icons/Icons.jsx'
+import Icon from 'components/Icon/Icon'
 
 // SCSS
 import './Footer.scss'

@@ -74,4 +74,4 @@ class ContentService {
   }
 } // /class ContentService
 
-export default ContentService
+export default new ContentService()

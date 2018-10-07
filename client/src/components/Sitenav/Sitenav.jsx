@@ -4,9 +4,6 @@ import React from 'react'
 // Routing
 import { NavLink } from 'react-router-dom'
 
-// // Styles
-import './Sitenav.scss'
-
 const Sitenav = () => {
   return (
     <ul className="sitenav list-unstyled m-0" role="navigation">

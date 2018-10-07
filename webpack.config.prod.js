@@ -25,14 +25,6 @@ const prodConfig = {
             }
           }
         ]
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        exclude: [path.resolve('client/src/images/icons')],
-        use: [
-          'file-loader',
-          'image-webpack-loader'
-        ]
       }
     ]
   },

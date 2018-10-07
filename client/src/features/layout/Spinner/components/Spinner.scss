@@ -1,0 +1,43 @@
+@import 'core';
+
+.spinner {
+  position: fixed;
+  top: $sidebar-height-mobile;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: palette(theme-mid);
+  color: palette(theme-light);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity ($anim-dur * 2) $anim-ease,
+              visibility ($anim-dur * 2) $anim-ease;
+
+  // lg up
+  @include media-breakpoint-up(lg) {
+    top: 0;
+    left: $sidebar-width;
+  }
+
+  &__icon {
+    .icon {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto;
+      animation: loader ($anim-dur * 15) linear 0s infinite forwards;
+    }
+  }
+
+  &--is-loading {
+    opacity: 1;
+    visibility: visible;
+  }
+}
