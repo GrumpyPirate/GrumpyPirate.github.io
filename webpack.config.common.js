@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
 
@@ -33,7 +33,6 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false,
               importLoaders: 2,
               sourceMaps: true
             }
@@ -53,33 +52,23 @@ module.exports = {
         include: /node_modules/,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              url: false
-            }
-          }
+          'css-loader'
         ]
       },
       {
         test: /\.html$/,
         use: ['html-loader']
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: ['file-loader']
       }
     ]
   },
   plugins: [
-    new WebpackCleanupPlugin(),
+    new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       template: 'client/src/index.html'
-    }),
-    new FaviconsWebpackPlugin({
-      logo: path.resolve('client/src/images/favicon-master.png'),
-      background: '#2b978a',
-      icons: {
-        android: false,
-        opengraph: true,
-        twitter: true
-      }
     }),
     new WebpackPwaManifestPlugin({
       name: 'Edward Cobbold\'s Portfolio',
@@ -90,6 +79,15 @@ module.exports = {
         src: path.resolve('client/src/images/favicon-master.png'),
         sizes: [96, 128, 192, 256, 384, 512]
       }]
+    }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve('client/src/images/favicon-master.png'),
+      background: '#2b978a',
+      icons: {
+        android: false,
+        opengraph: true,
+        twitter: true
+      }
     })
   ],
   resolve: {

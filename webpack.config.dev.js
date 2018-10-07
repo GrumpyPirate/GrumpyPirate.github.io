@@ -5,7 +5,7 @@ const devConfig = {
   mode: 'development',
   devServer: {
     publicPath: '/',
-    contentBase: './build',
+    contentBase: 'build',
     port: 3000,
     stats: 'minimal'
   }

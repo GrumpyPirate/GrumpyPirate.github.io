@@ -16,12 +16,7 @@ const prodConfig = {
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              url: false
-            }
-          },
+          'css-loader',
           'postcss-loader',
           {
             loader: 'sass-loader',
