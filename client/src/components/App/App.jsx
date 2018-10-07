@@ -5,7 +5,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Components
-// import Sidebar from 'components/Sidebar/Sidebar'
+import Sidebar from 'components/Sidebar/Sidebar'
 // import MainContainer from 'components/MainContainer/MainContainer'
 // import Footer from 'components/Footer/Footer'
 // import About from 'components/About/About'
@@ -21,7 +21,6 @@ import './App.scss'
 const App = () => (
   <Router basename="/">
     <div className="app">
-      Hello world!
       {/* <Sidebar /> */}
       {/* <MainContainer> */}
       {/*   <Switch> */}

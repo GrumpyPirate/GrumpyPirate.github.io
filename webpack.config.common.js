@@ -1,7 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
 
 module.exports = {
   entry: ['babel-polyfill', path.resolve(__dirname, 'client/src/index.jsx')],
@@ -53,6 +54,25 @@ module.exports = {
     new WebpackCleanupPlugin(),
     new HtmlWebpackPlugin({
       template: 'client/src/index.html'
+    }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve('client/src/images/favicon-master.png'),
+      background: '#2b978a',
+      icons: {
+        android: false,
+        opengraph: true,
+        twitter: true
+      }
+    }),
+    new WebpackPwaManifestPlugin({
+      name: 'Edward Cobbold\'s Portfolio',
+      short_name: 'EC Portfolio',
+      description: 'Edward Cobbold\'s personal portfolio/website',
+      background_color: '#2b978a',
+      icons: [{
+        src: path.resolve('client/src/images/favicon-master.png'),
+        sizes: [96, 128, 192, 256, 384, 512]
+      }]
     })
   ],
   resolve: {

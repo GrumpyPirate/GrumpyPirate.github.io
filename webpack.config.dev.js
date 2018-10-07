@@ -4,7 +4,8 @@ const commonConfig = require('./webpack.config.common');
 const devConfig = {
   mode: 'development',
   devServer: {
-    contentBase: 'static',
+    publicPath: '/',
+    contentBase: './build',
     port: 3000,
     stats: 'minimal'
   }
