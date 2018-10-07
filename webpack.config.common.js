@@ -1,6 +1,7 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+
 
 module.exports = {
   entry: ['babel-polyfill', path.resolve(__dirname, 'client/src/index.jsx')],
@@ -27,7 +28,7 @@ module.exports = {
         test: /\.s(a|c)ss$/,
         exclude: /node_modules/,
         use: [
-          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -49,9 +50,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'styles.[hash].css'
-    }),
+    new WebpackCleanupPlugin(),
     new HtmlWebpackPlugin({
       template: 'client/src/index.html'
     })
