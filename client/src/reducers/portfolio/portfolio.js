@@ -2,11 +2,12 @@ import {
   LOAD_PORTFOLIO_ITEMS,
   RECEIVE_PORTFOLIO_ITEMS,
   FAILED_PORTFOLIO_ITEMS_REQUEST
-} from '../../actions/portfolio/portfolio';
+} from 'actions/portfolio/portfolio'
 
 const defaultState = {
   portfolioItems: [],
   isFetching: false,
+  hasFetched: false,
   fetchCount: 0,
   error: '',
   errorCount: 0
@@ -17,7 +18,8 @@ const portfolioReducer = (state = defaultState, action) => {
     case LOAD_PORTFOLIO_ITEMS:
       return {
         ...state,
-        isFetching: true
+        isFetching: true,
+        hasFetched: true
       }
     case RECEIVE_PORTFOLIO_ITEMS:
       return {

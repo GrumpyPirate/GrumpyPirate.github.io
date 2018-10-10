@@ -13,7 +13,7 @@ import Icon from 'components/Icon/Icon'
 // SCSS
 import './PortfolioPageHeader.scss'
 
-const PortfolioPageHeader = (props) => (
+const PortfolioPageHeader = props => (
   <header className="pf-page-header text-left">
     <figure className="pf-page-header__media">
       <img src={props.bgImage} alt={props.title} />

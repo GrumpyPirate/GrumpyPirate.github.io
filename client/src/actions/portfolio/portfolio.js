@@ -1,4 +1,4 @@
-import contentService from '../../services/ContentService'
+import contentService from 'services/ContentService'
 
 // Actions
 const LOAD_PORTFOLIO_ITEMS = 'LOAD_PORTFOLIO_ITEMS'

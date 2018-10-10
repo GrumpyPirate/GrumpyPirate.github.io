@@ -1,146 +1,142 @@
-// React
-import React, { PureComponent } from 'react'
+import React, { Component, Fragment } from 'react'
+import { withRouter, Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
-
-import { EventEmitter } from 'fbemitter'
-
-// Vendor
 import marked from 'marked'
+import isEmpty from 'lodash/isEmpty'
 
-// Styles
-import './PortfolioPage.scss'
-
-// Components
 import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader'
 import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent'
 import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel'
 import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup'
 
-// Services
-import ContentService from 'services/ContentService'
+import './PortfolioPage.scss'
 
-class PortfolioPage extends PureComponent {
-  constructor (props) {
-    super(props)
+class PortfolioPage extends Component {
+  fetchPortfolioItems () {
+    const shouldFetchItems = Boolean(isEmpty(this.props.portfolioItem) && !this.props.hasFetched)
 
-    // Service instances
-    this.contentService = new ContentService()
+    if (shouldFetchItems) {
+      return this.props.requestPortfolioItems()
+    }
+  }
 
-    this.state = {
-      portfolioItem: null
-    } // /state
-  } // /constructor
+  componentDidMount () {
+    this.fetchPortfolioItems()
+  }
 
-  getDescription (markdownDescription) {
-    const markedOptions = { sanitize: true }
-    return marked(this.state.portfolioItem.description, markedOptions)
-  } // /getDescription
-
-  getPortfolioItem (slug) {
-    return this.contentService.getSinglePortfolioItem(slug)
-  } // /getPortfolioItem
-
-  // Lifecycle
-  componentWillMount () {
-    this.props.emitter.emit('startLoading')
-
-    this.getPortfolioItem(this.props.match.params.portfolioItemSlug)
-      .then(item => {
-        this.setState({
-          portfolioItem: item
-        })
-
-        this.props.emitter.emit('stopLoading')
-      })
-      .catch((e) => {
-        console.error(e)
-        this.props.emitter.emit('stopLoading')
-      })
-  } // /componentWillMount
+  componentDidUpdate (prevProps, prevState) {
+    if (this.props.hasFetched && isEmpty(this.props.portfolioItem)) {
+      return <Redirect to="/404" />
+    }
+  }
 
   render () {
+    if (!this.props.portfolioItem) return null
+
     return (
       <div className="pf-page">
         {this.state.portfolioItem &&
-          <div>
+          <Fragment>
             <PortfolioPageHeader
-              bgImage={this.state.portfolioItem.headerImgSrc}
-              title={this.state.portfolioItem.title}
-              tech={this.state.portfolioItem.tech}
+              bgImage={this.props.portfolioItem.headerImgSrc}
+              title={this.props.portfolioItem.title}
+              tech={this.props.portfolioItem.tech}
             />
 
-            {/* Content */}
             <PortfolioPageContent>
               <div className="container-fluid">
                 <div className="row justify-content-center align-items-center">
                   <div className="col-12 col-sm-10">
-                    {this.state.portfolioItem.supportingImageSrc
+                    {this.props.portfolioItem.supportingImageSrc
                       ? (
                         <div className="row align-items-lg-center">
                           <div
                             className="col-12 col-md col-xl-6"
-                            dangerouslySetInnerHTML={{
-                              __html: this.getDescription(this.state.portfolioItem.description)
-                            }}
+                            dangerouslySetInnerHTML={{ __html: marked(this.props.portfolioItem.description, { sanitize: true }) }}
                           />
 
                           <div className="col-12 col-md-6 col-xl-5 push-xl-1">
-                            {/* Supporting image 1 */}
                             <hr className="mt-1 hidden-md-up"/>
                             <figure className="mb-0">
-                              <img src={this.state.portfolioItem.supportingImageSrc} alt="" className="pf-page__supporting-image w-100" />
+                              <img
+                                src={this.props.portfolioItem.supportingImageSrc}
+                                alt=""
+                                className="pf-page__supporting-image w-100"
+                              />
                             </figure>
                           </div>
                         </div>
                       )
                       : (
-                        <div dangerouslySetInnerHTML={{
-                          __html: this.getDescription(this.state.portfolioItem.description)}}
+                        <div
+                          dangerouslySetInnerHTML={{ __html: this.getDescription(this.props.portfolioItem.description) }}
                         />
                       )
                     }
 
                     <hr/>
 
-                    {/* Device Carousel, for mobile (sm-) only */}
                     <div className="hidden-md-up">
                       <PortfolioCarousel
-                        desktop={this.state.portfolioItem.previews.desktop}
-                        tablet={this.state.portfolioItem.previews.tablet}
-                        mobile={this.state.portfolioItem.previews.mobile} />
+                        desktop={this.props.portfolioItem.previews.desktop}
+                        tablet={this.props.portfolioItem.previews.tablet}
+                        mobile={this.props.portfolioItem.previews.mobile} />
                     </div>
 
-                    {/* Device Lineup, for tablet up */}
                     <div className="hidden-sm-down">
                       <PortfolioDeviceLineup
-                        desktop={this.state.portfolioItem.previews.desktop}
-                        tablet={this.state.portfolioItem.previews.tablet}
-                        mobile={this.state.portfolioItem.previews.mobile} />
+                        desktop={this.props.portfolioItem.previews.desktop}
+                        tablet={this.props.portfolioItem.previews.tablet}
+                        mobile={this.props.portfolioItem.previews.mobile} />
                     </div>
 
                     <hr/>
 
                     <div className="text-center mt-2 mt-md-4">
-                      <a href={this.state.portfolioItem.url} className="btn btn-secondary" target="_blank">Visit {this.state.portfolioItem.title}</a>
+                      <a
+                        href={this.props.portfolioItem.url}
+                        className="btn btn-secondary"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        Visit {this.props.portfolioItem.title}
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </PortfolioPageContent>
-          </div>
+          </Fragment>
         }
       </div>
     )
-  } // /render()
-} // /class PortfolioPage extends Component
-
-PortfolioPage.propTypes = {
-  emitter: PropTypes.instanceOf(EventEmitter).isRequired,
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      portfolioItemSlug: PropTypes.string.isRequired
-    })
-  })
+  }
 }
 
-export default PortfolioPage
+PortfolioPage.propTypes = {
+  portfolioItem: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    headerImgSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    tech: PropTypes.string.isRequired,
+    supportingImageSrc: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    previews: PropTypes.shape({
+      desktop: PropTypes.string.isRequired,
+      tablet: PropTypes.string.isRequired,
+      mobile: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired,
+  hasFetched: PropTypes.bool.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      slug: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired,
+  requestPortfolioItems: PropTypes.func.isRequired
+}
+
+export default withRouter(PortfolioPage)

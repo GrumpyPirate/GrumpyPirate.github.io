@@ -15,14 +15,10 @@ class ContentService {
 
   // Load all entries for a given Content Type from Contentful
   fetchEntriesForContentType (contentTypeSysId) {
-    return this.contentfulClient.getEntries({
-      content_type: contentTypeSysId
-    })
-    .then((response) => response.items)
-    .catch((error) => {
-      console.error(error)
-    })
-  } // /fetchEntriesForContentType
+    return this.contentfulClient.getEntries({ content_type: contentTypeSysId })
+      .then(response => response.items)
+      .catch(error => console.error(error))
+  }
 
   formatItem (contentfulItem) {
     return {
@@ -44,34 +40,26 @@ class ContentService {
   }
 
   getPortfolioItems () {
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       this.fetchEntriesForContentType('portfolioItem')
-        .then((items) => {
-          const adaptedItems = items.map((item, i) => {
-            return this.formatItem(item)
-          })
-
-          resolve(adaptedItems)
-        })
-    }) // /new Promise((resolve, reject)
+        .then(items => resolve(items.map(item => this.formatItem(item))))
+    })
   }
 
   getSinglePortfolioItem (slug) {
     return new Promise((resolve, reject) => {
       this.fetchEntriesForContentType('portfolioItem')
-        .then((items) => {
-          const filteredItems = items.filter((item, i) => item.fields.slug === slug)
+        .then(items => {
+          const item = items.find(item => item.fields.slug === slug)
 
-          if (filteredItems.length) {
-            const item = filteredItems[0]
-
+          if (item) {
             resolve(this.formatItem(item))
           } else {
             reject(new Error('No portfolio item matching that slug was found.'))
           }
         })
-    }) // /new Promise((resolve, reject)
+    })
   }
-} // /class ContentService
+}
 
 export default new ContentService()

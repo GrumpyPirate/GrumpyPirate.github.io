@@ -6,7 +6,7 @@ import Main from 'features/layout/Main/containers/Main'
 import Footer from 'components/Footer/Footer'
 import About from 'components/About/About'
 import WebDev from 'features/pages/WebDev/containers/WebDev'
-// import PortfolioPage from 'components/Portfolio/PortfolioPage/PortfolioPage'
+import PortfolioPage from 'features/pages/PortfolioPage/containers/PortfolioPage'
 // import HTTPNotFound from 'components/404/404'
 
 import './App.scss'
@@ -20,7 +20,8 @@ const App = () => (
           <Fragment>
             <Route exact path="/" component={About} />
             <Route exact path="/webdev" component={WebDev} />
-            {/* <Route path="/webdev/:portfolioItemSlug" component={PortfolioPage} /> */}
+            <Route exact path="/webdev/:slug" component={PortfolioPage} />
+            {/* <Route exact path="/404" component={HTTPNotFound} /> */}
             {/* <Route component={HTTPNotFound} /> */}
           </Fragment>
         </Switch>

@@ -9,7 +9,7 @@ import './Carousel.scss'
 import { Carousel as ReactCarousel } from 'react-responsive-carousel'
 
 // Define Carousel
-const Carousel = (props) => (
+const Carousel = props => (
   <ReactCarousel {...props}>
     {props.children}
   </ReactCarousel>

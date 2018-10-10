@@ -4,15 +4,12 @@ module.exports = {
     "jest",
     "jsx-a11y",
     "promise",
-    "import",
     "node"
   ],
   "extends": [
-    "standard",
     "react-app",
     "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+    "standard"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -24,12 +21,5 @@ module.exports = {
   },
   "env": {
     "jest/globals": true
-  },
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack.config.common.js"
-      }
-    }
   }
 }
