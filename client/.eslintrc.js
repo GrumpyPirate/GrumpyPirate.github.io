@@ -10,7 +10,9 @@ module.exports = {
   "extends": [
     "standard",
     "react-app",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -22,5 +24,12 @@ module.exports = {
   },
   "env": {
     "jest/globals": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.common.js"
+      }
+    }
   }
 }
