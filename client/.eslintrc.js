@@ -2,14 +2,12 @@ module.exports = {
   "plugins": [
     "react",
     "jest",
-    "jsx-a11y",
-    "promise",
-    "node"
+    "jsx-a11y"
   ],
   "extends": [
     "react-app",
     "plugin:react/recommended",
-    "standard"
+    "airbnb"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,5 +19,12 @@ module.exports = {
   },
   "env": {
     "jest/globals": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.dev.js"
+      }
+    }
   }
 }

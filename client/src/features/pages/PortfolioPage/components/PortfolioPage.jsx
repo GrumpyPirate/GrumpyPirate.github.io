@@ -1,64 +1,70 @@
-import React, { Component, Fragment } from 'react'
-import { withRouter, Redirect } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import marked from 'marked'
-import isEmpty from 'lodash/isEmpty'
+import React, { Component, Fragment } from 'react';
+import { withRouter, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import marked from 'marked';
+import isEmpty from 'lodash/isEmpty';
 
-import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader'
-import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent'
-import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel'
-import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup'
+import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader';
+import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent';
+import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel';
+import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup';
 
-import './PortfolioPage.scss'
+import './PortfolioPage.scss';
 
 class PortfolioPage extends Component {
-  fetchPortfolioItems () {
-    const shouldFetchItems = Boolean(isEmpty(this.props.portfolioItem) && !this.props.hasFetched)
+  componentDidMount() {
+    this.fetchPortfolioItems();
+  }
+
+  componentDidUpdate() {
+    const { hasFetched, portfolioItem } = this.props;
+
+    if (hasFetched && isEmpty(portfolioItem)) {
+      return <Redirect to="/404" />;
+    }
+  }
+
+  fetchPortfolioItems() {
+    const { portfolioItem, hasFetched, requestPortfolioItems } = this.props;
+    const shouldFetchItems = Boolean(isEmpty(portfolioItem) && !hasFetched);
 
     if (shouldFetchItems) {
-      return this.props.requestPortfolioItems()
+      return requestPortfolioItems();
     }
   }
 
-  componentDidMount () {
-    this.fetchPortfolioItems()
-  }
-
-  componentDidUpdate (prevProps, prevState) {
-    if (this.props.hasFetched && isEmpty(this.props.portfolioItem)) {
-      return <Redirect to="/404" />
-    }
-  }
-
-  render () {
-    if (!this.props.portfolioItem) return null
+  render() {
+    const { portfolioItem } = this.props;
+    if (!portfolioItem) return null;
 
     return (
       <div className="pf-page">
         <Fragment>
           <PortfolioPageHeader
-            bgImage={this.props.portfolioItem.headerImgSrc}
-            title={this.props.portfolioItem.title}
-            tech={this.props.portfolioItem.tech}
+            bgImage={portfolioItem.headerImgSrc}
+            title={portfolioItem.title}
+            tech={portfolioItem.tech}
           />
 
           <PortfolioPageContent>
             <div className="container-fluid">
               <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-sm-10">
-                  {this.props.portfolioItem.supportingImageSrc
+                  {portfolioItem.supportingImageSrc
                     ? (
                       <div className="row align-items-lg-center">
                         <div
                           className="col-12 col-md col-xl-6"
-                          dangerouslySetInnerHTML={{ __html: marked(this.props.portfolioItem.description, { sanitize: true }) }}
+                          dangerouslySetInnerHTML={{
+                            __html: marked(portfolioItem.description, { sanitize: true }),
+                          }}
                         />
 
                         <div className="col-12 col-md-6 col-xl-5 push-xl-1">
-                          <hr className="mt-1 hidden-md-up"/>
+                          <hr className="mt-1 hidden-md-up" />
                           <figure className="mb-0">
                             <img
-                              src={this.props.portfolioItem.supportingImageSrc}
+                              src={portfolioItem.supportingImageSrc}
                               alt=""
                               className="pf-page__supporting-image w-100"
                             />
@@ -68,39 +74,43 @@ class PortfolioPage extends Component {
                     )
                     : (
                       <div
-                        dangerouslySetInnerHTML={{ __html: marked(this.props.portfolioItem.description, { sanitize: true }) }}
+                        dangerouslySetInnerHTML={{
+                          __html: marked(portfolioItem.description, { sanitize: true }),
+                        }}
                       />
                     )
                   }
 
-                  <hr/>
+                  <hr />
 
                   <div className="hidden-md-up">
                     <PortfolioCarousel
-                      desktop={this.props.portfolioItem.previews.desktop}
-                      tablet={this.props.portfolioItem.previews.tablet}
-                      mobile={this.props.portfolioItem.previews.mobile}
+                      desktop={portfolioItem.previews.desktop}
+                      tablet={portfolioItem.previews.tablet}
+                      mobile={portfolioItem.previews.mobile}
                     />
                   </div>
 
                   <div className="hidden-sm-down">
                     <PortfolioDeviceLineup
-                      desktop={this.props.portfolioItem.previews.desktop}
-                      tablet={this.props.portfolioItem.previews.tablet}
-                      mobile={this.props.portfolioItem.previews.mobile}
+                      desktop={portfolioItem.previews.desktop}
+                      tablet={portfolioItem.previews.tablet}
+                      mobile={portfolioItem.previews.mobile}
                     />
                   </div>
 
-                  <hr/>
+                  <hr />
 
                   <div className="text-center mt-2 mt-md-4">
                     <a
-                      href={this.props.portfolioItem.url}
+                      href={portfolioItem.url}
                       className="btn btn-secondary"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      Visit {this.props.portfolioItem.title}
+                      Visit
+                      {' '}
+                      {portfolioItem.title}
                     </a>
                   </div>
                 </div>
@@ -109,7 +119,7 @@ class PortfolioPage extends Component {
           </PortfolioPageContent>
         </Fragment>
       </div>
-    )
+    );
   }
 }
 
@@ -126,23 +136,23 @@ PortfolioPage.propTypes = {
     previews: PropTypes.shape({
       desktop: PropTypes.string.isRequired,
       tablet: PropTypes.string.isRequired,
-      mobile: PropTypes.string.isRequired
-    }).isRequired
+      mobile: PropTypes.string.isRequired,
+    }).isRequired,
   }),
   hasFetched: PropTypes.bool.isRequired,
   history: PropTypes.shape({
-    push: PropTypes.func.isRequired
+    push: PropTypes.func.isRequired,
   }).isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
-      slug: PropTypes.string.isRequired
-    }).isRequired
+      slug: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
-  requestPortfolioItems: PropTypes.func.isRequired
-}
+  requestPortfolioItems: PropTypes.func.isRequired,
+};
 
 PortfolioPage.defaultProps = {
-  portfolioItem: null
-}
+  portfolioItem: null,
+};
 
-export default withRouter(PortfolioPage)
+export default withRouter(PortfolioPage);

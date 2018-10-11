@@ -71,6 +71,10 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx'],
+    modules: [path.resolve('client/src'), 'node_modules']
+  },
   plugins: [
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
@@ -95,9 +99,5 @@ module.exports = {
         twitter: true
       }
     })
-  ],
-  resolve: {
-    modules: ['client/src', 'node_modules'],
-    extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx']
-  }
+  ]
 }
