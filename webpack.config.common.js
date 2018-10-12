@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   entry: ['babel-polyfill', path.resolve(__dirname, 'client/src/index.jsx')],
@@ -98,6 +99,7 @@ module.exports = {
         opengraph: true,
         twitter: true
       }
-    })
+    }),
+    new SWPrecacheWebpackPlugin()
   ]
 }
