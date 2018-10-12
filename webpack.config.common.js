@@ -6,7 +6,7 @@ const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
-  entry: ['babel-polyfill', path.resolve(__dirname, 'client/src/index.jsx')],
+  entry: path.resolve(__dirname, 'client/src/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
@@ -63,12 +63,18 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|svg)$/,
         exclude: [path.resolve('client/src/images/icons')],
-        use: ['file-loader']
+        use: [
+          'file-loader',
+          'image-webpack-loader',
+        ]
       },
       {
         test: /\.svg$/,
         include: [path.resolve('client/src/images/icons')],
-        use: ['svg-sprite-loader'],
+        use: [
+          'svg-sprite-loader',
+          'svgo-loader',
+        ],
       }
     ]
   },

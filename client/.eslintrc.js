@@ -7,6 +7,7 @@ module.exports = {
   "extends": [
     "react-app",
     "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
     "airbnb"
   ],
   "parserOptions": {
@@ -15,7 +16,7 @@ module.exports = {
     }
   },
   "globals": {
-    "fetch": true
+    "jest": true
   },
   "env": {
     "jest/globals": true

@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import animation from 'config/animation';
-
 import Sitenav from 'components/Sitenav/Sitenav';
 
 import './Sidebar.scss';
@@ -13,9 +11,7 @@ class Sidebar extends React.Component {
     super();
 
     this.state = {
-      navMenuOpen: false,
-      isClosing: false,
-      isClosed: true,
+      isOpen: false,
     };
 
     this.toggleMenu = this.toggleMenu.bind(this);
@@ -23,36 +19,17 @@ class Sidebar extends React.Component {
   }
 
   closeMenu() {
-    this.setState({ isClosing: true });
-
-    window.clearTimeout(this.menuCloseTimeout);
-    this.menuCloseTimeout = window.setTimeout(() => {
-      this.setState({
-        navMenuOpen: false,
-        isClosing: false,
-      });
-    }, animation.duration);
+    this.setState({ isOpen: false });
   }
 
   toggleMenu() {
-    const { navMenuOpen } = this.state;
+    const { isOpen } = this.state;
 
-    if (navMenuOpen) {
-      this.closeMenu();
-    } else {
-      this.setState({ navMenuOpen: true });
-    }
+    this.setState({ isOpen: !isOpen });
   }
 
   render() {
-    const { navMenuOpen, isClosing, isClosed } = this.state;
-    const isOpen = Boolean(navMenuOpen && !isClosing);
-
-    const mobileMenuclassnames = classnames('sidebar__menu hidden-md-up', {
-      'is--closing': isClosing,
-      'is--closed': isClosed,
-      'is--open': isOpen,
-    });
+    const { isOpen } = this.state;
 
     return (
       <aside className="sidebar text-lg-right">
@@ -70,7 +47,7 @@ class Sidebar extends React.Component {
               type="button"
               className="sidebar__btn-sitenav"
               onClick={this.toggleMenu}
-              aria-expanded={navMenuOpen}
+              aria-expanded={isOpen}
             >
               <span className="burger-bar" />
               <span className="sr-only">Toggle menu</span>
@@ -83,8 +60,9 @@ class Sidebar extends React.Component {
         </div>
 
         <menu
-          className={mobileMenuclassnames}
-          onClick={this.closeMenu}
+          className={classnames('sidebar__menu hidden-md-up', {
+            'is--closed': !isOpen,
+          })}
         >
           <div className="container-fluid">
             <Sitenav />
@@ -92,7 +70,7 @@ class Sidebar extends React.Component {
         </menu>
       </aside>
     );
-  };
-};
+  }
+}
 
 export default Sidebar;
