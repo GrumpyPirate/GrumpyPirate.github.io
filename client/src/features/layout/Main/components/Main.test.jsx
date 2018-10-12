@@ -1,23 +1,14 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import MainContainer from './Main';
 
-// Vendor
-import { EventEmitter } from 'fbemitter'
-
-// Component
-import MainContainer from './MainContainer'
-
-// Suite
 describe('<MainContainer />', () => {
   it('renders without crashing', () => {
-    const minProps = {
-      emitter: new EventEmitter(),
-      location: {}
-    }
+    const props = {
+      location: {},
+    };
 
-    shallow(<MainContainer {...minProps} />)
-  })
-})
+    shallow(<MainContainer {...props} />);
+  });
+});

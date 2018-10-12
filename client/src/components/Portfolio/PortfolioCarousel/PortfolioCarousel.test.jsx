@@ -1,15 +1,10 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import PortfolioCarousel from './PortfolioCarousel';
 
-// Component
-import PortfolioCarousel from './PortfolioCarousel'
-
-// Suite
 describe('<PortfolioCarousel />', () => {
   it('renders without crashing', () => {
-    shallow(<PortfolioCarousel />)
-  })
-})
+    shallow(<PortfolioCarousel />);
+  });
+});

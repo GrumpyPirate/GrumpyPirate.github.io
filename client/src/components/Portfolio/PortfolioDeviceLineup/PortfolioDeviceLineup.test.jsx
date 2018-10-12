@@ -1,15 +1,10 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import PortfolioDeviceLineup from './PortfolioDeviceLineup';
 
-// Component
-import PortfolioDeviceLineup from './PortfolioDeviceLineup'
-
-// Suite
 describe('<PortfolioDeviceLineup />', () => {
   it('renders without crashing', () => {
-    shallow(<PortfolioDeviceLineup />)
-  })
-})
+    shallow(<PortfolioDeviceLineup />);
+  });
+});

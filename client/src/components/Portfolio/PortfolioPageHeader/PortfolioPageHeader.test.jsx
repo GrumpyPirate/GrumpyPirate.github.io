@@ -1,26 +1,20 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
+import PortfolioPageHeader from './PortfolioPageHeader';
 
-// Testing libs
-import { shallow } from 'enzyme'
-
-// Component
-import PortfolioPageHeader from './PortfolioPageHeader'
-
-// Suite
 describe('<PortfolioPageHeader />', () => {
   it('renders without crashing', () => {
-    const minProps = {
+    const props = {
       bgImage: 'test',
       title: 'test title',
       tech: [
         {
           icon: 'test-icon',
-          name: 'test-name'
-        }
-      ]
-    } // /const minProps
+          name: 'test-name',
+        },
+      ],
+    };
 
-    shallow(<PortfolioPageHeader {...minProps} />)
-  })
-})
+    shallow(<PortfolioPageHeader {...props} />);
+  });
+});

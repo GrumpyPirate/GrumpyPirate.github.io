@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { requestPortfolioItems } from 'actions/portfolio/portfolio';
 
-import PortfolioPage from 'features/pages/PortfolioPage/components/PortfolioPage';
+import PortfolioPage from '../components/PortfolioPage';
 
 const mapStateToProps = (state, ownProps) => ({
   portfolioItem: state.portfolio.portfolioItems
@@ -16,7 +16,7 @@ const mapDispatchToProps = { requestPortfolioItems };
 
 const PortfolioPageContainer = withRouter(connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(PortfolioPage));
 
 PortfolioPageContainer.propTypes = {

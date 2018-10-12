@@ -1,14 +1,12 @@
-// React
-import React from 'react'
+import React from 'react';
 
-import Icon from 'components/Icon/Icon'
+import Icon from 'components/Icon/Icon';
 
-// SCSS
-import './Footer.scss'
+import './Footer.scss';
 
 const Footer = () => {
-  const CREATION_YEAR = 2017
-  const CURR_YEAR = new Date().getFullYear()
+  const creationYear = 2017;
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer text-center">
@@ -33,8 +31,8 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="footer__icon link-inherit"
                 title="Webpack"
-                >
-                <Icon glyph="webpack" altText="Webpack 2" />
+              >
+                <Icon glyph="webpack" altText="Webpack" />
               </a>
               {', '}
               <a
@@ -53,16 +51,20 @@ const Footer = () => {
             </p>
 
             <p>
-              &copy; {CURR_YEAR > CREATION_YEAR
-                ? <span className="footer__credits__date">{CREATION_YEAR}&mdash;{CURR_YEAR}</span>
-                : <span className="footer__credits__date">{CURR_YEAR}</span>
-              } Edward Cobbold
+              &copy;
+              {' '}
+              {currentYear > creationYear
+                ? <span className="footer__credits__date">{creationYear}&mdash;{currentYear}</span>
+                : <span className="footer__credits__date">{currentYear}</span>
+              }
+              {' '}
+              Edward Cobbold
             </p>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,24 +1,18 @@
-// React
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// SCSS
-import './AboutSection.scss'
+import './AboutSection.scss';
 
-// Define AboutSection
 const AboutSection = ({ title, children }) => (
   <div className="about__section">
     <h2 className="h3 about__section__title mb-3">{title}</h2>
     {children}
   </div>
-)
+);
 
 AboutSection.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
-}
+  children: PropTypes.node.isRequired,
+};
 
-export default AboutSection
+export default AboutSection;

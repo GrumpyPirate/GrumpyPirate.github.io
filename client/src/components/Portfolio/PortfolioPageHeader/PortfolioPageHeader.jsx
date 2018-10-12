@@ -1,22 +1,15 @@
-// React
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-// Router
-import { Link } from 'react-router-dom'
+import Icon from 'components/Icon/Icon';
 
-// PropTypes
-import PropTypes from 'prop-types'
+import './PortfolioPageHeader.scss';
 
-// Components
-import Icon from 'components/Icon/Icon'
-
-// SCSS
-import './PortfolioPageHeader.scss'
-
-const PortfolioPageHeader = props => (
+const PortfolioPageHeader = ({ bgImage, title, tech }) => (
   <header className="pf-page-header text-left">
     <figure className="pf-page-header__media">
-      <img src={props.bgImage} alt={props.title} />
+      <img src={bgImage} alt={title} />
     </figure>
 
     <div className="pf-page-header__copy">
@@ -25,33 +18,39 @@ const PortfolioPageHeader = props => (
       </div>
 
       <div>
-        <h1 className="pf-page-header__title">{props.title}</h1>
+        <h1 className="pf-page-header__title">{title}</h1>
       </div>
 
       <div className="pf-page-header__tech">
         <h2 className="h5 mb-0">Technologies</h2>
 
-        {props.tech.length &&
+        {!!tech.length && (
           <ul className="pf-page-header__tech__list">
-            {props.tech.map((techItem, index) => (
-              <li key={index}>
+            {tech.map(techItem => (
+              <li key={`tech-item__${techItem.name}`}>
                 <Icon glyph={techItem.icon} altText={techItem.name} />
               </li>
             ))}
           </ul>
-        }
+        )}
       </div>
     </div>
   </header>
-) // /const PortfolioPageHeader
+);
 
 PortfolioPageHeader.propTypes = {
   bgImage: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.shape({
-    icon: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-  }))
-} // /PortfolioPageHeader.propTypes
+  tech: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ),
+};
 
-export default PortfolioPageHeader
+PortfolioPageHeader.defaultProps = {
+  tech: [],
+};
+
+export default PortfolioPageHeader;

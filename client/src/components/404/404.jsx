@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 
-import { Link, withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom';
 
-import PageContainer from 'components/PageContainer/PageContainer'
-import PageHeader from 'components/PageHeader/PageHeader'
-import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle'
+import PageContainer from 'components/PageContainer/PageContainer';
+import PageHeader from 'components/PageHeader/PageHeader';
+import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 
 const HTTPNotFound = () => (
   <Fragment>
@@ -23,6 +23,6 @@ const HTTPNotFound = () => (
       </section>
     </PageContainer>
   </Fragment>
-)
+);
 
-export default withRouter(HTTPNotFound)
+export default withRouter(HTTPNotFound);

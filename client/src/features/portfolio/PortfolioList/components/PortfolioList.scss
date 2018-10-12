@@ -1,5 +1,18 @@
 @import 'core';
 
+.pf__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: rem(map-get($grid-gutter-widths, xs) / 2);
+  margin: 0 rem(map-get($grid-gutter-widths, xs) / -4);
+
+  // md up
+  @include media-breakpoint-up(md) {
+    padding-top: rem(map-get($grid-gutter-widths, md) / 2);
+    margin: 0 rem(map-get($grid-gutter-widths, md) / -4);
+  }
+}
+
 .pf__item {
   flex: 1 1 calc(100% - #{map-get($grid-gutter-widths, sm) / 2});
   display: flex;
@@ -16,7 +29,7 @@
   // xs only
   @include media-breakpoint-only(xs) {
     margin-bottom: rem(map-get($grid-gutter-widths, xs) / 2);
-  } // /xs only
+  }
 
   // sm up
   @include media-breakpoint-up(sm) {
@@ -24,7 +37,7 @@
     margin-right: map-get($grid-gutter-widths, sm) / 4;
     margin-left: map-get($grid-gutter-widths, sm) / 4;
     margin-bottom: rem(map-get($grid-gutter-widths, sm) / 2);
-  } // /sm up
+  }
 
   // md up
   @include media-breakpoint-up(md) {
@@ -32,19 +45,19 @@
     margin-right: map-get($grid-gutter-widths, md) / 4;
     margin-left: map-get($grid-gutter-widths, md) / 4;
     margin-bottom: rem(map-get($grid-gutter-widths, md) / 2);
-  } // /md up
+  }
 
   // lg up
   @include media-breakpoint-up(lg) {
     border-bottom-width: map-get($grid-gutter-widths, lg) / 4;
-  } // /lg up
+  }
 
   &:hover,
   &:focus {
     .pf__item__media {
       transform: scale(1.0625);
-    } // /.pf__item__media
-  } // /hover, focus
+    }
+  }
 
   // Media
   &__media {
@@ -65,8 +78,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    } // /img
-  } // /&__media
+    }
+  }
 
   // Copy
   &__copy {
@@ -81,5 +94,5 @@
       transparentize(palette(theme-dark), 1)
     );
     z-index: 1;
-  } // /&__copy
-} // /.pf__item
+  }
+}

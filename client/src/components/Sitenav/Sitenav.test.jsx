@@ -1,18 +1,10 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import Sitenav from './Sitenav';
 
-// Component
-import SiteNav from './SiteNav'
-
-// Suite
-describe('<SiteNav />', () => {
+describe('<Sitenav />', () => {
   it('renders without crashing', () => {
-    const minProps = {
-    } // /const minProps
-
-    shallow(<SiteNav {...minProps} />)
-  })
-})
+    shallow(<Sitenav />);
+  });
+});

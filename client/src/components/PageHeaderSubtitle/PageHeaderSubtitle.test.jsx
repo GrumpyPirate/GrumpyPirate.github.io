@@ -1,15 +1,10 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import PageHeaderSubtitle from './PageHeaderSubtitle';
 
-// Component
-import PageHeaderSubtitle from './PageHeaderSubtitle'
-
-// Suite
 describe('<PageHeaderSubtitle />', () => {
   it('renders without crashing', () => {
-    shallow(<PageHeaderSubtitle />)
-  })
-})
+    shallow(<PageHeaderSubtitle />);
+  });
+});

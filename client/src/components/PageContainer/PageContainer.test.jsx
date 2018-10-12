@@ -1,15 +1,10 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import PageContainer from './PageContainer';
 
-// Component
-import PageContainer from './PageContainer'
-
-// Suite
 describe('<PageContainer />', () => {
   it('renders without crashing', () => {
-    shallow(<PageContainer />)
-  })
-})
+    shallow(<PageContainer />);
+  });
+});

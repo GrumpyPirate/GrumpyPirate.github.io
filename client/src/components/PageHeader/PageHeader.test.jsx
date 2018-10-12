@@ -1,20 +1,14 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
+import PageHeader from './PageHeader';
 
-// Component
-import PageHeader from './PageHeader'
-
-// Suite
 describe('<PageHeader />', () => {
   it('renders without crashing', () => {
-    const minProps = {
+    const props = {
       title: 'test title',
-      subtitle: 'test subtitle',
-    }
+    };
 
-    shallow(<PageHeader {...minProps} />)
-  })
-})
+    shallow(<PageHeader {...props} />);
+  });
+});

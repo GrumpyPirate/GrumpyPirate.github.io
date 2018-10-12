@@ -1,18 +1,11 @@
-// React
-import React from 'react'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-// Testing libs
-import { shallow } from 'enzyme'
-
-// Component
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar';
 
 // Suite
 describe('<Sidebar />', () => {
   it('renders without crashing', () => {
-    const minProps = {
-    } // /const minProps
-
-    shallow(<Sidebar {...minProps} />)
-  })
-})
+    shallow(<Sidebar />);
+  });
+});

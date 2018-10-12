@@ -1,8 +1,8 @@
 import {
   LOAD_PORTFOLIO_ITEMS,
   RECEIVE_PORTFOLIO_ITEMS,
-  FAILED_PORTFOLIO_ITEMS_REQUEST
-} from 'actions/portfolio/portfolio'
+  FAILED_PORTFOLIO_ITEMS_REQUEST,
+} from 'actions/portfolio/portfolio';
 
 const defaultState = {
   portfolioItems: [],
@@ -10,8 +10,8 @@ const defaultState = {
   hasFetched: false,
   fetchCount: 0,
   error: '',
-  errorCount: 0
-}
+  errorCount: 0,
+};
 
 const portfolioReducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -19,27 +19,26 @@ const portfolioReducer = (state = defaultState, action) => {
       return {
         ...state,
         isFetching: true,
-        hasFetched: true
-      }
+        hasFetched: true,
+      };
     case RECEIVE_PORTFOLIO_ITEMS:
       return {
         ...state,
         portfolioItems: action.portfolioItems,
         isFetching: false,
-        fetchCount: state.fetchCount++
-      }
+        fetchCount: state.fetchCount + 1,
+      };
     case FAILED_PORTFOLIO_ITEMS_REQUEST:
       return {
         ...state,
         isFetching: false,
-        fetchCount: state.fetchCount++,
+        fetchCount: state.fetchCount + 1,
         error: action.error,
-        errorCount: state.errorCount++
-      }
+        errorCount: state.errorCount + 1,
+      };
     default:
-      return state
+      return state;
   }
-}
-
-export default portfolioReducer
-export { defaultState }
+};
+export default portfolioReducer;
+export { defaultState };

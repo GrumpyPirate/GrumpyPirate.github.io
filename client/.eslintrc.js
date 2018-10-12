@@ -26,5 +26,10 @@ module.exports = {
         "config": "webpack.config.dev.js"
       }
     }
+  },
+  "rules": {
+    "consistent-return": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-unescaped-entities": ["off", "'"]
   }
 }

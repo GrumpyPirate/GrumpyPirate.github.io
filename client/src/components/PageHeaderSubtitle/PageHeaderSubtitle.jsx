@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PageHeaderSubtitle = ({ children }) => (
   <h2 className="h4 mb-0 pb-1 pb-md-2">
@@ -11,13 +11,10 @@ const PageHeaderSubtitle = ({ children }) => (
       </div>
     </div>
   </h2>
-)
+);
 
 PageHeaderSubtitle.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
-}
+  children: PropTypes.node.isRequired,
+};
 
-export default PageHeaderSubtitle
+export default PageHeaderSubtitle;

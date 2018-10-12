@@ -1,14 +1,13 @@
-// React
-import React from 'react'
-import { shallow } from 'enzyme'
+import React from 'react';
+import { shallow } from 'enzyme';
 
-import AboutIcon from './AboutIcon'
+import AboutIcon from './AboutIcon';
 
 it('renders without crashing', () => {
-  const defaultProps = {
+  const props = {
     iconName: 'test-icon-name',
-    largeIcon: false
-  }
+    large: false,
+  };
 
-  shallow(<AboutIcon {...defaultProps} />)
-})
+  shallow(<AboutIcon {...props} />);
+});
