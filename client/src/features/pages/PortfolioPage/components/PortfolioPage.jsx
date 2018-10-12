@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import marked from 'marked';
+import ReactMarkdown from 'react-markdown';
 import isEmpty from 'lodash/isEmpty';
 
 import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader';
@@ -53,12 +53,9 @@ class PortfolioPage extends Component {
                   {portfolioItem.supportingImageSrc
                     ? (
                       <div className="row align-items-lg-center">
-                        <div
-                          className="col-12 col-md col-xl-6"
-                          dangerouslySetInnerHTML={{
-                            __html: marked(portfolioItem.description, { sanitize: true }),
-                          }}
-                        />
+                        <div className="col-12 col-md col-xl-6">
+                          <ReactMarkdown source={portfolioItem.description} />
+                        </div>
 
                         <div className="col-12 col-md-6 col-xl-5 push-xl-1">
                           <hr className="mt-1 hidden-md-up" />
@@ -72,13 +69,7 @@ class PortfolioPage extends Component {
                         </div>
                       </div>
                     )
-                    : (
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: marked(portfolioItem.description, { sanitize: true }),
-                        }}
-                      />
-                    )
+                    : <ReactMarkdown source={portfolioItem.description} />
                   }
 
                   <hr />
