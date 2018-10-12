@@ -13,7 +13,7 @@
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "postinstall": "npm run build",
     "start": "npm run build && NODE_ENV=production node server.js",
-    "test": "NODE_ENV=test node scripts/test.js --env=jsdom"
+    "test": "jest --watch"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -40,6 +40,8 @@
     "@babel/core": "7.1.2",
     "@babel/preset-env": "7.1.0",
     "@babel/preset-react": "7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "8.0.4",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
@@ -59,8 +61,9 @@
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "3.6.0",
-    "jest": "23.6.0",
+    "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "^5.0.1",

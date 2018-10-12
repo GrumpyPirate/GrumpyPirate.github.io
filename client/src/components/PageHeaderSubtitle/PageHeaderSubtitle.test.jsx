@@ -5,6 +5,10 @@ import PageHeaderSubtitle from './PageHeaderSubtitle';
 
 describe('<PageHeaderSubtitle />', () => {
   it('renders without crashing', () => {
-    shallow(<PageHeaderSubtitle />);
+    const props = {
+      children: <div>Test</div>,
+    };
+
+    shallow(<PageHeaderSubtitle {...props} />);
   });
 });

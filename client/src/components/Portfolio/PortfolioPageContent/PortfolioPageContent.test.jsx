@@ -5,6 +5,10 @@ import PortfolioPageContent from './PortfolioPageContent';
 
 describe('<PortfolioPageContent />', () => {
   it('renders without crashing', () => {
-    shallow(<PortfolioPageContent />);
+    const props = {
+      children: <div>Test</div>,
+    };
+
+    shallow(<PortfolioPageContent {...props} />);
   });
 });

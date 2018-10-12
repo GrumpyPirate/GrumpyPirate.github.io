@@ -4,5 +4,9 @@ import { shallow } from 'enzyme';
 import Carousel from './Carousel';
 
 it('renders without crashing', () => {
-  shallow(<Carousel />);
+  const props = {
+    children: <div>Test</div>,
+  };
+
+  shallow(<Carousel {...props} />);
 });

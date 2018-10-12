@@ -5,10 +5,10 @@ import PortfolioList from './PortfolioList';
 
 describe('<PortfolioList />', () => {
   it('renders without crashing', () => {
-    const minProps = {
-      items: [],
+    const props = {
+      portfolioItems: [],
     };
 
-    shallow(<PortfolioList {...minProps} />);
+    shallow(<PortfolioList {...props} />);
   });
 });

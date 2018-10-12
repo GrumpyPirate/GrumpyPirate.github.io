@@ -5,6 +5,10 @@ import PageContainer from './PageContainer';
 
 describe('<PageContainer />', () => {
   it('renders without crashing', () => {
-    shallow(<PageContainer />);
+    const props = {
+      children: <div>Test</div>,
+    };
+
+    shallow(<PageContainer {...props} />);
   });
 });
