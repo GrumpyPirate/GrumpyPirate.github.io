@@ -14,12 +14,12 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = { requestPortfolioItems };
 
-const PortfolioPageContainer = withRouter(connect(
+const PortfolioPageContent = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
 )(PortfolioPage));
 
-PortfolioPageContainer.propTypes = {
+PortfolioPageContent.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       slug: PropTypes.string.isRequired,
@@ -27,4 +27,4 @@ PortfolioPageContainer.propTypes = {
   }).isRequired,
 };
 
-export default PortfolioPageContainer;
+export default PortfolioPageContent;

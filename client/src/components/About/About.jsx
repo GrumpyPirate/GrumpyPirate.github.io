@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import PageContainer from 'components/PageContainer/PageContainer';
+import Page from 'components/Page/Page';
+import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 import AboutSection from 'components/AboutSection/AboutSection';
 import AboutIcon from 'components/AboutIcon/AboutIcon';
 
 const About = () => (
-  <Fragment>
+  <Page>
     <PageHeader title="Hello">
       <PageHeaderSubtitle>
         I'm a Frontend developer from Kent, working in London. I like <span role="img" aria-label="coffee">☕</span>, <span role="img" aria-label="gaming">🎮</span> and <span role="img" aria-label="beer">🍺</span>.
@@ -20,7 +21,7 @@ const About = () => (
       </PageHeaderSubtitle>
     </PageHeader>
 
-    <PageContainer>
+    <PageContent>
       <section className="about">
         <div className="container-fluid">
           <div className="row justify-content-center">
@@ -225,8 +226,8 @@ const About = () => (
           </div>
         </div>
       </section>
-    </PageContainer>
-  </Fragment>
+    </PageContent>
+  </Page>
 );
 
 export default About;

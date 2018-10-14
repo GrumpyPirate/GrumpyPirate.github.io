@@ -4,7 +4,7 @@
 html,
 body {
   background-color: palette(theme-dark);
-} // /body
+}
 
 .app {
   padding-top: $sidebar-height-mobile;
@@ -15,5 +15,39 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
-  } // /lg up
-} // /.app
+  }
+
+  &__page-transition {
+    &-enter {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      opacity: 1;
+      transform: translateX(0);
+
+      &-active {
+        opacity: 1;
+        transform: translateX(0);
+        transition-property: opacity, transform;
+        transition-duration: $anim-dur * 2;
+      }
+    }
+
+    &-exit {
+      &-active {
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: $anim-dur * 2;
+      }
+
+      &-done {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+  }
+}

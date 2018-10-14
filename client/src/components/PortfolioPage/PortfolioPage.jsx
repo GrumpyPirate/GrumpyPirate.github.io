@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import isEmpty from 'lodash/isEmpty';
 
+import Page from 'components/Page/Page';
 import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';
 import PortfolioPageContent from 'components/PortfolioPageContent/PortfolioPageContent';
 import PortfolioCarousel from 'components/PortfolioCarousel/PortfolioCarousel';
@@ -38,8 +39,8 @@ class PortfolioPage extends Component {
     if (!portfolioItem) return null;
 
     return (
-      <div className="pf-page">
-        <Fragment>
+      <Page>
+        <div className="pf-page">
           <PortfolioPageHeader
             bgImage={portfolioItem.headerImgSrc}
             title={portfolioItem.title}
@@ -108,8 +109,8 @@ class PortfolioPage extends Component {
               </div>
             </div>
           </PortfolioPageContent>
-        </Fragment>
-      </div>
+        </div>
+      </Page>
     );
   }
 }

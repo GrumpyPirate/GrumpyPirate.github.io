@@ -15,16 +15,21 @@ class Main extends PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    const { location: prevLocation } = prevProps;
-    const { location } = this.props;
+    const { location: { pathname: prevPathname } } = prevProps;
+    const { location: { pathname } } = this.props;
+    const scrollOptions = {
+      top: 0,
+      behavior: prevPathname !== pathname ? 'instant' : 'smooth',
+    };
 
-    if (prevLocation.pathname !== location.pathname) {
-      this.mainElement.current.scrollTo(0, 0);
-    }
+    window.scrollTo(scrollOptions);
+    this.mainElement.current.scrollTo(scrollOptions);
   }
 
   render() {
-    const { isLoading, children } = this.props;
+    const {
+      isLoading, renderLocation, location, children,
+    } = this.props;
 
     return (
       <main
@@ -34,6 +39,7 @@ class Main extends PureComponent {
         ref={this.mainElement}
       >
         <Spinner />
+        {renderLocation(location)}
         {children}
       </main>
     );
@@ -45,6 +51,7 @@ Main.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
+  renderLocation: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 

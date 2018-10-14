@@ -1,6 +1,7 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import Page from 'components/Page/Page';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 import PortfolioList from 'containers/PortfolioList/PortfolioList';
@@ -17,7 +18,7 @@ class WebDev extends PureComponent {
     const { portfolioItems } = this.props;
 
     return (
-      <Fragment>
+      <Page>
         <PageHeader title="Portfolio">
           <PageHeaderSubtitle>
             Stuff I've worked on
@@ -27,7 +28,7 @@ class WebDev extends PureComponent {
         <section className="portfolio">
           {!!portfolioItems.length && <PortfolioList />}
         </section>
-      </Fragment>
+      </Page>
     );
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
+import CSSTransition from 'react-transition-group/CSSTransition';
 
 import Sidebar from 'components/Sidebar/Sidebar';
 import Main from 'components/Main/Main';
@@ -15,14 +17,34 @@ const App = () => (
   <Router basename="/">
     <div className="app">
       <Sidebar />
-      <Main>
-        <Switch>
-          <Route exact path="/" component={About} />
-          <Route exact path="/webdev" component={WebDev} />
-          <Route exact path="/webdev/:slug" component={PortfolioPage} />
-          <Route exact path="/404" component={HTTPNotFound} />
-          <Route component={HTTPNotFound} />
-        </Switch>
+      <Main
+        renderLocation={(location) => {
+          const { pathname } = location;
+
+          return (
+            <TransitionGroup component={null}>
+              <CSSTransition
+                key={pathname}
+                classNames="app__page-transition"
+                timeout={{ exit: 300, enter: 300 }}
+              >
+                <Route
+                  location={location}
+                  render={() => (
+                    <Switch>
+                      <Route exact path="/" component={About} />
+                      <Route exact path="/webdev" component={WebDev} />
+                      <Route exact path="/webdev/:slug" component={PortfolioPage} />
+                      <Route exact path="/404" component={HTTPNotFound} />
+                      <Route component={HTTPNotFound} />
+                    </Switch>
+                  )}
+                />
+              </CSSTransition>
+            </TransitionGroup>
+          );
+        }}
+      >
         <Footer />
       </Main>
     </div>

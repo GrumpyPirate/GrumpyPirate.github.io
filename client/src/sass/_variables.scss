@@ -8,37 +8,37 @@ $static-path: '..';
 // Colour palette
 // ---------------------------------------------------------------------------------------------------------------------
 $palette: (
-    // Greyscale
-    white:         #fff,
-    black:         #000,
-    grey:          #666,
-    // Colour Themes
-    // Dark Green/Orange
-    // theme-dark:     #1d2527,
-    // theme-mid:      #c1c395,
-    // theme-light:    #f8efb6,
-    // theme-accent-1: #1e9859,
-    // theme-accent-2: #d65d2b,
-    // Pink/Blue
-    // theme-dark:     #293e44,
-    // theme-mid:      #a5ceeb,
-    // theme-light:    #f6ecf0,
-    // theme-accent-1: #e76569,
-    // theme-accent-2: #56b9b7,
-    // Blue/Green/Cream
-    theme-dark:     #354143,
-    theme-mid:      #4c5b69,
-    theme-light:    #fef9b4,
-    theme-accent-1: #2b978a,
-    theme-accent-2: #cbda57,
-    // Social
-    googleplus:    #dd4b39,
-    twitter:       #55acee,
-    facebook:      #3b5998,
-    linkedin:      #0274b3,
-    instagram:     #bc2a8d,
-    youtube:       #b00,
-    pinterest:     #cb2027
+  // Greyscale
+  white:         #fff,
+  black:         #000,
+  grey:          #666,
+  // Colour Themes
+  // Dark Green/Orange
+  // theme-dark:     #1d2527,
+  // theme-mid:      #c1c395,
+  // theme-light:    #f8efb6,
+  // theme-accent-1: #1e9859,
+  // theme-accent-2: #d65d2b,
+  // Pink/Blue
+  // theme-dark:     #293e44,
+  // theme-mid:      #a5ceeb,
+  // theme-light:    #f6ecf0,
+  // theme-accent-1: #e76569,
+  // theme-accent-2: #56b9b7,
+  // Blue/Green/Cream
+  theme-dark:     #354143,
+  theme-mid:      #4c5b69,
+  theme-light:    #fef9b4,
+  theme-accent-1: #2b978a,
+  theme-accent-2: #cbda57,
+  // Social
+  googleplus:    #dd4b39,
+  twitter:       #55acee,
+  facebook:      #3b5998,
+  linkedin:      #0274b3,
+  instagram:     #bc2a8d,
+  youtube:       #b00,
+  pinterest:     #cb2027
 );
 
 // $headings-color: mix(palette(theme-accent-2), palette(theme-dark), 12.5%);
@@ -50,15 +50,15 @@ $font-path: '#{$static-path}/fonts';
 
 // Font weights
 $font-weights: (
-    thin:       100,
-    extralight: 200,
-    light:      300,
-    regular:    normal,
-    medium:     500,
-    semibold:   600,
-    bold:       bold,
-    extrabold:  800,
-    heavy:      900
+  thin:       100,
+  extralight: 200,
+  light:      300,
+  regular:    normal,
+  medium:     500,
+  semibold:   600,
+  bold:       bold,
+  extrabold:  800,
+  heavy:      900
 );
 
 // Paragraph text
@@ -90,9 +90,9 @@ $icon-bottom-correction: 0;
 $anim-dur: .15s;
 $anim-ease: ease-in-out;
 $easings: (
-    ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1),
-    ease-in-out-quart: cubic-bezier(.77, 0, .175, 1),
-    ease-out-expo: cubic-bezier(.19, 1, .22, 1) // A very harsh ease-out - http://easings.net/#easeOutExpo
+  ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1),
+  ease-in-out-quart: cubic-bezier(.77, 0, .175, 1),
+  ease-out-expo: cubic-bezier(.19, 1, .22, 1) // A very harsh ease-out - http://easings.net/#easeOutExpo
 );
 
 // Shadows
@@ -193,26 +193,26 @@ $spacer:   1rem;
 $spacer-x: $spacer;
 $spacer-y: $spacer;
 $spacers: (
-    0: (
-        x:   0,
-        y:   0
-    ),
-    1: (
-        x:   $spacer-x,
-        y:   $spacer-y
-    ),
-    2: (
-        x:   ($spacer-x * 2),
-        y:   ($spacer-y * 2)
-    ),
-    3: (
-        x:   ($spacer-x * 3),
-        y:   ($spacer-y * 3)
-    ),
-    4: (
-        x:   ($spacer-x * 4),
-        y:   ($spacer-y * 4)
-    )
+  0: (
+    x:   0,
+    y:   0
+  ),
+  1: (
+    x:   $spacer-x,
+    y:   $spacer-y
+  ),
+  2: (
+    x:   ($spacer-x * 2),
+    y:   ($spacer-y * 2)
+  ),
+  3: (
+    x:   ($spacer-x * 3),
+    y:   ($spacer-y * 3)
+  ),
+  4: (
+    x:   ($spacer-x * 4),
+    y:   ($spacer-y * 4)
+  )
 );
 
 // $body-bg:    palette(theme-light);
@@ -290,8 +290,8 @@ $input-border-focus: palette(grey-lighter);
 $input-border-radius: 0;
 $input-box-shadow: none;
 $input-transition: color $anim-dur $anim-ease,
-                   border-color $anim-dur $anim-ease,
-                   background-color $anim-dur $anim-ease;
+           border-color $anim-dur $anim-ease,
+           background-color $anim-dur $anim-ease;
 
 // App Components
 // ---------------------------------------------------------------------------------------------------------------------

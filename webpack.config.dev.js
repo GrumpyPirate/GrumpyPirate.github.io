@@ -8,6 +8,7 @@ const devConfig = {
     historyApiFallback: true,
     publicPath: '/',
     port: 3000,
+    host: '0.0.0.0',
     stats: 'minimal'
   }
 };
