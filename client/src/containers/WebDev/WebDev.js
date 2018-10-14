@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { requestPortfolioItems } from 'actions/portfolio/portfolio';
 
-import WebDev from 'features/pages/WebDev/components/WebDev';
+import WebDev from 'components/WebDev/WebDev';
 
 const mapStateToProps = state => ({
   portfolioItems: state.portfolio.portfolioItems,

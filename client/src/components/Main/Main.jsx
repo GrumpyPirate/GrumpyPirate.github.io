@@ -1,8 +1,9 @@
 import React, { PureComponent, createRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
-import Spinner from '../../Spinner/containers/Spinner';
+import Spinner from 'containers/Spinner/Spinner';
 
 import './Main.scss';
 
@@ -51,4 +52,4 @@ Main.defaultProps = {
   isLoading: false,
 };
 
-export default Main;
+export default withRouter(Main);

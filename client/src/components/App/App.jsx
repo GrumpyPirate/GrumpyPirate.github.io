@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Sidebar from 'components/Sidebar/Sidebar';
-import Main from 'features/layout/Main/containers/Main';
+import Main from 'components/Main/Main';
 import Footer from 'components/Footer/Footer';
 import About from 'components/About/About';
-import WebDev from 'features/pages/WebDev/containers/WebDev';
-import PortfolioPage from 'features/pages/PortfolioPage/containers/PortfolioPage';
+import WebDev from 'containers/WebDev/WebDev';
+import PortfolioPage from 'containers/PortfolioPage/PortfolioPage';
 import HTTPNotFound from 'components/404/404';
 
 import './App.scss';

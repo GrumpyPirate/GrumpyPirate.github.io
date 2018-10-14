@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
-import PortfolioList from 'features/portfolio/PortfolioList/containers/PortfolioList';
+import PortfolioList from 'containers/PortfolioList/PortfolioList';
 
 import './WebDev.scss';
 

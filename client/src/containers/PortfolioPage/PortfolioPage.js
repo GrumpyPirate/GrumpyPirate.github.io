@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { requestPortfolioItems } from 'actions/portfolio/portfolio';
 
-import PortfolioPage from '../components/PortfolioPage';
+import PortfolioPage from 'components/PortfolioPage/PortfolioPage';
 
 const mapStateToProps = (state, ownProps) => ({
   portfolioItem: state.portfolio.portfolioItems

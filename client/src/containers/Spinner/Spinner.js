@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Spinner from '../components/Spinner';
+import Spinner from 'components/Spinner/Spinner';
 
 const mapStateToProps = state => ({
   isLoading: state.portfolio.isFetching,

@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import isEmpty from 'lodash/isEmpty';
 
-import PortfolioPageHeader from 'components/Portfolio/PortfolioPageHeader/PortfolioPageHeader';
-import PortfolioPageContent from 'components/Portfolio/PortfolioPageContent/PortfolioPageContent';
-import PortfolioCarousel from 'components/Portfolio/PortfolioCarousel/PortfolioCarousel';
-import PortfolioDeviceLineup from 'components/Portfolio/PortfolioDeviceLineup/PortfolioDeviceLineup';
+import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';
+import PortfolioPageContent from 'components/PortfolioPageContent/PortfolioPageContent';
+import PortfolioCarousel from 'components/PortfolioCarousel/PortfolioCarousel';
+import PortfolioDeviceLineup from 'components/PortfolioDeviceLineup/PortfolioDeviceLineup';
 
 import './PortfolioPage.scss';
 
