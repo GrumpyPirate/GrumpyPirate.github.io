@@ -11,7 +11,6 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
-    "postinstall": "npm run build",
     "start": "npm run build && NODE_ENV=production node server.js",
     "analyze-bundle": "webpack --config webpack.config.analyze.js",
     "test": "jest --watch"
