@@ -16,7 +16,7 @@ class Main extends PureComponent {
 
   componentDidUpdate(prevProps) {
     const { location: { pathname: prevPathname } } = prevProps;
-    const { location: { pathname } } = this.props;
+    const { location: { pathname }, closeMobileNavigation } = this.props;
     const scrollOptions = {
       top: 0,
       behavior: prevPathname !== pathname ? 'instant' : 'smooth',
@@ -24,6 +24,8 @@ class Main extends PureComponent {
 
     window.scrollTo(scrollOptions);
     this.mainElement.current.scrollTo(scrollOptions);
+
+    closeMobileNavigation();
   }
 
   render() {
@@ -36,6 +38,7 @@ class Main extends PureComponent {
         className={classnames('main', {
           'is--loading': isLoading,
         })}
+        id="main-content"
         ref={this.mainElement}
       >
         <Spinner />
@@ -52,6 +55,7 @@ Main.propTypes = {
     pathname: PropTypes.string.isRequired,
   }).isRequired,
   renderLocation: PropTypes.func.isRequired,
+  closeMobileNavigation: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 

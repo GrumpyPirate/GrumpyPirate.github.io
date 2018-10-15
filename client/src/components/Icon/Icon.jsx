@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 import './Icon.scss';
 
-// Import icon SVGs. Note that we're using material-design-icons, via NPM.
 // feather-icons
+import 'images/icons/chevron-down.svg';
+import 'images/icons/chevron-left.svg';
 
 // Generic
 // import close from 'images/icons/x.svg';
@@ -71,7 +72,7 @@ Icon.defaultProps = {
   className: 'icon',
   width: 48,
   height: 48,
-  altText: ''
+  altText: '',
 };
 
 export default Icon;

@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        include: [path.resolve('client/src/images/icons')],
+        include: [/node_modules/, path.resolve('client/src/images/icons')],
         use: [
           'svg-sprite-loader',
           'svgo-loader',

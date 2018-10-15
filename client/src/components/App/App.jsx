@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CSSTransition from 'react-transition-group/CSSTransition';
 
-import Sidebar from 'components/Sidebar/Sidebar';
-import Main from 'components/Main/Main';
-import Footer from 'components/Footer/Footer';
-import About from 'components/About/About';
+import Sidebar from 'containers/Sidebar/Sidebar';
+import Main from 'containers/Main/Main';
 import WebDev from 'containers/WebDev/WebDev';
 import PortfolioPage from 'containers/PortfolioPage/PortfolioPage';
+
+import Footer from 'components/Footer/Footer';
+import About from 'components/About/About';
 import HTTPNotFound from 'components/404/404';
 
 import './App.scss';

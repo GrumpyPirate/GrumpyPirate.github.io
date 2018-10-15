@@ -20,10 +20,13 @@
   transition: opacity ($anim-dur * 2) $anim-ease,
               visibility ($anim-dur * 2) $anim-ease;
 
-  // lg up
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     top: 0;
     left: $sidebar-width;
+  }
+
+  @include media-breakpoint-up(lg) {
+    left: $sidebar-width-lg;
   }
 
   &__icon {

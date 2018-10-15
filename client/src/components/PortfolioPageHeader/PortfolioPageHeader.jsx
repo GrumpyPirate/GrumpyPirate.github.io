@@ -14,7 +14,10 @@ const PortfolioPageHeader = ({ bgImage, title, tech }) => (
 
     <div className="pf-page-header__copy">
       <div>
-        <Link to="/webdev" className="pf-page-header__back h6 mb-0">&lt; Portfolio</Link>
+        <Link to="/webdev" className="pf-page-header__back h6 mb-0">
+          <Icon glyph="chevron-left" />
+          Portfolio
+        </Link>
       </div>
 
       <div>

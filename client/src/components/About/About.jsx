@@ -10,7 +10,10 @@ import AboutIcon from 'components/AboutIcon/AboutIcon';
 
 const About = () => (
   <Page>
-    <PageHeader title="Hello">
+    <PageHeader
+      title="Hello"
+      isFullscreen
+    >
       <PageHeaderSubtitle>
         I'm a Frontend developer from Kent, working in London. I like <span role="img" aria-label="coffee">☕</span>, <span role="img" aria-label="gaming">🎮</span> and <span role="img" aria-label="beer">🍺</span>.
       </PageHeaderSubtitle>
