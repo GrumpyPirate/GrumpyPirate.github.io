@@ -34,7 +34,7 @@ const Footer = () => {
               >
                 <Icon glyph="webpack" altText="Webpack" />
               </a>
-              {', '}
+              {' and '}
               <a
                 href="https://www.contentful.com/"
                 target="_blank"
@@ -43,11 +43,17 @@ const Footer = () => {
                 title="Contentful"
               >
                 <Icon glyph="contentful" altText="Contentful" />
+              </a>.
+              {' '}
+              <a
+                href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
+                className="link-inherit"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Source code
               </a>
-              {' and '}
-              <span className="footer__icon">
-                <Icon glyph="heart" altText="love" />
-              </span>
+              .
             </p>
 
             <p>
@@ -58,7 +64,7 @@ const Footer = () => {
                 : <span className="footer__credits__date">{currentYear}</span>
               }
               {' '}
-              Edward Cobbold
+              Edward Cobbold.
             </p>
           </div>
         </div>
