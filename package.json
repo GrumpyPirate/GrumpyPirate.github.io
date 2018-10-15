@@ -1,6 +1,6 @@
 {
   "name": "ecobbold-portfolio-2017",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "node": "8.x",
     "npm": "5.x"
