@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
-import isEmpty from 'lodash/isEmpty';
+import isEmpty from 'lodash-es/isEmpty';
 
 import Page from 'components/Page/Page';
 import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';

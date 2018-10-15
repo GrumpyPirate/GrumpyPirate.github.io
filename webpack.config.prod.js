@@ -34,7 +34,9 @@ const prodConfig = {
       new OptimiseCSSAssetsPlugin({
         cssProcessorPluginOptions: { preset: 'advanced' }
       })
-    ]
+    ],
+    usedExports: true,
+    sideEffects: true
   },
   plugins: [
     new MiniCssExtractPlugin({
