@@ -1,0 +1,41 @@
+@import 'core';
+
+.sitenav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond-only(md) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin: 0 0 .75rem;
+
+      @include respond-only(md) {
+        margin: 0 .75rem 0 0;
+      }
+
+      @include respond-up(lg) {
+        margin: 0 0 .25rem;
+      }
+    }
+  }
+
+  &__nav-link {
+    @include no-underline;
+    @include heading(5);
+    @include lasers;
+    letter-spacing: normal;
+    margin-bottom: 0;
+    padding-bottom: .25em;
+
+    &--active {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

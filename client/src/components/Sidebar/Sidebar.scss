@@ -69,36 +69,12 @@
     }
   }
 
-  .sitenav__nav-link {
-    @include lasers($direction: out, $display: block);
-    font-family: $headings-font-family;
-    font-weight: weight(light);
-    display: inline-block;
-    padding: .25rem 0;
-    margin: .25rem 0;
-
-    // md up
-    @include respond-up(md) {
-      display: block;
-      padding: 0;
-      margin: 0;
-    }
-
-    // lg up
-    @include respond-up(lg) {
-      display: inline-block;
-    }
-  }
-
   // Brand (Logo/Text)
   // -----------------------------------------------------------------------------------------------------------------
   &__brand {
-    font-family: $headings-font-family;
-    color: palette(theme-light);
-    display: block;
-    font-weight: weight(light);
-    font-size: $font-size-h5;
-    line-height: $headings-line-height;
+    @include heading(5);
+    margin-bottom: 0;
+    letter-spacing: normal;
 
     // lg up
     @include respond-up(lg) {
@@ -136,9 +112,9 @@
 
     &__job-title {
       display: block;
-      font-size: rem(12px);
+      font-size: .75em;
       color: palette(theme-light);
-      opacity: .65;
+      opacity: .8;
 
       @include respond-down(md) {
         display: none;
@@ -161,6 +137,10 @@
   }
 
   &__divider {
+    border-style: solid none none;
+    border-color: palette(theme-light);
+    border-width: 1px;
+
     @include respond-down(md) {
       display: none;
     }

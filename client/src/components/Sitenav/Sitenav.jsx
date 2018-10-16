@@ -1,29 +1,41 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { uniqueId } from 'lodash-es';
+
+import classes from './Sitenav.scss';
+
+const navItems = [
+  {
+    key: uniqueId(),
+    to: '/',
+    label: 'About',
+  },
+  {
+    key: uniqueId(),
+    to: '/webdev',
+    label: 'Portfolio',
+  },
+];
 
 const Sitenav = ({ onNavLinkClick }) => (
-  <ul className="sitenav list-unstyled m-0" role="navigation">
-    <li className="sitenav__nav-item">
-      <NavLink
-        to="/"
-        exact
-        className="sitenav__nav-link"
-        onClick={onNavLinkClick}
+  <ul className={classes['sitenav']} role="navigation">
+    {navItems.map(navItem => (
+      <li
+        key={`sitenav__nav-item__${navItem.key}`}
+        className={classes['sitenav__nav-item']}
       >
-        About
-      </NavLink>
-    </li>
-
-    <li className="sitenav__nav-item">
-      <NavLink
-        to="/webdev"
-        className="sitenav__nav-link"
-        onClick={onNavLinkClick}
-      >
-        Portfolio
-      </NavLink>
-    </li>
+        <NavLink
+          to={navItem.to}
+          exact
+          className={classes['sitenav__nav-link']}
+          activeClassName={classes['sitenav__nav-link--active']}
+          onClick={onNavLinkClick}
+        >
+          {navItem.label}
+        </NavLink>
+      </li>
+    ))}
   </ul>
 );
 

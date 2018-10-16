@@ -1,6 +1,7 @@
 @import 'core';
 
 .container {
+  width: 100%;
   padding-right: rem(map-get($gutter-widths, xs) / 2);
   padding-left: rem(map-get($gutter-widths, xs) / 2);
 
