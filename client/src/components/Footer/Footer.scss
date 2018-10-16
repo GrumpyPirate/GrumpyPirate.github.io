@@ -6,10 +6,10 @@
   background-color: palette(theme-dark);
   color: transparentize(palette(theme-light), .4);
   padding: 1.5rem 0;
-  font-size: $small-font-size;
+  font-size: rem(12px);
 
   // md up
-  @include media-breakpoint-up(md) {
+  @include respond-up(md) {
     padding: 2rem 0;
   }
 

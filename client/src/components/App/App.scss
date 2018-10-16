@@ -1,16 +1,10 @@
-// Global layout styles that apply to all document content
 @import 'core';
-
-html,
-body {
-  background-color: palette(theme-dark);
-}
 
 .app {
   padding-top: $sidebar-height-mobile;
 
   // lg up
-  @include media-breakpoint-up(lg) {
+  @include respond-up(lg) {
     padding-top: 0;
     display: flex;
     flex-flow: row nowrap;

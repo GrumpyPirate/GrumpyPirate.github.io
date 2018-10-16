@@ -20,7 +20,7 @@
     } // /&:first-of-type
 
     // md up
-    @include media-breakpoint-up(md) {
+    @include respond-up(md) {
       margin: 6rem 0;
     } // /md up
 

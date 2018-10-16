@@ -16,17 +16,24 @@ const prodConfig = {
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[hash:base64:5]',
+              importLoaders: 2,
+            }
+          },
           'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
-              includePaths: ['client/src/sass']
-            }
-          }
-        ]
-      }
-    ]
+              includePaths: ['client/src/sass'],
+            },
+          },
+        ],
+      },
+    ],
   },
   optimization: {
     minimizer: [

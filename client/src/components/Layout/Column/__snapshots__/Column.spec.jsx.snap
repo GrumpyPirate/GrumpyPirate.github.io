@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Column /> should render as expected, without crashing 1`] = `
+<Column
+  span={null}
+  spanLG={null}
+  spanMD={null}
+  spanSM={null}
+  spanXL={null}
+  spanXS={null}
+>
+  <div>
+    Test children
+  </div>
+</Column>
+`;

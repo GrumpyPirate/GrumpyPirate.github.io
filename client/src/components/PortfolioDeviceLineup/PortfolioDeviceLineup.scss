@@ -5,7 +5,7 @@
   height: rem(360px);
 
   // xl up
-  @include media-breakpoint-up(xl) {
+  @include respond-up(xl) {
     height: rem(420px);
   } // /xl up
 
@@ -27,7 +27,7 @@
         height: rem($device-frame-width-md * $aspect * 1px);
 
         // xl up
-        @include media-breakpoint-up(xl) {
+        @include respond-up(xl) {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
         } // /xl up
@@ -53,7 +53,7 @@
         height: rem($device-frame-width-md * $aspect * 1px);
 
         // xl up
-        @include media-breakpoint-up(xl) {
+        @include respond-up(xl) {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
         } // /xl up
@@ -79,7 +79,7 @@
         height: rem($device-frame-width-md * $aspect * 1px);
 
         // xl up
-        @include media-breakpoint-up(xl) {
+        @include respond-up(xl) {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
         } // /xl up

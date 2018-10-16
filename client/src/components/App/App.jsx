@@ -12,42 +12,42 @@ import Footer from 'components/Footer/Footer';
 import About from 'components/About/About';
 import HTTPNotFound from 'components/404/404';
 
-import './App.scss';
+import classes from './App.scss';
 
 const App = () => (
   <Router basename="/">
-    <div className="app">
+    <div className={classes['app']}>
       <Sidebar />
-      <Main
-        renderLocation={(location) => {
-          const { pathname } = location;
-
-          return (
-            <TransitionGroup component={null}>
-              <CSSTransition
-                key={pathname}
-                classNames="app__page-transition"
-                timeout={{ exit: 300, enter: 300 }}
-              >
-                <Route
-                  location={location}
-                  render={() => (
-                    <Switch>
-                      <Route exact path="/" component={About} />
-                      <Route exact path="/webdev" component={WebDev} />
-                      <Route exact path="/webdev/:slug" component={PortfolioPage} />
-                      <Route exact path="/404" component={HTTPNotFound} />
-                      <Route component={HTTPNotFound} />
-                    </Switch>
-                  )}
-                />
-              </CSSTransition>
-            </TransitionGroup>
-          );
-        }}
-      >
-        <Footer />
-      </Main>
+{/*       <Main */}
+{/*         renderLocation={(location) => { */}
+{/*           const { pathname } = location; */}
+{/*  */}
+{/*           return ( */}
+{/*             <TransitionGroup component={null}> */}
+{/*               <CSSTransition */}
+{/*                 key={pathname} */}
+{/*                 classNames="app__page-transition" */}
+{/*                 timeout={{ exit: 300, enter: 300 }} */}
+{/*               > */}
+{/*                 <Route */}
+{/*                   location={location} */}
+{/*                   render={() => ( */}
+{/*                     <Switch> */}
+{/*                       <Route exact path="/" component={About} /> */}
+{/*                       <Route exact path="/webdev" component={WebDev} /> */}
+{/*                       <Route exact path="/webdev/:slug" component={PortfolioPage} /> */}
+{/*                       <Route exact path="/404" component={HTTPNotFound} /> */}
+{/*                       <Route component={HTTPNotFound} /> */}
+{/*                     </Switch> */}
+{/*                   )} */}
+{/*                 /> */}
+{/*               </CSSTransition> */}
+{/*             </TransitionGroup> */}
+{/*           ); */}
+{/*         }} */}
+{/*       > */}
+{/*         <Footer /> */}
+{/*       </Main> */}
     </div>
   </Router>
 );

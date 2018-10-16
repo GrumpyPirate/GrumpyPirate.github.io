@@ -3,53 +3,53 @@
 .pf__list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: rem(map-get($grid-gutter-widths, xs) / 2);
-  margin: 0 rem(map-get($grid-gutter-widths, xs) / -4);
+  padding-top: rem(map-get($gutter-widths, xs) / 2);
+  margin: 0 rem(map-get($gutter-widths, xs) / -4);
 
   // md up
-  @include media-breakpoint-up(md) {
-    padding-top: rem(map-get($grid-gutter-widths, md) / 2);
-    margin: 0 rem(map-get($grid-gutter-widths, md) / -4);
+  @include respond-up(md) {
+    padding-top: rem(map-get($gutter-widths, md) / 2);
+    margin: 0 rem(map-get($gutter-widths, md) / -4);
   }
 }
 
 .pf__item {
-  flex: 1 1 calc(100% - #{map-get($grid-gutter-widths, sm) / 2});
+  flex: 1 1 calc(100% - #{map-get($gutter-widths, sm) / 2});
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   text-align: left;
-  border: solid (map-get($grid-gutter-widths, xs) / 4) palette(theme-accent-2);
+  border: solid (map-get($gutter-widths, xs) / 4) palette(theme-accent-2);
   border-style: none none solid;
-  margin-right: map-get($grid-gutter-widths, xs) / 4;
-  margin-left: map-get($grid-gutter-widths, xs) / 4;
+  margin-right: map-get($gutter-widths, xs) / 4;
+  margin-left: map-get($gutter-widths, xs) / 4;
   overflow: hidden;
 
   // xs only
-  @include media-breakpoint-only(xs) {
-    margin-bottom: rem(map-get($grid-gutter-widths, xs) / 2);
+  @include respond-only(xs) {
+    margin-bottom: rem(map-get($gutter-widths, xs) / 2);
   }
 
   // sm up
-  @include media-breakpoint-up(sm) {
-    flex-basis: calc(50% - #{map-get($grid-gutter-widths, sm) / 2});
-    margin-right: map-get($grid-gutter-widths, sm) / 4;
-    margin-left: map-get($grid-gutter-widths, sm) / 4;
-    margin-bottom: rem(map-get($grid-gutter-widths, sm) / 2);
+  @include respond-up(sm) {
+    flex-basis: calc(50% - #{map-get($gutter-widths, sm) / 2});
+    margin-right: map-get($gutter-widths, sm) / 4;
+    margin-left: map-get($gutter-widths, sm) / 4;
+    margin-bottom: rem(map-get($gutter-widths, sm) / 2);
   }
 
   // md up
-  @include media-breakpoint-up(md) {
-    flex-basis: calc(50% - #{map-get($grid-gutter-widths, md) / 2});
-    margin-right: map-get($grid-gutter-widths, md) / 4;
-    margin-left: map-get($grid-gutter-widths, md) / 4;
-    margin-bottom: rem(map-get($grid-gutter-widths, md) / 2);
+  @include respond-up(md) {
+    flex-basis: calc(50% - #{map-get($gutter-widths, md) / 2});
+    margin-right: map-get($gutter-widths, md) / 4;
+    margin-left: map-get($gutter-widths, md) / 4;
+    margin-bottom: rem(map-get($gutter-widths, md) / 2);
   }
 
   // lg up
-  @include media-breakpoint-up(lg) {
-    border-bottom-width: map-get($grid-gutter-widths, lg) / 4;
+  @include respond-up(lg) {
+    border-bottom-width: map-get($gutter-widths, lg) / 4;
   }
 
   &:hover,

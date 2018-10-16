@@ -31,7 +31,7 @@
       } // /.pf-carousel__device-img
 
       // sm up
-      @include media-breakpoint-up(sm) {
+      @include respond-up(sm) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-sm * 1px);
           height: rem($device-frame-width-sm * $aspect * 1px);
@@ -45,7 +45,7 @@
       } // /sm up
 
       // md up
-      @include media-breakpoint-up(md) {
+      @include respond-up(md) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-md * 1px);
           height: rem($device-frame-width-md * $aspect * 1px);
@@ -59,7 +59,7 @@
       } // /md up
 
       // xl up
-      @include media-breakpoint-up(xl) {
+      @include respond-up(xl) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
@@ -98,7 +98,7 @@
       } // /.pf-carousel__device-img
 
       // sm up
-      @include media-breakpoint-up(sm) {
+      @include respond-up(sm) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-sm * 1px);
           height: rem($device-frame-width-sm * $aspect * 1px);
@@ -112,7 +112,7 @@
       } // /sm up
 
       // md up
-      @include media-breakpoint-up(md) {
+      @include respond-up(md) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-md * 1px);
           height: rem($device-frame-width-md * $aspect * 1px);
@@ -126,7 +126,7 @@
       } // /md up
 
       // xl up
-      @include media-breakpoint-up(xl) {
+      @include respond-up(xl) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
@@ -165,7 +165,7 @@
       } // /.pf-carousel__device-img
 
       // sm up
-      @include media-breakpoint-up(sm) {
+      @include respond-up(sm) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-sm * 1px);
           height: rem($device-frame-width-sm * $aspect * 1px);
@@ -179,7 +179,7 @@
       } // /sm up
 
       // md up
-      @include media-breakpoint-up(md) {
+      @include respond-up(md) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-md * 1px);
           height: rem($device-frame-width-md * $aspect * 1px);
@@ -193,7 +193,7 @@
       } // /md up
 
       // xl up
-      @include media-breakpoint-up(xl) {
+      @include respond-up(xl) {
         .pf-carousel__device-frame {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);

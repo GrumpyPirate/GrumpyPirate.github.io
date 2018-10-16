@@ -20,7 +20,7 @@
     margin-bottom: $paragraph-margin-bottom;
 
     // lg up
-    @include media-breakpoint-up(lg) {
+    @include respond-up(lg) {
       font-size: $font-size-h1 * 1.5;
       padding: 0 ($grid-gutter-width-base / 2);
     } // /lg up
@@ -29,7 +29,7 @@
     &--large {
       font-size: $font-size-h1;
 
-      @include media-breakpoint-up(md) {
+      @include respond-up(md) {
         font-size: $font-size-h1 * 2;
       } // /md up
     } // /&--large

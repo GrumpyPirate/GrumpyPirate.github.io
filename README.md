@@ -14,3 +14,5 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 - [ ] Drop bootstrap, move over to 100% custom CSS
 - Implement `styled-components`
 - [ ] Migrate from `sass-lint` to `stylelint`
+- [ ] Flesh out tests
+- Implement `react-storybook`

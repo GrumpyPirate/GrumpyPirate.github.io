@@ -1,17 +1,10 @@
-@import '../sass/bootstrap/variables';
-/* ---------------------------------------------------------------------------------------------------------------------
-** Application variables
-** ------------------------------------------------------------------------------------------------------------------ */
-// Static assets path (relative to generated CSS)
-$static-path: '..';
-
-// Colour palette
+// Colours
 // ---------------------------------------------------------------------------------------------------------------------
 $palette: (
   // Greyscale
-  white:         #fff,
-  black:         #000,
-  grey:          #666,
+  white: #fff,
+  black: #000,
+  grey: #666,
   // Colour Themes
   // Dark Green/Orange
   // theme-dark:     #1d2527,
@@ -41,43 +34,11 @@ $palette: (
   pinterest:     #cb2027
 );
 
-// $headings-color: mix(palette(theme-accent-2), palette(theme-dark), 12.5%);
-$headings-color: desaturate(palette(theme-accent-2), 25%);
-
-// Typography
-// ---------------------------------------------------------------------------------------------------------------------
-$font-path: '#{$static-path}/fonts';
-
-// Font weights
-$font-weights: (
-  thin:       100,
-  extralight: 200,
-  light:      300,
-  regular:    normal,
-  medium:     500,
-  semibold:   600,
-  bold:       bold,
-  extrabold:  800,
-  heavy:      900
-);
-
-// Paragraph text
-$paragraph-margin-bottom: 1rem;
-
 // Links
-$link-font-weight: weight(semibold);
+$link-font-weight: 600;
 
 // Lists
 $list-padding: 1em;
-$dl-margin-bottom: $paragraph-margin-bottom;
-$dt-font-weight: weight(semibold);
-$dt-margin-bottom: $paragraph-margin-bottom;
-$dd-font-size: percentage(14 / 18);
-
-// Font families
-$font-family-base: sans-serif;
-$body-font-family: 'Open Sans', $font-family-base;
-$headings-font-family: 'Titillium Web', $font-family-base;
 
 // Icon vertical align correction
 // Varies based on font-family used - use this value to centre icons properly with inline elements,
@@ -96,90 +57,72 @@ $easings: (
 
 // Shadows
 // ---------------------------------------------------------------------------------------------------------------------
-$shadow-blur-sm: rem(2px);
-$shadow-spread-sm: rem(-1px);
-$shadow-distance-sm: rem(4px);
+$shadow-blur-sm: (2px / 16px) * 1rem;
+$shadow-spread-sm: (-1px / 16px) * 1rem;
+$shadow-distance-sm: (4px / 16px) * 1rem;
 $shadow-opacity: .2;
 
-// Box
-$box-shadow-right-sm: $shadow-distance-sm 0 $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
-$box-shadow-right-down-sm: $shadow-distance-sm $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
-$box-shadow-down-sm: 0 $shadow-distance-sm $shadow-blur-sm $shadow-spread-sm rgba(0, 0, 0, $shadow-opacity);
-
 // Filter
-$filter-shadow-right-sm: $shadow-distance-sm 0 $shadow-blur-sm rgba(0, 0, 0, $shadow-opacity);
 $filter-shadow-right-down-sm: $shadow-distance-sm $shadow-distance-sm $shadow-blur-sm rgba(0, 0, 0, $shadow-opacity);
-$filter-shadow-down-sm: 0 $shadow-distance-sm $shadow-blur-sm rgba(0, 0, 0, $shadow-opacity);
-
-/* ---------------------------------------------------------------------------------------------------------------------
-** Bootstrap Customisation
-** ------------------------------------------------------------------------------------------------------------------ */
-// Brands
-// $brand-success: ;
-// $brand-warning: ;
-// $brand-danger:  ;
-
-// Typography
-$font-size-root: 16px;
-$font-size-base: rem($font-size-root);
-$line-height: 1.5;
 
 // Horizontal rule
 $hr-border-width: 1px;
 $hr-border-color: currentColor;
 
+// Typography
+$font-weights: (
+  thin:       100,
+  extralight: 200,
+  light:      300,
+  regular:    normal,
+  medium:     500,
+  semibold:   600,
+  bold:       bold,
+  extrabold:  800,
+  heavy:      900
+);
+$font-family-base: sans-serif;
+$body-font-family: 'Open Sans', $font-family-base;
+$line-height: 1.5;
+$paragraph-margin-bottom: 1rem;
+
 // Headings
+$headings-font-family: 'Titillium Web', $font-family-base;
 $headings-margin-bottom: $paragraph-margin-bottom;
 $headings-line-height: 1.2;
-$headings-font-weight: weight(light);
+$headings-font-weight: 300;
 $headings-letter-spacing: .2em;
+$headings-color: desaturate(map-get($palette, theme-accent-2), 25%);
 
-// Desktop sizes
-$font-size-h1: rem(72px);
-$font-size-h2: rem(56px);
-$font-size-h3: rem(48px);
-$font-size-h4: rem(24px);
+// Sizes - Desktop
+$font-size-h1: (72px / 16px) * 1rem;
+$font-size-h2: (56px / 16px) * 1rem;
+$font-size-h3: (48px / 16px) * 1rem;
+$font-size-h4: (24px / 16px) * 1rem;
 $font-size-h5: 1rem;
-$font-size-h6: rem(14px);
+$font-size-h6: (14px / 16px) * 1rem;
 
-// // Headings - Mobile sizes
+// Sizes - Mobile
 $font-size-h1-mobile: $font-size-h1 * .55;
 $font-size-h2-mobile: $font-size-h2 * .75;
 $font-size-h3-mobile: $font-size-h3 * .75;
 $font-size-h4-mobile: 1rem;
 
-// $display-line-height: 1.28;
-
-$lead-font-size: rem(30px);
-$lead-font-size-mobile: $lead-font-size * .75;
-$lead-font-weight: weight(light);
-
-$small-font-size: percentage(12px / $font-size-root);
-
 // Grid
 // ---------------------------------------------------------------------------------------------------------------------
-// // Custom breakpoints
-// $grid-breakpoints: (
-//     xs: 0,
-//     sm: 576px,
-//     md: 768px,
-//     lg: 992px,
-//     xl: 1200px
-// );
-
-// // Custom .container widths
-// $container-max-widths: (
-//     sm: 540px,
-//     md: 720px,
-//     lg: 960px,
-//     xl: 1140px
-// );
+$breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
 
 $container-absolute-max-width: 1440px;
 
 $grid-columns: 12;
 $grid-gutter-width-base: 30px;
-$grid-gutter-widths: (
+$gutter-widths: (
   xs: 24px,
   sm: 24px,
   md: $grid-gutter-width-base,
@@ -187,120 +130,43 @@ $grid-gutter-widths: (
   xl: $grid-gutter-width-base
 );
 
-// Spacers
-$spacer:   1rem;
-$spacer-x: $spacer;
-$spacer-y: $spacer;
-$spacers: (
-  0: (
-    x:   0,
-    y:   0
-  ),
-  1: (
-    x:   $spacer-x,
-    y:   $spacer-y
-  ),
-  2: (
-    x:   ($spacer-x * 2),
-    y:   ($spacer-y * 2)
-  ),
-  3: (
-    x:   ($spacer-x * 3),
-    y:   ($spacer-y * 3)
-  ),
-  4: (
-    x:   ($spacer-x * 4),
-    y:   ($spacer-y * 4)
-  )
-);
+$body-bg: darken(map-get($palette, white), 5%);
+$body-color: map-get($palette, theme-dark);
 
-// $body-bg:    palette(theme-light);
-$body-bg: darken(palette(white), 5%);
-// $content-bg: palette(white);
-
-// $body-color: lighten(desaturate(palette(theme-dark), 25%), 50%);
-$body-color: palette(theme-dark);
-
-// Border radii
-$border-radius-sm: rem(4px);
-$border-radius:    rem(8px);
-$border-radius-lg: rem(12px);
-
-// Transitions
-$transition-collapse: height ($anim-dur * 3) ease(ease-out-expo);
-
+// Border radius
+$border-radius-sm: (4px / 16px) * 1rem;
+$border-radius: (8px / 16px) * 1rem;
+$border-radius-lg: (12px / 16px) * 1rem;
 
 // Links
-$link-color:        palette(theme-mid);
-$link-hover-color:  palette(theme-accent-1);
+$link-color: map-get($palette, theme-mid);
+$link-hover-color: map-get($palette, theme-accent-1);
 $link-active-color: darken($link-hover-color, 15%);
 
-$link-decoration:       none;
-$link-hover-decoration: none;
-
 // Buttons
-$btn-primary-color:  palette(white);
-$btn-primary-bg:     palette(theme-accent-1);
-$btn-primary-border: palette(theme-accent-1);
+$btn-primary-color: map-get($palette, white);
+$btn-primary-bg: map-get($palette, theme-accent-1);
+$btn-primary-border: map-get($palette, theme-accent-1);
 
-$btn-secondary-color:  palette(white);
-$btn-secondary-bg:     palette(theme-accent-2);
-$btn-secondary-border: palette(theme-accent-2);
+$btn-secondary-color: map-get($palette, white);
+$btn-secondary-bg: map-get($palette, theme-accent-2);
+$btn-secondary-border: map-get($palette, theme-accent-2);
 
 $btn-font-size: 1rem;
 $btn-line-height: (22 / 16);
-// $btn-font-weight: weight(semibold);
+$btn-font-weight: 600;
+
 $btn-padding-x: 1.5rem;
-$btn-padding-y: rem(8px);
-$btn-padding-x-lg: rem(32px);
-$btn-padding-y-lg: rem(24px);
+$btn-padding-y: (8px / 16px) * 1rem;
+
 $btn-border-radius: $btn-font-size * 2;
 $btn-focus-box-shadow: none;
-
-// Buttons - small
-$btn-padding-x-sm: rem(16px);
-$btn-padding-y-sm: rem(10px);
-$btn-font-size-sm: $small-font-size;
-$btn-border-radius-sm: $border-radius-sm;
-
-// Buttons - large
-$btn-border-radius-lg: $border-radius-lg;
-
-$btn-box-shadow-size:        rem(6px);
-$btn-box-shadow-size-hover:  rem(2px);
-$btn-box-shadow-size-active: 0;
-
-$btn-transition: all $anim-dur $anim-ease;
-
-
-// Forms
-$form-group-margin-bottom: $paragraph-margin-bottom;
-
-$form-feedback-margin-top: .75rem;
-
-$input-btn-border-width: 1px;
-$input-padding-x: $btn-padding-x;
-$input-padding-y: $btn-padding-y;
-
-$input-color: inherit;
-$input-color-placeholder: palette(grey-light);
-$input-border-color: transparent;
-$input-border-focus: palette(grey-lighter);
-$input-border-radius: 0;
-$input-box-shadow: none;
-$input-transition: color $anim-dur $anim-ease,
-           border-color $anim-dur $anim-ease,
-           background-color $anim-dur $anim-ease;
 
 // App Components
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
-$sidebar-height-mobile: rem(50px);
-$sidebar-width: rem(260px);
+$sidebar-height-mobile: (50px / 16px) * 1rem;
+$sidebar-width: (260px / 16px) * 1rem;
 $sidebar-width-lg: $sidebar-width * .85;
-$sidebar-border-color: palette(theme-light);
+$sidebar-border-color: map-get($palette, theme-light);
 $sidebar-zindex: 10;
-
-// Modal
-$modal-padding: 1rem;
-$modal-header-size: rem(80px);

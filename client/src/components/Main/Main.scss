@@ -9,7 +9,7 @@
   position: relative;
 
   // lg up
-  @include media-breakpoint-up(lg) {
+  @include respond-up(lg) {
     flex: 1 1 auto;
     height: 100vh;
     overflow-y: auto;

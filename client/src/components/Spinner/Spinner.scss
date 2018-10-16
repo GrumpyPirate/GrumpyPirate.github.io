@@ -20,12 +20,12 @@
   transition: opacity ($anim-dur * 2) $anim-ease,
               visibility ($anim-dur * 2) $anim-ease;
 
-  @include media-breakpoint-up(md) {
+  @include respond-up(md) {
     top: 0;
     left: $sidebar-width;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include respond-up(lg) {
     left: $sidebar-width-lg;
   }
 

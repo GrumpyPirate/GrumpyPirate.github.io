@@ -1,371 +1,191 @@
-/* ---------------------------------------------------------------------------------------------------------------------
-** Global mixins
-** ------------------------------------------------------------------------------------------------------------------ */
-// Make bootstrap mixins available to the app mixins
-@import 'bootstrap/mixins';
+@import 'mixins/media-queries';
 
-// Link utilities
-// ---------------------------------------------------------------------------------------------------------------------
 @mixin no-underline {
-    &,
-    &:hover,
-    &:focus {
-        text-decoration: none;
-    }// /&:hover, &:focus
-} // /@mixin no-underline
-
-// Headings
-@mixin all-headings {
-    h1, h2, h3, h4, h5, h6,
-    .h1, .h2, .h3, .h4, .h5, .h6 {
-        @content;
-    }
-} // /@mixin all-headings
-
-
-/* ---------------------------------------------------------------------------------------------------------------------
-** Browser targeting
-** ------------------------------------------------------------------------------------------------------------------ */
-// Targeting IE10 + 11 only (as these no longer support conditional comments)
-// This also targets MS Edge too, so use with caution/reckless abandon
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin ie-10-11 {
-    // The logic here is that only IE 10/11 support these media queries (ignored by IE9)
-    // IE 10/11
-    @if $ie-10-11-support {
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            @content;
-        } // /@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-    } // /@if $ie-10-11-support
-} // /@mixin ie-10-11
-
-// Targeting IE 9 (and below)
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin ie-9 ($self: true) {
-    @if $ie-9-support {
-        @at-root {
-            .lt-ie10 & {
-                @content;
-            } // /.lt-ie10
-        } // /@at-root
-    } // /@if $ie-9-support
-} // /@mixin ie-10-11
-
-// All Firefox versions
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin firefox {
-    @-moz-document url-prefix() {
-        @content;
-    } // /@-moz-document url-prefix()
-} // /@mixin firefox
-
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
 
 @mixin make-link-colour($colour, $hover-colour: false, $active-colour: false, $lighten: false, $self: false) {
-    @if not $self {
-        a {
-            color: $colour;
+  @if not $self {
+    a {
+      color: $colour;
 
-            &:hover,
-            &:focus {
-                @if $hover-colour {
-                    color: $hover-colour;
-                } @else {
-                    @if $lighten {
-                        color: lighten($colour, 10%);
-                    } @else {
-                        color: darken($colour, 10%);
-                    }
-                }
-            } // /&:hover, &:focus
+      &:hover,
+      &:focus {
+        @if $hover-colour {
+          color: $hover-colour;
+        } @else {
+          @if $lighten {
+            color: lighten($colour, 10%);
+          } @else {
+            color: darken($colour, 10%);
+          }
+        }
+      }
 
-            &:active,
-            &.active {
-                @if $active-colour {
-                    color: $active-colour;
-                } @else {
-                    color: darken($colour, 10%);
-                }
-            } // /&:active
-        } // /a
-    } @else {
-        color: $colour;
+      &:active,
+      &.active {
+        @if $active-colour {
+          color: $active-colour;
+        } @else {
+          color: darken($colour, 10%);
+        }
+      }
+    }
+  } @else {
+    color: $colour;
 
-        &:hover,
-        &:focus {
-            @if $hover-colour {
-                color: $hover-colour;
-            } @else {
-                @if $lighten {
-                    color: lighten($colour, 10%);
-                } @else {
-                    color: darken($colour, 10%);
-                }
-            }
-        } // /&:hover, &:focus
+    &:hover,
+    &:focus {
+      @if $hover-colour {
+        color: $hover-colour;
+      } @else {
+        @if $lighten {
+          color: lighten($colour, 10%);
+        } @else {
+          color: darken($colour, 10%);
+        }
+      }
+    }
 
-        &:active,
-        &.active {
-            @if $active-colour {
-                color: $active-colour;
-            } @else {
-                color: darken($colour, 10%);
-            }
-        } // /&:active
-    } // /} @else
-} // /@mixin make-link-colour
+    &:active,
+    &.active {
+      @if $active-colour {
+        color: $active-colour;
+      } @else {
+        color: darken($colour, 10%);
+      }
+    }
+  }
+}
 
 
 // Mixin: give a link a custom animated underline
 // If $animate is passed as false, the resulting effect is a simple static customiseable underline
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin lasers($display: inline-block, $bottom: 0, $laser-colour: currentColor, $laser-height: 1px, $animate: true, $duration: $anim-dur, $direction: ltr) {
-    @include no-underline;
-    position: relative;
-    display: $display;
+  @include no-underline;
+  position: relative;
+  display: $display;
 
+  &::before {
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    content: '';
+    display: block;
+    background-color: $laser-colour;
+    width: 100%;
+    height: $laser-height;
+  }
+
+  @if $animate {
     &::before {
-        position: absolute;
-        bottom: $bottom;
-        left: 0;
-        content: '';
-        display: block;
-        background-color: $laser-colour;
-        width: 100%;
-        height: $laser-height;
-    } // /&::before
-
-    @if $animate {
-        &::before {
-            transform: scaleX(0);
-            transition: transform $duration ease;
-        } // /&::before
-
-        &:focus,
-        &:hover,
-        &:active,
-        &.active {
-            // text-decoration: none;
-
-            &::before {
-                transform: scaleX(1);
-            } // /&::before
-        } // /.active
-
-        @if $direction == ltr {
-            &::before {
-                transform-origin: left center;
-            } // /&::before
-        } @else if $direction == rtl {
-            &::before {
-                transform-origin: right center;
-            } // /&::before
-        } @else if $direction == out {
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: $bottom;
-                display: block;
-                background-color: $laser-colour;
-                width: 50%;
-                height: $laser-height;
-                transform: scaleX(0);
-                transition: transform $duration ease;
-            } // /&::before
-
-            &::before {
-                left: 0;
-                transform-origin: right center;
-            } // /&::before
-
-            &::after {
-                right: 0;
-                transform-origin: left center;
-            } // /&::before
-
-            &:focus,
-            &:hover,
-            &:active,
-            &.active {
-                &::before,
-                &::after {
-                    transform: scaleX(1);
-                } // /&::before
-            } // /.active
-        }
-    } // /@if $animate
-} // /@mixin lasers
-
-
-// Mixin: Gradiented text
-// ---------------------------------------------------------------------------------------------------------------------
-
-// Gradiented text
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin gradient-text($gradient, $fallback) {
-    color: $fallback;
-    background: $gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} // /@mixin gradient-text($gradient, $fallback)
-
-
-// CSS caret generator
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin css-caret($colour,
-    $width,
-    $height,
-    $arrow-direction: down,
-    $caret-target: after,
-    $caret-pos: false // as list (x, y)
-) {
-    & {
-        position: relative;
+      transform: scaleX(0);
+      transition: transform $duration ease;
     }
 
-    &::#{$caret-target} {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      // text-decoration: none;
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+
+    @if $direction == ltr {
+      &::before {
+        transform-origin: left center;
+      }
+    } @else if $direction == rtl {
+      &::before {
+        transform-origin: right center;
+      }
+    } @else if $direction == out {
+      &::before,
+      &::after {
         content: '';
-        border-style: solid;
+        position: absolute;
+        bottom: $bottom;
+        display: block;
+        background-color: $laser-colour;
+        width: 50%;
+        height: $laser-height;
+        transform: scaleX(0);
+        transition: transform $duration ease;
+      }
 
-        @if $arrow-direction == down {
-            border-color: $colour transparent transparent;
-            border-width: $height ($width / 2);
-        }
-        @if $arrow-direction == left {
-            border-color: transparent $colour transparent transparent;
-            border-width: ($height / 2) $width;
-        }
-        @if $arrow-direction == up {
-            border-color: transparent transparent $colour;
-            border-width: $height ($width / 2);
-        }
-        @if $arrow-direction == right {
-            border-color: transparent transparent transparent $colour;
-            border-width: ($height / 2) $width;
-        }
+      &::before {
+        left: 0;
+        transform-origin: right center;
+      }
 
-        // Position (type: list)
-        @if $caret-pos {
-            // X pos
-            @if nth($caret-pos, 1) == left {
-                left: 0;
-            } @else if nth($caret-pos, 1) == right {
-                right: 0;
-            } @else if nth($caret-pos, 1) == center {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            // Y pos
-            @if nth($caret-pos, 2) == top {
-                top: 0;
-            } @else if nth($caret-pos, 2) == bottom {
-                bottom: 0;
-            } @else if nth($caret-pos, 2) == center {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        } // /@if $caret-pos
-    } // /&::after
-} // /@mixin css-caret($colour, $width, $height)
+      &::after {
+        right: 0;
+        transform-origin: left center;
+      }
+
+      &:focus,
+      &:hover,
+      &:active,
+      &.active {
+        &::before,
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
 
 // No user pointer interaction (text selection, pointer events)
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin no-select {
-    user-select: none;
-    pointer-events: none;
-    cursor: default;
-} // /@mixin no-select
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+}
 
 // No outlines
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin no-outline {
-    // &,
-    // &:hover,
-    &:focus,
-    &:active,
-    &.active {
-        outline: 0;
-    }
-} // /@mixin no-outline
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    outline: 0;
+  }
+}
 
 // No box-shadows
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin no-box-shadow {
-    // &,
-    // &:hover,
-    &:focus,
-    &:active,
-    &.active {
-        box-shadow: none;
-    }
-} // /@mixin no-box-shadow
-
-// Bring an element in front of other elements with default static position, and no z-index
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin to-front {
-    position: relative;
-    z-index: 1;
-} // /@mixin to-front
-
-// 'Full' content via position absolute
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin absolute-full($x: left, $y: top) {
-    position: absolute;
-    #{$x}: 0;
-    #{$y}: 0;
-    width: 100%;
-    height: 100%;
-} // /@mixin absolute-full
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+}
 
 // Mixin to clear browser default button styles
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin button-reset {
-    user-select: none;
-    cursor: pointer;
-    background: 0;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-    color: inherit;
-    touch-action: manipulation;
-} // /@mixin button-reset
-
-// Parent hover (for specifying hover states within BEM-style selectors)
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin on-parent-hover($parent-selector) {
-    #{$parent-selector}:hover & {
-        @content;
-    } // /#{$parent-selector}:hover &
-} // /@mixin on-parent-hover($parent-selector)
-
-// Parent hover/focus (for specifying hover states within BEM-style selectors)
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin on-parent-hover-focus($parent-selector) {
-    #{$parent-selector}:hover &,
-    #{$parent-selector}:focus & {
-        @content;
-    }
-} // /@mixin on-parent-hover-focus($parent-selector)
-
-// Parent active (for specifying hover states within BEM-style selectors)
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin on-parent-active($parent-selector) {
-    #{$parent-selector}:active &,
-    #{$parent-selector}.active & {
-        @content;
-    }
-} // /@mixin on-parent-active($parent-selector)
-
-// Parent has class
-// ---------------------------------------------------------------------------------------------------------------------
-@mixin on-parent-class($parent-selector, $target-selector) {
-    #{$parent-selector}#{$target-selector} & {
-        @content;
-    }
-} // /@mixin on-parent-class($parent-selector, $target-selector)
+  user-select: none;
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: inherit;
+  touch-action: manipulation;
+}

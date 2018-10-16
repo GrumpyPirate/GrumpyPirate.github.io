@@ -23,11 +23,11 @@
   $hex-size: 40vmin;
   $header-bg: palette(theme-dark);
   background-color: $header-bg;
-  border-bottom: solid (map-get($grid-gutter-widths, xs) / 4) palette(theme-accent-2);
+  border-bottom: solid (map-get($gutter-widths, xs) / 4) palette(theme-accent-2);
 
   // lg up
-  @include media-breakpoint-up(lg) {
-    border-bottom-width: map-get($grid-gutter-widths, lg) / 4;
+  @include respond-up(lg) {
+    border-bottom-width: map-get($gutter-widths, lg) / 4;
   }
 
   &__title {
@@ -36,7 +36,7 @@
     color: palette(theme-accent-2);
 
     // md up
-    @include media-breakpoint-up(md) {
+    @include respond-up(md) {
       padding-top: 2rem;
     }
 
@@ -100,7 +100,7 @@
     align-content: center;
 
     .page-header__content {
-      @include media-breakpoint-down(md) {
+      @include respond-down(md) {
         margin-bottom: $paragraph-margin-bottom * 2;
       }
     }

@@ -1,9 +1,12 @@
-@import 'functions';
-@import 'mixins';
-@import 'variables';
+@import 'core';
 
 .sidebar {
-  @include make-link-colour(palette(theme-light), $hover-colour: palette(theme-light), $active-colour: palette(white), $self: false);
+  @include make-link-colour(
+    palette(theme-light),
+    $hover-colour: palette(theme-light),
+    $active-colour: palette(white),
+    $self: false
+  );
   position: fixed;
   top: 0;
   right: 0;
@@ -15,7 +18,7 @@
   z-index: $sidebar-zindex;
 
   // lg up
-  @include media-breakpoint-up(lg) {
+  @include respond-up(lg) {
     position: relative;
     height: 100vh;
     overflow-y: auto;
@@ -26,10 +29,11 @@
     flex: 0 0 $sidebar-width-lg;
     padding: 0;
     border: 0;
+    text-align: right;
   }
 
   // xl up
-  @include media-breakpoint-up(xl) {
+  @include respond-up(xl) {
     flex-basis: $sidebar-width;
   }
 
@@ -45,7 +49,7 @@
     z-index: $sidebar-zindex;
 
     // lg up
-    @include media-breakpoint-up(lg) {
+    @include respond-up(lg) {
       display: block;
       padding-top: 0;
       padding-bottom: 0;
@@ -56,7 +60,7 @@
 
   .sitenav__nav-item {
     // md only
-    @include media-breakpoint-only(md) {
+    @include respond-only(md) {
       display: inline-block;
 
       &:not(:last-child) {
@@ -74,14 +78,14 @@
     margin: .25rem 0;
 
     // md up
-    @include media-breakpoint-up(md) {
+    @include respond-up(md) {
       display: block;
       padding: 0;
       margin: 0;
     }
 
     // lg up
-    @include media-breakpoint-up(lg) {
+    @include respond-up(lg) {
       display: inline-block;
     }
   }
@@ -97,7 +101,7 @@
     line-height: $headings-line-height;
 
     // lg up
-    @include media-breakpoint-up(lg) {
+    @include respond-up(lg) {
       font-size: $font-size-h4;
     }
 
@@ -106,7 +110,7 @@
       vertical-align: middle;
       width: rem(32px);
       height: rem(32px);
-      margin-bottom: 0;
+      margin: 0;
       background: url('./head-sprite.png') top left no-repeat transparent;
       background-size: rem(32px) rem(64px);
       image-rendering: pixelated;
@@ -114,7 +118,7 @@
       transition: transform $anim-dur;
 
       // lg up
-      @include media-breakpoint-up(lg) {
+      @include respond-up(lg) {
         display: block;
         margin-left: auto;
         width: rem(48px);
@@ -127,6 +131,7 @@
       display: inline-block;
       vertical-align: middle;
       color: inherit;
+      margin-left: 1rem;
     }
 
     &__job-title {
@@ -134,6 +139,10 @@
       font-size: rem(12px);
       color: palette(theme-light);
       opacity: .65;
+
+      @include respond-down(md) {
+        display: none;
+      }
     }
 
     &:hover,
@@ -151,8 +160,20 @@
     }
   }
 
+  &__divider {
+    @include respond-down(md) {
+      display: none;
+    }
+  }
+
   // Menu
   // -------------------------------------------------------------------------------------------------
+  &__btn-sitenav-container {
+    @include respond-up(md) {
+      display: none;
+    }
+  }
+
   &__btn-sitenav {
     $burger-bar-width: 1.75rem;
     $burger-bar-height: 1px;
@@ -216,26 +237,38 @@
     }
   }
 
-  &__menu {
-    position: fixed;
-    top: $sidebar-height-mobile;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: .5rem 0;
-    background-color: palette(theme-accent-1);
-    border-top: solid $hr-border-width transparentize($sidebar-border-color, .75);
-    border-bottom: solid $hr-border-width $sidebar-border-color;
-    z-index: $sidebar-zindex - 1;
-    transition: opacity $anim-dur ease,
-                transform $anim-dur ease,
-                visibility $anim-dur ease;
+  &__sitenav-wrapper {
+    &--desktop {
+      @include respond-down(sm) {
+        display: none;
+      }
+    }
 
-    &.is--closed {
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-50%);
-      pointer-events: none;
+    &--mobile {
+      position: fixed;
+      top: $sidebar-height-mobile;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: .5rem 0;
+      background-color: palette(theme-accent-1);
+      border-top: solid $hr-border-width transparentize($sidebar-border-color, .75);
+      border-bottom: solid $hr-border-width $sidebar-border-color;
+      z-index: $sidebar-zindex - 1;
+      transition: opacity $anim-dur ease,
+                  transform $anim-dur ease,
+                  visibility $anim-dur ease;
+
+      &.is--closed {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      @include respond-up(md) {
+        display: none;
+      }
     }
   }
 }

@@ -1,89 +1,54 @@
-/* ---------------------------------------------------------------------------------------------------------------------
-** Typography
-** ------------------------------------------------------------------------------------------------------------------ */
-// Import webfonts
-// ---------------------------------------------------------------------------------------------------------------------
-// @import 'SomeWebfont';
-
-.osx {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-} // /.osx
+@import 'core';
 
 body {
-    font-family: $body-font-family;
-    font-weight: weight(light);
-    font-size: $font-size-base;
-    line-height: $line-height;
-    color: $body-color;
-} // /body
+  font-family: $body-font-family;
+  font-weight: weight(light);
+  line-height: $line-height;
+  color: $body-color;
+}
 
 p {
-    margin-bottom: $paragraph-margin-bottom;
-} // /p
+  margin-bottom: $paragraph-margin-bottom;
+}
 
-// Address
-// ---------------------------------------------------------------------------------------------------------------------
 address {
-    font-style: normal;
-    margin-bottom: $paragraph-margin-bottom;
-} // /address
+  font-style: normal;
+  margin-bottom: $paragraph-margin-bottom;
+}
 
 
-// Links
-// ---------------------------------------------------------------------------------------------------------------------
 a {
-    font-weight: $link-font-weight;
-    transition: color $anim-dur,
-                background $anim-dur;
+  font-weight: $link-font-weight;
+  transition: color $anim-dur,
+        background $anim-dur;
 
-    &:focus {
-        outline: none;
-    } // /&:focus
+  &:focus {
+    outline: none;
+  }
 
-    &:active,
-    &.active {
-        color: $link-color;
-    } // /active links
-} // /a
+  &:active,
+  &.active {
+    color: $link-color;
+  }
+}
 
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-} // /button, input, optgroup, select, textarea
-
-// Text selection
-// ---------------------------------------------------------------------------------------------------------------------
 ::selection {
-    background-color: palette(theme-accent-1);
-    color: palette(white);
-} // /::selection
+  background-color: palette(theme-accent-1);
+  color: palette(white);
+}
 
 
 // Lists
 // ---------------------------------------------------------------------------------------------------------------------
 ul,
 ol {
-    padding: 0 0 0 $list-padding;
-    margin-bottom: $paragraph-margin-bottom;
-} // /ol
-
-// Description lists
-dl {
-    margin-bottom: $dl-margin-bottom;
-} // /dl
-
-dt {
-    margin-bottom: $dt-margin-bottom;
-} // /dt
+  padding: 0 0 0 $list-padding;
+  margin-bottom: $paragraph-margin-bottom;
+}
 
 
 // Strong text
 // ---------------------------------------------------------------------------------------------------------------------
-strong,
-.strong {
-    font-weight: weight(bold);
-} // /.strong
+strong {
+  font-weight: weight(bold);
+}
