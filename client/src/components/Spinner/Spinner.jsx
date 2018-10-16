@@ -4,19 +4,19 @@ import classnames from 'classnames';
 
 import Icon from 'components/Icon/Icon';
 
-import './Spinner.scss';
+import classes from './Spinner.scss';
 
 const Spinner = ({ isLoading }) => (
   <div
-    className={classnames('spinner', {
-      'spinner--is-loading': isLoading,
+    className={classnames(classes['spinner'], {
+      [classes['spinner--is-loading']]: isLoading,
     })}
   >
-    <figure className="spinner__icon">
+    <figure className={classes['spinner__icon']}>
       <Icon glyph="loader" altText="Loading..." />
     </figure>
 
-    <h6 className="h4 mb-0">Loading...</h6>
+    <h6 className={classes['spinner__loading-text']}>Loading...</h6>
   </div>
 );
 

@@ -12,35 +12,27 @@
   }
 
   &__page-transition {
-    &-enter {
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 100%;
+    &--enter {
+      position: relative;
       opacity: 1;
-      transform: translateX(0);
 
-      &-active {
+      &--active {
         opacity: 1;
-        transform: translateX(0);
-        transition-property: opacity, transform;
+        transition-property: opacity;
         transition-duration: $anim-dur * 2;
       }
     }
 
-    &-exit {
-      &-active {
-        opacity: 0;
-        transition-property: opacity;
-        transition-duration: $anim-dur * 2;
-      }
-
-      &-done {
+    &--exit {
+      &--active {
         position: absolute;
         left: 0;
         right: 0;
         height: 100%;
         opacity: 0;
+        transition-property: opacity;
+        transition-duration: $anim-dur * 2;
+        z-index: 1;
       }
     }
   }

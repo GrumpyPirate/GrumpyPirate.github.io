@@ -19,7 +19,7 @@
       }
 
       @include respond-up(lg) {
-        margin: 0 0 .25rem;
+        margin: 0;
       }
     }
   }
@@ -27,13 +27,22 @@
   &__nav-link {
     @include no-underline;
     @include heading(5);
-    @include lasers;
+    @include lasers($direction: out);
     letter-spacing: normal;
     margin-bottom: 0;
-    padding-bottom: .25em;
+    padding-bottom: .125em;
+
+    &,
+    &:hover,
+    &:focus {
+      color: palette(theme-light);
+    }
 
     &--active {
-      &::before {
+      color: palette(white);
+
+      &::before,
+      &::after {
         transform: scaleX(1);
       }
     }

@@ -1,0 +1,26 @@
+@import 'core';
+
+.about {
+  &__page-header {
+    &__divider {
+      margin: 0 0 1rem;
+      border-style: solid none none;
+      border-color: currentColor;
+      border-width: 1px;
+      opacity: .5;
+
+      @include respond-up(md) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__section-graphic {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 3rem;
+    color: palette(theme-accent-1);
+  }
+}

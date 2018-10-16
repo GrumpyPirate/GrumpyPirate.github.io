@@ -1,0 +1,55 @@
+@import 'core';
+
+.heading {
+  font-family: $headings-font-family;
+  margin: 0 0 $headings-margin-bottom;
+  line-height: $headings-line-height;
+  font-weight: $headings-font-weight;
+  letter-spacing: $headings-letter-spacing;
+  text-transform: uppercase;
+
+  // Modifiers
+  &--level {
+    &-1 {
+      @include respond-up(md) {
+        font-size: $font-size-h1;
+      }
+      font-size: $font-size-h1-mobile;
+    }
+
+    &-2 {
+      @include respond-up(md) {
+        font-size: $font-size-h2;
+      }
+      font-size: $font-size-h2-mobile;
+    }
+
+    &-3 {
+      @include respond-up(md) {
+        font-size: $font-size-h3;
+      }
+      font-size: $font-size-h3-mobile;
+    }
+
+    &-4 {
+      @include respond-up(md) {
+        font-size: $font-size-h4;
+      }
+      font-size: $font-size-h4-mobile;
+    }
+
+    &-5 {
+      @include respond-up(md) {
+        font-size: $font-size-h5;
+      }
+      font-size: $font-size-h5-mobile;
+    }
+
+    &-6 {
+      @include respond-up(md) {
+        font-size: $font-size-h6;
+      }
+      font-size: $font-size-h6-mobile;
+    }
+  }
+}

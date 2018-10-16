@@ -18,36 +18,42 @@ const App = () => (
   <Router basename="/">
     <div className={classes['app']}>
       <Sidebar />
-{/*       <Main */}
-{/*         renderLocation={(location) => { */}
-{/*           const { pathname } = location; */}
-{/*  */}
-{/*           return ( */}
-{/*             <TransitionGroup component={null}> */}
-{/*               <CSSTransition */}
-{/*                 key={pathname} */}
-{/*                 classNames="app__page-transition" */}
-{/*                 timeout={{ exit: 300, enter: 300 }} */}
-{/*               > */}
-{/*                 <Route */}
-{/*                   location={location} */}
-{/*                   render={() => ( */}
-{/*                     <Switch> */}
-{/*                       <Route exact path="/" component={About} /> */}
-{/*                       <Route exact path="/webdev" component={WebDev} /> */}
-{/*                       <Route exact path="/webdev/:slug" component={PortfolioPage} /> */}
-{/*                       <Route exact path="/404" component={HTTPNotFound} /> */}
-{/*                       <Route component={HTTPNotFound} /> */}
-{/*                     </Switch> */}
-{/*                   )} */}
-{/*                 /> */}
-{/*               </CSSTransition> */}
-{/*             </TransitionGroup> */}
-{/*           ); */}
-{/*         }} */}
-{/*       > */}
-{/*         <Footer /> */}
-{/*       </Main> */}
+      <Main
+        renderLocation={(location) => {
+          const { pathname } = location;
+
+          return (
+            <TransitionGroup component={null}>
+              <CSSTransition
+                key={pathname}
+                classNames={{
+                  enter: classes['app__page-transition--enter'],
+                  enterActive: classes['app__page-transition--enter--active'],
+                  exit: classes['app__page-transition--exit'],
+                  exitActive: classes['app__page-transition--exit--active'],
+                  exitDone: classes['app__page-transition--exit--done'],
+                }}
+                timeout={{ exit: 5000, enter: 5000 }}
+              >
+                <Route
+                  location={location}
+                  render={() => (
+                    <Switch>
+                      <Route exact path="/" component={About} />
+                      {/* <Route exact path="/webdev" component={WebDev} /> */}
+                      {/* <Route exact path="/webdev/:slug" component={PortfolioPage} /> */}
+                      <Route exact path="/404" component={HTTPNotFound} />
+                      <Route component={HTTPNotFound} />
+                    </Switch>
+                  )}
+                />
+              </CSSTransition>
+            </TransitionGroup>
+          );
+        }}
+      >
+        <Footer />
+      </Main>
     </div>
   </Router>
 );

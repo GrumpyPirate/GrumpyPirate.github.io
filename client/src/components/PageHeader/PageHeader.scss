@@ -20,14 +20,15 @@
 
 .page-header {
   $page-padding: 3rem;
-  $hex-size: 40vmin;
   $header-bg: palette(theme-dark);
+  text-transform: uppercase;
   background-color: $header-bg;
-  border-bottom: solid (map-get($gutter-widths, xs) / 4) palette(theme-accent-2);
+  border-bottom: solid rem(6px) palette(theme-accent-2);
+  text-align: center;
 
   // lg up
   @include respond-up(lg) {
-    border-bottom-width: map-get($gutter-widths, lg) / 4;
+    border-bottom-width: rem(8px);
   }
 
   &__title {
@@ -41,11 +42,16 @@
     }
 
     &__text {
-      font-size: $hex-size * .25;
+      @include heading(1);
+      font-size: 10vmin;
       font-weight: weight(extralight);
       user-select: none;
       cursor: default;
       margin: 0;
+
+      @include respond-up(lg) {
+        font-size: 10vmin;
+      }
 
       &::first-letter {
         margin-left: $headings-letter-spacing + .05em;
@@ -53,20 +59,17 @@
     }
   }
 
-  &__subtitle {
-    @include make-link-colour(palette(theme-accent-1), $lighten: true);
-    color: mix(palette(theme-light), palette(theme-dark), 40%);
-  }
-
   &__scroll-button {
     @include button-reset;
     @include no-outline;
+    @include heading(5);
     text-align: center;
     color: transparentize(palette(theme-light), .6);
     text-transform: uppercase;
     position: absolute;
-    bottom: 2rem;
+    bottom: 0;
     left: 50%;
+    margin-bottom: 2rem;
     transform: translateX(-50%);
     transition: color $anim-dur;
 

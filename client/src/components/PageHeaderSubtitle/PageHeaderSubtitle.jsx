@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Container from 'components/Layout/Container/Container';
+import Row from 'components/Layout/Row/Row';
+import Column from 'components/Layout/Column/Column';
+
+import classes from './PageHeaderSubtitle.scss';
+
 const PageHeaderSubtitle = ({ children }) => (
-  <h2 className="h4 mb-0 pb-1 pb-md-2">
-    <div className="container-fluid">
-      <div className="row justify-content-center">
-        <div className="col-12 col-sm-10 col-md-8">
+  <h2 className={classes['page-header-subtitle']}>
+    <Container>
+      <Row justify="center">
+        <Column spanSM={10} spanMD={8}>
           {children}
-        </div>
-      </div>
-    </div>
+        </Column>
+      </Row>
+    </Container>
   </h2>
 );
 

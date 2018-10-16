@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Icon.scss';
+import classes from './Icon.scss';
 
 // feather-icons
 import 'images/icons/chevron-down.svg';
@@ -69,7 +69,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  className: 'icon',
+  className: classes['icon'],
   width: 48,
   height: 48,
   altText: '',

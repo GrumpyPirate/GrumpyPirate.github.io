@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 import Spinner from 'containers/Spinner/Spinner';
 
-import './Main.scss';
+import classes from './Main.scss';
 
 class Main extends PureComponent {
   constructor(props) {
@@ -35,8 +35,8 @@ class Main extends PureComponent {
 
     return (
       <main
-        className={classnames('main', {
-          'is--loading': isLoading,
+        className={classnames(classes['main'], {
+          [classes['main--is-loading']]: isLoading,
         })}
         id="main-content"
         ref={this.mainElement}

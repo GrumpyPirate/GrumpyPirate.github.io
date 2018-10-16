@@ -1,0 +1,35 @@
+@import 'core';
+
+.button {
+  @include button-reset;
+  @include no-underline;
+  display: inline-block;
+  font-family: $body-font-family;
+  font-size: $btn-font-size;
+  line-height: (rem(22px) / $btn-font-size);
+  font-weight: weight(regular);
+  text-transform: uppercase;
+  color: $btn-primary-color;
+  background-color: $btn-primary-bg;
+  border: solid 1px $btn-primary-border;
+  box-shadow: none;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-y $btn-padding-x;
+  transition-property: transform, color, background-color;
+  transition-duration: $anim-dur;
+  transition-timing-function: $anim-ease;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($btn-primary-bg, 5%);
+    border-color: lighten($btn-primary-bg, 5%);
+  }
+
+  &:active {
+    color: $btn-primary-color;
+    background-color: $btn-primary-bg;
+    border-color: $btn-primary-bg;
+    transform: translateY(1px);
+    transition-duration: 0s, $anim-dur, $anim-dur;
+  }
+}

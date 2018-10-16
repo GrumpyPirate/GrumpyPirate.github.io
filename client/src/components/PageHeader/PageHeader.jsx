@@ -5,9 +5,10 @@ import { debounce } from 'lodash-es';
 
 import getElementAbsoluteOffsetTop from 'utils/dom';
 
+import Container from 'components/Layout/Container/Container';
 import Icon from 'components/Icon/Icon';
 
-import './PageHeader.scss';
+import classes from './PageHeader.scss';
 
 const getFullscreenHeight = () => {
   const windowHeight = window.innerHeight;
@@ -67,37 +68,31 @@ class PageHeader extends PureComponent {
     return (
       <header
         className={classnames(
-          'page-header', 'text-center', 'last-child-mb-0', {
-            'page-header--is-fullscreen': isFullscreen,
+          classes['page-header'], {
+            [classes['page-header--is-fullscreen']]: isFullscreen,
           },
         )}
         style={{ height: isFullscreen && height }}
         ref={this.elementRef}
       >
-        <div className="page-header__content">
-          <div className="page-header__title">
-            <div className="container-fluid">
-              <h1 className="page-header__title__text">
-                <div className="container-fluid">{title}</div>
-              </h1>
+        <Container>
+          <div className={classes['page-header__content']}>
+            <div className={classes['page-header__title']}>
+              <h1 className={classes['page-header__title__text']}>{title}</h1>
             </div>
-          </div>
 
-          {!!children && (
-            <div className="page-header__subtitle">
-              {children}
-            </div>
-          )}
-        </div>
+            {children}
+          </div>
+        </Container>
 
         {!!isFullscreen && (
           <button
             type="button"
-            className="page-header__scroll-button h5"
+            className={classes['page-header__scroll-button']}
             onClick={this.onScrollDownClick}
           >
-            <span className="page-header__scroll-button__label">Scroll for more</span>
-            <span className="page-header__scroll-button__icon">
+            <span className={classes['page-header__scroll-button__label']}>Scroll for more</span>
+            <span className={classes['page-header__scroll-button__icon']}>
               <Icon glyph="chevron-down" />
             </span>
           </button>

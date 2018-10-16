@@ -1,9 +1,57 @@
 @import 'core';
 
-@import 'type';
-@import 'animations';
-
 html,
 body {
-  background-color: palette(theme-dark);
+  background-color: $body-bg;
+}
+
+body {
+  font-family: $body-font-family;
+  font-weight: weight(light);
+  line-height: $line-height;
+  color: $body-color;
+}
+
+p {
+  margin: 0 0 $paragraph-margin-bottom;
+}
+
+
+a {
+  @include no-outline;
+  @include no-underline;
+  color: $link-color;
+  font-weight: $link-font-weight;
+  transition: color $anim-dur,
+        background $anim-dur;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+
+  &:active {
+    color: $link-active-color;
+  }
+}
+
+::selection {
+  background-color: palette(theme-accent-1);
+  color: palette(white);
+}
+
+
+// Lists
+// ---------------------------------------------------------------------------------------------------------------------
+ul,
+ol {
+  padding: 0 0 0 $list-padding;
+  margin: 0 0 $paragraph-margin-bottom;
+}
+
+
+// Strong text
+// ---------------------------------------------------------------------------------------------------------------------
+strong {
+  font-weight: weight(semibold);
 }

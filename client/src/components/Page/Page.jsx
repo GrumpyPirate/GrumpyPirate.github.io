@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
-import './Page.scss';
+import classes from './Page.scss';
 
 const Page = ({ children }) => (
-  <div className="page">{children}</div>
+  <div className={classes['page']}>{children}</div>
 );
 
 Page.propTypes = {

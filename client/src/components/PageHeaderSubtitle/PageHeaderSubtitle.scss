@@ -1,0 +1,14 @@
+@import 'core';
+
+.page-header-subtitle {
+  @include heading(4);
+  @include make-link-colour(palette(theme-accent-1), $lighten: true);
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 1rem;
+  color: mix(palette(theme-light), palette(theme-dark), 40%);
+
+  @include respond-up(md) {
+    padding-bottom: 2rem;
+  }
+}

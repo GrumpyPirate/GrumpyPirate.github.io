@@ -1,11 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './AboutSection.scss';
+import Heading from 'components/Typography/Heading/Heading';
+
+import classes from './AboutSection.scss';
 
 const AboutSection = ({ title, children }) => (
-  <div className="about__section">
-    <h2 className="h3 about__section__title mb-3">{title}</h2>
+  <div className={classes['about__section']}>
+    <Heading
+      level={2}
+      displayLevel={3}
+      text={title}
+      className={classes['about__section__title']}
+    />
     {children}
   </div>
 );

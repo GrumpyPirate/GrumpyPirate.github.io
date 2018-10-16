@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from 'components/Icon/Icon';
 
-import './AboutIcon.scss';
+import classes from './AboutIcon.scss';
 
 const AboutIcon = ({ iconName, large }) => (
   <div
     className={classnames(
-      'about__section__graphic__icon', {
-        'about__section__graphic__icon--large': large,
+      classes['about-icon'], {
+        [classes['about-icon--large']]: large,
       },
     )}
   >

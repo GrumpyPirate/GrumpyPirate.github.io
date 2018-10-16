@@ -1,5 +1,10 @@
 @import 'core';
 
+@keyframes spin {
+  from { transform: rotateZ(0turn); }
+  to { transform: rotateZ(1turn); }
+}
+
 .spinner {
   position: fixed;
   top: $sidebar-height-mobile;
@@ -17,26 +22,37 @@
   visibility: hidden;
   pointer-events: none;
   user-select: none;
-  transition: opacity ($anim-dur * 2) $anim-ease,
-              visibility ($anim-dur * 2) $anim-ease;
-
-  @include respond-up(md) {
-    top: 0;
-    left: $sidebar-width;
-  }
+  transition-property: opacity, visibility;
+  transition-duration: $anim-dur * 2;
+  transition-timing-function: $anim-ease;
 
   @include respond-up(lg) {
+    top: 0;
     left: $sidebar-width-lg;
   }
 
+  @include respond-up(xl) {
+    left: $sidebar-width;
+  }
+
   &__icon {
-    .icon {
+    margin: 0 0 $paragraph-margin-bottom;
+
+    svg {
       display: block;
       width: 3rem;
       height: 3rem;
       margin: 0 auto;
-      animation: loader ($anim-dur * 15) linear 0s infinite forwards;
+      animation: spin ($anim-dur * 15) linear 0s infinite;
     }
+  }
+
+  &__loading-text {
+    @include heading(4);
+    position: relative;
+    left: rem(6px);
+    text-transform: uppercase;
+    margin: 0;
   }
 
   &--is-loading {

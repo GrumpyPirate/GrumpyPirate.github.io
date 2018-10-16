@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
+import Heading from 'components/Typography/Heading/Heading';
+import Button from 'components/Layout/Button/Button';
 import Page from 'components/Page/Page';
 import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
+
+import classes from './404.scss';
 
 const HTTPNotFound = () => (
   <Page>
@@ -14,13 +18,17 @@ const HTTPNotFound = () => (
     </PageHeader>
 
     <PageContent>
-      <section className="404">
-        <h4 className="mb-2">That page doesn&#039;t exist.</h4>
-        <h5 className="mb-2">&#xff08;&#x256f;&deg;&#x25a1;&deg;&#xff09;&#x256f;&#xfe35;( .o.)</h5>
+      <section className={classes['error-page']}>
+        <div className={classes['error-page__heading']}>
+          <Heading level={4} text="That page doesn&#039;t exist." />
+        </div>
+        <div className={classes['error-page__heading']}>
+          <Heading level={5} text="&#xff08;&#x256f;&deg;&#x25a1;&deg;&#xff09;&#x256f;&#xfe35;( .o.)" />
+        </div>
 
-        <p>
-          <Link to="/" className="btn btn-primary">Home</Link>
-        </p>
+        <div>
+          <Button to="/">Home</Button>
+        </div>
       </section>
     </PageContent>
   </Page>

@@ -43,12 +43,12 @@ $list-padding: 1em;
 // Icon vertical align correction
 // Varies based on font-family used - use this value to centre icons properly with inline elements,
 // in conjunction with vertical-align: middle
-$icon-bottom-correction: .0625em;
+$icon-bottom-correction: .125em;
 
 // Animations
 // ---------------------------------------------------------------------------------------------------------------------
 $anim-dur: .15s;
-$anim-ease: ease-in-out;
+$anim-ease: ease;
 $easings: (
   ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1),
   ease-in-out-quart: cubic-bezier(.77, 0, .175, 1),
@@ -126,10 +126,7 @@ $grid-columns: 12;
 $grid-gutter-width-base: 30px;
 $gutter-widths: (
   xs: 24px,
-  sm: 24px,
   md: $grid-gutter-width-base,
-  lg: $grid-gutter-width-base,
-  xl: $grid-gutter-width-base
 );
 
 $body-bg: darken(map-get($palette, white), 5%);

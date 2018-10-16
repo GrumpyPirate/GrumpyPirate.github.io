@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './PageContent.scss';
+import classes from './PageContent.scss';
 
 const PageContent = ({ children }) => (
-  <div className="page-content">{children}</div>
+  <div className={classes['page-content']}>{children}</div>
 );
 
 PageContent.propTypes = {

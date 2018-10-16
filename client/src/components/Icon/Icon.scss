@@ -1,13 +1,13 @@
 @import 'core';
 
 .icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor !important;
-    fill: currentColor !important;
-    vertical-align: middle;
-    position: relative;
-    bottom: $icon-bottom-correction;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor !important;
+  fill: currentColor !important;
+  vertical-align: middle;
+  position: relative;
+  bottom: $icon-bottom-correction;
 }

@@ -1,74 +1,72 @@
 import React from 'react';
+import classnames from 'classnames';
 
+import Container from 'components/Layout/Container/Container';
 import Icon from 'components/Icon/Icon';
 
-import './Footer.scss';
+import classes from './Footer.scss';
 
 const Footer = () => {
   const creationYear = 2017;
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer text-center">
-      <div className="footer__credits">
-        <div className="container-fluid">
-          <div className="last-child-mb-0">
-            <p className="mb-0">
-              {'Made with '}
-              <a
-                href="https://facebook.github.io/react/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__icon link-inherit"
-                title="React"
-              >
-                <Icon glyph="react" altText="React" />
-              </a>
-              {', '}
-              <a
-                href="https://webpack.js.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__icon link-inherit"
-                title="Webpack"
-              >
-                <Icon glyph="webpack" altText="Webpack" />
-              </a>
-              {' and '}
-              <a
-                href="https://www.contentful.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__icon link-inherit"
-                title="Contentful"
-              >
-                <Icon glyph="contentful" altText="Contentful" />
-              </a>.
-              {' '}
-              <a
-                href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
-                className="link-inherit"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Source code
-              </a>
-              .
-            </p>
+    <footer className={classes['footer']}>
+      <Container>
+        <p className={classes['footer__tech']}>
+          {'Made with '}
+          <a
+            href="https://facebook.github.io/react/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="React"
+            className={classnames(classes['footer__link'], classes['footer__link--icon'])}
+          >
+            <Icon glyph="react" altText="React" />
+          </a>
+          {', '}
+          <a
+            href="https://webpack.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Webpack"
+            className={classnames(classes['footer__link'], classes['footer__link--icon'])}
+          >
+            <Icon glyph="webpack" altText="Webpack" />
+          </a>
+          {' and '}
+          <a
+            href="https://www.contentful.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Contentful"
+            className={classnames(classes['footer__link'], classes['footer__link--icon'])}
+          >
+            <Icon glyph="contentful" altText="Contentful" />
+          </a>.
+          {' '}
+          <a
+            href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
+            className={classes['footer__link']}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Source code
+          </a>
+          .
+        </p>
 
-            <p>
-              &copy;
-              {' '}
-              {currentYear > creationYear
-                ? <span className="footer__credits__date">{creationYear}&mdash;{currentYear}</span>
-                : <span className="footer__credits__date">{currentYear}</span>
-              }
-              {' '}
-              Edward Cobbold.
-            </p>
-          </div>
-        </div>
-      </div>
+        <p className={classes['footer__copyright']}>
+          &copy;
+          {' '}
+          {currentYear > creationYear
+            ? <span className={classes['footer__copyright__date']}>{creationYear}&mdash;{currentYear}</span>
+            : <span className={classes['footer__copyright__date']}>{currentYear}</span>
+          }
+          {' '}
+          Edward Cobbold.
+        </p>
+      </Container>
     </footer>
   );
 };

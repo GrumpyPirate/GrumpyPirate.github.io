@@ -1,24 +1,39 @@
-@import 'functions';
-@import 'variables';
-@import 'mixins';
+@import 'core';
 
 .footer {
   background-color: palette(theme-dark);
-  color: transparentize(palette(theme-light), .4);
+  color: transparentize(palette(theme-light), .5);
   padding: 1.5rem 0;
   font-size: rem(12px);
+  text-align: center;
 
   // md up
   @include respond-up(md) {
     padding: 2rem 0;
   }
 
-  &__icon {
-    vertical-align: middle;
-    font-size: 175%;
+  // Elements
+  &__tech {
+    margin-bottom: 0;
+  }
 
-    .icon {
-      bottom: .125em;
+  &__copyright {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    @include no-underline;
+    color: inherit;
+    font: inherit;
+
+    &--icon {
+      vertical-align: middle;
+      font-size: 1.75em;
+    }
+
+    &:hover,
+    &:focus {
+      color: palette(theme-accent-1);
     }
   }
 }

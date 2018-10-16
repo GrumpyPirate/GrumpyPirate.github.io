@@ -1,12 +1,6 @@
 @import 'core';
 
 .sidebar {
-  @include make-link-colour(
-    palette(theme-light),
-    $hover-colour: palette(theme-light),
-    $active-colour: palette(white),
-    $self: false
-  );
   position: fixed;
   top: 0;
   right: 0;
@@ -81,6 +75,7 @@
       font-size: $font-size-h4;
     }
 
+    // Elements
     &__image {
       display: inline-block;
       vertical-align: middle;
@@ -121,6 +116,13 @@
       }
     }
 
+    // Modifiers
+    &,
+    &:hover,
+    &:focus {
+      color: palette(theme-light);
+    }
+
     &:hover,
     &:focus {
       .sidebar__brand__image {
@@ -138,8 +140,9 @@
 
   &__divider {
     border-style: solid none none;
-    border-color: palette(theme-light);
+    border-color: transparentize(palette(theme-light), .8);
     border-width: 1px;
+    margin: 2rem 0;
 
     @include respond-down(md) {
       display: none;

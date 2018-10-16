@@ -1,32 +1,24 @@
-/* -------------------------------------------------------
-** About Section
-** -----------------------------------------------------*/
-@import 'functions';
-@import 'variables';
-@import 'mixins';
+@import 'core';
 
 .about {
   &__section {
     $title-icon-size: rem(32px);
-    // $section-border-color: darken($body-bg, 25%);
     $section-border-color: mix($body-bg, palette(theme-accent-1), 75%);
-    // background-color: darken($body-bg, 2.5%);
-    // padding: $grid-gutter-width-base / 2;
     margin: 3rem 0;
-    // box-shadow: 0 rem(2px) rem(2px) 0 rgba(0, 0, 0, .175);
 
     &:first-of-type {
       margin-top: 0;
-    } // /&:first-of-type
+    }
 
     // md up
     @include respond-up(md) {
       margin: 6rem 0;
-    } // /md up
+    }
 
     &__title {
       border-bottom: solid $hr-border-width $section-border-color;
       padding-bottom: 1rem;
+      margin-bottom: 3rem;
 
       // Variant - has-icon
       &--has-icon {
@@ -38,9 +30,9 @@
           position: absolute;
           top: 0;
           right: 0;
-        } // /.about__section__icon
-      } // /&--has-icon
-    } // /&__title
+        }
+      }
+    }
 
     &__title-icon {
       display: inline-block;
@@ -50,7 +42,7 @@
       .icon {
         width: 1.125em;
         height: 1.125em;
-      } // /.icon
-    } // /&__title-icon, &__section-icon
-  } // /&__section
-} // /.about
+      }
+    }
+  }
+}

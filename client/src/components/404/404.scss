@@ -1,0 +1,7 @@
+@import 'variables';
+
+.error-page {
+  &__heading {
+    margin-bottom: $paragraph-margin-bottom * 2;
+  }
+}

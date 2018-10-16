@@ -14,7 +14,7 @@
 }
 
 .pf__item {
-  flex: 1 1 calc(100% - #{map-get($gutter-widths, sm) / 2});
+  flex: 1 1 calc(100% - #{map-get($gutter-widths, xs) / 2});
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -28,15 +28,15 @@
 
   // xs only
   @include respond-only(xs) {
-    margin-bottom: rem(map-get($gutter-widths, xs) / 2);
+    margin-bottom: map-get($gutter-widths, xs) / 2;
   }
 
   // sm up
   @include respond-up(sm) {
-    flex-basis: calc(50% - #{map-get($gutter-widths, sm) / 2});
-    margin-right: map-get($gutter-widths, sm) / 4;
-    margin-left: map-get($gutter-widths, sm) / 4;
-    margin-bottom: rem(map-get($gutter-widths, sm) / 2);
+    flex-basis: calc(50% - #{map-get($gutter-widths, xs) / 2});
+    margin-right: map-get($gutter-widths, xs) / 4;
+    margin-left: map-get($gutter-widths, xs) / 4;
+    margin-bottom: map-get($gutter-widths, xs) / 2;
   }
 
   // md up
@@ -44,12 +44,12 @@
     flex-basis: calc(50% - #{map-get($gutter-widths, md) / 2});
     margin-right: map-get($gutter-widths, md) / 4;
     margin-left: map-get($gutter-widths, md) / 4;
-    margin-bottom: rem(map-get($gutter-widths, md) / 2);
+    margin-bottom: map-get($gutter-widths, md) / 2;
   }
 
   // lg up
   @include respond-up(lg) {
-    border-bottom-width: map-get($gutter-widths, lg) / 4;
+    border-bottom-width: map-get($gutter-widths, md) / 4;
   }
 
   &:hover,
