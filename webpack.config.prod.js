@@ -29,6 +29,7 @@ const prodConfig = {
             loader: 'sass-loader',
             options: {
               includePaths: ['client/src/sass'],
+              sourceMap: true,
             },
           },
         ],
@@ -52,4 +53,4 @@ const prodConfig = {
   ]
 };
 
-module.exports = merge(commonConfig, prodConfig);
+module.exports = merge.smart(commonConfig, prodConfig);

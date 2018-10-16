@@ -37,15 +37,20 @@ module.exports = {
               modules: true,
               localIdentName: '[name]__[local]--[hash:base64:5]',
               importLoaders: 2,
-              sourceMaps: true
+              sourceMap: true,
             }
           },
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
           {
             loader: 'sass-loader',
             options: {
               includePaths: ['client/src/sass'],
-              sourceMaps: true
+              sourceMap: true
             }
           }
         ]
