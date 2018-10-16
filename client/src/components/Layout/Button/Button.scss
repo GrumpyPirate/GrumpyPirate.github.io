@@ -20,13 +20,18 @@
   transition-timing-function: $anim-ease;
 
   &:hover,
+  &:focus,
+  &:active {
+    color: $btn-primary-color;
+  }
+
+  &:hover,
   &:focus {
     background-color: lighten($btn-primary-bg, 5%);
     border-color: lighten($btn-primary-bg, 5%);
   }
 
   &:active {
-    color: $btn-primary-color;
     background-color: $btn-primary-bg;
     border-color: $btn-primary-bg;
     transform: translateY(1px);
