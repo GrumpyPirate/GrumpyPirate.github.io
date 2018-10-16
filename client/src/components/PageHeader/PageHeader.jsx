@@ -46,17 +46,16 @@ class PageHeader extends PureComponent {
   onScrollDownClick() {
     const headerElement = this.elementRef.current;
     const elementHeight = headerElement.offsetHeight;
-    const elementAbsolutePosition = getElementAbsoluteOffsetTop(headerElement);
+    const scrollOptions = {
+      top: elementHeight,
+      behavior: 'smooth',
+    };
+
+    if (window.innerWidth < 992) return window.scrollTo(scrollOptions);
+
     const scrollContainer = document.getElementById('main-content');
-
     if ('scrollTo' in scrollContainer) {
-      const scrollOptions = {
-        top: elementAbsolutePosition + elementHeight - (window.innerWidth < 992 ? 50 : 0),
-        behavior: 'smooth',
-      };
-
-      window.scrollTo(scrollOptions);
-      scrollContainer.scrollTo(scrollOptions);
+      return scrollContainer.scrollTo(scrollOptions);
     }
   }
 
