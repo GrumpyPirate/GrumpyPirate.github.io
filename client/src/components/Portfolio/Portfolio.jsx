@@ -23,7 +23,7 @@ class Portfolio extends PureComponent {
       <Page>
         <PageHeader title="Portfolio">
           <PageHeaderSubtitle>
-            Stuff I've worked on
+            Projects I've worked on
           </PageHeaderSubtitle>
         </PageHeader>
 

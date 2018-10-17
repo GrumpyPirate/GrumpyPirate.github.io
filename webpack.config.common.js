@@ -1,6 +1,10 @@
 const path = require('path');
+const { EnvironmentPlugin } = require('webpack');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
@@ -10,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
-    filename: '[name].[hash].bundle.js'
+    filename: '[name].[hash].bundle.js',
   },
   module: {
     rules: [
@@ -21,51 +25,53 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: true
-            }
-          }
-        ]
+              cacheDirectory: true,
+            },
+          },
+        ],
       },
       {
-        test: /\.s(a|c)ss$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: [
-          'style-loader',
+          process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[name]__[local]--[hash:base64:5]',
+              localIdentName: process.env.NODE_ENV === 'production'
+                ? '[hash:base64:5]'
+                : '[name]__[local]--[hash:base64:5]',
               importLoaders: 2,
-              sourceMap: true,
-            }
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
           },
           {
             loader: 'sass-loader',
             options: {
               includePaths: ['client/src/sass'],
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
         include: /node_modules/,
         use: [
           'style-loader',
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.html$/,
-        use: ['html-loader']
+        use: ['html-loader'],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -73,7 +79,7 @@ module.exports = {
         use: [
           'file-loader',
           'image-webpack-loader',
-        ]
+        ],
       },
       {
         test: /\.svg$/,
@@ -82,18 +88,28 @@ module.exports = {
           'svg-sprite-loader',
           'svgo-loader',
         ],
-      }
-    ]
+      },
+    ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx'],
-    modules: [path.resolve('client/src'), 'node_modules']
+    modules: [path.resolve('client/src'), 'node_modules'],
   },
   plugins: [
-    new CleanWebpackPlugin(['build']),
-    new HtmlWebpackPlugin({
-      template: 'client/src/index.html'
+    new EnvironmentPlugin({
+      NODE_ENV: process.env.NODE_ENV,
     }),
+    new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
+    new HtmlWebpackPlugin({
+      template: 'client/src/index.html',
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: '_redirects',
+        to: '_redirects',
+        toType: 'file',
+      },
+    ]),
     new WebpackPwaManifestPlugin({
       name: 'Edward Cobbold\'s Portfolio',
       short_name: 'EC Portfolio',
@@ -101,8 +117,8 @@ module.exports = {
       background_color: '#2b978a',
       icons: [{
         src: path.resolve('client/src/images/favicon-master.png'),
-        sizes: [96, 128, 192, 256, 384, 512]
-      }]
+        sizes: [96, 128, 192, 256, 384, 512],
+      }],
     }),
     new FaviconsWebpackPlugin({
       logo: path.resolve('client/src/images/favicon-master.png'),
@@ -110,9 +126,12 @@ module.exports = {
       icons: {
         android: false,
         opengraph: true,
-        twitter: true
-      }
+        twitter: true,
+      },
     }),
-    new SWPrecacheWebpackPlugin()
-  ]
-}
+    new SWPrecacheWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'styles.[hash].css',
+    }),
+  ],
+};

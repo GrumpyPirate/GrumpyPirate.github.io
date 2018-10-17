@@ -9,8 +9,8 @@ const devConfig = {
     publicPath: '/',
     port: 3000,
     host: '0.0.0.0',
-    stats: 'minimal'
-  }
+    stats: 'minimal',
+  },
 };
 
-module.exports = merge(commonConfig, devConfig);
+module.exports = merge.smart(commonConfig, devConfig);

@@ -13,8 +13,16 @@
 
   &__page-transition {
     &--enter {
-      position: relative;
-      opacity: 1;
+      &,
+      &-active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        opacity: 0;
+        z-index: 10;
+      }
 
       &--active {
         opacity: 1;
@@ -25,14 +33,10 @@
 
     &--exit {
       &--active {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 100%;
         opacity: 0;
         transition-property: opacity;
         transition-duration: $anim-dur * 2;
-        z-index: 1;
+        pointer-events: none;
       }
     }
   }

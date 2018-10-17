@@ -12,8 +12,8 @@
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "start": "npm run build && NODE_ENV=production node server.js",
-    "analyze-bundle": "webpack --config webpack.config.analyze.js",
-    "test": "jest --watch"
+    "analyze-bundle": "NODE_ENV=production webpack --config webpack.config.analyze.js",
+    "test": "NODE_ENV=test jest --watch"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -46,6 +46,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "8.0.4",
     "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.3",
     "css-loader": "^1.0.0",
     "cssnano-preset-advanced": "^4.0.2",
     "enzyme": "3.6.0",

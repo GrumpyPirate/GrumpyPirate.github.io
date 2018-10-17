@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import CSSTransition from 'react-transition-group/CSSTransition';
 
+import animation from 'config/animation';
+
 import Sidebar from 'containers/Sidebar/Sidebar';
 import Main from 'containers/Main/Main';
 import Portfolio from 'containers/Portfolio/Portfolio';
@@ -33,7 +35,7 @@ const App = () => (
                   exitActive: classes['app__page-transition--exit--active'],
                   exitDone: classes['app__page-transition--exit--done'],
                 }}
-                timeout={{ exit: 300, enter: 300 }}
+                timeout={{ exit: animation.duration * 2, enter: animation.duration * 2 }}
               >
                 <Route
                   location={location}
