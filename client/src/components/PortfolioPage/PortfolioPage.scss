@@ -2,29 +2,29 @@
 
 .portfolio-page {
   &__supporting-image {
+    border-radius: 0.25rem;
     margin: 0;
-    border-radius: .25rem;
 
     > img {
       display: block;
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
 
   &__content-divider {
-    border-style: solid none none;
     border-color: currentColor;
+    border-style: solid none none;
     border-width: 1px;
     margin: 2rem 0;
-    opacity: .25;
+    opacity: 0.25;
   }
 
   &__external-link {
-    text-align: center;
     margin-top: 2rem;
+    text-align: center;
 
-    @include respond-up(md) {
+    @include respond-up('md') {
       margin-top: 4rem;
     }
   }

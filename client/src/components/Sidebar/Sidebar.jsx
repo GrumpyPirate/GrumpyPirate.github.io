@@ -48,7 +48,7 @@ const Sidebar = ({ isMobileNavigationOpen, toggleMobileNavigation }) => (
       className={classnames(
         classes['sidebar__sitenav-wrapper'],
         classes['sidebar__sitenav-wrapper--mobile'], {
-          [classes['is--closed']]: !isMobileNavigationOpen,
+          [classes['sidebar__sitenav-wrapper--mobile--is--closed']]: !isMobileNavigationOpen,
         },
       )}
     >

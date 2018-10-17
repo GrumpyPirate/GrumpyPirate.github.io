@@ -5,20 +5,20 @@
   margin: 0;
   padding: 0;
 
-  @include respond-only(md) {
-    display: flex;
+  @include respond-only('md') {
     align-items: stretch;
+    display: flex;
   }
 
   &__nav-item {
     &:not(:last-child) {
-      margin: 0 0 .75rem;
+      margin: 0 0 0.75rem;
 
-      @include respond-only(md) {
-        margin: 0 .75rem 0 0;
+      @include respond-only('md') {
+        margin: 0 0.75rem 0 0;
       }
 
-      @include respond-up(lg) {
+      @include respond-up('lg') {
         margin: 0;
       }
     }
@@ -30,16 +30,16 @@
     @include lasers($direction: out);
     letter-spacing: normal;
     margin-bottom: 0;
-    padding-bottom: .125em;
+    padding-bottom: 0.125em;
 
     &,
     &:hover,
     &:focus {
-      color: palette(theme-light);
+      color: palette('theme-light');
     }
 
     &--active {
-      color: palette(white);
+      color: palette('white');
 
       &::before,
       &::after {

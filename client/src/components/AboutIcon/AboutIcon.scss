@@ -2,14 +2,14 @@
 
 .about-icon {
   display: block;
+  flex: 0 1 auto;
   font-size: $font-size-h3;
   line-height: 1;
-  text-align: center;
-  flex: 0 1 auto;
-  padding: 0 ($grid-gutter-width-base / 4);
   margin-bottom: 1rem;
+  padding: 0 ($grid-gutter-width-base / 4);
+  text-align: center;
 
-  @include respond-up(lg) {
+  @include respond-up('lg') {
     font-size: $font-size-h1 * 1.5;
     padding: 0 ($grid-gutter-width-base / 2);
   }
@@ -18,7 +18,7 @@
   &--large {
     font-size: $font-size-h1;
 
-    @include respond-up(md) {
+    @include respond-up('md') {
       font-size: $font-size-h1 * 2;
     }
   }

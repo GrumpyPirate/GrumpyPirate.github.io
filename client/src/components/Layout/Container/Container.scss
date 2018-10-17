@@ -1,15 +1,15 @@
 @import 'core';
 
 .container {
+  padding-left: rem(map-get($gutter-widths, 'xs') / 2);
+  padding-right: rem(map-get($gutter-widths, 'xs') / 2);
   width: 100%;
-  padding-right: rem(map-get($gutter-widths, xs) / 2);
-  padding-left: rem(map-get($gutter-widths, xs) / 2);
 
   @each $breakpoint in map-keys($gutter-widths) {
     @if index($breakpoints, $breakpoint map-get($breakpoints, $breakpoint)) > 1 {
       @include respond-up($breakpoint) {
-        padding-right: rem(map-get($gutter-widths, $breakpoint) / 2);
         padding-left: rem(map-get($gutter-widths, $breakpoint) / 2);
+        padding-right: rem(map-get($gutter-widths, $breakpoint) / 2);
       }
     }
   }

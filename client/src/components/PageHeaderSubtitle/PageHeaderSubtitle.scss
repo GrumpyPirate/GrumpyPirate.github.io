@@ -2,13 +2,13 @@
 
 .page-header-subtitle {
   @include heading(4);
-  @include make-link-colour(palette(theme-accent-1), $lighten: true);
-  text-transform: uppercase;
+  @include make-link-colour(palette('theme-accent-1'), $lighten: true);
+  color: mix(palette('theme-light'), palette('theme-dark'), 40%);
   margin: 0;
   padding-bottom: 1rem;
-  color: mix(palette(theme-light), palette(theme-dark), 40%);
+  text-transform: uppercase;
 
-  @include respond-up(md) {
+  @include respond-up('md') {
     padding-bottom: 2rem;
   }
 }

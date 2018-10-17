@@ -95,6 +95,17 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx'],
     modules: [path.resolve('client/src'), 'node_modules'],
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
+  },
   plugins: [
     new EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV,

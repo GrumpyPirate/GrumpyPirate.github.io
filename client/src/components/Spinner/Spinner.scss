@@ -6,32 +6,32 @@
 }
 
 .spinner {
-  position: fixed;
-  top: $sidebar-height-mobile;
-  right: 0;
+  align-items: center;
+  background-color: palette('theme-mid');
   bottom: 0;
-  left: 0;
+  color: palette('theme-light');
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
-  background-color: palette(theme-mid);
-  color: palette(theme-light);
-  z-index: 2;
+  left: 0;
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
-  user-select: none;
-  transition-property: opacity, visibility;
+  position: fixed;
+  right: 0;
+  top: $sidebar-height-mobile;
   transition-duration: $anim-dur * 2;
+  transition-property: opacity, visibility;
   transition-timing-function: $anim-ease;
+  user-select: none;
+  visibility: hidden;
+  z-index: 2;
 
-  @include respond-up(lg) {
-    top: 0;
+  @include respond-up('lg') {
     left: $sidebar-width-lg;
+    top: 0;
   }
 
-  @include respond-up(xl) {
+  @include respond-up('xl') {
     left: $sidebar-width;
   }
 
@@ -39,20 +39,20 @@
     margin: 0 0 $paragraph-margin-bottom;
 
     svg {
+      animation: spin ($anim-dur * 15) linear 0s infinite;
       display: block;
-      width: 3rem;
       height: 3rem;
       margin: 0 auto;
-      animation: spin ($anim-dur * 15) linear 0s infinite;
+      width: 3rem;
     }
   }
 
   &__loading-text {
     @include heading(4);
-    position: relative;
     left: rem(6px);
-    text-transform: uppercase;
     margin: 0;
+    position: relative;
+    text-transform: uppercase;
   }
 
   &--is-loading {

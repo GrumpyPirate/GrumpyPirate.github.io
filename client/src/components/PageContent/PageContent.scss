@@ -3,13 +3,12 @@
 $page-padding: 3rem;
 
 .page-content {
-  text-align: center;
+  padding-bottom: ($page-padding / 2);
   padding-top: ($page-padding / 2);
-	padding-bottom: ($page-padding / 2);
+  text-align: center;
 
-	// md up
-	@include respond-up(md) {
+  @include respond-up('md') {
+    padding-bottom: $page-padding;
     padding-top: $page-padding;
-		padding-bottom: $page-padding;
-	}
+  }
 }

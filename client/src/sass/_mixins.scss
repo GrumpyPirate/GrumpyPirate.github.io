@@ -27,8 +27,7 @@
         }
       }
 
-      &:active,
-      &.active {
+      &:active {
         @if $active-colour {
           color: $active-colour;
         } @else {
@@ -52,8 +51,7 @@
       }
     }
 
-    &:active,
-    &.active {
+    &:active {
       @if $active-colour {
         color: $active-colour;
       } @else {
@@ -69,18 +67,18 @@
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin lasers($display: inline-block, $bottom: 0, $laser-colour: currentColor, $laser-height: 1px, $animate: true, $duration: $anim-dur, $direction: ltr) {
   @include no-underline;
-  position: relative;
   display: $display;
+  position: relative;
 
   &::before {
-    position: absolute;
+    background-color: $laser-colour;
     bottom: $bottom;
-    left: 0;
     content: '';
     display: block;
-    background-color: $laser-colour;
-    width: 100%;
     height: $laser-height;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 
   @if $animate {
@@ -91,10 +89,7 @@
 
     &:focus,
     &:hover,
-    &:active,
-    &.active {
-      // text-decoration: none;
-
+    &:active {
       &::before {
         transform: scaleX(1);
       }
@@ -111,15 +106,15 @@
     } @else if $direction == out {
       &::before,
       &::after {
-        content: '';
-        position: absolute;
-        bottom: $bottom;
-        display: block;
         background-color: $laser-colour;
-        width: 50%;
+        bottom: $bottom;
+        content: '';
+        display: block;
         height: $laser-height;
+        position: absolute;
         transform: scaleX(0);
         transition: transform $duration ease;
+        width: 50%;
       }
 
       &::before {
@@ -134,8 +129,7 @@
 
       &:focus,
       &:hover,
-      &:active,
-      &.active {
+      &:active {
         &::before,
         &::after {
           transform: scaleX(1);
@@ -148,9 +142,9 @@
 // No user pointer interaction (text selection, pointer events)
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin no-select {
-  user-select: none;
-  pointer-events: none;
   cursor: default;
+  pointer-events: none;
+  user-select: none;
 }
 
 // No outlines
@@ -159,8 +153,7 @@
   &,
   &:hover,
   &:focus,
-  &:active,
-  &.active {
+  &:active {
     outline: 0;
   }
 }
@@ -171,8 +164,7 @@
   &,
   &:hover,
   &:focus,
-  &:active,
-  &.active {
+  &:active {
     box-shadow: none;
   }
 }
@@ -180,13 +172,13 @@
 // Mixin to clear browser default button styles
 // ---------------------------------------------------------------------------------------------------------------------
 @mixin button-reset {
-  user-select: none;
-  cursor: pointer;
   background: 0;
   border: 0;
-  padding: 0;
-  margin: 0;
   box-shadow: none;
   color: inherit;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
   touch-action: manipulation;
+  user-select: none;
 }

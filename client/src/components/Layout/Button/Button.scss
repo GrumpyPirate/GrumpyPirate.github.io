@@ -28,20 +28,20 @@
 .button {
   @include button-reset;
   @include no-underline;
+  background-color: $btn-primary-bg;
+  border: solid 1px $btn-primary-bg;
+  border-radius: $btn-border-radius;
+  box-shadow: none;
+  color: $btn-primary-color;
   display: inline-block;
   font-family: $body-font-family;
   font-size: $btn-font-size;
+  font-weight: weight('regular');
   line-height: (rem(22px) / $btn-font-size);
-  font-weight: weight(regular);
-  text-transform: uppercase;
-  color: $btn-primary-color;
-  background-color: $btn-primary-bg;
-  border: solid 1px $btn-primary-bg;
-  box-shadow: none;
-  border-radius: $btn-border-radius;
   padding: $btn-padding-y $btn-padding-x;
-  transition-property: transform, color, background-color;
+  text-transform: uppercase;
   transition-duration: $anim-dur;
+  transition-property: transform, color, background-color;
   transition-timing-function: $anim-ease;
 
   &--primary {
@@ -58,11 +58,11 @@
     &:hover,
     &:focus,
     &:active {
-      color: palette(white);
-      background-color: palette(grey-light);
-      border-color: palette(grey-light);
-      pointer-events: none;
+      background-color: palette('grey-light');
+      border-color: palette('grey-light');
+      color: palette('white');
       cursor: not-allowed;
+      pointer-events: none;
     }
   }
 }

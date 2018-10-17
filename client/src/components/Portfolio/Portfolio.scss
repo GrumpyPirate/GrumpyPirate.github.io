@@ -1,97 +1,91 @@
 @import 'core';
 
-.portfolio {
+$selector: portfolio;
+
+.#{$selector} {
   &__list {
     display: flex;
     flex-wrap: wrap;
-    padding-top: rem(map-get($gutter-widths, xs) / 2);
-    margin: 0 rem(map-get($gutter-widths, xs) / -4);
+    margin: 0 rem(map-get($gutter-widths, 'xs') / -4);
+    padding-top: rem(map-get($gutter-widths, 'xs') / 2);
 
-    // md up
-    @include respond-up(md) {
-      padding-top: rem(map-get($gutter-widths, md) / 2);
-      margin: 0 rem(map-get($gutter-widths, md) / -4);
+    @include respond-up('md') {
+      margin: 0 rem(map-get($gutter-widths, 'md') / -4);
+      padding-top: rem(map-get($gutter-widths, 'md') / 2);
     }
   }
 
   &__list-item {
-    flex: 1 1 calc(100% - #{map-get($gutter-widths, xs) / 2});
+    border: solid (map-get($gutter-widths, 'xs') / 4) palette('theme-accent-2');
+    border-style: none none solid;
     display: flex;
+    flex: 1 1 calc(100% - #{map-get($gutter-widths, 'xs') / 2});
     flex-direction: column;
     justify-content: flex-end;
+    margin-left: map-get($gutter-widths, 'xs') / 4;
+    margin-right: map-get($gutter-widths, 'xs') / 4;
+    overflow: hidden;
     position: relative;
     text-align: left;
-    border: solid (map-get($gutter-widths, xs) / 4) palette(theme-accent-2);
-    border-style: none none solid;
-    margin-right: map-get($gutter-widths, xs) / 4;
-    margin-left: map-get($gutter-widths, xs) / 4;
-    overflow: hidden;
 
-    // xs only
-    @include respond-only(xs) {
-      margin-bottom: map-get($gutter-widths, xs) / 2;
+    @include respond-only('xs') {
+      margin-bottom: map-get($gutter-widths, 'xs') / 2;
     }
 
-    // sm up
-    @include respond-up(sm) {
-      flex-basis: calc(50% - #{map-get($gutter-widths, xs) / 2});
-      margin-right: map-get($gutter-widths, xs) / 4;
-      margin-left: map-get($gutter-widths, xs) / 4;
-      margin-bottom: map-get($gutter-widths, xs) / 2;
+    @include respond-up('sm') {
+      flex-basis: calc(50% - #{map-get($gutter-widths, 'xs') / 2});
+      margin-bottom: map-get($gutter-widths, 'xs') / 2;
+      margin-left: map-get($gutter-widths, 'xs') / 4;
+      margin-right: map-get($gutter-widths, 'xs') / 4;
     }
 
     // md up
-    @include respond-up(md) {
-      flex-basis: calc(50% - #{map-get($gutter-widths, md) / 2});
-      margin-right: map-get($gutter-widths, md) / 4;
-      margin-left: map-get($gutter-widths, md) / 4;
-      margin-bottom: map-get($gutter-widths, md) / 2;
+    @include respond-up('md') {
+      flex-basis: calc(50% - #{map-get($gutter-widths, 'md') / 2});
+      margin-bottom: map-get($gutter-widths, 'md') / 2;
+      margin-left: map-get($gutter-widths, 'md') / 4;
+      margin-right: map-get($gutter-widths, 'md') / 4;
     }
 
     // lg up
-    @include respond-up(lg) {
-      border-bottom-width: map-get($gutter-widths, md) / 4;
+    @include respond-up('lg') {
+      border-bottom-width: map-get($gutter-widths, 'md') / 4;
     }
 
     &:hover,
     &:focus {
-      .portfolio__list-item__media {
+      .#{$selector}__list-item__media {
         transform: scale(1.0625);
       }
     }
 
     &__media {
-      position: absolute;
-      top: 0;
-      right: 0;
       bottom: 0;
       left: 0;
       margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
       transition: transform $anim-dur ease;
 
       img {
-        position: absolute;
-        top: 0;
-        right: 0;
         bottom: 0;
-        left: 0;
-        width: 100%;
         height: 100%;
+        left: 0;
         object-fit: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
       }
     }
 
     &__copy {
       $copy-padding: $grid-gutter-width-base / 2;
-      position: relative;
+      background-image: linear-gradient(to top, transparentize(palette('theme-dark'), 0.2), transparentize(palette('theme-dark'), 0.6) 40%, transparentize(palette('theme-dark'), 1));
+      color: palette('white');
       padding: 15vmax $copy-padding $copy-padding;
-      color: palette(white);
-      background-image: linear-gradient(
-        to top,
-        transparentize(palette(theme-dark), .2),
-        transparentize(palette(theme-dark), .6) 40%,
-        transparentize(palette(theme-dark), 1)
-      );
+      position: relative;
       z-index: 1;
     }
 

@@ -3,7 +3,7 @@
 $selector: portfolio-carousel;
 
 .#{$selector} {
-  @include respond-up(md) {
+  @include respond-up('md') {
     display: none;
   }
 
@@ -13,214 +13,130 @@ $selector: portfolio-carousel;
 
     &--mobile {
       $aspect: (439 / 222);
-      $device-img-width-diff: .8675;
-      $device-img-height-diff: .74725;
-      $device-img-offset-top: .2575;
+      $device-img-width-diff: 0.8675;
+      $device-img-height-diff: 0.74725;
+      $device-img-offset-top: 0.2575;
       $device-frame-width-xs: 192;
       $device-frame-width-sm: 192;
-      $device-frame-width-md: 192;
-      $device-frame-width-xl: 192;
+
+      @include respond-up('sm') {
+        .#{$selector}__device-frame {
+          height: rem($device-frame-width-sm * $aspect * 1px);
+          width: rem($device-frame-width-sm * 1px);
+        }
+
+        .#{$selector}__device-img {
+          height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
+          top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
+          width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
+        }
+      }
 
       .#{$selector}__device-frame {
-        width: rem($device-frame-width-xs * 1px);
         height: rem($device-frame-width-xs * $aspect * 1px);
+        width: rem($device-frame-width-xs * 1px);
       }
 
       .#{$selector}__device-img {
-        width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
         height: rem($device-frame-width-xs * $aspect * $device-img-height-diff * 1px);
-        top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
-        right: 0;
         left: 0;
         margin: 0 auto;
-      }
-
-      @include respond-up(sm) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-sm * 1px);
-          height: rem($device-frame-width-sm * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
-        }
-      }
-
-      @include respond-up(md) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-md * 1px);
-          height: rem($device-frame-width-md * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-md * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-md * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-md * $device-img-offset-top * 1px);
-        }
-      }
-
-      @include respond-up(xl) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-xl * 1px);
-          height: rem($device-frame-width-xl * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-xl * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-xl * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-xl * $device-img-offset-top * 1px);
-        }
+        right: 0;
+        top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
+        width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
       }
     }
 
     &--tablet {
       $aspect: (477 / 322);
-      $device-img-width-diff: .8875;
-      $device-img-height-diff: .80125;
-      $device-img-offset-top: .1375;
+      $device-img-width-diff: 0.8875;
+      $device-img-height-diff: 0.80125;
+      $device-img-offset-top: 0.1375;
       $device-frame-width-xs: 224;
       $device-frame-width-sm: 320;
-      $device-frame-width-md: 320;
-      $device-frame-width-xl: 320;
+
+      @include respond-up('sm') {
+        .#{$selector}__device-frame {
+          height: rem($device-frame-width-sm * $aspect * 1px);
+          width: rem($device-frame-width-sm * 1px);
+        }
+
+        .#{$selector}__device-img {
+          height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
+          top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
+          width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
+        }
+      }
 
       .#{$selector}__device-frame {
-        width: rem($device-frame-width-xs * 1px);
         height: rem($device-frame-width-xs * $aspect * 1px);
+        width: rem($device-frame-width-xs * 1px);
       }
 
       .#{$selector}__device-img {
-        width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
         height: rem($device-frame-width-xs * $aspect * $device-img-height-diff * 1px);
-        top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
-        right: 0;
         left: 0;
         margin: 0 auto;
-      }
-
-      @include respond-up(sm) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-sm * 1px);
-          height: rem($device-frame-width-sm * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
-        }
-      }
-
-      @include respond-up(md) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-md * 1px);
-          height: rem($device-frame-width-md * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-md * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-md * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-md * $device-img-offset-top * 1px);
-        }
-      }
-
-      @include respond-up(xl) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-xl * 1px);
-          height: rem($device-frame-width-xl * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-xl * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-xl * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-xl * $device-img-offset-top * 1px);
-        }
+        right: 0;
+        top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
+        width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
       }
     }
 
     &--desktop {
       $aspect: (291 / 506);
-      $device-img-width-diff: .75;
-      $device-img-height-diff: .81375;
-      $device-img-offset-top: .036225;
+      $device-img-width-diff: 0.75;
+      $device-img-height-diff: 0.81375;
+      $device-img-offset-top: 0.036225;
       $device-frame-width-xs: 290;
       $device-frame-width-sm: 420;
-      $device-frame-width-md: 540;
-      $device-frame-width-xl: 640;
+
+      @include respond-up('sm') {
+        .#{$selector}__device-frame {
+          height: rem($device-frame-width-sm * $aspect * 1px);
+          width: rem($device-frame-width-sm * 1px);
+        }
+
+        .#{$selector}__device-img {
+          height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
+          top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
+          width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
+        }
+      }
 
       .#{$selector}__device-frame {
-        width: rem($device-frame-width-xs * 1px);
         height: rem($device-frame-width-xs * $aspect * 1px);
+        width: rem($device-frame-width-xs * 1px);
       }
 
       .#{$selector}__device-img {
-        width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
         height: rem($device-frame-width-xs * $aspect * $device-img-height-diff * 1px);
-        top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
-        right: 0;
         left: 0;
         margin: 0 auto;
-      }
-
-      @include respond-up(sm) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-sm * 1px);
-          height: rem($device-frame-width-sm * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
-        }
-      }
-
-      @include respond-up(md) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-md * 1px);
-          height: rem($device-frame-width-md * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-md * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-md * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-md * $device-img-offset-top * 1px);
-        }
-      }
-
-      @include respond-up(xl) {
-        .#{$selector}__device-frame {
-          width: rem($device-frame-width-xl * 1px);
-          height: rem($device-frame-width-xl * $aspect * 1px);
-        }
-
-        .#{$selector}__device-img {
-          width: rem($device-frame-width-xl * $device-img-width-diff * 1px);
-          height: rem($device-frame-width-xl * $aspect * $device-img-height-diff * 1px);
-          top: rem($device-frame-width-xl * $device-img-offset-top * 1px);
-        }
+        right: 0;
+        top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
+        width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
       }
     }
   }
 
   &__device-frame {
-    position: relative;
     display: block;
-    max-width: 100%;
     margin: auto;
+    max-width: 100%;
+    position: relative;
     z-index: 2;
   }
 
   &__device-img {
-    position: absolute;
     overflow-y: auto;
+    position: absolute;
     z-index: 1;
 
     img {
       display: block;
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
 }

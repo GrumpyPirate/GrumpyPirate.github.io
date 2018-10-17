@@ -1,137 +1,119 @@
 @import 'core';
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
+$selector: sidebar;
+
+.#{$selector} {
+  background-color: palette('theme-accent-1');
+  color: palette('theme-light');
   left: 0;
-  width: 100%;
-  background-color: palette(theme-accent-1);
+  position: fixed;
+  right: 0;
   text-transform: uppercase;
-  color: palette(theme-light);
+  top: 0;
+  width: 100%;
   z-index: $sidebar-zindex;
 
-  // lg up
-  @include respond-up(lg) {
-    position: relative;
+  @include respond-up('lg') {
+    align-items: center;
+    border: 0;
+    display: flex;
+    flex: 0 0 $sidebar-width-lg;
+    flex-wrap: wrap;
     height: 100vh;
     overflow-y: auto;
-    touch-action: pan-y;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex: 0 0 $sidebar-width-lg;
     padding: 0;
-    border: 0;
+    position: relative;
     text-align: right;
+    touch-action: pan-y;
   }
 
-  // xl up
-  @include respond-up(xl) {
+  @include respond-up('xl') {
     flex-basis: $sidebar-width;
   }
 
   &__content {
-    position: relative;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-top: $grid-gutter-width-base / 4;
-    padding-bottom: $grid-gutter-width-base / 4;
-    background-color: palette(theme-accent-1);
+    background-color: palette('theme-accent-1');
+    display: flex;
     height: $sidebar-height-mobile;
+    justify-content: space-between;
+    padding-bottom: $grid-gutter-width-base / 4;
+    padding-top: $grid-gutter-width-base / 4;
+    position: relative;
     z-index: $sidebar-zindex;
 
-    // lg up
-    @include respond-up(lg) {
-      display: block;
-      padding-top: 0;
-      padding-bottom: 0;
+    @include respond-up('lg') {
       background: 0;
+      display: block;
       height: auto;
+      padding-bottom: 0;
+      padding-top: 0;
     }
   }
 
-  .sitenav__nav-item {
-    // md only
-    @include respond-only(md) {
-      display: inline-block;
-
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
-    }
-  }
-
-  // Brand (Logo/Text)
-  // -----------------------------------------------------------------------------------------------------------------
   &__brand {
     @include heading(5);
-    margin-bottom: 0;
     letter-spacing: normal;
+    margin-bottom: 0;
 
-    // lg up
-    @include respond-up(lg) {
+    @include respond-up('lg') {
       font-size: $font-size-h4;
     }
 
-    // Elements
     &__image {
-      display: inline-block;
-      vertical-align: middle;
-      width: rem(32px);
-      height: rem(32px);
-      margin: 0;
       background: url('./head-sprite.png') top left no-repeat transparent;
       background-size: rem(32px) rem(64px);
-      image-rendering: pixelated;
+      display: inline-block;
       filter: drop-shadow(#{$filter-shadow-right-down-sm});
+      height: rem(32px);
+      image-rendering: pixelated;
+      margin: 0;
       transition: transform $anim-dur;
+      vertical-align: middle;
+      width: rem(32px);
 
-      // lg up
-      @include respond-up(lg) {
+      @include respond-up('lg') {
+        background-size: rem(48px) rem(96px);
         display: block;
+        height: rem(48px);
         margin-left: auto;
         width: rem(48px);
-        height: rem(48px);
-        background-size: rem(48px) rem(96px);
       }
     }
 
     &__name {
-      display: inline-block;
-      vertical-align: middle;
       color: inherit;
+      display: inline-block;
       margin-left: 1rem;
+      vertical-align: middle;
     }
 
     &__job-title {
+      color: palette('theme-light');
       display: block;
-      font-size: .75em;
-      color: palette(theme-light);
-      opacity: .8;
+      font-size: 0.75em;
+      opacity: 0.8;
 
-      @include respond-down(md) {
+      @include respond-down('md') {
         display: none;
       }
     }
 
-    // Modifiers
     &,
     &:hover,
     &:focus {
-      color: palette(theme-light);
+      color: palette('theme-light');
     }
 
     &:hover,
     &:focus {
-      .sidebar__brand__image {
+      .#{$selector}__brand__image {
         background-position: bottom left;
       }
     }
 
     &:active {
-      .sidebar__brand__image {
+      .#{$selector}__brand__image {
         transform: scale(#{1 - (1 / 8)});
         transition-duration: 0s;
       }
@@ -139,20 +121,18 @@
   }
 
   &__divider {
+    border-color: transparentize(palette('theme-light'), 0.8);
     border-style: solid none none;
-    border-color: transparentize(palette(theme-light), .8);
     border-width: 1px;
     margin: 2rem 0;
 
-    @include respond-down(md) {
+    @include respond-down('md') {
       display: none;
     }
   }
 
-  // Menu
-  // -------------------------------------------------------------------------------------------------
   &__btn-sitenav-container {
-    @include respond-up(md) {
+    @include respond-up('md') {
       display: none;
     }
   }
@@ -163,18 +143,16 @@
     $burger-bar-spacing: 7px;
     @include button-reset;
     @include no-outline;
-    position: relative;
     display: block;
-    width: $burger-bar-width;
     height: ($burger-bar-height * 3) + ($burger-bar-spacing * 2);
+    position: relative;
     transition: transform ($anim-dur / 2) ease;
+    width: $burger-bar-width;
 
-    // Clicked
     &:active {
       transform: scale(#{1 - (1 / 10)});
     }
 
-    // Menu active
     &[aria-expanded='true'] {
       .burger-bar {
         background-color: transparent;
@@ -195,14 +173,13 @@
       &,
       &::before,
       &::after {
+        background-color: palette('theme-light');
         display: block;
-        width: $burger-bar-width;
         height: $burger-bar-height;
-        position: absolute;
         left: 0;
-        background-color: palette(theme-light);
-        transition: transform $anim-dur ease,
-                    background-color $anim-dur ease;
+        position: absolute;
+        transition: transform $anim-dur ease, background-color $anim-dur ease;
+        width: $burger-bar-width;
       }
 
       &::before,
@@ -222,35 +199,33 @@
 
   &__sitenav-wrapper {
     &--desktop {
-      @include respond-down(sm) {
+      @include respond-down('sm') {
         display: none;
       }
     }
 
     &--mobile {
+      background-color: palette('theme-accent-1');
+      border-bottom: solid $hr-border-width $sidebar-border-color;
+      border-top: solid $hr-border-width transparentize($sidebar-border-color, 0.75);
+      left: 0;
+      margin: 0;
+      padding: 0.5rem 0;
       position: fixed;
       top: $sidebar-height-mobile;
-      left: 0;
+      transition: opacity $anim-dur ease, transform $anim-dur ease, visibility $anim-dur ease;
       width: 100%;
-      margin: 0;
-      padding: .5rem 0;
-      background-color: palette(theme-accent-1);
-      border-top: solid $hr-border-width transparentize($sidebar-border-color, .75);
-      border-bottom: solid $hr-border-width $sidebar-border-color;
       z-index: $sidebar-zindex - 1;
-      transition: opacity $anim-dur ease,
-                  transform $anim-dur ease,
-                  visibility $anim-dur ease;
 
-      &.is--closed {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-50%);
-        pointer-events: none;
+      @include respond-up('md') {
+        display: none;
       }
 
-      @include respond-up(md) {
-        display: none;
+      &--is--closed {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-50%);
+        visibility: hidden;
       }
     }
   }
