@@ -22,5 +22,11 @@
     justify-content: center;
     margin: 0 0 3rem;
     color: palette(theme-accent-1);
+
+    &--single {
+      @include respond-up(md) {
+        margin-bottom: 0;
+      }
+    }
   }
 }

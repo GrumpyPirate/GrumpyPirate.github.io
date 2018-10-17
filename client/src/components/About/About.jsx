@@ -255,31 +255,65 @@ const About = () => (
                   key={section.key}
                   title={section.title}
                 >
-                  {!!section.icons.length && (
-                    <figure
-                      className={classnames(
-                        classes['about__section-graphic'],
-                        classes[`about__section-graphic--${section.slug}`],
-                      )}
-                    >
-                      {section.icons.map(icon => (
-                        <AboutIcon
-                          key={`${section.key}__icon--${icon.name}`}
-                          iconName={icon.name}
-                          large={icon.large}
-                        />
-                      ))}
-                    </figure>
-                  )}
-                  {!!section.paragraphs.length && (
-                    <Row justify="center">
-                      <Column spanMD={8}>
-                        {section.paragraphs.map(paragraph => (
-                          <p key={`${section.key}__paragraph--${uniqueId()}`}>{paragraph}</p>
-                        ))}
-                      </Column>
-                    </Row>
-                  )}
+                  {/* If 1 icon, house content in columns */}
+                  {!!section.icons.length && section.icons.length === 1
+                    ? (
+                      <Row justify="center">
+                        <Column spanMD={8}>
+                          <Row alignMD="middle">
+                            {!!section.icons.length && (
+                              <Column span={12} spanMD={4} pushMD={8}>
+                                <figure
+                                  className={classnames(
+                                    classes['about__section-graphic'],
+                                    classes[`about__section-graphic--${section.slug}`],
+                                    classes['about__section-graphic--single'],
+                                  )}
+                                >
+                                  <AboutIcon iconName="redux" large />
+                                </figure>
+                              </Column>
+                            )}
+                            <Column span={12} spanMD={8} pullMD={4}>
+                              {section.paragraphs.map(paragraph => (
+                                <p key={`${section.key}__paragraph--${uniqueId()}`}>{paragraph}</p>
+                              ))}
+                            </Column>
+                          </Row>
+                        </Column>
+                      </Row>
+                    )
+                    : (
+                      <Fragment>
+                        {!!section.icons.length && (
+                          <figure
+                            className={classnames(
+                              classes['about__section-graphic'],
+                              classes[`about__section-graphic--${section.slug}`],
+                            )}
+                          >
+                            {section.icons.map(icon => (
+                              <AboutIcon
+                                key={`${section.key}__icon--${icon.name}`}
+                                iconName={icon.name}
+                                large={icon.large}
+                              />
+                            ))}
+                          </figure>
+                        )}
+
+                        {!!section.paragraphs.length && (
+                          <Row justify="center">
+                            <Column spanMD={8}>
+                              {section.paragraphs.map(paragraph => (
+                                <p key={`${section.key}__paragraph--${uniqueId()}`}>{paragraph}</p>
+                              ))}
+                            </Column>
+                          </Row>
+                        )}
+                      </Fragment>
+                    )
+                  }
                 </AboutSection>
               ))}
             </Column>

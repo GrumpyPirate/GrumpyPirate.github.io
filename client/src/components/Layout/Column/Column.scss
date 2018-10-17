@@ -1,6 +1,7 @@
 @import 'core';
 
 .column {
+  position: relative;
   flex: 1 1 auto;
   padding-right: rem(map-get($gutter-widths, xs) / 2);
   padding-left: rem(map-get($gutter-widths, xs) / 2);
@@ -22,19 +23,54 @@
 
   // Spans - per breakpoint
   @each $breakpoint in map-keys($breakpoints) {
-    @if index($breakpoints, $breakpoint map-get($breakpoints, $breakpoint)) == 1 {
-      @for $i from 1 through $grid-columns {
-        &-#{$breakpoint}-#{$i} {
-          flex: 0 0 percentage($i / $grid-columns);
-          max-width: percentage($i / $grid-columns);
-        }
-      }
-    } @else {
+    @if index($breakpoints, $breakpoint map-get($breakpoints, $breakpoint)) > 1 {
       @include respond-up($breakpoint) {
         @for $i from 1 through $grid-columns {
           &-#{$breakpoint}-#{$i} {
             flex: 0 0 percentage($i / $grid-columns);
             max-width: percentage($i / $grid-columns);
+          }
+        }
+      }
+    }
+  }
+
+  // Pushes
+  &-push {
+    @for $i from 1 through ($grid-columns - 1) {
+      &-#{$i} {
+        left: percentage($i / $grid-columns);
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @if index($breakpoints, $breakpoint map-get($breakpoints, $breakpoint)) > 1 {
+        @include respond-up($breakpoint) {
+          @for $i from 1 through ($grid-columns - 1) {
+            &-#{$breakpoint}-#{$i} {
+              left: percentage($i / $grid-columns);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Pulls
+  &-pull {
+    @for $i from 1 through ($grid-columns - 1) {
+      &-#{$i} {
+        right: percentage($i / $grid-columns);
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @if index($breakpoints, $breakpoint map-get($breakpoints, $breakpoint)) > 1 {
+        @include respond-up($breakpoint) {
+          @for $i from 1 through ($grid-columns - 1) {
+            &-#{$breakpoint}-#{$i} {
+              right: percentage($i / $grid-columns);
+            }
           }
         }
       }

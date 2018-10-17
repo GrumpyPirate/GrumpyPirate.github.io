@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { debounce } from 'lodash-es';
 
-import getElementAbsoluteOffsetTop from 'utils/dom';
-
 import Container from 'components/Layout/Container/Container';
 import Icon from 'components/Icon/Icon';
 
