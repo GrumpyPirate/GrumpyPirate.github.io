@@ -79,12 +79,12 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // @mixin font-example {
 //     font-family: 'example-font';
-// } // /@mixin font-example
+// }
 
 // @mixin font-example-bold {
 //     font-family: 'example-font';
 //     font-weight: $font-weight-bold;
-// } // /@mixin font-example-bold
+// }
 // etc...
 
 
@@ -92,8 +92,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // .font-example {
 //     @include font-example;
-// } // /.font-example
+// }
 
 // .font-example-bold {
 //     @include font-example-bold;
-// } // /.font-example-bold
+// }

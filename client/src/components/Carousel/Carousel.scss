@@ -16,7 +16,7 @@
     .control-arrow {
       &:hover {
         opacity: 1;
-      } // /&:hover
+      }
 
       &::before {
         content: '';
@@ -24,9 +24,9 @@
         display: inline-block;
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
-      } // /&::before
-    } // /.control-arrow
-  } // /.carousel.carousel-slider .control-arrow
+      }
+    }
+  }
 
   .carousel .control-disabled.control-arrow {
     opacity: 0;
@@ -58,34 +58,34 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    } // /*
+    }
 
     button {
       outline: 0;
       border: 0;
       background: none;
-    } // /button
+    }
 
     img {
       // width: 100%;
       // display: inline-block;
       pointer-events: none;
-    } // /img
+    }
 
     .carousel {
       position: relative;
-    } // /.carousel
+    }
 
     .control-arrow {
       top: 50%;
       margin-top: -13px;
       font-size: 18px;
-    } // /.control-arrow
+    }
 
     .thumbs-wrapper {
       margin: 20px;
       overflow: hidden;
-    } // /.thumbs-wrapper
+    }
 
     .thumbs {
       transition: all .15s ease-in;
@@ -93,7 +93,7 @@
       position: relative;
       list-style: none;
       white-space: nowrap;
-    } // /.thumbs
+    }
 
     .thumb {
       transition: border .15s ease-in;
@@ -113,8 +113,8 @@
 
       img {
         vertical-align: top;
-      } // /img
-    } // /.thumb
+      }
+    }
 
     .control-dots {
       // position: absolute;
@@ -142,14 +142,14 @@
           background-color: transparent;
           border: solid 1px palette(theme-accent-1);
           transform: scale(2);
-        } // /&:hover
+        }
 
         &.selected {
           opacity: 1;
-        } // /&:hover
-      } // /.dot
-    } // /.control-dots
-  } // /.carousel
+        }
+      }
+    }
+  }
 
   .carousel.carousel-slider {
     position: relative;
