@@ -47,12 +47,14 @@ const Column = ({
   </div>
 );
 
+const spanTypes = [PropTypes.oneOf(['auto']), PropTypes.number];
+
 Column.propTypes = {
-  span: PropTypes.number,
-  spanSM: PropTypes.number,
-  spanMD: PropTypes.number,
-  spanLG: PropTypes.number,
-  spanXL: PropTypes.number,
+  span: PropTypes.oneOfType(spanTypes),
+  spanSM: PropTypes.oneOfType(spanTypes),
+  spanMD: PropTypes.oneOfType(spanTypes),
+  spanLG: PropTypes.oneOfType(spanTypes),
+  spanXL: PropTypes.oneOfType(spanTypes),
   push: PropTypes.number,
   pushSM: PropTypes.number,
   pushMD: PropTypes.number,

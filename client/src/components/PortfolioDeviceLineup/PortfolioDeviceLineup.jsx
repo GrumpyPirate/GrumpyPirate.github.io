@@ -1,49 +1,66 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import './PortfolioDeviceLineup.scss';
+import classnames from 'classnames';
+import { uniqueId } from 'lodash-es';
 
 import frameMobile from 'images/device-frames/frame-mobile.svg';
 import frameTablet from 'images/device-frames/frame-tablet.svg';
 import frameLaptop from 'images/device-frames/frame-laptop.svg';
 
-const PortfolioDeviceLineup = ({ desktop, tablet, mobile }) => (
-  <div className="pf-lineup">
-    <div className="pf-lineup__item pf-lineup__item--desktop">
-      <figure className="pf-lineup__figure pf-lineup__figure--desktop">
-        <img src={frameLaptop} className="pf-lineup__device-frame" alt="" />
-        <div className="pf-lineup__device-img pf-lineup__device-img--desktop">
-          <img src={desktop} alt="" />
-        </div>
-      </figure>
-    </div>
+import classes from './PortfolioDeviceLineup.scss';
 
-    {!!tablet && (
-      <div className="pf-lineup__item pf-lineup__item--tablet">
-        <figure className="pf-lineup__figure pf-lineup__figure--tablet">
-          <img src={frameTablet} className="pf-lineup__device-frame" alt="" />
-          <div className="pf-lineup__device-img pf-lineup__device-img--tablet">
-            <img src={tablet} alt="" />
-          </div>
-        </figure>
-      </div>
-    )}
+const PortfolioDeviceLineup = ({ desktopImage, tabletImage, mobileImage }) => {
+  const items = [
+    {
+      key: `portfolio-device-lineup__item--${uniqueId()}`,
+      type: 'desktop',
+      frameSrc: frameLaptop,
+      imageSrc: desktopImage,
+    },
+    {
+      key: `portfolio-device-lineup__item--${uniqueId()}`,
+      type: 'tablet',
+      frameSrc: frameTablet,
+      imageSrc: tabletImage,
+    },
+    {
+      key: `portfolio-device-lineup__item--${uniqueId()}`,
+      type: 'mobile',
+      frameSrc: frameMobile,
+      imageSrc: mobileImage,
+    },
+  ];
 
-    <div className="pf-lineup__item pf-lineup__item--mobile">
-      <figure className="pf-lineup__figure pf-lineup__figure--mobile">
-        <img src={frameMobile} className="pf-lineup__device-frame" alt="" />
-        <div className="pf-lineup__device-img pf-lineup__device-img--mobile">
-          <img src={mobile} alt="" />
+  return (
+    <div className={classes['portfolio-device-lineup']}>
+      {items.map(item => (
+        <div
+          key={item.key}
+          className={classnames(
+            classes['portfolio-device-lineup__item'],
+            classes[`portfolio-device-lineup__item--${item.type}`],
+          )}
+        >
+          <figure className={classes['portfolio-device-lineup__figure']}>
+            <img
+              src={item.frameSrc}
+              alt=""
+              className={classes['portfolio-device-lineup__device-frame']}
+            />
+            <div className={classes['portfolio-device-lineup__device-img']}>
+              <img src={item.imageSrc} alt="" />
+            </div>
+          </figure>
         </div>
-      </figure>
+      ))}
     </div>
-  </div>
-);
+  );
+};
 
 PortfolioDeviceLineup.propTypes = {
-  desktop: PropTypes.node.isRequired,
-  tablet: PropTypes.node.isRequired,
-  mobile: PropTypes.node.isRequired,
+  desktopImage: PropTypes.string.isRequired,
+  tabletImage: PropTypes.string.isRequired,
+  mobileImage: PropTypes.string.isRequired,
 };
 
 export default PortfolioDeviceLineup;

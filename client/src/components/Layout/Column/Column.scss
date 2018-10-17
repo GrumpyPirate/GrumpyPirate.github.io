@@ -25,6 +25,10 @@
   @each $breakpoint in map-keys($breakpoints) {
     @if index($breakpoints, $breakpoint map-get($breakpoints, $breakpoint)) > 1 {
       @include respond-up($breakpoint) {
+        &-#{$breakpoint}-auto {
+          flex: 1 1 0;
+        }
+
         @for $i from 1 through $grid-columns {
           &-#{$breakpoint}-#{$i} {
             flex: 0 0 percentage($i / $grid-columns);

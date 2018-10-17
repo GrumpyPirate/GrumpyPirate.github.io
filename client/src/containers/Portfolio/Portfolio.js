@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { requestPortfolioItems } from 'actions/portfolio/portfolio';
 
-import WebDev from 'components/WebDev/WebDev';
+import Portfolio from 'components/Portfolio/Portfolio';
 
 const mapStateToProps = state => ({
   portfolioItems: state.portfolio.portfolioItems,
@@ -10,4 +10,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = { requestPortfolioItems };
 
-export default connect(mapStateToProps, mapDispatchToProps)(WebDev);
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);

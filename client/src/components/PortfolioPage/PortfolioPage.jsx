@@ -4,13 +4,17 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import isEmpty from 'lodash-es/isEmpty';
 
+import Container from 'components/Layout/Container/Container';
+import Row from 'components/Layout/Row/Row';
+import Column from 'components/Layout/Column/Column';
+import Button from 'components/Layout/Button/Button';
 import Page from 'components/Page/Page';
 import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';
 import PortfolioPageContent from 'components/PortfolioPageContent/PortfolioPageContent';
 import PortfolioCarousel from 'components/PortfolioCarousel/PortfolioCarousel';
 import PortfolioDeviceLineup from 'components/PortfolioDeviceLineup/PortfolioDeviceLineup';
 
-import './PortfolioPage.scss';
+import classes from './PortfolioPage.scss';
 
 class PortfolioPage extends Component {
   componentDidMount() {
@@ -40,7 +44,7 @@ class PortfolioPage extends Component {
 
     return (
       <Page>
-        <div className="pf-page">
+        <div className={classes['portfolio-page']}>
           <PortfolioPageHeader
             bgImage={portfolioItem.headerImgSrc}
             title={portfolioItem.title}
@@ -48,66 +52,56 @@ class PortfolioPage extends Component {
           />
 
           <PortfolioPageContent>
-            <div className="container-fluid">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-sm-10">
+            <Container>
+              <Row justify="center">
+                <Column spanSM={10}>
                   {portfolioItem.supportingImageSrc
                     ? (
-                      <div className="row align-items-lg-center">
-                        <div className="col-12 col-md col-xl-6">
+                      <Row alignLG="middle">
+                        <Column span={12} spanMD="auto" spanXL={6}>
                           <ReactMarkdown source={portfolioItem.description} />
-                        </div>
+                        </Column>
 
-                        <div className="col-12 col-md-6 col-xl-5 push-xl-1">
-                          <hr className="mt-1 hidden-md-up" />
-                          <figure className="mb-0">
-                            <img
-                              src={portfolioItem.supportingImageSrc}
-                              alt=""
-                              className="pf-page__supporting-image w-100"
-                            />
+                        <Column span={12} spanMD={6} spanXL={5} pushXL={1}>
+                          <figure className={classes['portfolio-page__supporting-image']}>
+                            <img src={portfolioItem.supportingImageSrc} alt="" />
                           </figure>
-                        </div>
-                      </div>
+                        </Column>
+                      </Row>
                     )
                     : <ReactMarkdown source={portfolioItem.description} />
                   }
 
-                  <hr />
+                  <hr className={classes['portfolio-page__content-divider']} />
 
-                  <div className="hidden-md-up">
-                    <PortfolioCarousel
-                      desktop={portfolioItem.previews.desktop}
-                      tablet={portfolioItem.previews.tablet}
-                      mobile={portfolioItem.previews.mobile}
-                    />
-                  </div>
+                  <PortfolioCarousel
+                    desktopImage={portfolioItem.previews.desktop}
+                    tabletImage={portfolioItem.previews.tablet}
+                    mobileImage={portfolioItem.previews.mobile}
+                  />
 
-                  <div className="hidden-sm-down">
-                    <PortfolioDeviceLineup
-                      desktop={portfolioItem.previews.desktop}
-                      tablet={portfolioItem.previews.tablet}
-                      mobile={portfolioItem.previews.mobile}
-                    />
-                  </div>
+                  <PortfolioDeviceLineup
+                    desktopImage={portfolioItem.previews.desktop}
+                    tabletImage={portfolioItem.previews.tablet}
+                    mobileImage={portfolioItem.previews.mobile}
+                  />
 
-                  <hr />
+                  <hr className={classes['portfolio-page__content-divider']} />
 
-                  <div className="text-center mt-2 mt-md-4">
-                    <a
-                      href={portfolioItem.url}
-                      className="btn btn-secondary"
-                      target="_blank"
-                      rel="noreferrer noopener"
+                  <div className={classes['portfolio-page__external-link']}>
+                    <Button
+                      to={portfolioItem.url}
+                      external
+                      secondary
                     >
                       Visit
                       {' '}
                       {portfolioItem.title}
-                    </a>
+                    </Button>
                   </div>
-                </div>
-              </div>
-            </div>
+                </Column>
+              </Row>
+            </Container>
           </PortfolioPageContent>
         </div>
       </Page>

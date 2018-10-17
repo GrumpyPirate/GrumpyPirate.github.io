@@ -1,12 +1,11 @@
 @import 'core';
 
-.pf-page-header {
+.portfolio-page-header {
   $header-bg: palette(theme-dark);
   position: relative;
   height: rem(360px);
   background-color: $header-bg;
 
-  // Media
   &__media {
     position: absolute;
     top: 0;
@@ -28,7 +27,7 @@
       display: block;
       background-color: transparentize(desaturate(darken(palette(theme-accent-2), 40%), 40%), .2);
       z-index: 1;
-    } // /&::after
+    }
 
     img {
       position: absolute;
@@ -37,8 +36,8 @@
       transform: rotateZ(-4deg) translateX(-12.5%);
       transform-origin: top left;
       object-fit: cover;
-    } // /img
-  } // /&__media
+    }
+  }
 
   // Title
   &__copy {
@@ -46,7 +45,7 @@
     bottom: 2rem;
     left: 0;
     z-index: 1;
-  } // /&__copy
+  }
 
   &__title {
     display: inline-block;
@@ -56,20 +55,18 @@
     color: palette(theme-accent-2);
     padding: .25rem (map-get($gutter-widths, xs) / 2);
     box-decoration-break: clone;
-    // word-break: break-all;
 
-    // sm up
     @include respond-up(sm) {
         word-break: normal;
-    } // /sm up
+    }
 
-    // md up
     @include respond-up(md) {
       padding: .25rem ($grid-gutter-width-base / 2);
-    } // /md up
-  } // /&__title
+    }
+  }
 
   &__back {
+    @include heading(6);
     position: relative;
     background: palette(theme-accent-1);
     color: palette(theme-accent-2);
@@ -79,32 +76,33 @@
     padding: .25rem (map-get($gutter-widths, xs) / 2);
     z-index: 1;
 
-    // md up
     @include respond-up(md) {
       padding: .25rem ($grid-gutter-width-base / 2);
-    } // /md up
+    }
 
     &:hover,
     &:focus {
       color: palette(theme-light);
-    } // hover state
-  } // /&__back
+    }
+  }
 
   &__tech {
     background: palette(theme-dark);
     color: palette(white);
     padding: 0 (map-get($gutter-widths, xs) / 2);
 
-    // sm up
     @include respond-up(sm) {
       display: inline-flex;
       align-items: baseline;
-    } // /sm up
+    }
 
-    // md up
     @include respond-up(md) {
       padding: 0 ($grid-gutter-width-base / 2);
-    } // /md up
+    }
+
+    &__heading {
+      margin: 0;
+    }
 
     &__list {
       list-style: none;
@@ -116,22 +114,22 @@
         padding-left: 1rem;
         border-left: solid 1px palette(theme-accent-1);
         margin-left: 1rem;
-      } // /sm up
+      }
+    }
 
-      li {
-        display: inline-block;
-        vertical-align: middle;
-        padding: .5rem 0;
+    &__list-item {
+      display: inline-block;
+      vertical-align: middle;
+      padding: .5rem 0;
 
-        &:not(:last-child) {
-          margin-right: 1rem;
-        } // /&:not(:last-child)
-      } // /li
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
 
-      .icon {
+      svg {
         width: rem(64px);
         height: rem(48px);
       }
-    } // /&__list
-  } // /&__tech
-} // /.pf-page-header
+    }
+  }
+}

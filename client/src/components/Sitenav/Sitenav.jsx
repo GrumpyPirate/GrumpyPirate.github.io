@@ -13,7 +13,7 @@ const navItems = [
   },
   {
     key: uniqueId(),
-    to: '/webdev',
+    to: '/portfolio',
     label: 'Portfolio',
   },
 ];
@@ -27,7 +27,7 @@ const Sitenav = ({ onNavLinkClick }) => (
       >
         <NavLink
           to={navItem.to}
-          exact
+          exact={Boolean(navItem.to === '/')}
           className={classes['sitenav__nav-link']}
           activeClassName={classes['sitenav__nav-link--active']}
           onClick={onNavLinkClick}

@@ -1,11 +1,16 @@
 @import 'core';
 
-.pf-carousel {
+$selector: portfolio-carousel;
+
+.#{$selector} {
+  @include respond-up(md) {
+    display: none;
+  }
 
   &__figure {
     position: relative;
+    user-select: none;
 
-    // Figure variants
     &--mobile {
       $aspect: (439 / 222);
       $device-img-width-diff: .8675;
@@ -16,62 +21,59 @@
       $device-frame-width-md: 192;
       $device-frame-width-xl: 192;
 
-      .pf-carousel__device-frame {
+      .#{$selector}__device-frame {
         width: rem($device-frame-width-xs * 1px);
         height: rem($device-frame-width-xs * $aspect * 1px);
-      } // /.pf-carousel__device-frame
+      }
 
-      .pf-carousel__device-img {
+      .#{$selector}__device-img {
         width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
         height: rem($device-frame-width-xs * $aspect * $device-img-height-diff * 1px);
         top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
         right: 0;
         left: 0;
         margin: 0 auto;
-      } // /.pf-carousel__device-img
+      }
 
-      // sm up
       @include respond-up(sm) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-sm * 1px);
           height: rem($device-frame-width-sm * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
           height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /sm up
+        }
+      }
 
-      // md up
       @include respond-up(md) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-md * 1px);
           height: rem($device-frame-width-md * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-md * $device-img-width-diff * 1px);
           height: rem($device-frame-width-md * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-md * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /md up
+        }
+      }
 
-      // xl up
       @include respond-up(xl) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-xl * $device-img-width-diff * 1px);
           height: rem($device-frame-width-xl * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-xl * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /xl up
-    } // /&--mobile
+        }
+      }
+    }
 
     &--tablet {
       $aspect: (477 / 322);
@@ -83,62 +85,59 @@
       $device-frame-width-md: 320;
       $device-frame-width-xl: 320;
 
-      .pf-carousel__device-frame {
+      .#{$selector}__device-frame {
         width: rem($device-frame-width-xs * 1px);
         height: rem($device-frame-width-xs * $aspect * 1px);
-      } // /.pf-carousel__device-frame
+      }
 
-      .pf-carousel__device-img {
+      .#{$selector}__device-img {
         width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
         height: rem($device-frame-width-xs * $aspect * $device-img-height-diff * 1px);
         top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
         right: 0;
         left: 0;
         margin: 0 auto;
-      } // /.pf-carousel__device-img
+      }
 
-      // sm up
       @include respond-up(sm) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-sm * 1px);
           height: rem($device-frame-width-sm * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
           height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /sm up
+        }
+      }
 
-      // md up
       @include respond-up(md) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-md * 1px);
           height: rem($device-frame-width-md * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-md * $device-img-width-diff * 1px);
           height: rem($device-frame-width-md * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-md * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /md up
+        }
+      }
 
-      // xl up
       @include respond-up(xl) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-xl * $device-img-width-diff * 1px);
           height: rem($device-frame-width-xl * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-xl * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /xl up
-    } // /&--tablet
+        }
+      }
+    }
 
     &--desktop {
       $aspect: (291 / 506);
@@ -150,74 +149,69 @@
       $device-frame-width-md: 540;
       $device-frame-width-xl: 640;
 
-      .pf-carousel__device-frame {
+      .#{$selector}__device-frame {
         width: rem($device-frame-width-xs * 1px);
         height: rem($device-frame-width-xs * $aspect * 1px);
-      } // /.pf-carousel__device-frame
+      }
 
-      .pf-carousel__device-img {
+      .#{$selector}__device-img {
         width: rem($device-frame-width-xs * $device-img-width-diff * 1px);
         height: rem($device-frame-width-xs * $aspect * $device-img-height-diff * 1px);
         top: rem($device-frame-width-xs * $device-img-offset-top * 1px);
         right: 0;
         left: 0;
         margin: 0 auto;
-      } // /.pf-carousel__device-img
+      }
 
-      // sm up
       @include respond-up(sm) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-sm * 1px);
           height: rem($device-frame-width-sm * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-sm * $device-img-width-diff * 1px);
           height: rem($device-frame-width-sm * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-sm * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /sm up
+        }
+      }
 
-      // md up
       @include respond-up(md) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-md * 1px);
           height: rem($device-frame-width-md * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-md * $device-img-width-diff * 1px);
           height: rem($device-frame-width-md * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-md * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /md up
+        }
+      }
 
-      // xl up
       @include respond-up(xl) {
-        .pf-carousel__device-frame {
+        .#{$selector}__device-frame {
           width: rem($device-frame-width-xl * 1px);
           height: rem($device-frame-width-xl * $aspect * 1px);
-        } // /.pf-carousel__device-frame
+        }
 
-        .pf-carousel__device-img {
+        .#{$selector}__device-img {
           width: rem($device-frame-width-xl * $device-img-width-diff * 1px);
           height: rem($device-frame-width-xl * $aspect * $device-img-height-diff * 1px);
           top: rem($device-frame-width-xl * $device-img-offset-top * 1px);
-        } // /.pf-carousel__device-frame
-      } // /xl up
-    } // /&--desktop
-  } // /&__figure
+        }
+      }
+    }
+  }
 
-  // Device frames (laptop, tablet, mobile)
   &__device-frame {
     position: relative;
     display: block;
     max-width: 100%;
     margin: auto;
     z-index: 2;
-  } // /&__device-frame
+  }
 
-  // Device images
   &__device-img {
     position: absolute;
     overflow-y: auto;
@@ -227,6 +221,6 @@
       display: block;
       width: 100%;
       height: auto;
-    } // /img
-  } // /&__device-frame
-} // /.pf-carousel
+    }
+  }
+}

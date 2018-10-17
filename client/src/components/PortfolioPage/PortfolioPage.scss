@@ -1,7 +1,31 @@
 @import 'core';
 
-.pf-page {
+.portfolio-page {
   &__supporting-image {
+    margin: 0;
     border-radius: .25rem;
-  } // /&__supporting-image
-} // /.pf-page
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content-divider {
+    border-style: solid none none;
+    border-color: currentColor;
+    border-width: 1px;
+    margin: 2rem 0;
+    opacity: .25;
+  }
+
+  &__external-link {
+    text-align: center;
+    margin-top: 2rem;
+
+    @include respond-up(md) {
+      margin-top: 4rem;
+    }
+  }
+}

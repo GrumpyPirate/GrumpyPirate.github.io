@@ -1,5 +1,30 @@
 @import 'core';
 
+@mixin button-variant($color, $background-color) {
+  background-color: $background-color;
+  border-color: $background-color;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($background-color, 5%);
+    border-color: darken($background-color, 5%);
+  }
+
+  &:active {
+    background-color: $background-color;
+    border-color: $background-color;
+    transform: translateY(1px);
+    transition-duration: 0s, $anim-dur, $anim-dur;
+  }
+}
+
 .button {
   @include button-reset;
   @include no-underline;
@@ -11,7 +36,7 @@
   text-transform: uppercase;
   color: $btn-primary-color;
   background-color: $btn-primary-bg;
-  border: solid 1px $btn-primary-border;
+  border: solid 1px $btn-primary-bg;
   box-shadow: none;
   border-radius: $btn-border-radius;
   padding: $btn-padding-y $btn-padding-x;
@@ -19,22 +44,25 @@
   transition-duration: $anim-dur;
   transition-timing-function: $anim-ease;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $btn-primary-color;
+  &--primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg);
   }
 
-  &:hover,
-  &:focus {
-    background-color: lighten($btn-primary-bg, 5%);
-    border-color: lighten($btn-primary-bg, 5%);
+  &--secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg);
   }
 
-  &:active {
-    background-color: $btn-primary-bg;
-    border-color: $btn-primary-bg;
-    transform: translateY(1px);
-    transition-duration: 0s, $anim-dur, $anim-dur;
+  &:disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: palette(white);
+      background-color: palette(grey-light);
+      border-color: palette(grey-light);
+      pointer-events: none;
+      cursor: not-allowed;
+    }
   }
 }

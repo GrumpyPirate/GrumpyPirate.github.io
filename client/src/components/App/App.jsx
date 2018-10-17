@@ -5,7 +5,7 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 
 import Sidebar from 'containers/Sidebar/Sidebar';
 import Main from 'containers/Main/Main';
-import WebDev from 'containers/WebDev/WebDev';
+import Portfolio from 'containers/Portfolio/Portfolio';
 import PortfolioPage from 'containers/PortfolioPage/PortfolioPage';
 
 import Footer from 'components/Footer/Footer';
@@ -33,15 +33,15 @@ const App = () => (
                   exitActive: classes['app__page-transition--exit--active'],
                   exitDone: classes['app__page-transition--exit--done'],
                 }}
-                timeout={{ exit: 5000, enter: 5000 }}
+                timeout={{ exit: 300, enter: 300 }}
               >
                 <Route
                   location={location}
                   render={() => (
                     <Switch>
                       <Route exact path="/" component={About} />
-                      {/* <Route exact path="/webdev" component={WebDev} /> */}
-                      {/* <Route exact path="/webdev/:slug" component={PortfolioPage} /> */}
+                      <Route exact path="/portfolio" component={Portfolio} />
+                      <Route exact path="/portfolio/:slug" component={PortfolioPage} />
                       <Route exact path="/404" component={HTTPNotFound} />
                       <Route component={HTTPNotFound} />
                     </Switch>

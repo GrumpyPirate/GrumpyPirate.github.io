@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import classes from './PortfolioPageContent.scss';
+
 const PortfolioPageContent = ({ children }) => (
-  <div className="pf-page__content py-2 py-md-4">
-    {children}
-  </div>
+  <div className={classes['portfolio-page-content']}>{children}</div>
 );
 
 PortfolioPageContent.propTypes = {

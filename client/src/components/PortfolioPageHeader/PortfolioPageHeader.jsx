@@ -2,35 +2,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import Heading from 'components/Typography/Heading/Heading';
 import Icon from 'components/Icon/Icon';
 
-import './PortfolioPageHeader.scss';
+import classes from './PortfolioPageHeader.scss';
 
 const PortfolioPageHeader = ({ bgImage, title, tech }) => (
-  <header className="pf-page-header text-left">
-    <figure className="pf-page-header__media">
+  <header className={classes['portfolio-page-header']}>
+    <figure className={classes['portfolio-page-header__media']}>
       <img src={bgImage} alt={title} />
     </figure>
 
-    <div className="pf-page-header__copy">
+    <div className={classes['portfolio-page-header__copy']}>
       <div>
-        <Link to="/webdev" className="pf-page-header__back h6 mb-0">
+        <Link to="/portfolio" className={classes['portfolio-page-header__back']}>
           <Icon glyph="chevron-left" />
           Portfolio
         </Link>
       </div>
 
       <div>
-        <h1 className="pf-page-header__title">{title}</h1>
+        <Heading level={1} text={title} className={classes['portfolio-page-header__title']} />
       </div>
 
-      <div className="pf-page-header__tech">
-        <h2 className="h5 mb-0">Technologies</h2>
+      <div className={classes['portfolio-page-header__tech']}>
+        <Heading
+          level={2}
+          displayLevel={5}
+          text="Technologies"
+          className={classes['portfolio-page-header__tech__heading']}
+        />
 
         {!!tech.length && (
-          <ul className="pf-page-header__tech__list">
+          <ul className={classes['portfolio-page-header__tech__list']}>
             {tech.map(techItem => (
-              <li key={`tech-item__${techItem.name}`}>
+              <li
+                key={`tech-item__${techItem.name}`}
+                className={classes['portfolio-page-header__tech__list-item']}
+              >
                 <Icon glyph={techItem.icon} altText={techItem.name} />
               </li>
             ))}

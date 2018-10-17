@@ -5,6 +5,7 @@ $palette: (
   white: #fff,
   black: #000,
   grey: #666,
+  grey-light: #ccc,
   // Colour Themes
   // Dark Green/Orange
   // theme-dark:     #1d2527,
@@ -145,11 +146,9 @@ $link-active-color: darken($link-hover-color, 15%);
 // Buttons
 $btn-primary-color: map-get($palette, white);
 $btn-primary-bg: map-get($palette, theme-accent-1);
-$btn-primary-border: map-get($palette, theme-accent-1);
 
 $btn-secondary-color: map-get($palette, white);
 $btn-secondary-bg: map-get($palette, theme-accent-2);
-$btn-secondary-border: map-get($palette, theme-accent-2);
 
 $btn-font-size: 1rem;
 $btn-line-height: (22 / 16);

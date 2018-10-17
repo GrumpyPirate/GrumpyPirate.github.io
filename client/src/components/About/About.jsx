@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { uniqueId } from 'lodash-es';
 import classnames from 'classnames';
 
@@ -241,7 +241,7 @@ const About = () => (
 
       <PageHeaderSubtitle>
         <hr className={classes['about__page-header__divider']} />
-        <NavLink to="/webdev">Check out my portfolio</NavLink>.
+        <Link to="/portfolio">Check out my portfolio</Link>.
       </PageHeaderSubtitle>
     </PageHeader>
 
