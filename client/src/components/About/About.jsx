@@ -21,8 +21,8 @@ const sections = [
     title: 'Languages',
     slug: 'languages',
     icons: [
-      { name: 'html5', large: false },
       { name: 'javascript', large: false },
+      { name: 'html5', large: false },
       { name: 'babel', large: false },
       { name: 'sass', large: false },
     ],
@@ -224,24 +224,18 @@ const sections = [
 
 const About = () => (
   <Page>
-    <PageHeader title="Hello" isFullscreen>
+    <PageHeader
+      title="Hello"
+      scrollLabel="Scroll for about"
+      isFullscreen
+    >
       <PageHeaderSubtitle>
-        I'm a Frontend developer from Kent, working in London. I like
-        {' '}
-        <span role="img" aria-label="coffee">☕</span>
-        ,
-        {' '}
-        <span role="img" aria-label="gaming">🎮</span>
-        {' '}
-        and
-        {' '}
-        <span role="img" aria-label="beer">🍺</span>
-        .
+        I'm a Frontend developer from Kent, working in London.
       </PageHeaderSubtitle>
 
       <PageHeaderSubtitle>
         <hr className={classes['about__page-header__divider']} />
-        <Link to="/portfolio">Check out my portfolio</Link>.
+        <Link to="/portfolio">Check out my portfolio</Link>
       </PageHeaderSubtitle>
     </PageHeader>
 

@@ -28,19 +28,19 @@
     @include no-underline;
     @include heading(5);
     @include lasers($direction: out);
+    color: palette('theme-accent-light');
+    font-weight: weight('regular');
     letter-spacing: normal;
     margin-bottom: 0;
     padding-bottom: 0.125em;
 
-    &,
     &:hover,
-    &:focus {
-      color: palette('theme-light');
+    &:focus,
+    &--active {
+      color: palette('white');
     }
 
     &--active {
-      color: palette('white');
-
       &::before,
       &::after {
         transform: scaleX(1);

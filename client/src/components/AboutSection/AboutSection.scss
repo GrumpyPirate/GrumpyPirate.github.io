@@ -5,7 +5,7 @@ $selector: about;
 .#{$selector} {
   &__section {
     $title-icon-size: rem(32px);
-    $section-border-color: mix($body-bg, palette('theme-accent-1'), 75%);
+    $section-border-color: mix($body-bg, palette('theme-accent-light'), 75%);
     margin: 3rem 0;
 
     @include respond-up('md') {

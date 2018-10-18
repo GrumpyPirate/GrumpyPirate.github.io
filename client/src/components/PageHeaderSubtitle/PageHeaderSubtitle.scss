@@ -2,8 +2,8 @@
 
 .page-header-subtitle {
   @include heading(4);
-  @include make-link-colour(palette('theme-accent-1'), $lighten: true);
-  color: mix(palette('theme-light'), palette('theme-dark'), 40%);
+  @include make-link-colour(palette('theme-accent-light'), $lighten: true);
+  color: transparentize(palette('theme-light-shades'), 0.5);
   margin: 0;
   padding-bottom: 1rem;
   text-transform: uppercase;

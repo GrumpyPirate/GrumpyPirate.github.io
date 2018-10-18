@@ -3,8 +3,8 @@
 $selector: sidebar;
 
 .#{$selector} {
-  background-color: palette('theme-accent-1');
-  color: palette('theme-light');
+  background-color: palette('theme-main-brand');
+  color: palette('theme-light-shades');
   left: 0;
   position: fixed;
   right: 0;
@@ -33,7 +33,6 @@ $selector: sidebar;
 
   &__content {
     align-items: center;
-    background-color: palette('theme-accent-1');
     display: flex;
     height: $sidebar-height-mobile;
     justify-content: space-between;
@@ -89,7 +88,7 @@ $selector: sidebar;
     }
 
     &__job-title {
-      color: palette('theme-light');
+      color: palette('theme-light-shades');
       display: block;
       font-size: 0.75em;
       opacity: 0.8;
@@ -102,7 +101,7 @@ $selector: sidebar;
     &,
     &:hover,
     &:focus {
-      color: palette('theme-light');
+      color: palette('theme-light-shades');
     }
 
     &:hover,
@@ -121,7 +120,7 @@ $selector: sidebar;
   }
 
   &__divider {
-    border-color: transparentize(palette('theme-light'), 0.8);
+    border-color: transparentize(palette('theme-light-shades'), 0.8);
     border-style: solid none none;
     border-width: 1px;
     margin: 2rem 0;
@@ -173,7 +172,7 @@ $selector: sidebar;
       &,
       &::before,
       &::after {
-        background-color: palette('theme-light');
+        background-color: palette('theme-light-shades');
         display: block;
         height: $burger-bar-height;
         left: 0;
@@ -205,9 +204,9 @@ $selector: sidebar;
     }
 
     &--mobile {
-      background-color: palette('theme-accent-1');
-      border-bottom: solid $hr-border-width $sidebar-border-color;
-      border-top: solid $hr-border-width transparentize($sidebar-border-color, 0.75);
+      background-color: palette('theme-main-brand');
+      border-bottom: solid $hr-border-width palette('theme-accent-light');
+      border-top: solid $hr-border-width transparentize(palette('theme-accent-light'), 0.75);
       left: 0;
       margin: 0;
       padding: 0.5rem 0;

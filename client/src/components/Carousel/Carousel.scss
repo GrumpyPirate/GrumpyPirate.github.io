@@ -70,7 +70,7 @@
       text-align: center;
 
       .dot {
-        background: palette('theme-accent-1');
+        background: palette('theme-accent-light');
         border-radius: 50%;
         cursor: pointer;
         display: inline-block;
@@ -84,7 +84,7 @@
         &:hover,
         &.selected {
           background-color: transparent;
-          border: solid 1px palette('theme-accent-1');
+          border: solid 1px palette('theme-accent-light');
           transform: scale(2);
         }
 

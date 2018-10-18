@@ -58,8 +58,9 @@ class PageHeader extends PureComponent {
   }
 
   render() {
-    const { title, isFullscreen, children } = this.props;
-
+    const {
+      title, isFullscreen, scrollLabel, children,
+    } = this.props;
     const { height } = this.state;
 
     return (
@@ -88,7 +89,7 @@ class PageHeader extends PureComponent {
             className={classes['page-header__scroll-button']}
             onClick={this.onScrollDownClick}
           >
-            <span className={classes['page-header__scroll-button__label']}>Scroll for more</span>
+            <span className={classes['page-header__scroll-button__label']}>{scrollLabel}</span>
             <span className={classes['page-header__scroll-button__icon']}>
               <Icon glyph="chevron-down" />
             </span>
@@ -102,11 +103,13 @@ class PageHeader extends PureComponent {
 PageHeader.propTypes = {
   title: PropTypes.string.isRequired,
   isFullscreen: PropTypes.bool,
+  scrollLabel: PropTypes.string,
   children: PropTypes.node,
 };
 
 PageHeader.defaultProps = {
   isFullscreen: false,
+  scrollLabel: 'Scroll for more',
   children: null,
 };
 

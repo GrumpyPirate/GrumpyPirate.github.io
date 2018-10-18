@@ -22,23 +22,21 @@ $selector: page-header;
 
 .#{$selector} {
   $page-padding: 3rem;
-  $header-bg: palette('theme-dark');
+  $header-bg: palette('theme-dark-shades');
   background-color: $header-bg;
-  border-bottom: solid rem(6px) palette('theme-accent-2');
+  border-bottom: solid rem(6px) palette('theme-accent-light');
   text-align: center;
   text-transform: uppercase;
 
-  // lg up
   @include respond-up('lg') {
     border-bottom-width: rem(8px);
   }
 
   &__title {
-    color: palette('theme-accent-2');
+    color: palette('theme-accent-light');
     padding: 1rem 0;
     position: relative;
 
-    // md up
     @include respond-up('md') {
       padding-top: 2rem;
     }
@@ -46,7 +44,7 @@ $selector: page-header;
     &__text {
       @include heading(1);
       cursor: default;
-      font-size: 10vmin;
+      font-size: 15vmin;
       font-weight: weight('extralight');
       margin: 0;
       user-select: none;
@@ -66,7 +64,7 @@ $selector: page-header;
     @include no-outline;
     @include heading(5);
     bottom: 0;
-    color: transparentize(palette('theme-light'), 0.6);
+    color: transparentize(palette('theme-light-shades'), 0.5);
     left: 50%;
     margin-bottom: 2rem;
     position: absolute;
@@ -91,7 +89,7 @@ $selector: page-header;
 
     &:hover,
     &:focus {
-      color: palette('theme-light');
+      color: palette('theme-light-shades');
     }
   }
 
