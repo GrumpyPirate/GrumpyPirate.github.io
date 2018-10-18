@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
+const WebappWebpackPlugin = require('webapp-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
@@ -121,23 +120,18 @@ module.exports = {
         toType: 'file',
       },
     ]),
-    new WebpackPwaManifestPlugin({
-      name: 'Edward Cobbold\'s Portfolio',
-      short_name: 'EC Portfolio',
-      description: 'Edward Cobbold\'s personal portfolio/website',
-      background_color: '#2b978a',
-      icons: [{
-        src: path.resolve('client/src/images/favicon-master.png'),
-        sizes: [96, 128, 192, 256, 384, 512],
-      }],
-    }),
-    new FaviconsWebpackPlugin({
+    new WebappWebpackPlugin({
       logo: path.resolve('client/src/images/favicon-master.png'),
-      background: '#2b978a',
-      icons: {
-        android: false,
-        opengraph: true,
-        twitter: true,
+      cache: true,
+      inject: true,
+      favicons: {
+        appName: 'Edward Cobbold',
+        appDescription: 'Edward Cobbold\'s personal website',
+        developerName: 'Edward Cobbold',
+        developerURL: 'https://edwardcobbold.co.uk/',
+        lang: 'en-GB',
+        background: '#2b978a',
+        theme_color: '#354143',
       },
     }),
     new SWPrecacheWebpackPlugin(),
