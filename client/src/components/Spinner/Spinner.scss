@@ -7,15 +7,14 @@
 
 .spinner {
   align-items: center;
-  background-color: palette('theme-main-brand');
+  background-color: palette('theme-dark-shades');
   bottom: 0;
-  color: palette('theme-light-shades');
+  color: palette('theme-accent-light');
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   left: 0;
   opacity: 0;
-  pointer-events: none;
   position: fixed;
   right: 0;
   top: $sidebar-height-mobile;

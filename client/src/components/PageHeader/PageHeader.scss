@@ -44,14 +44,10 @@ $selector: page-header;
     &__text {
       @include heading(1);
       cursor: default;
-      font-size: 15vmin;
+      font-size: 12vmin;
       font-weight: weight('extralight');
       margin: 0;
       user-select: none;
-
-      @include respond-up('lg') {
-        font-size: 10vmin;
-      }
 
       &::first-letter {
         margin-left: $headings-letter-spacing + 0.05em;
