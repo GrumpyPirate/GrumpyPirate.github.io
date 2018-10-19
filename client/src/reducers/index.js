@@ -1,11 +1,13 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import portfolio from './portfolio/portfolio'
-import ui from './ui/ui'
+import ui from './ui/ui';
+import about from './about/about';
+import portfolio from './portfolio/portfolio';
 
 const rootReducer = combineReducers({
+  ui,
+  about,
   portfolio,
-  ui
-})
+});
 
-export default rootReducer
+export default rootReducer;

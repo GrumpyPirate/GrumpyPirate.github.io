@@ -6,7 +6,8 @@ import { closeMobileNavigation } from 'actions/ui/ui';
 import Main from 'components/Main/Main';
 
 const mapStateToProps = state => ({
-  isLoading: state.portfolio.isFetching,
+  isLoading: state.about.isFetching || state.portfolio.isFetching,
+  isMobileNavigationOpen: state.ui.isMobileNavigationOpen,
 });
 
 const mapDispatchToProps = { closeMobileNavigation };

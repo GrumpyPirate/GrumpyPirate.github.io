@@ -12,8 +12,11 @@ import classes from './Portfolio.scss';
 
 class Portfolio extends PureComponent {
   componentDidMount() {
-    const { requestPortfolioItems } = this.props;
-    requestPortfolioItems();
+    const { portfolioItems, requestPortfolioItems } = this.props;
+
+    if (!portfolioItems.length) {
+      requestPortfolioItems();
+    }
   }
 
   render() {

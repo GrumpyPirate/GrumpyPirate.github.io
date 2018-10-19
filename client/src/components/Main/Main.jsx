@@ -16,16 +16,18 @@ class Main extends PureComponent {
 
   componentDidUpdate(prevProps) {
     const { location: { pathname: prevPathname } } = prevProps;
-    const { location: { pathname }, closeMobileNavigation } = this.props;
+    const { location: { pathname }, closeMobileNavigation, isMobileNavigationOpen } = this.props;
     const scrollOptions = {
       top: 0,
       behavior: prevPathname !== pathname ? 'instant' : 'smooth',
     };
 
+    if ((prevPathname !== pathname) && isMobileNavigationOpen) {
+      closeMobileNavigation();
+    }
+
     window.scrollTo(scrollOptions);
     this.mainElement.current.scrollTo(scrollOptions);
-
-    closeMobileNavigation();
   }
 
   render() {
@@ -51,6 +53,7 @@ class Main extends PureComponent {
 
 Main.propTypes = {
   isLoading: PropTypes.bool,
+  isMobileNavigationOpen: PropTypes.bool.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,

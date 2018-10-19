@@ -29,21 +29,25 @@ import 'images/icons/development/airplay.svg';
 // import 'images/icons/development/js/express.svg';
 // import 'images/icons/development/js/nodejs.svg';
 import 'images/icons/development/js/redux.svg';
+import 'images/icons/development/js/reactivex.svg';
 
 import 'images/icons/development/devtool/webpack.svg';
 import 'images/icons/development/devtool/gulp.svg';
 import 'images/icons/development/devtool/grunt.svg';
 
+import 'images/icons/development/css/styled-components.svg';
 import 'images/icons/development/css/sass.svg';
 // import 'images/icons/development/css/less.svg';
 import 'images/icons/development/css/bootstrap.svg';
 import 'images/icons/development/css/foundation.svg';
 import 'images/icons/development/css/bulma.svg';
+import 'images/icons/development/css/postcss.svg';
 
 import 'images/icons/development/html5.svg';
 import 'images/icons/development/django.svg';
 import 'images/icons/development/laravel.svg';
 
+import 'images/icons/design/invision.svg';
 import 'images/icons/design/photoshop.svg';
 import 'images/icons/design/illustrator.svg';
 import 'images/icons/design/sketch.svg';
@@ -52,10 +56,8 @@ import 'images/icons/design/image.svg';
 // Utils
 import 'images/icons/loader.svg';
 
-const Icon = ({
-  glyph, className, width, height, altText,
-}) => (
-  <svg className={className} width={width} height={height} aria-label={altText}>
+const Icon = ({ glyph, className, altText }) => (
+  <svg className={className} aria-label={altText}>
     <use xlinkHref={`#${glyph}`} />
   </svg>
 );
@@ -63,15 +65,11 @@ const Icon = ({
 Icon.propTypes = {
   glyph: PropTypes.string.isRequired,
   className: PropTypes.string,
-  width: PropTypes.number,
-  height: PropTypes.number,
   altText: PropTypes.string,
 };
 
 Icon.defaultProps = {
   className: classes['icon'],
-  width: 48,
-  height: 48,
   altText: '',
 };
 

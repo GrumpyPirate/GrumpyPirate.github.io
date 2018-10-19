@@ -114,9 +114,12 @@ PortfolioPage.propTypes = {
     description: PropTypes.string.isRequired,
     headerImgSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    tech: PropTypes.arrayOf(PropTypes.shape({
-
-    })).isRequired,
+    tech: PropTypes.arrayOf(
+      PropTypes.shape({
+        icon: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
     supportingImageSrc: PropTypes.string,
     url: PropTypes.string.isRequired,
     previews: PropTypes.shape({

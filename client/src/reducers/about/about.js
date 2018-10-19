@@ -1,11 +1,11 @@
 import {
-  PORTFOLIO_ITEMS_LOAD,
-  PORTFOLIO_ITEMS_RECEIVE,
-  PORTFOLIO_ITEMS_REQUEST_FAILED,
-} from 'actions/portfolio/portfolio';
+  ABOUT_SECTIONS_LOAD,
+  ABOUT_SECTIONS_RECEIVE,
+  ABOUT_SECTIONS_REQUEST_FAILED,
+} from 'actions/about/about';
 
 const defaultState = {
-  portfolioItems: [],
+  aboutSections: [],
   isFetching: false,
   hasFetched: false,
   fetchCount: 0,
@@ -13,24 +13,24 @@ const defaultState = {
   errorCount: 0,
 };
 
-const portfolioReducer = (state = defaultState, action) => {
+const aboutReducer = (state = defaultState, action) => {
   const { type } = action;
 
   switch (type) {
-    case PORTFOLIO_ITEMS_LOAD:
+    case ABOUT_SECTIONS_LOAD:
       return {
         ...state,
         isFetching: true,
       };
-    case PORTFOLIO_ITEMS_RECEIVE:
+    case ABOUT_SECTIONS_RECEIVE:
       return {
         ...state,
-        portfolioItems: action.portfolioItems,
+        aboutSections: action.aboutSections,
         isFetching: false,
         hasFetched: true,
         fetchCount: state.fetchCount + 1,
       };
-    case PORTFOLIO_ITEMS_REQUEST_FAILED:
+    case ABOUT_SECTIONS_REQUEST_FAILED:
       return {
         ...state,
         isFetching: false,
@@ -43,5 +43,7 @@ const portfolioReducer = (state = defaultState, action) => {
       return state;
   }
 };
-export default portfolioReducer;
+
+export default aboutReducer;
+
 export { defaultState };

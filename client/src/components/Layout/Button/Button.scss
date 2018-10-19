@@ -36,7 +36,7 @@
   display: inline-block;
   font-family: $body-font-family;
   font-size: $btn-font-size;
-  font-weight: weight('regular');
+  font-weight: $btn-font-weight;
   line-height: (rem(22px) / $btn-font-size);
   padding: $btn-padding-y $btn-padding-x;
   text-transform: uppercase;

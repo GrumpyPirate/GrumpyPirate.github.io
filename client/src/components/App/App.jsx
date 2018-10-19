@@ -11,7 +11,7 @@ import Portfolio from 'containers/Portfolio/Portfolio';
 import PortfolioPage from 'containers/PortfolioPage/PortfolioPage';
 
 import Footer from 'components/Footer/Footer';
-import About from 'components/About/About';
+import About from 'containers/About/About';
 import HTTPNotFound from 'components/404/404';
 
 import classes from './App.scss';
@@ -36,6 +36,7 @@ const App = () => (
                   exitDone: classes['app__page-transition--exit--done'],
                 }}
                 timeout={{ exit: animation.duration * 2, enter: animation.duration * 2 }}
+                mountOnEnter
               >
                 <Route
                   location={location}
