@@ -6,9 +6,9 @@ import PortfolioCarousel from './PortfolioCarousel';
 describe('<PortfolioCarousel />', () => {
   it('renders without crashing', () => {
     const props = {
-      desktop: <div>Test1</div>,
-      tablet: <div>Test2</div>,
-      mobile: <div>Test3</div>,
+      desktopImage: 'https://coexertion.com/hernant/antepretonic?a=porker&b=patriarch#keratonosus',
+      tabletImage: 'https://echites.com/womanless/unaccusably?a=wodgy&b=interdispensation#stauter',
+      mobileImage: 'https://firmer.com/akee/rubbler?a=pyrogenation&b=solidarism#uncharily',
     };
 
     shallow(<PortfolioCarousel {...props} />);

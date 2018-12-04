@@ -6,9 +6,9 @@ import PortfolioDeviceLineup from './PortfolioDeviceLineup';
 describe('<PortfolioDeviceLineup />', () => {
   it('renders without crashing', () => {
     const props = {
-      desktop: <div>Test1</div>,
-      tablet: <div>Test2</div>,
-      mobile: <div>Test3</div>,
+      desktopImage: 'https://maggotpie.com/powdering/remove?a=ambit&b=antihypochondriac#unreliability',
+      tabletImage: 'https://milleporous.com/meningomyelorrhaphy/unsettling?a=talao&b=guaranian#virgater',
+      mobileImage: 'https://cockateel.com/patronizable/sapiutan?a=coxarthropathy&b=prodisplay#choes',
     };
 
     shallow(<PortfolioDeviceLineup {...props} />);

@@ -1,0 +1,745 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About /> should render as epected, without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <About
+    aboutSections={Array []}
+    aboutSectionsRequest={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    hasFetched={false}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <PageHeader
+          isFullscreen={true}
+          scrollLabel="Scroll for about"
+          title="Hello"
+        >
+          <PageHeaderSubtitle>
+            I'm a Frontend developer from Kent, working in London.
+          </PageHeaderSubtitle>
+          <PageHeaderSubtitle>
+            <hr
+              className="about__page-header__divider"
+            />
+            <Link
+              replace={false}
+              to="/portfolio"
+            >
+              Check out my portfolio
+            </Link>
+          </PageHeaderSubtitle>
+        </PageHeader>,
+        <PageContent>
+          <section
+            className="about__page-content"
+          >
+            <Container>
+              <Row
+                align={null}
+                alignLG={null}
+                alignMD={null}
+                alignSM={null}
+                alignXL={null}
+                justify="center"
+                justifyLG={null}
+                justifyMD={null}
+                justifySM={null}
+                justifyXL={null}
+              >
+                <Column
+                  pull={null}
+                  pullLG={null}
+                  pullMD={null}
+                  pullSM={null}
+                  pullXL={null}
+                  push={null}
+                  pushLG={null}
+                  pushMD={null}
+                  pushSM={null}
+                  pushXL={null}
+                  span={null}
+                  spanLG={12}
+                  spanMD={null}
+                  spanSM={10}
+                  spanXL={10}
+                />
+              </Row>
+            </Container>
+          </section>
+        </PageContent>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <PageHeaderSubtitle>
+              I'm a Frontend developer from Kent, working in London.
+            </PageHeaderSubtitle>,
+            <PageHeaderSubtitle>
+              <hr
+                className="about__page-header__divider"
+              />
+              <Link
+                replace={false}
+                to="/portfolio"
+              >
+                Check out my portfolio
+              </Link>
+            </PageHeaderSubtitle>,
+          ],
+          "isFullscreen": true,
+          "scrollLabel": "Scroll for about",
+          "title": "Hello",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "I'm a Frontend developer from Kent, working in London.",
+            },
+            "ref": null,
+            "rendered": "I'm a Frontend developer from Kent, working in London.",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <hr
+                  className="about__page-header__divider"
+                />,
+                <Link
+                  replace={false}
+                  to="/portfolio"
+                >
+                  Check out my portfolio
+                </Link>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "about__page-header__divider",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "hr",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Check out my portfolio",
+                  "replace": false,
+                  "to": "/portfolio",
+                },
+                "ref": null,
+                "rendered": "Check out my portfolio",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <section
+            className="about__page-content"
+          >
+            <Container>
+              <Row
+                align={null}
+                alignLG={null}
+                alignMD={null}
+                alignSM={null}
+                alignXL={null}
+                justify="center"
+                justifyLG={null}
+                justifyMD={null}
+                justifySM={null}
+                justifyXL={null}
+              >
+                <Column
+                  pull={null}
+                  pullLG={null}
+                  pullMD={null}
+                  pullSM={null}
+                  pullXL={null}
+                  push={null}
+                  pushLG={null}
+                  pushMD={null}
+                  pushSM={null}
+                  pushXL={null}
+                  span={null}
+                  spanLG={12}
+                  spanMD={null}
+                  spanSM={10}
+                  spanXL={10}
+                />
+              </Row>
+            </Container>
+          </section>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Container>
+              <Row
+                align={null}
+                alignLG={null}
+                alignMD={null}
+                alignSM={null}
+                alignXL={null}
+                justify="center"
+                justifyLG={null}
+                justifyMD={null}
+                justifySM={null}
+                justifyXL={null}
+              >
+                <Column
+                  pull={null}
+                  pullLG={null}
+                  pullMD={null}
+                  pullSM={null}
+                  pullXL={null}
+                  push={null}
+                  pushLG={null}
+                  pushMD={null}
+                  pushSM={null}
+                  pushXL={null}
+                  span={null}
+                  spanLG={12}
+                  spanMD={null}
+                  spanSM={10}
+                  spanXL={10}
+                />
+              </Row>
+            </Container>,
+            "className": "about__page-content",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Row
+                align={null}
+                alignLG={null}
+                alignMD={null}
+                alignSM={null}
+                alignXL={null}
+                justify="center"
+                justifyLG={null}
+                justifyMD={null}
+                justifySM={null}
+                justifyXL={null}
+              >
+                <Column
+                  pull={null}
+                  pullLG={null}
+                  pullMD={null}
+                  pullSM={null}
+                  pullXL={null}
+                  push={null}
+                  pushLG={null}
+                  pushMD={null}
+                  pushSM={null}
+                  pushXL={null}
+                  span={null}
+                  spanLG={12}
+                  spanMD={null}
+                  spanSM={10}
+                  spanXL={10}
+                />
+              </Row>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "align": null,
+                "alignLG": null,
+                "alignMD": null,
+                "alignSM": null,
+                "alignXL": null,
+                "children": <Column
+                  pull={null}
+                  pullLG={null}
+                  pullMD={null}
+                  pullSM={null}
+                  pullXL={null}
+                  push={null}
+                  pushLG={null}
+                  pushMD={null}
+                  pushSM={null}
+                  pushXL={null}
+                  span={null}
+                  spanLG={12}
+                  spanMD={null}
+                  spanSM={10}
+                  spanXL={10}
+                />,
+                "justify": "center",
+                "justifyLG": null,
+                "justifyMD": null,
+                "justifySM": null,
+                "justifyXL": null,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [],
+                  "pull": null,
+                  "pullLG": null,
+                  "pullMD": null,
+                  "pullSM": null,
+                  "pullXL": null,
+                  "push": null,
+                  "pushLG": null,
+                  "pushMD": null,
+                  "pushSM": null,
+                  "pushXL": null,
+                  "span": null,
+                  "spanLG": 12,
+                  "spanMD": null,
+                  "spanSM": 10,
+                  "spanXL": 10,
+                },
+                "ref": null,
+                "rendered": Array [],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": "section",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <PageHeader
+            isFullscreen={true}
+            scrollLabel="Scroll for about"
+            title="Hello"
+          >
+            <PageHeaderSubtitle>
+              I'm a Frontend developer from Kent, working in London.
+            </PageHeaderSubtitle>
+            <PageHeaderSubtitle>
+              <hr
+                className="about__page-header__divider"
+              />
+              <Link
+                replace={false}
+                to="/portfolio"
+              >
+                Check out my portfolio
+              </Link>
+            </PageHeaderSubtitle>
+          </PageHeader>,
+          <PageContent>
+            <section
+              className="about__page-content"
+            >
+              <Container>
+                <Row
+                  align={null}
+                  alignLG={null}
+                  alignMD={null}
+                  alignSM={null}
+                  alignXL={null}
+                  justify="center"
+                  justifyLG={null}
+                  justifyMD={null}
+                  justifySM={null}
+                  justifyXL={null}
+                >
+                  <Column
+                    pull={null}
+                    pullLG={null}
+                    pullMD={null}
+                    pullSM={null}
+                    pullXL={null}
+                    push={null}
+                    pushLG={null}
+                    pushMD={null}
+                    pushSM={null}
+                    pushXL={null}
+                    span={null}
+                    spanLG={12}
+                    spanMD={null}
+                    spanSM={10}
+                    spanXL={10}
+                  />
+                </Row>
+              </Container>
+            </section>
+          </PageContent>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <PageHeaderSubtitle>
+                I'm a Frontend developer from Kent, working in London.
+              </PageHeaderSubtitle>,
+              <PageHeaderSubtitle>
+                <hr
+                  className="about__page-header__divider"
+                />
+                <Link
+                  replace={false}
+                  to="/portfolio"
+                >
+                  Check out my portfolio
+                </Link>
+              </PageHeaderSubtitle>,
+            ],
+            "isFullscreen": true,
+            "scrollLabel": "Scroll for about",
+            "title": "Hello",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "I'm a Frontend developer from Kent, working in London.",
+              },
+              "ref": null,
+              "rendered": "I'm a Frontend developer from Kent, working in London.",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <hr
+                    className="about__page-header__divider"
+                  />,
+                  <Link
+                    replace={false}
+                    to="/portfolio"
+                  >
+                    Check out my portfolio
+                  </Link>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "about__page-header__divider",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "hr",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Check out my portfolio",
+                    "replace": false,
+                    "to": "/portfolio",
+                  },
+                  "ref": null,
+                  "rendered": "Check out my portfolio",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <section
+              className="about__page-content"
+            >
+              <Container>
+                <Row
+                  align={null}
+                  alignLG={null}
+                  alignMD={null}
+                  alignSM={null}
+                  alignXL={null}
+                  justify="center"
+                  justifyLG={null}
+                  justifyMD={null}
+                  justifySM={null}
+                  justifyXL={null}
+                >
+                  <Column
+                    pull={null}
+                    pullLG={null}
+                    pullMD={null}
+                    pullSM={null}
+                    pullXL={null}
+                    push={null}
+                    pushLG={null}
+                    pushMD={null}
+                    pushSM={null}
+                    pushXL={null}
+                    span={null}
+                    spanLG={12}
+                    spanMD={null}
+                    spanSM={10}
+                    spanXL={10}
+                  />
+                </Row>
+              </Container>
+            </section>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Container>
+                <Row
+                  align={null}
+                  alignLG={null}
+                  alignMD={null}
+                  alignSM={null}
+                  alignXL={null}
+                  justify="center"
+                  justifyLG={null}
+                  justifyMD={null}
+                  justifySM={null}
+                  justifyXL={null}
+                >
+                  <Column
+                    pull={null}
+                    pullLG={null}
+                    pullMD={null}
+                    pullSM={null}
+                    pullXL={null}
+                    push={null}
+                    pushLG={null}
+                    pushMD={null}
+                    pushSM={null}
+                    pushXL={null}
+                    span={null}
+                    spanLG={12}
+                    spanMD={null}
+                    spanSM={10}
+                    spanXL={10}
+                  />
+                </Row>
+              </Container>,
+              "className": "about__page-content",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Row
+                  align={null}
+                  alignLG={null}
+                  alignMD={null}
+                  alignSM={null}
+                  alignXL={null}
+                  justify="center"
+                  justifyLG={null}
+                  justifyMD={null}
+                  justifySM={null}
+                  justifyXL={null}
+                >
+                  <Column
+                    pull={null}
+                    pullLG={null}
+                    pullMD={null}
+                    pullSM={null}
+                    pullXL={null}
+                    push={null}
+                    pushLG={null}
+                    pushMD={null}
+                    pushSM={null}
+                    pushXL={null}
+                    span={null}
+                    spanLG={12}
+                    spanMD={null}
+                    spanSM={10}
+                    spanXL={10}
+                  />
+                </Row>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "align": null,
+                  "alignLG": null,
+                  "alignMD": null,
+                  "alignSM": null,
+                  "alignXL": null,
+                  "children": <Column
+                    pull={null}
+                    pullLG={null}
+                    pullMD={null}
+                    pullSM={null}
+                    pullXL={null}
+                    push={null}
+                    pushLG={null}
+                    pushMD={null}
+                    pushSM={null}
+                    pushXL={null}
+                    span={null}
+                    spanLG={12}
+                    spanMD={null}
+                    spanSM={10}
+                    spanXL={10}
+                  />,
+                  "justify": "center",
+                  "justifyLG": null,
+                  "justifyMD": null,
+                  "justifySM": null,
+                  "justifyXL": null,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [],
+                    "pull": null,
+                    "pullLG": null,
+                    "pullMD": null,
+                    "pullSM": null,
+                    "pullXL": null,
+                    "push": null,
+                    "pushLG": null,
+                    "pushMD": null,
+                    "pushSM": null,
+                    "pushXL": null,
+                    "span": null,
+                    "spanLG": 12,
+                    "spanMD": null,
+                    "spanSM": 10,
+                    "spanXL": 10,
+                  },
+                  "ref": null,
+                  "rendered": Array [],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": "section",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

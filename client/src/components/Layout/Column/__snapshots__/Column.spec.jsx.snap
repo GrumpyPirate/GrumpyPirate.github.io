@@ -2,12 +2,21 @@
 
 exports[`<Column /> should render as expected, without crashing 1`] = `
 <Column
+  pull={null}
+  pullLG={null}
+  pullMD={null}
+  pullSM={null}
+  pullXL={null}
+  push={null}
+  pushLG={null}
+  pushMD={null}
+  pushSM={null}
+  pushXL={null}
   span={null}
   spanLG={null}
   spanMD={null}
   spanSM={null}
   spanXL={null}
-  spanXS={null}
 >
   <div>
     Test children

@@ -163,14 +163,14 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.jsx?$": "babel-jest",
-    "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/jest.fileTransformer.js"
+    '^.+\\.(js|jsx)$': 'babel-jest',
+    '^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/jest.fileTransformer.js',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  transformIgnorePatterns: [
+    '<rootDir>/node_modules/(?!lodash-es)',
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,

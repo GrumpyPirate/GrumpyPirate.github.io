@@ -19,10 +19,10 @@ const aboutSectionsRequestFailed = error => ({
   error,
 });
 
-const aboutSectionsRequest = () => (dispatch) => {
+const aboutSectionsRequest = () => (dispatch, store, service = contentService) => {
   dispatch(aboutSectionsLoad());
 
-  return contentService.getAboutSections()
+  return service.getAboutSections()
     .then(sections => dispatch(aboutSectionsReceive(sections)))
     .catch(error => dispatch(aboutSectionsRequestFailed(error)));
 };
