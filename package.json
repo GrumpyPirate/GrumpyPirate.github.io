@@ -2,8 +2,8 @@
   "name": "ecobbold-portfolio-2017",
   "version": "2.1.1",
   "engines": {
-    "node": "8.x",
-    "npm": "5.x"
+    "node": "^10.0.0",
+    "npm": "^6.0.0"
   },
   "description": "Personal portfolio website of Edward Cobbold, a Frontend Web Developer",
   "main": "server.js",
