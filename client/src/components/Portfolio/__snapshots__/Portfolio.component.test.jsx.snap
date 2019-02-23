@@ -1,0 +1,1744 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Portfolio should render as expected, without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Portfolio
+    portfolioItems={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.",
+          "descriptionShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+          "headerImgSrc": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+          "id": "93fffc74-34a4-49da-a995-eed94dfdc9bc",
+          "previews": Object {
+            "desktop": "http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia",
+            "mobile": "https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander",
+            "tablet": "https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow",
+          },
+          "slug": "scrupulum-misphrase",
+          "supportingImageSrc": "http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse",
+          "tech": Array [
+            Object {
+              "icon": "Glycolaldehyde",
+              "name": "youngling",
+            },
+          ],
+          "title": "Scrupulum Misphrase",
+          "url": "https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform",
+        },
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.",
+          "descriptionShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+          "headerImgSrc": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+          "id": "ecd3cfe6-c880-4c7e-a15c-f13e27cf5c69",
+          "previews": Object {
+            "desktop": "http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia",
+            "mobile": "https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander",
+            "tablet": "https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow",
+          },
+          "slug": "scrupulum-misphrase",
+          "supportingImageSrc": "http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse",
+          "tech": Array [
+            Object {
+              "icon": "Glycolaldehyde",
+              "name": "youngling",
+            },
+          ],
+          "title": "Scrupulum Misphrase",
+          "url": "https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform",
+        },
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.",
+          "descriptionShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+          "headerImgSrc": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+          "id": "09d58d40-16f9-451c-adec-04cfc9d5655d",
+          "previews": Object {
+            "desktop": "http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia",
+            "mobile": "https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander",
+            "tablet": "https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow",
+          },
+          "slug": "scrupulum-misphrase",
+          "supportingImageSrc": "http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse",
+          "tech": Array [
+            Object {
+              "icon": "Glycolaldehyde",
+              "name": "youngling",
+            },
+          ],
+          "title": "Scrupulum Misphrase",
+          "url": "https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform",
+        },
+      ]
+    }
+    requestPortfolioItems={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <PageHeader
+          isFullscreen={false}
+          scrollLabel="Scroll for more"
+          title="Portfolio"
+        >
+          <PageHeaderSubtitle>
+            Projects I've worked on
+          </PageHeaderSubtitle>
+        </PageHeader>,
+        <section
+          className="portfolio"
+        >
+          <Container>
+            <div
+              className="portfolio__list"
+              role="list"
+            >
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </Container>
+        </section>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <PageHeaderSubtitle>
+            Projects I've worked on
+          </PageHeaderSubtitle>,
+          "isFullscreen": false,
+          "scrollLabel": "Scroll for more",
+          "title": "Portfolio",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Projects I've worked on",
+          },
+          "ref": null,
+          "rendered": "Projects I've worked on",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Container>
+            <div
+              className="portfolio__list"
+              role="list"
+            >
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </Container>,
+          "className": "portfolio",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div
+              className="portfolio__list"
+              role="list"
+            >
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                className="portfolio__list-item"
+                replace={false}
+                role="listitem"
+                to="/portfolio/scrupulum-misphrase"
+              >
+                <figure
+                  className="portfolio__list-item__media"
+                >
+                  <img
+                    alt=""
+                    src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                  />
+                </figure>
+                <div
+                  className="portfolio__list-item__copy"
+                >
+                  <Heading
+                    className={null}
+                    displayLevel={5}
+                    level={3}
+                    text="Scrupulum Misphrase"
+                  />
+                  <p
+                    className="portfolio__list-item__desc"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                  </p>
+                </div>
+              </Link>
+            </div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>,
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>,
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>,
+              ],
+              "className": "portfolio__list",
+              "role": "list",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "portfolio__list-item--scrupulum-misphrase--93fffc74-34a4-49da-a995-eed94dfdc9bc",
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <figure
+                      className="portfolio__list-item__media"
+                    >
+                      <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />
+                    </figure>,
+                    <div
+                      className="portfolio__list-item__copy"
+                    >
+                      <Heading
+                        className={null}
+                        displayLevel={5}
+                        level={3}
+                        text="Scrupulum Misphrase"
+                      />
+                      <p
+                        className="portfolio__list-item__desc"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                      </p>
+                    </div>,
+                  ],
+                  "className": "portfolio__list-item",
+                  "replace": false,
+                  "role": "listitem",
+                  "to": "/portfolio/scrupulum-misphrase",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />,
+                      "className": "portfolio__list-item__media",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "",
+                        "src": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "figure",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Heading
+                          className={null}
+                          displayLevel={5}
+                          level={3}
+                          text="Scrupulum Misphrase"
+                        />,
+                        <p
+                          className="portfolio__list-item__desc"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                        </p>,
+                      ],
+                      "className": "portfolio__list-item__copy",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "className": null,
+                          "displayLevel": 5,
+                          "level": 3,
+                          "text": "Scrupulum Misphrase",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                          "className": "portfolio__list-item__desc",
+                        },
+                        "ref": null,
+                        "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "portfolio__list-item--scrupulum-misphrase--ecd3cfe6-c880-4c7e-a15c-f13e27cf5c69",
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <figure
+                      className="portfolio__list-item__media"
+                    >
+                      <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />
+                    </figure>,
+                    <div
+                      className="portfolio__list-item__copy"
+                    >
+                      <Heading
+                        className={null}
+                        displayLevel={5}
+                        level={3}
+                        text="Scrupulum Misphrase"
+                      />
+                      <p
+                        className="portfolio__list-item__desc"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                      </p>
+                    </div>,
+                  ],
+                  "className": "portfolio__list-item",
+                  "replace": false,
+                  "role": "listitem",
+                  "to": "/portfolio/scrupulum-misphrase",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />,
+                      "className": "portfolio__list-item__media",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "",
+                        "src": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "figure",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Heading
+                          className={null}
+                          displayLevel={5}
+                          level={3}
+                          text="Scrupulum Misphrase"
+                        />,
+                        <p
+                          className="portfolio__list-item__desc"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                        </p>,
+                      ],
+                      "className": "portfolio__list-item__copy",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "className": null,
+                          "displayLevel": 5,
+                          "level": 3,
+                          "text": "Scrupulum Misphrase",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                          "className": "portfolio__list-item__desc",
+                        },
+                        "ref": null,
+                        "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "portfolio__list-item--scrupulum-misphrase--09d58d40-16f9-451c-adec-04cfc9d5655d",
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <figure
+                      className="portfolio__list-item__media"
+                    >
+                      <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />
+                    </figure>,
+                    <div
+                      className="portfolio__list-item__copy"
+                    >
+                      <Heading
+                        className={null}
+                        displayLevel={5}
+                        level={3}
+                        text="Scrupulum Misphrase"
+                      />
+                      <p
+                        className="portfolio__list-item__desc"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                      </p>
+                    </div>,
+                  ],
+                  "className": "portfolio__list-item",
+                  "replace": false,
+                  "role": "listitem",
+                  "to": "/portfolio/scrupulum-misphrase",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />,
+                      "className": "portfolio__list-item__media",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "",
+                        "src": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "figure",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Heading
+                          className={null}
+                          displayLevel={5}
+                          level={3}
+                          text="Scrupulum Misphrase"
+                        />,
+                        <p
+                          className="portfolio__list-item__desc"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                        </p>,
+                      ],
+                      "className": "portfolio__list-item__copy",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "className": null,
+                          "displayLevel": 5,
+                          "level": 3,
+                          "text": "Scrupulum Misphrase",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                          "className": "portfolio__list-item__desc",
+                        },
+                        "ref": null,
+                        "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        "type": "section",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <PageHeader
+            isFullscreen={false}
+            scrollLabel="Scroll for more"
+            title="Portfolio"
+          >
+            <PageHeaderSubtitle>
+              Projects I've worked on
+            </PageHeaderSubtitle>
+          </PageHeader>,
+          <section
+            className="portfolio"
+          >
+            <Container>
+              <div
+                className="portfolio__list"
+                role="list"
+              >
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </Container>
+          </section>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <PageHeaderSubtitle>
+              Projects I've worked on
+            </PageHeaderSubtitle>,
+            "isFullscreen": false,
+            "scrollLabel": "Scroll for more",
+            "title": "Portfolio",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Projects I've worked on",
+            },
+            "ref": null,
+            "rendered": "Projects I've worked on",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Container>
+              <div
+                className="portfolio__list"
+                role="list"
+              >
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </Container>,
+            "className": "portfolio",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <div
+                className="portfolio__list"
+                role="list"
+              >
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  className="portfolio__list-item"
+                  replace={false}
+                  role="listitem"
+                  to="/portfolio/scrupulum-misphrase"
+                >
+                  <figure
+                    className="portfolio__list-item__media"
+                  >
+                    <img
+                      alt=""
+                      src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                    />
+                  </figure>
+                  <div
+                    className="portfolio__list-item__copy"
+                  >
+                    <Heading
+                      className={null}
+                      displayLevel={5}
+                      level={3}
+                      text="Scrupulum Misphrase"
+                    />
+                    <p
+                      className="portfolio__list-item__desc"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                    </p>
+                  </div>
+                </Link>
+              </div>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Link
+                    className="portfolio__list-item"
+                    replace={false}
+                    role="listitem"
+                    to="/portfolio/scrupulum-misphrase"
+                  >
+                    <figure
+                      className="portfolio__list-item__media"
+                    >
+                      <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />
+                    </figure>
+                    <div
+                      className="portfolio__list-item__copy"
+                    >
+                      <Heading
+                        className={null}
+                        displayLevel={5}
+                        level={3}
+                        text="Scrupulum Misphrase"
+                      />
+                      <p
+                        className="portfolio__list-item__desc"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                      </p>
+                    </div>
+                  </Link>,
+                  <Link
+                    className="portfolio__list-item"
+                    replace={false}
+                    role="listitem"
+                    to="/portfolio/scrupulum-misphrase"
+                  >
+                    <figure
+                      className="portfolio__list-item__media"
+                    >
+                      <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />
+                    </figure>
+                    <div
+                      className="portfolio__list-item__copy"
+                    >
+                      <Heading
+                        className={null}
+                        displayLevel={5}
+                        level={3}
+                        text="Scrupulum Misphrase"
+                      />
+                      <p
+                        className="portfolio__list-item__desc"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                      </p>
+                    </div>
+                  </Link>,
+                  <Link
+                    className="portfolio__list-item"
+                    replace={false}
+                    role="listitem"
+                    to="/portfolio/scrupulum-misphrase"
+                  >
+                    <figure
+                      className="portfolio__list-item__media"
+                    >
+                      <img
+                        alt=""
+                        src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                      />
+                    </figure>
+                    <div
+                      className="portfolio__list-item__copy"
+                    >
+                      <Heading
+                        className={null}
+                        displayLevel={5}
+                        level={3}
+                        text="Scrupulum Misphrase"
+                      />
+                      <p
+                        className="portfolio__list-item__desc"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                      </p>
+                    </div>
+                  </Link>,
+                ],
+                "className": "portfolio__list",
+                "role": "list",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "portfolio__list-item--scrupulum-misphrase--93fffc74-34a4-49da-a995-eed94dfdc9bc",
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <figure
+                        className="portfolio__list-item__media"
+                      >
+                        <img
+                          alt=""
+                          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                        />
+                      </figure>,
+                      <div
+                        className="portfolio__list-item__copy"
+                      >
+                        <Heading
+                          className={null}
+                          displayLevel={5}
+                          level={3}
+                          text="Scrupulum Misphrase"
+                        />
+                        <p
+                          className="portfolio__list-item__desc"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                        </p>
+                      </div>,
+                    ],
+                    "className": "portfolio__list-item",
+                    "replace": false,
+                    "role": "listitem",
+                    "to": "/portfolio/scrupulum-misphrase",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <img
+                          alt=""
+                          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                        />,
+                        "className": "portfolio__list-item__media",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "",
+                          "src": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      "type": "figure",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Heading
+                            className={null}
+                            displayLevel={5}
+                            level={3}
+                            text="Scrupulum Misphrase"
+                          />,
+                          <p
+                            className="portfolio__list-item__desc"
+                          >
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                          </p>,
+                        ],
+                        "className": "portfolio__list-item__copy",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "className": null,
+                            "displayLevel": 5,
+                            "level": 3,
+                            "text": "Scrupulum Misphrase",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                            "className": "portfolio__list-item__desc",
+                          },
+                          "ref": null,
+                          "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "portfolio__list-item--scrupulum-misphrase--ecd3cfe6-c880-4c7e-a15c-f13e27cf5c69",
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <figure
+                        className="portfolio__list-item__media"
+                      >
+                        <img
+                          alt=""
+                          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                        />
+                      </figure>,
+                      <div
+                        className="portfolio__list-item__copy"
+                      >
+                        <Heading
+                          className={null}
+                          displayLevel={5}
+                          level={3}
+                          text="Scrupulum Misphrase"
+                        />
+                        <p
+                          className="portfolio__list-item__desc"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                        </p>
+                      </div>,
+                    ],
+                    "className": "portfolio__list-item",
+                    "replace": false,
+                    "role": "listitem",
+                    "to": "/portfolio/scrupulum-misphrase",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <img
+                          alt=""
+                          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                        />,
+                        "className": "portfolio__list-item__media",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "",
+                          "src": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      "type": "figure",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Heading
+                            className={null}
+                            displayLevel={5}
+                            level={3}
+                            text="Scrupulum Misphrase"
+                          />,
+                          <p
+                            className="portfolio__list-item__desc"
+                          >
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                          </p>,
+                        ],
+                        "className": "portfolio__list-item__copy",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "className": null,
+                            "displayLevel": 5,
+                            "level": 3,
+                            "text": "Scrupulum Misphrase",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                            "className": "portfolio__list-item__desc",
+                          },
+                          "ref": null,
+                          "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "portfolio__list-item--scrupulum-misphrase--09d58d40-16f9-451c-adec-04cfc9d5655d",
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <figure
+                        className="portfolio__list-item__media"
+                      >
+                        <img
+                          alt=""
+                          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                        />
+                      </figure>,
+                      <div
+                        className="portfolio__list-item__copy"
+                      >
+                        <Heading
+                          className={null}
+                          displayLevel={5}
+                          level={3}
+                          text="Scrupulum Misphrase"
+                        />
+                        <p
+                          className="portfolio__list-item__desc"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                        </p>
+                      </div>,
+                    ],
+                    "className": "portfolio__list-item",
+                    "replace": false,
+                    "role": "listitem",
+                    "to": "/portfolio/scrupulum-misphrase",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <img
+                          alt=""
+                          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                        />,
+                        "className": "portfolio__list-item__media",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "",
+                          "src": "https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      "type": "figure",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Heading
+                            className={null}
+                            displayLevel={5}
+                            level={3}
+                            text="Scrupulum Misphrase"
+                          />,
+                          <p
+                            className="portfolio__list-item__desc"
+                          >
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+                          </p>,
+                        ],
+                        "className": "portfolio__list-item__copy",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "className": null,
+                            "displayLevel": 5,
+                            "level": 3,
+                            "text": "Scrupulum Misphrase",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                            "className": "portfolio__list-item__desc",
+                          },
+                          "ref": null,
+                          "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          "type": "section",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

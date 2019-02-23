@@ -1,0 +1,728 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioPageHeader should render as expected, without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PortfolioPageHeader
+    bgImage="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+    tech={
+      Array [
+        Object {
+          "icon": "guttulate-brokenheartedly",
+          "name": "Ex ullam",
+        },
+      ]
+    }
+    title="Alias rem cumque laudantium"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <figure
+          className="portfolio-page-header__media"
+        >
+          <img
+            alt="Alias rem cumque laudantium"
+            src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+          />
+        </figure>,
+        <div
+          className="portfolio-page-header__copy"
+        >
+          <div>
+            <Link
+              className="portfolio-page-header__back"
+              replace={false}
+              to="/portfolio"
+            >
+              <Icon
+                altText=""
+                className="icon"
+                glyph="chevron-left"
+              />
+              Portfolio
+            </Link>
+          </div>
+          <div>
+            <Heading
+              className="portfolio-page-header__title"
+              displayLevel={null}
+              level={1}
+              text="Alias rem cumque laudantium"
+            />
+          </div>
+          <div
+            className="portfolio-page-header__tech"
+          >
+            <Heading
+              className="portfolio-page-header__tech__heading"
+              displayLevel={5}
+              level={2}
+              text="Technologies"
+            />
+            <ul
+              className="portfolio-page-header__tech__list"
+            >
+              <li
+                className="portfolio-page-header__tech__list-item"
+              >
+                <Icon
+                  altText="Ex ullam"
+                  className="icon"
+                  glyph="guttulate-brokenheartedly"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>,
+      ],
+      "className": "portfolio-page-header",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            alt="Alias rem cumque laudantium"
+            src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+          />,
+          "className": "portfolio-page-header__media",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Alias rem cumque laudantium",
+            "src": "https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "figure",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div>
+              <Link
+                className="portfolio-page-header__back"
+                replace={false}
+                to="/portfolio"
+              >
+                <Icon
+                  altText=""
+                  className="icon"
+                  glyph="chevron-left"
+                />
+                Portfolio
+              </Link>
+            </div>,
+            <div>
+              <Heading
+                className="portfolio-page-header__title"
+                displayLevel={null}
+                level={1}
+                text="Alias rem cumque laudantium"
+              />
+            </div>,
+            <div
+              className="portfolio-page-header__tech"
+            >
+              <Heading
+                className="portfolio-page-header__tech__heading"
+                displayLevel={5}
+                level={2}
+                text="Technologies"
+              />
+              <ul
+                className="portfolio-page-header__tech__list"
+              >
+                <li
+                  className="portfolio-page-header__tech__list-item"
+                >
+                  <Icon
+                    altText="Ex ullam"
+                    className="icon"
+                    glyph="guttulate-brokenheartedly"
+                  />
+                </li>
+              </ul>
+            </div>,
+          ],
+          "className": "portfolio-page-header__copy",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                className="portfolio-page-header__back"
+                replace={false}
+                to="/portfolio"
+              >
+                <Icon
+                  altText=""
+                  className="icon"
+                  glyph="chevron-left"
+                />
+                Portfolio
+              </Link>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Icon
+                    altText=""
+                    className="icon"
+                    glyph="chevron-left"
+                  />,
+                  "Portfolio",
+                ],
+                "className": "portfolio-page-header__back",
+                "replace": false,
+                "to": "/portfolio",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "altText": "",
+                    "className": "icon",
+                    "glyph": "chevron-left",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "Portfolio",
+              ],
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Heading
+                className="portfolio-page-header__title"
+                displayLevel={null}
+                level={1}
+                text="Alias rem cumque laudantium"
+              />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "portfolio-page-header__title",
+                "displayLevel": null,
+                "level": 1,
+                "text": "Alias rem cumque laudantium",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Heading
+                  className="portfolio-page-header__tech__heading"
+                  displayLevel={5}
+                  level={2}
+                  text="Technologies"
+                />,
+                <ul
+                  className="portfolio-page-header__tech__list"
+                >
+                  <li
+                    className="portfolio-page-header__tech__list-item"
+                  >
+                    <Icon
+                      altText="Ex ullam"
+                      className="icon"
+                      glyph="guttulate-brokenheartedly"
+                    />
+                  </li>
+                </ul>,
+              ],
+              "className": "portfolio-page-header__tech",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "portfolio-page-header__tech__heading",
+                  "displayLevel": 5,
+                  "level": 2,
+                  "text": "Technologies",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li
+                      className="portfolio-page-header__tech__list-item"
+                    >
+                      <Icon
+                        altText="Ex ullam"
+                        className="icon"
+                        glyph="guttulate-brokenheartedly"
+                      />
+                    </li>,
+                  ],
+                  "className": "portfolio-page-header__tech__list",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "tech-item__Ex ullam",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Icon
+                        altText="Ex ullam"
+                        className="icon"
+                        glyph="guttulate-brokenheartedly"
+                      />,
+                      "className": "portfolio-page-header__tech__list-item",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "altText": "Ex ullam",
+                        "className": "icon",
+                        "glyph": "guttulate-brokenheartedly",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <figure
+            className="portfolio-page-header__media"
+          >
+            <img
+              alt="Alias rem cumque laudantium"
+              src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+            />
+          </figure>,
+          <div
+            className="portfolio-page-header__copy"
+          >
+            <div>
+              <Link
+                className="portfolio-page-header__back"
+                replace={false}
+                to="/portfolio"
+              >
+                <Icon
+                  altText=""
+                  className="icon"
+                  glyph="chevron-left"
+                />
+                Portfolio
+              </Link>
+            </div>
+            <div>
+              <Heading
+                className="portfolio-page-header__title"
+                displayLevel={null}
+                level={1}
+                text="Alias rem cumque laudantium"
+              />
+            </div>
+            <div
+              className="portfolio-page-header__tech"
+            >
+              <Heading
+                className="portfolio-page-header__tech__heading"
+                displayLevel={5}
+                level={2}
+                text="Technologies"
+              />
+              <ul
+                className="portfolio-page-header__tech__list"
+              >
+                <li
+                  className="portfolio-page-header__tech__list-item"
+                >
+                  <Icon
+                    altText="Ex ullam"
+                    className="icon"
+                    glyph="guttulate-brokenheartedly"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>,
+        ],
+        "className": "portfolio-page-header",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              alt="Alias rem cumque laudantium"
+              src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+            />,
+            "className": "portfolio-page-header__media",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Alias rem cumque laudantium",
+              "src": "https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "figure",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <Link
+                  className="portfolio-page-header__back"
+                  replace={false}
+                  to="/portfolio"
+                >
+                  <Icon
+                    altText=""
+                    className="icon"
+                    glyph="chevron-left"
+                  />
+                  Portfolio
+                </Link>
+              </div>,
+              <div>
+                <Heading
+                  className="portfolio-page-header__title"
+                  displayLevel={null}
+                  level={1}
+                  text="Alias rem cumque laudantium"
+                />
+              </div>,
+              <div
+                className="portfolio-page-header__tech"
+              >
+                <Heading
+                  className="portfolio-page-header__tech__heading"
+                  displayLevel={5}
+                  level={2}
+                  text="Technologies"
+                />
+                <ul
+                  className="portfolio-page-header__tech__list"
+                >
+                  <li
+                    className="portfolio-page-header__tech__list-item"
+                  >
+                    <Icon
+                      altText="Ex ullam"
+                      className="icon"
+                      glyph="guttulate-brokenheartedly"
+                    />
+                  </li>
+                </ul>
+              </div>,
+            ],
+            "className": "portfolio-page-header__copy",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  className="portfolio-page-header__back"
+                  replace={false}
+                  to="/portfolio"
+                >
+                  <Icon
+                    altText=""
+                    className="icon"
+                    glyph="chevron-left"
+                  />
+                  Portfolio
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Icon
+                      altText=""
+                      className="icon"
+                      glyph="chevron-left"
+                    />,
+                    "Portfolio",
+                  ],
+                  "className": "portfolio-page-header__back",
+                  "replace": false,
+                  "to": "/portfolio",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "altText": "",
+                      "className": "icon",
+                      "glyph": "chevron-left",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "Portfolio",
+                ],
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Heading
+                  className="portfolio-page-header__title"
+                  displayLevel={null}
+                  level={1}
+                  text="Alias rem cumque laudantium"
+                />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "portfolio-page-header__title",
+                  "displayLevel": null,
+                  "level": 1,
+                  "text": "Alias rem cumque laudantium",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Heading
+                    className="portfolio-page-header__tech__heading"
+                    displayLevel={5}
+                    level={2}
+                    text="Technologies"
+                  />,
+                  <ul
+                    className="portfolio-page-header__tech__list"
+                  >
+                    <li
+                      className="portfolio-page-header__tech__list-item"
+                    >
+                      <Icon
+                        altText="Ex ullam"
+                        className="icon"
+                        glyph="guttulate-brokenheartedly"
+                      />
+                    </li>
+                  </ul>,
+                ],
+                "className": "portfolio-page-header__tech",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "portfolio-page-header__tech__heading",
+                    "displayLevel": 5,
+                    "level": 2,
+                    "text": "Technologies",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li
+                        className="portfolio-page-header__tech__list-item"
+                      >
+                        <Icon
+                          altText="Ex ullam"
+                          className="icon"
+                          glyph="guttulate-brokenheartedly"
+                        />
+                      </li>,
+                    ],
+                    "className": "portfolio-page-header__tech__list",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": "tech-item__Ex ullam",
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <Icon
+                          altText="Ex ullam"
+                          className="icon"
+                          glyph="guttulate-brokenheartedly"
+                        />,
+                        "className": "portfolio-page-header__tech__list-item",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "altText": "Ex ullam",
+                          "className": "icon",
+                          "glyph": "guttulate-brokenheartedly",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

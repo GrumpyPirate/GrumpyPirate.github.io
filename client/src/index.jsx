@@ -5,8 +5,8 @@ import './polyfills';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Store from 'components/Store/Store';
-import App from 'components/App/App';
+import Store from 'components/Store/Store.component';
+import App from 'components/App/App.component';
 
 import 'sanitize.css';
 import './sass/global.scss';

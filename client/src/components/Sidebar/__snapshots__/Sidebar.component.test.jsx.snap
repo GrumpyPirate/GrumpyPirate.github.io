@@ -1,0 +1,822 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Sidebar should render as expected, without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Sidebar
+    isMobileNavigationOpen={false}
+    toggleMobileNavigation={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Container>
+          <div
+            className="sidebar__content"
+          >
+            <Link
+              className="sidebar__brand"
+              replace={false}
+              to="/"
+            >
+              <figure
+                alt=""
+                className="sidebar__brand__image"
+                height="52"
+                width="52"
+              />
+              <span
+                className="sidebar__brand__name"
+              >
+                Edward Cobbold
+              </span>
+            </Link>
+            <span
+              className="sidebar__brand__job-title"
+            >
+              Frontend Developer
+            </span>
+            <hr
+              className="sidebar__divider"
+            />
+            <div
+              className="sidebar__btn-sitenav-container"
+            >
+              <button
+                aria-expanded={false}
+                className="sidebar__btn-sitenav"
+                onClick={[MockFunction]}
+                type="button"
+              >
+                <span
+                  className="burger-bar"
+                />
+                <ScreenreaderOnlyText
+                  text="Toggle menu"
+                />
+              </button>
+            </div>
+            <div
+              className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+            >
+              <withRouter(Connect(Sitenav)) />
+            </div>
+          </div>
+        </Container>,
+        <menu
+          className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--mobile sidebar__sitenav-wrapper--mobile--is--closed"
+        >
+          <Container>
+            <withRouter(Connect(Sitenav)) />
+          </Container>
+        </menu>,
+      ],
+      "className": "sidebar",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <div
+            className="sidebar__content"
+          >
+            <Link
+              className="sidebar__brand"
+              replace={false}
+              to="/"
+            >
+              <figure
+                alt=""
+                className="sidebar__brand__image"
+                height="52"
+                width="52"
+              />
+              <span
+                className="sidebar__brand__name"
+              >
+                Edward Cobbold
+              </span>
+            </Link>
+            <span
+              className="sidebar__brand__job-title"
+            >
+              Frontend Developer
+            </span>
+            <hr
+              className="sidebar__divider"
+            />
+            <div
+              className="sidebar__btn-sitenav-container"
+            >
+              <button
+                aria-expanded={false}
+                className="sidebar__btn-sitenav"
+                onClick={[MockFunction]}
+                type="button"
+              >
+                <span
+                  className="burger-bar"
+                />
+                <ScreenreaderOnlyText
+                  text="Toggle menu"
+                />
+              </button>
+            </div>
+            <div
+              className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+            >
+              <withRouter(Connect(Sitenav)) />
+            </div>
+          </div>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                className="sidebar__brand"
+                replace={false}
+                to="/"
+              >
+                <figure
+                  alt=""
+                  className="sidebar__brand__image"
+                  height="52"
+                  width="52"
+                />
+                <span
+                  className="sidebar__brand__name"
+                >
+                  Edward Cobbold
+                </span>
+              </Link>,
+              <span
+                className="sidebar__brand__job-title"
+              >
+                Frontend Developer
+              </span>,
+              <hr
+                className="sidebar__divider"
+              />,
+              <div
+                className="sidebar__btn-sitenav-container"
+              >
+                <button
+                  aria-expanded={false}
+                  className="sidebar__btn-sitenav"
+                  onClick={[MockFunction]}
+                  type="button"
+                >
+                  <span
+                    className="burger-bar"
+                  />
+                  <ScreenreaderOnlyText
+                    text="Toggle menu"
+                  />
+                </button>
+              </div>,
+              <div
+                className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+              >
+                <withRouter(Connect(Sitenav)) />
+              </div>,
+            ],
+            "className": "sidebar__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <figure
+                    alt=""
+                    className="sidebar__brand__image"
+                    height="52"
+                    width="52"
+                  />,
+                  <span
+                    className="sidebar__brand__name"
+                  >
+                    Edward Cobbold
+                  </span>,
+                ],
+                "className": "sidebar__brand",
+                "replace": false,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "",
+                    "className": "sidebar__brand__image",
+                    "height": "52",
+                    "width": "52",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "figure",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Edward Cobbold",
+                    "className": "sidebar__brand__name",
+                  },
+                  "ref": null,
+                  "rendered": "Edward Cobbold",
+                  "type": "span",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Frontend Developer",
+                "className": "sidebar__brand__job-title",
+              },
+              "ref": null,
+              "rendered": "Frontend Developer",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "sidebar__divider",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <button
+                  aria-expanded={false}
+                  className="sidebar__btn-sitenav"
+                  onClick={[MockFunction]}
+                  type="button"
+                >
+                  <span
+                    className="burger-bar"
+                  />
+                  <ScreenreaderOnlyText
+                    text="Toggle menu"
+                  />
+                </button>,
+                "className": "sidebar__btn-sitenav-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-expanded": false,
+                  "children": Array [
+                    <span
+                      className="burger-bar"
+                    />,
+                    <ScreenreaderOnlyText
+                      text="Toggle menu"
+                    />,
+                  ],
+                  "className": "sidebar__btn-sitenav",
+                  "onClick": [MockFunction],
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "burger-bar",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "text": "Toggle menu",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "button",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <withRouter(Connect(Sitenav)) />,
+                "className": "sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Container>
+            <withRouter(Connect(Sitenav)) />
+          </Container>,
+          "className": "sidebar__sitenav-wrapper sidebar__sitenav-wrapper--mobile sidebar__sitenav-wrapper--mobile--is--closed",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <withRouter(Connect(Sitenav)) />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": "menu",
+      },
+    ],
+    "type": "aside",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Container>
+            <div
+              className="sidebar__content"
+            >
+              <Link
+                className="sidebar__brand"
+                replace={false}
+                to="/"
+              >
+                <figure
+                  alt=""
+                  className="sidebar__brand__image"
+                  height="52"
+                  width="52"
+                />
+                <span
+                  className="sidebar__brand__name"
+                >
+                  Edward Cobbold
+                </span>
+              </Link>
+              <span
+                className="sidebar__brand__job-title"
+              >
+                Frontend Developer
+              </span>
+              <hr
+                className="sidebar__divider"
+              />
+              <div
+                className="sidebar__btn-sitenav-container"
+              >
+                <button
+                  aria-expanded={false}
+                  className="sidebar__btn-sitenav"
+                  onClick={[MockFunction]}
+                  type="button"
+                >
+                  <span
+                    className="burger-bar"
+                  />
+                  <ScreenreaderOnlyText
+                    text="Toggle menu"
+                  />
+                </button>
+              </div>
+              <div
+                className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+              >
+                <withRouter(Connect(Sitenav)) />
+              </div>
+            </div>
+          </Container>,
+          <menu
+            className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--mobile sidebar__sitenav-wrapper--mobile--is--closed"
+          >
+            <Container>
+              <withRouter(Connect(Sitenav)) />
+            </Container>
+          </menu>,
+        ],
+        "className": "sidebar",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div
+              className="sidebar__content"
+            >
+              <Link
+                className="sidebar__brand"
+                replace={false}
+                to="/"
+              >
+                <figure
+                  alt=""
+                  className="sidebar__brand__image"
+                  height="52"
+                  width="52"
+                />
+                <span
+                  className="sidebar__brand__name"
+                >
+                  Edward Cobbold
+                </span>
+              </Link>
+              <span
+                className="sidebar__brand__job-title"
+              >
+                Frontend Developer
+              </span>
+              <hr
+                className="sidebar__divider"
+              />
+              <div
+                className="sidebar__btn-sitenav-container"
+              >
+                <button
+                  aria-expanded={false}
+                  className="sidebar__btn-sitenav"
+                  onClick={[MockFunction]}
+                  type="button"
+                >
+                  <span
+                    className="burger-bar"
+                  />
+                  <ScreenreaderOnlyText
+                    text="Toggle menu"
+                  />
+                </button>
+              </div>
+              <div
+                className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+              >
+                <withRouter(Connect(Sitenav)) />
+              </div>
+            </div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Link
+                  className="sidebar__brand"
+                  replace={false}
+                  to="/"
+                >
+                  <figure
+                    alt=""
+                    className="sidebar__brand__image"
+                    height="52"
+                    width="52"
+                  />
+                  <span
+                    className="sidebar__brand__name"
+                  >
+                    Edward Cobbold
+                  </span>
+                </Link>,
+                <span
+                  className="sidebar__brand__job-title"
+                >
+                  Frontend Developer
+                </span>,
+                <hr
+                  className="sidebar__divider"
+                />,
+                <div
+                  className="sidebar__btn-sitenav-container"
+                >
+                  <button
+                    aria-expanded={false}
+                    className="sidebar__btn-sitenav"
+                    onClick={[MockFunction]}
+                    type="button"
+                  >
+                    <span
+                      className="burger-bar"
+                    />
+                    <ScreenreaderOnlyText
+                      text="Toggle menu"
+                    />
+                  </button>
+                </div>,
+                <div
+                  className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+                >
+                  <withRouter(Connect(Sitenav)) />
+                </div>,
+              ],
+              "className": "sidebar__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <figure
+                      alt=""
+                      className="sidebar__brand__image"
+                      height="52"
+                      width="52"
+                    />,
+                    <span
+                      className="sidebar__brand__name"
+                    >
+                      Edward Cobbold
+                    </span>,
+                  ],
+                  "className": "sidebar__brand",
+                  "replace": false,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "",
+                      "className": "sidebar__brand__image",
+                      "height": "52",
+                      "width": "52",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "figure",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Edward Cobbold",
+                      "className": "sidebar__brand__name",
+                    },
+                    "ref": null,
+                    "rendered": "Edward Cobbold",
+                    "type": "span",
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Frontend Developer",
+                  "className": "sidebar__brand__job-title",
+                },
+                "ref": null,
+                "rendered": "Frontend Developer",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "sidebar__divider",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "hr",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <button
+                    aria-expanded={false}
+                    className="sidebar__btn-sitenav"
+                    onClick={[MockFunction]}
+                    type="button"
+                  >
+                    <span
+                      className="burger-bar"
+                    />
+                    <ScreenreaderOnlyText
+                      text="Toggle menu"
+                    />
+                  </button>,
+                  "className": "sidebar__btn-sitenav-container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-expanded": false,
+                    "children": Array [
+                      <span
+                        className="burger-bar"
+                      />,
+                      <ScreenreaderOnlyText
+                        text="Toggle menu"
+                      />,
+                    ],
+                    "className": "sidebar__btn-sitenav",
+                    "onClick": [MockFunction],
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "burger-bar",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "text": "Toggle menu",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "button",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <withRouter(Connect(Sitenav)) />,
+                  "className": "sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Container>
+              <withRouter(Connect(Sitenav)) />
+            </Container>,
+            "className": "sidebar__sitenav-wrapper sidebar__sitenav-wrapper--mobile sidebar__sitenav-wrapper--mobile--is--closed",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <withRouter(Connect(Sitenav)) />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": "menu",
+        },
+      ],
+      "type": "aside",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
