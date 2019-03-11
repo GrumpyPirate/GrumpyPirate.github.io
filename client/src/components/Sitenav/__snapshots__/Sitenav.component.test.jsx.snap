@@ -1,3 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components Sitenav should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components Sitenav should render as expected, without crashing 1`] = `
+<ul
+  className="sitenav"
+  role="navigation"
+>
+  <li
+    className="sitenav__nav-item"
+    key="sitenav__nav-item__1"
+  >
+    <NavLink
+      activeClassName="sitenav__nav-link--active"
+      aria-current="page"
+      className="sitenav__nav-link"
+      exact={true}
+      onClick={[MockFunction]}
+      to="/"
+    >
+      About
+    </NavLink>
+  </li>
+  <li
+    className="sitenav__nav-item"
+    key="sitenav__nav-item__2"
+  >
+    <NavLink
+      activeClassName="sitenav__nav-link--active"
+      aria-current="page"
+      className="sitenav__nav-link"
+      exact={false}
+      onClick={[MockFunction]}
+      to="/portfolio"
+    >
+      Portfolio
+    </NavLink>
+  </li>
+</ul>
+`;

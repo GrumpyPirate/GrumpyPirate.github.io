@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components Heading should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components Heading should render as expected, without crashing 1`] = `
+<h5
+  className="heading heading--level-5"
+>
+  Facilis dicta totam assumenda
+</h5>
+`;

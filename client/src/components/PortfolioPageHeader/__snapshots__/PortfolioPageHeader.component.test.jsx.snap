@@ -1,3 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components PortfolioPageHeader should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components PortfolioPageHeader should render as expected, without crashing 1`] = `
+<header
+  className="portfolio-page-header"
+>
+  <figure
+    className="portfolio-page-header__media"
+  >
+    <img
+      alt="Alias rem cumque laudantium"
+      src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+    />
+  </figure>
+  <div
+    className="portfolio-page-header__copy"
+  >
+    <div>
+      <Link
+        className="portfolio-page-header__back"
+        replace={false}
+        to="/portfolio"
+      >
+        <Icon
+          altText=""
+          className="icon"
+          glyph="chevron-left"
+        />
+        Portfolio
+      </Link>
+    </div>
+    <div>
+      <Heading
+        className="portfolio-page-header__title"
+        displayLevel={null}
+        level={1}
+        text="Alias rem cumque laudantium"
+      />
+    </div>
+    <div
+      className="portfolio-page-header__tech"
+    >
+      <Heading
+        className="portfolio-page-header__tech__heading"
+        displayLevel={5}
+        level={2}
+        text="Technologies"
+      />
+      <ul
+        className="portfolio-page-header__tech__list"
+      >
+        <li
+          className="portfolio-page-header__tech__list-item"
+          key="tech-item__Ex ullam"
+        >
+          <Icon
+            altText="Ex ullam"
+            className="icon"
+            glyph="guttulate-brokenheartedly"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+`;

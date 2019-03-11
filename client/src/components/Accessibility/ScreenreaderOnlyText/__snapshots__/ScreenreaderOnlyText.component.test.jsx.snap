@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components ScreenreaderOnlyText should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components ScreenreaderOnlyText should render as expected, without crashing 1`] = `
+<span
+  className="screenreader-only"
+>
+  Nobis doloribus quidem
+</span>
+`;

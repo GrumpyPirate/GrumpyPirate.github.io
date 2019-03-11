@@ -1,3 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components Carousel should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components Carousel should render as expected, without crashing 1`] = `
+<Carousel
+  autoPlay={false}
+  axis="horizontal"
+  centerMode={false}
+  centerSlidePercentage={80}
+  dynamicHeight={false}
+  emulateTouch={false}
+  infiniteLoop={false}
+  interval={3000}
+  onChange={[Function]}
+  onClickItem={[Function]}
+  onClickThumb={[Function]}
+  selectedItem={0}
+  showArrows={true}
+  showIndicators={true}
+  showStatus={true}
+  showThumbs={true}
+  statusFormatter={[Function]}
+  stopOnHover={true}
+  swipeScrollTolerance={5}
+  swipeable={true}
+  transitionTime={350}
+  useKeyboardArrows={false}
+  verticalSwipe="standard"
+  width="100%"
+>
+  <div>
+    Test
+  </div>
+</Carousel>
+`;

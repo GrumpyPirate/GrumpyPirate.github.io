@@ -1,3 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components Footer should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components Footer should render as expected, without crashing 1`] = `
+<footer
+  className="footer"
+>
+  <Container>
+    <p
+      className="footer__tech"
+    >
+      Made with 
+      <a
+        className="footer__link footer__link--icon"
+        href="https://facebook.github.io/react/"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="React"
+      >
+        <Icon
+          altText="React"
+          className="icon"
+          glyph="react"
+        />
+      </a>
+      , 
+      <a
+        className="footer__link footer__link--icon"
+        href="https://webpack.js.org/"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Webpack"
+      >
+        <Icon
+          altText="Webpack"
+          className="icon"
+          glyph="webpack"
+        />
+      </a>
+       and 
+      <a
+        className="footer__link footer__link--icon"
+        href="https://www.contentful.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Contentful"
+      >
+        <Icon
+          altText="Contentful"
+          className="icon"
+          glyph="contentful"
+        />
+      </a>
+      .
+       
+      <a
+        className="footer__link"
+        href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        Source code
+      </a>
+      .
+    </p>
+    <p
+      className="footer__copyright"
+    >
+      ©
+       
+      <span
+        className="footer__copyright__date"
+      >
+        2017
+        —
+        2019
+      </span>
+       
+      Edward Cobbold.
+    </p>
+  </Container>
+</footer>
+`;

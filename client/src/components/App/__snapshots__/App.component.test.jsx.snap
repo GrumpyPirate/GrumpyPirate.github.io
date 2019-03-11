@@ -1,3 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components App should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components App should render as expected, without crashing 1`] = `
+<BrowserRouter
+  basename="/"
+>
+  <div
+    className="app"
+  >
+    <withRouter(Connect(Sidebar)) />
+    <withRouter(Connect(Main))
+      renderLocation={[Function]}
+    >
+      <Footer />
+    </withRouter(Connect(Main))>
+  </div>
+</BrowserRouter>
+`;

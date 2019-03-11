@@ -1,3 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components Row should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components Row should render as expected, without crashing 1`] = `
+<div
+  className="row"
+>
+  <Column
+    pull={null}
+    pullLG={null}
+    pullMD={null}
+    pullSM={null}
+    pullXL={null}
+    push={null}
+    pushLG={null}
+    pushMD={null}
+    pushSM={null}
+    pushXL={null}
+    span={null}
+    spanLG={null}
+    spanMD={null}
+    spanSM={null}
+    spanXL={null}
+  >
+    <div>
+      Test
+    </div>
+  </Column>
+</div>
+`;

@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components Main should render as expected, without crashing 1`] = `ShallowWrapper {}`;
+exports[`Components Main should render as expected, without crashing 1`] = `
+<main
+  className="main"
+  id="main-content"
+>
+  <Connect(Spinner) />
+  <div>
+    Test
+  </div>
+</main>
+`;
