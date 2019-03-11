@@ -109,7 +109,7 @@ module.exports = {
     new EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV,
     }),
-    new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'client/src/index.html',
     }),
