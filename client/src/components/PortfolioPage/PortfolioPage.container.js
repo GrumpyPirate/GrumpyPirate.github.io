@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import { requestPortfolioItems } from 'actions/portfolio/portfolio';
 
@@ -18,13 +17,5 @@ const PortfolioPageContainer = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
 )(PortfolioPage));
-
-PortfolioPageContainer.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      slug: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default PortfolioPageContainer;

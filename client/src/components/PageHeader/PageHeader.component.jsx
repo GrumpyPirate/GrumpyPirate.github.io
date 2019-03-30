@@ -1,4 +1,4 @@
-import React, { PureComponent, createRef } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { debounce } from 'lodash-es';
@@ -14,35 +14,18 @@ const getFullscreenHeight = () => {
   return window.innerWidth < 992 ? `calc(${windowHeight - 50}px)` : `${windowHeight}px`;
 };
 
-class PageHeader extends PureComponent {
-  constructor(props) {
-    super(props);
+const PageHeader = ({
+  children, isFullscreen, scrollLabel, title,
+}) => {
+  const [height, setHeight] = useState(getFullscreenHeight());
+  const elementRef = createRef();
 
-    this.state = {
-      height: getFullscreenHeight(),
-    };
+  const onResize = debounce(() => {
+    setHeight(getFullscreenHeight());
+  }, 300);
 
-    this.elementRef = createRef();
-
-    this.onResize = debounce(this.onResize.bind(this), 300);
-    this.onScrollDownClick = this.onScrollDownClick.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.onResize);
-    this.onResize();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
-  }
-
-  onResize() {
-    this.setState({ height: getFullscreenHeight() });
-  }
-
-  onScrollDownClick() {
-    const headerElement = this.elementRef.current;
+  const onScrollDownClick = () => {
+    const headerElement = elementRef.current;
     const elementHeight = headerElement.offsetHeight;
     const scrollOptions = {
       top: elementHeight,
@@ -55,56 +38,58 @@ class PageHeader extends PureComponent {
     if ('scrollTo' in scrollContainer) {
       return scrollContainer.scrollTo(scrollOptions);
     }
-  }
+  };
 
-  render() {
-    const {
-      title, isFullscreen, scrollLabel, children,
-    } = this.props;
-    const { height } = this.state;
+  useEffect(() => {
+    window.addEventListener('resize', onResize);
+    onResize();
 
-    return (
-      <header
-        className={classnames(
-          classes['page-header'], {
-            [classes['page-header--is-fullscreen']]: isFullscreen,
-          },
-        )}
-        style={{ height: isFullscreen && height }}
-        ref={this.elementRef}
-      >
-        <Container>
-          <div className={classes['page-header__content']}>
-            <div className={classes['page-header__title']}>
-              <h1 className={classes['page-header__title__text']}>{title}</h1>
-            </div>
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  });
 
-            {children}
+  return (
+    <header
+      className={classnames(
+        classes['page-header'], {
+          [classes['page-header--is-fullscreen']]: isFullscreen,
+        },
+      )}
+      style={{ height: isFullscreen && height }}
+      ref={elementRef}
+    >
+      <Container>
+        <div className={classes['page-header__content']}>
+          <div className={classes['page-header__title']}>
+            <h1 className={classes['page-header__title__text']}>{title}</h1>
           </div>
-        </Container>
 
-        {!!isFullscreen && (
-          <button
-            type="button"
-            className={classes['page-header__scroll-button']}
-            onClick={this.onScrollDownClick}
-          >
-            <span className={classes['page-header__scroll-button__label']}>{scrollLabel}</span>
-            <span className={classes['page-header__scroll-button__icon']}>
-              <Icon glyph="chevron-down" />
-            </span>
-          </button>
-        )}
-      </header>
-    );
-  }
-}
+          {children}
+        </div>
+      </Container>
+
+      {isFullscreen && (
+        <button
+          type="button"
+          className={classes['page-header__scroll-button']}
+          onClick={onScrollDownClick}
+        >
+          <span className={classes['page-header__scroll-button__label']}>{scrollLabel}</span>
+          <span className={classes['page-header__scroll-button__icon']}>
+            <Icon glyph="chevron-down" />
+          </span>
+        </button>
+      )}
+    </header>
+  );
+};
 
 PageHeader.propTypes = {
-  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
   isFullscreen: PropTypes.bool,
   scrollLabel: PropTypes.string,
-  children: PropTypes.node,
+  title: PropTypes.string.isRequired,
 };
 
 PageHeader.defaultProps = {

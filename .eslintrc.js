@@ -1,6 +1,7 @@
 module.exports = {
   "plugins": [
     "react",
+    "react-hooks",
     "jest",
     "jsx-a11y"
   ],

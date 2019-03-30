@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -10,65 +10,59 @@ import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle
 
 import classes from './Portfolio.component.scss';
 
-class Portfolio extends PureComponent {
-  componentDidMount() {
-    const { portfolioItems, requestPortfolioItems } = this.props;
-
-    if (!portfolioItems.length) {
+const Portfolio = ({ requestPortfolioItems, portfolioItems }) => {
+  useEffect(() => {
+    if (portfolioItems.length === 0) {
       requestPortfolioItems();
     }
-  }
+  }, [portfolioItems]);
 
-  render() {
-    const { portfolioItems } = this.props;
+  return (
+    <Page>
+      <PageHeader title="Portfolio">
+        <PageHeaderSubtitle>
+          Projects I've worked on
+        </PageHeaderSubtitle>
+      </PageHeader>
 
-    return (
-      <Page>
-        <PageHeader title="Portfolio">
-          <PageHeaderSubtitle>
-            Projects I've worked on
-          </PageHeaderSubtitle>
-        </PageHeader>
+      <section className={classes['portfolio']}>
+        {!!portfolioItems.length && (
+          <Container>
+            <div
+              className={classes['portfolio__list']}
+              role="list"
+            >
+              {portfolioItems.map(item => (
+                <Link
+                  key={`portfolio__list-item--${item.slug}--${item.id}`}
+                  to={`/portfolio/${item.slug}`}
+                  className={classes['portfolio__list-item']}
+                  role="listitem"
+                >
+                  <figure className={classes['portfolio__list-item__media']}>
+                    <img src={item.headerImgSrc} alt="" />
+                  </figure>
 
-        <section className={classes['portfolio']}>
-          {!!portfolioItems.length && (
-            <Container>
-              <div
-                className={classes['portfolio__list']}
-                role="list"
-              >
-                {portfolioItems.map(item => (
-                  <Link
-                    key={`portfolio__list-item--${item.slug}--${item.id}`}
-                    to={`/portfolio/${item.slug}`}
-                    className={classes['portfolio__list-item']}
-                    role="listitem"
-                  >
-                    <figure className={classes['portfolio__list-item__media']}>
-                      <img src={item.headerImgSrc} alt="" />
-                    </figure>
+                  <div className={classes['portfolio__list-item__copy']}>
+                    <Heading
+                      level={3}
+                      displayLevel={5}
+                      text={item.title}
+                    />
 
-                    <div className={classes['portfolio__list-item__copy']}>
-                      <Heading
-                        level={3}
-                        displayLevel={5}
-                        text={item.title}
-                      />
-
-                      <p className={classes['portfolio__list-item__desc']}>
-                        {item.descriptionShort}
-                      </p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </Container>
-          )}
-        </section>
-      </Page>
-    );
-  }
-}
+                    <p className={classes['portfolio__list-item__desc']}>
+                      {item.descriptionShort}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        )}
+      </section>
+    </Page>
+  );
+};
 
 Portfolio.propTypes = {
   requestPortfolioItems: PropTypes.func.isRequired,

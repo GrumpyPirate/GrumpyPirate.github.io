@@ -3,6 +3,7 @@ module.exports = {
     '@babel/preset-react',
     ['@babel/preset-env', {
       useBuiltIns: 'entry',
+      corejs: 3,
       modules: false,
     }],
   ],
@@ -12,6 +13,7 @@ module.exports = {
         '@babel/preset-react',
         ['@babel/preset-env', {
           useBuiltIns: 'entry',
+          corejs: 3,
         }],
       ],
       plugins: [

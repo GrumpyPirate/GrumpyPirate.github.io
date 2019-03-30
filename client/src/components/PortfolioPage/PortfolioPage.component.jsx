@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import isEmpty from 'lodash-es/isEmpty';
@@ -16,100 +15,93 @@ import PortfolioDeviceLineup from 'components/PortfolioDeviceLineup/PortfolioDev
 
 import classes from './PortfolioPage.component.scss';
 
-class PortfolioPage extends Component {
-  componentDidMount() {
-    this.fetchPortfolioItems();
-  }
-
-  componentDidUpdate() {
-    const { hasFetched, portfolioItem } = this.props;
-
-    if (hasFetched && isEmpty(portfolioItem)) {
-      return <Redirect to="/404" />;
-    }
-  }
-
-  fetchPortfolioItems() {
-    const { portfolioItem, hasFetched, requestPortfolioItems } = this.props;
+const PortfolioPage = ({
+  hasFetched, history, portfolioItem, requestPortfolioItems,
+}) => {
+  useEffect(() => {
     const shouldFetchItems = Boolean(isEmpty(portfolioItem) && !hasFetched);
 
     if (shouldFetchItems) {
-      return requestPortfolioItems();
+      requestPortfolioItems();
     }
-  }
 
-  render() {
-    const { portfolioItem } = this.props;
-    if (!portfolioItem) return null;
+    if (hasFetched && isEmpty(portfolioItem)) {
+      history.push('/404');
+    }
+  });
 
-    return (
-      <Page>
-        <div className={classes['portfolio-page']}>
-          <PortfolioPageHeader
-            bgImage={portfolioItem.headerImgSrc}
-            title={portfolioItem.title}
-            tech={portfolioItem.tech}
-          />
+  if (!portfolioItem) return null;
 
-          <PortfolioPageContent>
-            <Container>
-              <Row justify="center">
-                <Column spanSM={10}>
-                  {portfolioItem.supportingImageSrc
-                    ? (
-                      <Row alignLG="middle">
-                        <Column span={12} spanMD="auto" spanXL={6}>
-                          <ReactMarkdown source={portfolioItem.description} />
-                        </Column>
+  return (
+    <Page>
+      <div className={classes['portfolio-page']}>
+        <PortfolioPageHeader
+          bgImage={portfolioItem.headerImgSrc}
+          title={portfolioItem.title}
+          tech={portfolioItem.tech}
+        />
 
-                        <Column span={12} spanMD={6} spanXL={5} pushXL={1}>
-                          <figure className={classes['portfolio-page__supporting-image']}>
-                            <img src={portfolioItem.supportingImageSrc} alt="" />
-                          </figure>
-                        </Column>
-                      </Row>
-                    )
-                    : <ReactMarkdown source={portfolioItem.description} />
-                  }
+        <PortfolioPageContent>
+          <Container>
+            <Row justify="center">
+              <Column spanSM={10}>
+                {portfolioItem.supportingImageSrc
+                  ? (
+                    <Row alignLG="middle">
+                      <Column span={12} spanMD="auto" spanXL={6}>
+                        <ReactMarkdown source={portfolioItem.description} />
+                      </Column>
 
-                  <hr className={classes['portfolio-page__content-divider']} />
+                      <Column span={12} spanMD={6} spanXL={5} pushXL={1}>
+                        <figure className={classes['portfolio-page__supporting-image']}>
+                          <img src={portfolioItem.supportingImageSrc} alt="" />
+                        </figure>
+                      </Column>
+                    </Row>
+                  )
+                  : <ReactMarkdown source={portfolioItem.description} />
+                }
 
-                  <PortfolioCarousel
-                    desktopImage={portfolioItem.previews.desktop}
-                    tabletImage={portfolioItem.previews.tablet}
-                    mobileImage={portfolioItem.previews.mobile}
-                  />
+                <hr className={classes['portfolio-page__content-divider']} />
 
-                  <PortfolioDeviceLineup
-                    desktopImage={portfolioItem.previews.desktop}
-                    tabletImage={portfolioItem.previews.tablet}
-                    mobileImage={portfolioItem.previews.mobile}
-                  />
+                <PortfolioCarousel
+                  desktopImage={portfolioItem.previews.desktop}
+                  tabletImage={portfolioItem.previews.tablet}
+                  mobileImage={portfolioItem.previews.mobile}
+                />
 
-                  <hr className={classes['portfolio-page__content-divider']} />
+                <PortfolioDeviceLineup
+                  desktopImage={portfolioItem.previews.desktop}
+                  tabletImage={portfolioItem.previews.tablet}
+                  mobileImage={portfolioItem.previews.mobile}
+                />
 
-                  <div className={classes['portfolio-page__external-link']}>
-                    <Button
-                      to={portfolioItem.url}
-                      external
-                      secondary
-                    >
-                      Visit
-                      {' '}
-                      {portfolioItem.title}
-                    </Button>
-                  </div>
-                </Column>
-              </Row>
-            </Container>
-          </PortfolioPageContent>
-        </div>
-      </Page>
-    );
-  }
-}
+                <hr className={classes['portfolio-page__content-divider']} />
+
+                <div className={classes['portfolio-page__external-link']}>
+                  <Button
+                    to={portfolioItem.url}
+                    external
+                    secondary
+                  >
+                    Visit
+                    {' '}
+                    {portfolioItem.title}
+                  </Button>
+                </div>
+              </Column>
+            </Row>
+          </Container>
+        </PortfolioPageContent>
+      </div>
+    </Page>
+  );
+};
 
 PortfolioPage.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
   portfolioItem: PropTypes.shape({
     description: PropTypes.string.isRequired,
     headerImgSrc: PropTypes.string.isRequired,
