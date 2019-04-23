@@ -1,54 +1,57 @@
-import React, { PureComponent, createRef } from 'react';
+import React, { createRef, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+
+import usePrevious from 'hooks/usePrevious';
 
 import Spinner from 'components/Spinner/Spinner.container';
 
 import classes from './Main.component.scss';
 
-class Main extends PureComponent {
-  constructor(props) {
-    super(props);
+const Main = ({
+  isLoading,
+  isMobileNavigationOpen,
+  location,
+  renderLocation,
+  closeMobileNavigation,
+  children,
+}) => {
+  const mainElement = createRef();
+  const { pathname } = location;
+  const prevPathname = usePrevious(pathname);
 
-    this.mainElement = createRef();
-  }
-
-  componentDidUpdate(prevProps) {
-    const { location: { pathname: prevPathname } } = prevProps;
-    const { location: { pathname }, closeMobileNavigation, isMobileNavigationOpen } = this.props;
-    const scrollOptions = {
-      top: 0,
-      behavior: prevPathname !== pathname ? 'instant' : 'smooth',
-    };
-
-    if ((prevPathname !== pathname) && isMobileNavigationOpen) {
+  useEffect(() => {
+    if (prevPathname !== pathname && isMobileNavigationOpen) {
       closeMobileNavigation();
     }
+  }, [location]);
 
-    window.scrollTo(scrollOptions);
-    this.mainElement.current.scrollTo(scrollOptions);
-  }
+  useEffect(() => {
+    if (prevPathname !== pathname) {
+      const scrollOptions = {
+        top: 0,
+        behavior: 'instant',
+      };
 
-  render() {
-    const {
-      isLoading, renderLocation, location, children,
-    } = this.props;
+      window.scrollTo(scrollOptions);
+      mainElement.current.scrollTo(scrollOptions);
+    }
+  });
 
-    return (
-      <main
-        className={classnames(classes['main'], {
-          [classes['main--is-loading']]: isLoading,
-        })}
-        id="main-content"
-        ref={this.mainElement}
-      >
-        <Spinner />
-        {renderLocation(location)}
-        {children}
-      </main>
-    );
-  }
-}
+  return (
+    <main
+      className={classnames(classes['main'], {
+        [classes['main--is-loading']]: isLoading,
+      })}
+      id="main-content"
+      ref={mainElement}
+    >
+      <Spinner />
+      {renderLocation(location)}
+      {children}
+    </main>
+  );
+};
 
 Main.propTypes = {
   isLoading: PropTypes.bool.isRequired,

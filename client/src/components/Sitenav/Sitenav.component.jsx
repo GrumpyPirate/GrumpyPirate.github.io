@@ -20,19 +20,16 @@ const navItems = [
 
 const Sitenav = ({ onNavLinkClick }) => (
   <ul className={classes['sitenav']} role="navigation">
-    {navItems.map(navItem => (
-      <li
-        key={`sitenav__nav-item__${navItem.key}`}
-        className={classes['sitenav__nav-item']}
-      >
+    {navItems.map(({ key, label, to }) => (
+      <li key={`sitenav__nav-item__${key}`} className={classes['sitenav__nav-item']}>
         <NavLink
-          to={navItem.to}
-          exact={Boolean(navItem.to === '/')}
+          to={to}
+          exact={Boolean(to === '/')}
           className={classes['sitenav__nav-link']}
           activeClassName={classes['sitenav__nav-link--active']}
           onClick={onNavLinkClick}
         >
-          {navItem.label}
+          {label}
         </NavLink>
       </li>
     ))}
