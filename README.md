@@ -15,5 +15,8 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 - [x] Code splitting (vendor)
 - [ ] Implement `styled-components`
 - [x] Migrate from `sass-lint` to `stylelint`
-- [ ] Flesh out tests
+- [x] Flesh out tests
 - [ ] Implement `react-storybook`
+- [ ] Convert class components to functional components w/hooks
+- [ ] Migrate from Redux to Storeon
+- [ ] Implement server-side rendering
