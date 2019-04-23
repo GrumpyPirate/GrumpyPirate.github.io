@@ -43,8 +43,8 @@ const Footer = () => {
             className={classnames(classes['footer__link'], classes['footer__link--icon'])}
           >
             <Icon glyph="contentful" altText="Contentful" />
-          </a>.
-          {' '}
+          </a>
+          .{' '}
           <a
             href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
             className={classes['footer__link']}
@@ -57,14 +57,23 @@ const Footer = () => {
         </p>
 
         <p className={classes['footer__copyright']}>
-          &copy;
-          {' '}
-          {currentYear > creationYear
-            ? <span className={classes['footer__copyright__date']}>{creationYear}&mdash;{currentYear}</span>
-            : <span className={classes['footer__copyright__date']}>{currentYear}</span>
-          }
-          {' '}
-          Edward Cobbold.
+          &copy;{' '}
+          {currentYear > creationYear ? (
+            <span className={classes['footer__copyright__date']}>
+              {creationYear}&mdash;{currentYear}
+            </span>
+          ) : (
+            <span className={classes['footer__copyright__date']}>{currentYear}</span>
+          )}{' '}
+          <a
+            className={classes['footer__link']}
+            href="https://github.com/grumpypirate"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Edward Cobbold
+          </a>
+          .
         </p>
       </Container>
     </footer>
