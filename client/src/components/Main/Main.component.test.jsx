@@ -9,6 +9,9 @@ describe('Components', () => {
   describe('Main', () => {
     const props = {
       ...fixture,
+      history: {
+        listen: jest.fn(),
+      },
       renderLocation: jest.fn(),
       closeMobileNavigation: jest.fn(),
     };

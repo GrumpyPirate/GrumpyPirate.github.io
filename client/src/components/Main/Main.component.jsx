@@ -9,6 +9,7 @@ import Spinner from 'components/Spinner/Spinner.container';
 import classes from './Main.component.scss';
 
 const Main = ({
+  history,
   isLoading,
   isMobileNavigationOpen,
   location,
@@ -19,6 +20,19 @@ const Main = ({
   const mainElement = createRef();
   const { pathname } = location;
   const prevPathname = usePrevious(pathname);
+
+  useEffect(() => {
+    history.listen(() => {
+      const { action } = history;
+
+      if (String(action).toUpperCase() === 'PUSH' && prevPathname !== pathname) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
+    });
+  }, [history, pathname, prevPathname]);
 
   useEffect(() => {
     if (prevPathname !== pathname && isMobileNavigationOpen) {
@@ -55,6 +69,9 @@ const Main = ({
 };
 
 Main.propTypes = {
+  history: PropTypes.shape({
+    listen: PropTypes.func.isRequired,
+  }).isRequired,
   isLoading: PropTypes.bool.isRequired,
   isMobileNavigationOpen: PropTypes.bool.isRequired,
   location: PropTypes.shape({
