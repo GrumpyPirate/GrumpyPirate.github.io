@@ -18,6 +18,7 @@ const formatPortfolioItem = portfolioItem => ({
     tablet: get(portfolioItem, 'fields.devicePreviews[1].fields.file.url', ''),
     mobile: get(portfolioItem, 'fields.devicePreviews[0].fields.file.url', ''),
   },
+  createdAt: get(portfolioItem, 'sys.createdAt', new Date().toISOString()),
 });
 
 const formatAboutSectionItem = aboutSection => ({
@@ -39,7 +40,8 @@ class ContentService {
 
   // Fetch all entries for a given content type
   fetchEntriesForContentType(contentTypeSysId) {
-    return this.contentfulClient.getEntries({ content_type: contentTypeSysId })
+    return this.contentfulClient
+      .getEntries({ content_type: contentTypeSysId })
       .then(response => response.items)
       .catch(error => console.error(error));
   }
@@ -47,7 +49,13 @@ class ContentService {
   getPortfolioItems() {
     return new Promise((resolve) => {
       this.fetchEntriesForContentType('portfolioItem')
-        .then(items => resolve(items.map(item => formatPortfolioItem(item))))
+        .then(items => resolve(
+          [...items]
+            .map(formatPortfolioItem)
+            .sort(
+              (itemA, itemB) => new Date(itemA.createdAt).getTime() - new Date(itemB.createdAt).getTime(),
+            ),
+        ))
         .catch(error => console.error(error));
     });
   }
@@ -55,27 +63,22 @@ class ContentService {
   getAboutSections() {
     return new Promise((resolve) => {
       this.fetchEntriesForContentType('aboutPageSection')
-        .then(items => resolve(
-          items
-            .map(item => formatAboutSectionItem(item))
-            .sort((a, b) => a.order - b.order),
-        ))
+        .then(items => resolve([...items].map(formatAboutSectionItem).sort((a, b) => a.order - b.order)))
         .catch(error => console.error(error));
     });
   }
 
   getSinglePortfolioItem(slug) {
     return new Promise((resolve, reject) => {
-      this.fetchEntriesForContentType('portfolioItem')
-        .then((items) => {
-          const matchedItem = items.find(item => item.fields.slug === slug);
+      this.fetchEntriesForContentType('portfolioItem').then((items) => {
+        const matchedItem = items.find(item => item.fields.slug === slug);
 
-          if (matchedItem) {
-            resolve(formatPortfolioItem(matchedItem));
-          } else {
-            reject(new Error('No portfolio item matching that slug was found.'));
-          }
-        });
+        if (matchedItem) {
+          resolve(formatPortfolioItem(matchedItem));
+        } else {
+          reject(new Error('No portfolio item matching that slug was found.'));
+        }
+      });
     });
   }
 }

@@ -15,23 +15,18 @@ const Portfolio = ({ requestPortfolioItems, portfolioItems }) => {
     if (portfolioItems.length === 0) {
       requestPortfolioItems();
     }
-  }, [portfolioItems]);
+  }, [portfolioItems, requestPortfolioItems]);
 
   return (
     <Page>
       <PageHeader title="Portfolio">
-        <PageHeaderSubtitle>
-          Projects I've worked on
-        </PageHeaderSubtitle>
+        <PageHeaderSubtitle>Projects I've worked on</PageHeaderSubtitle>
       </PageHeader>
 
       <section className={classes['portfolio']}>
-        {!!portfolioItems.length && (
+        {portfolioItems.length > 0 && (
           <Container>
-            <div
-              className={classes['portfolio__list']}
-              role="list"
-            >
+            <div className={classes['portfolio__list']} role="list">
               {portfolioItems.map(item => (
                 <Link
                   key={`portfolio__list-item--${item.slug}--${item.id}`}
@@ -44,15 +39,9 @@ const Portfolio = ({ requestPortfolioItems, portfolioItems }) => {
                   </figure>
 
                   <div className={classes['portfolio__list-item__copy']}>
-                    <Heading
-                      level={3}
-                      displayLevel={5}
-                      text={item.title}
-                    />
+                    <Heading level={3} displayLevel={5} text={item.title} />
 
-                    <p className={classes['portfolio__list-item__desc']}>
-                      {item.descriptionShort}
-                    </p>
+                    <p className={classes['portfolio__list-item__desc']}>{item.descriptionShort}</p>
                   </div>
                 </Link>
               ))}
