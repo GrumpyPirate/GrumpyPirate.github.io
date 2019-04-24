@@ -32,12 +32,7 @@ const PageHeader = ({
       behavior: 'smooth',
     };
 
-    if (window.innerWidth < 992) return window.scrollTo(scrollOptions);
-
-    const scrollContainer = document.getElementById('main-content');
-    if ('scrollTo' in scrollContainer) {
-      return scrollContainer.scrollTo(scrollOptions);
-    }
+    window.scrollTo(scrollOptions);
   };
 
   useEffect(() => {

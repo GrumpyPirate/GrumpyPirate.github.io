@@ -27,12 +27,12 @@
   z-index: 2;
 
   @include respond-up('lg') {
-    left: $sidebar-width-lg;
+    left: $sidebar-width;
     top: 0;
   }
 
   @include respond-up('xl') {
-    left: $sidebar-width;
+    left: $sidebar-width-xl;
   }
 
   &__icon {

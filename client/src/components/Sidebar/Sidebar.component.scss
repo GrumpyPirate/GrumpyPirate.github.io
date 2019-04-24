@@ -17,18 +17,16 @@ $selector: sidebar;
     align-items: center;
     border: 0;
     display: flex;
-    flex: 0 0 $sidebar-width-lg;
     flex-wrap: wrap;
     height: 100vh;
-    overflow-y: auto;
     padding: 0;
-    position: relative;
+    position: fixed;
     text-align: right;
-    touch-action: pan-y;
+    width: $sidebar-width;
   }
 
   @include respond-up('xl') {
-    flex-basis: $sidebar-width;
+    width: $sidebar-width-xl;
   }
 
   &__content {

@@ -24,7 +24,7 @@ const Main = ({
     if (prevPathname !== pathname && isMobileNavigationOpen) {
       closeMobileNavigation();
     }
-  }, [location]);
+  });
 
   useEffect(() => {
     if (prevPathname !== pathname) {
@@ -34,7 +34,6 @@ const Main = ({
       };
 
       window.scrollTo(scrollOptions);
-      mainElement.current.scrollTo(scrollOptions);
     }
   });
 
@@ -46,9 +45,11 @@ const Main = ({
       id="main-content"
       ref={mainElement}
     >
-      <Spinner />
-      {renderLocation(location)}
-      {children}
+      <div className={classes['main__content']}>
+        <Spinner />
+        {renderLocation(location)}
+        {children}
+      </div>
     </main>
   );
 };

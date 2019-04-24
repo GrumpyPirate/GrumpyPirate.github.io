@@ -159,6 +159,6 @@ $btn-focus-box-shadow: none;
 // ---------------------------------------------------------------------------------------------------------------------
 // Sidebar
 $sidebar-height-mobile: (50px / 16px) * 1rem;
-$sidebar-width: (260px / 16px) * 1rem;
-$sidebar-width-lg: $sidebar-width * 0.85;
+$sidebar-width-xl: (260px / 16px) * 1rem;
+$sidebar-width: $sidebar-width-xl * 0.85;
 $sidebar-zindex: 11;

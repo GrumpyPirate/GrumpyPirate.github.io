@@ -11,9 +11,16 @@
   // lg up
   @include respond-up('lg') {
     flex: 1 1 auto;
-    height: 100vh;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: auto;
+    padding-left: $sidebar-width;
+    position: relative;
+  }
+
+  @include respond-up('xl') {
+    padding-left: $sidebar-width-xl;
+  }
+
+  &__content {
+    position: relative;
   }
 
   &--is-loading {
