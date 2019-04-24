@@ -12,6 +12,7 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 ### TODO
 
 - [x] Drop bootstrap, move over to 100% custom CSS
+- [ ] Sort/group portfolio items in some way, perhaps by creation date
 - [x] Code splitting (vendor)
 - [ ] Code splitting via lazy-loading components with @loadable/component
 - [x] Migrate from `sass-lint` to `stylelint`
@@ -21,5 +22,6 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 - [ ] Implement `styled-components`
 - [ ] Implement `react-storybook`
 - [ ] Migrate from Redux to Storeon
+- [ ] Migrate from react-router to reach-router
 - [ ] Implement server-side rendering
 - [ ] Replace portfolio page item previews with dependency-free solution

@@ -24,11 +24,13 @@ const PortfolioPage = ({
     if (shouldFetchItems) {
       requestPortfolioItems();
     }
+  }, [portfolioItem, hasFetched, requestPortfolioItems]);
 
+  useEffect(() => {
     if (hasFetched && isEmpty(portfolioItem)) {
       history.push('/404');
     }
-  });
+  }, [hasFetched, portfolioItem, history])
 
   if (!portfolioItem) return null;
 
@@ -45,22 +47,21 @@ const PortfolioPage = ({
           <Container>
             <Row justify="center">
               <Column spanSM={10}>
-                {portfolioItem.supportingImageSrc
-                  ? (
-                    <Row alignLG="middle">
-                      <Column span={12} spanMD="auto" spanXL={6}>
-                        <ReactMarkdown source={portfolioItem.description} />
-                      </Column>
+                {portfolioItem.supportingImageSrc ? (
+                  <Row alignLG="middle">
+                    <Column span={12} spanMD="auto" spanXL={6}>
+                      <ReactMarkdown source={portfolioItem.description} />
+                    </Column>
 
-                      <Column span={12} spanMD={6} spanXL={5} pushXL={1}>
-                        <figure className={classes['portfolio-page__supporting-image']}>
-                          <img src={portfolioItem.supportingImageSrc} alt="" />
-                        </figure>
-                      </Column>
-                    </Row>
-                  )
-                  : <ReactMarkdown source={portfolioItem.description} />
-                }
+                    <Column span={12} spanMD={6} spanXL={5} pushXL={1}>
+                      <figure className={classes['portfolio-page__supporting-image']}>
+                        <img src={portfolioItem.supportingImageSrc} alt="" />
+                      </figure>
+                    </Column>
+                  </Row>
+                ) : (
+                  <ReactMarkdown source={portfolioItem.description} />
+                )}
 
                 <hr className={classes['portfolio-page__content-divider']} />
 
@@ -79,14 +80,8 @@ const PortfolioPage = ({
                 <hr className={classes['portfolio-page__content-divider']} />
 
                 <div className={classes['portfolio-page__external-link']}>
-                  <Button
-                    to={portfolioItem.url}
-                    external
-                    secondary
-                  >
-                    Visit
-                    {' '}
-                    {portfolioItem.title}
+                  <Button to={portfolioItem.url} external secondary>
+                    Visit {portfolioItem.title}
                   </Button>
                 </div>
               </Column>
