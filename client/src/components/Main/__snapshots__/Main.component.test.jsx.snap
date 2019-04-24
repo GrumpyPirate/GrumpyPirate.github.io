@@ -5,9 +5,13 @@ exports[`Components Main should render as expected, without crashing 1`] = `
   className="main"
   id="main-content"
 >
-  <Connect(Spinner) />
-  <div>
-    Test
+  <div
+    className="main__content"
+  >
+    <Connect(Spinner) />
+    <div>
+      Test
+    </div>
   </div>
 </main>
 `;

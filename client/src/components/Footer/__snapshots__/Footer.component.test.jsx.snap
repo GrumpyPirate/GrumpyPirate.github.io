@@ -75,7 +75,15 @@ exports[`Components Footer should render as expected, without crashing 1`] = `
         2019
       </span>
        
-      Edward Cobbold.
+      <a
+        className="footer__link"
+        href="https://github.com/grumpypirate"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Edward Cobbold
+      </a>
+      .
     </p>
   </Container>
 </footer>
