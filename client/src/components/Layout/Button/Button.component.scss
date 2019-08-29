@@ -28,6 +28,7 @@
 .button {
   @include button-reset;
   @include no-underline;
+
   background-color: $btn-primary-bg;
   border: solid 1px $btn-primary-bg;
   border-radius: $btn-border-radius;

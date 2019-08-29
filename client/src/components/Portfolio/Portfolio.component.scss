@@ -82,7 +82,13 @@ $selector: portfolio;
 
     &__copy {
       $copy-padding: $grid-gutter-width-base / 2;
-      background-image: linear-gradient(to top, transparentize(palette('theme-dark-shades'), 0.2), transparentize(palette('theme-dark-shades'), 0.6) 40%, transparentize(palette('theme-dark-shades'), 1));
+
+      background-image: linear-gradient(
+        to top,
+        transparentize(palette('theme-dark-shades'), 0.2),
+        transparentize(palette('theme-dark-shades'), 0.6) 40%,
+        transparentize(palette('theme-dark-shades'), 1)
+      );
       color: palette('white');
       padding: 15vmax $copy-padding $copy-padding;
       position: relative;

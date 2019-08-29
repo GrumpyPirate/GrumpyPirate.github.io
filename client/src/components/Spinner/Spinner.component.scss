@@ -1,8 +1,12 @@
 @import 'core';
 
 @keyframes spin {
-  from { transform: rotateZ(0turn); }
-  to { transform: rotateZ(1turn); }
+  from {
+    transform: rotateZ(0turn);
+  }
+  to {
+    transform: rotateZ(1turn);
+  }
 }
 
 .spinner {
@@ -49,6 +53,7 @@
 
   &__loading-text {
     @include heading(4);
+
     left: rem(6px);
     margin: 0;
     position: relative;

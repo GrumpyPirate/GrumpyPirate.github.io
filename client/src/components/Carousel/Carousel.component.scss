@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @import 'core';
 
 :global {
@@ -194,7 +195,7 @@
   }
 
   .carousel .slider.animated {
-    transition: all .35s ease-in-out;
+    transition: all 0.35s ease-in-out;
   }
 
   .carousel .slide {

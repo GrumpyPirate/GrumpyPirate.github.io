@@ -23,6 +23,7 @@ $selector: page-header;
 .#{$selector} {
   $page-padding: 3rem;
   $header-bg: palette('theme-dark-shades');
+
   background-color: $header-bg;
   border-bottom: solid rem(6px) palette('theme-accent-light');
   text-align: center;
@@ -43,6 +44,7 @@ $selector: page-header;
 
     &__text {
       @include heading(1);
+
       cursor: default;
       font-size: 12vmin;
       font-weight: weight('extralight');
@@ -59,6 +61,7 @@ $selector: page-header;
     @include button-reset;
     @include no-outline;
     @include heading(5);
+
     bottom: 0;
     color: transparentize(palette('theme-light-shades'), 0.5);
     left: 50%;

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // Contentful
 import { createClient } from 'contentful';
 import ContentfulSettings from 'config/contentful';
@@ -47,30 +48,35 @@ class ContentService {
   }
 
   getPortfolioItems() {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       this.fetchEntriesForContentType('portfolioItem')
-        .then(items => resolve(
-          [...items]
-            .map(formatPortfolioItem)
-            .sort(
-              (itemA, itemB) => new Date(itemA.createdAt).getTime() - new Date(itemB.createdAt).getTime(),
-            ),
-        ))
+        .then(items =>
+          resolve(
+            [...items]
+              .map(formatPortfolioItem)
+              .sort(
+                (itemA, itemB) =>
+                  new Date(itemA.createdAt).getTime() - new Date(itemB.createdAt).getTime(),
+              ),
+          ),
+        )
         .catch(error => console.error(error));
     });
   }
 
   getAboutSections() {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       this.fetchEntriesForContentType('aboutPageSection')
-        .then(items => resolve([...items].map(formatAboutSectionItem).sort((a, b) => a.order - b.order)))
+        .then(items =>
+          resolve([...items].map(formatAboutSectionItem).sort((a, b) => a.order - b.order)),
+        )
         .catch(error => console.error(error));
     });
   }
 
   getSinglePortfolioItem(slug) {
     return new Promise((resolve, reject) => {
-      this.fetchEntriesForContentType('portfolioItem').then((items) => {
+      this.fetchEntriesForContentType('portfolioItem').then(items => {
         const matchedItem = items.find(item => item.fields.slug === slug);
 
         if (matchedItem) {

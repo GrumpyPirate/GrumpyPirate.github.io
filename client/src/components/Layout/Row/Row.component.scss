@@ -18,31 +18,59 @@
 
   // Modifiers
   &--align {
-    &-top { align-items: flex-start; }
-    &-middle { align-items: center; }
-    &-bottom { align-items: flex-end; }
+    &-top {
+      align-items: flex-start;
+    }
+    &-middle {
+      align-items: center;
+    }
+    &-bottom {
+      align-items: flex-end;
+    }
 
     @each $breakpoint in map-keys($breakpoints) {
       @include respond-up($breakpoint) {
-        &-#{$breakpoint}-top { align-items: flex-start; }
-        &-#{$breakpoint}-middle { align-items: center; }
-        &-#{$breakpoint}-bottom { align-items: flex-end; }
+        &-#{$breakpoint}-top {
+          align-items: flex-start;
+        }
+        &-#{$breakpoint}-middle {
+          align-items: center;
+        }
+        &-#{$breakpoint}-bottom {
+          align-items: flex-end;
+        }
       }
     }
   }
 
   &--justify {
-    &-left { justify-content: flex-start; }
-    &-center { justify-content: center; }
-    &-right { justify-content: flex-end; }
-    &-space-between { justify-content: space-between; }
+    &-left {
+      justify-content: flex-start;
+    }
+    &-center {
+      justify-content: center;
+    }
+    &-right {
+      justify-content: flex-end;
+    }
+    &-space-between {
+      justify-content: space-between;
+    }
 
     @each $breakpoint in map-keys($breakpoints) {
       @include respond-up($breakpoint) {
-        &-#{$breakpoint}-left { justify-content: flex-start; }
-        &-#{$breakpoint}-center { justify-content: center; }
-        &-#{$breakpoint}-right { justify-content: flex-end; }
-        &-#{$breakpoint}-space-between { justify-content: space-between; }
+        &-#{$breakpoint}-left {
+          justify-content: flex-start;
+        }
+        &-#{$breakpoint}-center {
+          justify-content: center;
+        }
+        &-#{$breakpoint}-right {
+          justify-content: flex-end;
+        }
+        &-#{$breakpoint}-space-between {
+          justify-content: space-between;
+        }
       }
     }
   }

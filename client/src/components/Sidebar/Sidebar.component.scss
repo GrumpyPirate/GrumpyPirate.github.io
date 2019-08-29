@@ -50,6 +50,7 @@ $selector: sidebar;
 
   &__brand {
     @include heading(5);
+
     letter-spacing: normal;
     margin-bottom: 0;
 
@@ -140,6 +141,7 @@ $selector: sidebar;
     $burger-bar-spacing: 7px;
     @include button-reset;
     @include no-outline;
+
     display: block;
     height: ($burger-bar-height * 3) + ($burger-bar-spacing * 2);
     position: relative;

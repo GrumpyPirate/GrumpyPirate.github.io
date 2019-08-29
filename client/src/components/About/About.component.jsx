@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -42,69 +42,63 @@ const About = ({ aboutSections, hasFetched, aboutSectionsRequest }) => {
             <Row justify="center">
               <Column spanSM={10} spanLG={12} spanXL={10}>
                 {aboutSections.map(section => (
-                  <AboutSection
-                    key={`about-section--${section.id}`}
-                    title={section.title}
-                  >
+                  <AboutSection key={`about-section--${section.id}`} title={section.title}>
                     {/* If 1 icon, house content in columns */}
-                    {section.icons.length === 1
-                      ? (
-                        <Row justify="center">
-                          <Column spanMD={8}>
-                            <Row alignMD="middle">
-                              {!!section.icons.length && (
-                                <Column span={12} spanMD={4} pushMD={8}>
-                                  <figure
-                                    className={classnames(
-                                      classes['about__section-graphic'],
-                                      classes[`about__section-graphic--${section.slug}`],
-                                      classes['about__section-graphic--single'],
-                                    )}
-                                  >
-                                    {section.icons.map(icon => (
-                                      <AboutIcon
-                                        key={`${section.key}__icon--${icon.name}`}
-                                        iconName={icon.name}
-                                        large={icon.large}
-                                      />
-                                    ))}
-                                  </figure>
-                                </Column>
-                              )}
-                              <Column span={12} spanMD={8} pullMD={4}>
-                                <ReactMarkdown source={section.content} />
+                    {section.icons.length === 1 ? (
+                      <Row justify="center">
+                        <Column spanMD={8}>
+                          <Row alignMD="middle">
+                            {!!section.icons.length && (
+                              <Column span={12} spanMD={4} pushMD={8}>
+                                <figure
+                                  className={classnames(
+                                    classes['about__section-graphic'],
+                                    classes[`about__section-graphic--${section.slug}`],
+                                    classes['about__section-graphic--single'],
+                                  )}
+                                >
+                                  {section.icons.map(icon => (
+                                    <AboutIcon
+                                      key={`${section.key}__icon--${icon.name}`}
+                                      iconName={icon.name}
+                                      large={icon.large}
+                                    />
+                                  ))}
+                                </figure>
                               </Column>
-                            </Row>
-                          </Column>
-                        </Row>
-                      )
-                      : (
-                        <Fragment>
-                          {section.icons.length > 0 && (
-                            <figure
-                              className={classnames(
-                                classes['about__section-graphic'],
-                                classes[`about__section-graphic--${section.slug}`],
-                              )}
-                            >
-                              {section.icons.map(icon => (
-                                <AboutIcon
-                                  key={`${section.key}__icon--${icon.name}`}
-                                  iconName={icon.name}
-                                  large={icon.large}
-                                />
-                              ))}
-                            </figure>
-                          )}
-
-                          <Row justify="center">
-                            <Column spanMD={8}>
+                            )}
+                            <Column span={12} spanMD={8} pullMD={4}>
                               <ReactMarkdown source={section.content} />
                             </Column>
                           </Row>
-                        </Fragment>
-                      )
-                    }
+                        </Column>
+                      </Row>
+                    ) : (
+                      <>
+                        {section.icons.length > 0 && (
+                          <figure
+                            className={classnames(
+                              classes['about__section-graphic'],
+                              classes[`about__section-graphic--${section.slug}`],
+                            )}
+                          >
+                            {section.icons.map(icon => (
+                              <AboutIcon
+                                key={`${section.key}__icon--${icon.name}`}
+                                iconName={icon.name}
+                                large={icon.large}
+                              />
+                            ))}
+                          </figure>
+                        )}
+
+                        <Row justify="center">
+                          <Column spanMD={8}>
+                            <ReactMarkdown source={section.content} />
+                          </Column>
+                        </Row>
+                      </>
+                    )}
                   </AboutSection>
                 ))}
               </Column>

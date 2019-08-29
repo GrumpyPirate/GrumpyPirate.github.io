@@ -16,10 +16,10 @@ p {
   margin: 0 0 $paragraph-margin-bottom;
 }
 
-
 a {
   @include no-outline;
   @include no-underline;
+
   color: $link-color;
   font-weight: $link-font-weight;
   transition-duration: $anim-dur;
@@ -40,13 +40,11 @@ a {
   color: palette('white');
 }
 
-
 ul,
 ol {
   margin: 0 0 $paragraph-margin-bottom;
   padding: 0 0 0 $list-padding;
 }
-
 
 strong {
   font-weight: $font-weight-bold;

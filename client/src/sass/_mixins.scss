@@ -9,7 +9,13 @@
   }
 }
 
-@mixin make-link-colour($colour, $hover-colour: false, $active-colour: false, $lighten: false, $self: false) {
+@mixin make-link-colour(
+  $colour,
+  $hover-colour: false,
+  $active-colour: false,
+  $lighten: false,
+  $self: false
+) {
   @if not $self {
     a {
       color: $colour;
@@ -61,12 +67,20 @@
   }
 }
 
-
 // Mixin: give a link a custom animated underline
 // If $animate is passed as false, the resulting effect is a simple static customiseable underline
 // ---------------------------------------------------------------------------------------------------------------------
-@mixin lasers($display: inline-block, $bottom: 0, $laser-colour: currentColor, $laser-height: 1px, $animate: true, $duration: $anim-dur, $direction: ltr) {
+@mixin lasers(
+  $display: inline-block,
+  $bottom: 0,
+  $laser-colour: currentColor,
+  $laser-height: 1px,
+  $animate: true,
+  $duration: $anim-dur,
+  $direction: ltr
+) {
   @include no-underline;
+
   display: $display;
   position: relative;
 

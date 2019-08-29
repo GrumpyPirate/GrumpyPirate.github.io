@@ -28,6 +28,7 @@
     @include no-underline;
     @include heading(5);
     @include lasers($direction: out);
+
     color: palette('theme-accent-light');
     font-weight: weight('regular');
     letter-spacing: normal;
