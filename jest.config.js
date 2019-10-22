@@ -60,10 +60,7 @@ module.exports = {
   // globals: {},
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: [
-    'node_modules',
-    'client/src',
-  ],
+  moduleDirectories: ['node_modules', 'src/client'],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [
@@ -172,14 +169,13 @@ module.exports = {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
-    '^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/jest.fileTransformer.js',
+    '^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/jest.fileTransformer.js',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched
   // files will skip transformation
-  transformIgnorePatterns: [
-    '<rootDir>/node_modules/(?!lodash-es)',
-  ],
+  transformIgnorePatterns: ['<rootDir>/node_modules/(?!lodash-es)'],
 
   // An array of regexp pattern strings that are matched against all modules before the module
   // loader will automatically return a mock for them

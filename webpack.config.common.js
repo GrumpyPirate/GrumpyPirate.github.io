@@ -2,14 +2,14 @@ const path = require('path');
 const { EnvironmentPlugin } = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebappWebpackPlugin = require('webapp-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'client/src/index.jsx'),
+  entry: path.resolve(__dirname, 'src/client/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
@@ -37,10 +37,12 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              localIdentName: process.env.NODE_ENV === 'production'
-                ? '[hash:base64:5]'
-                : '[name]__[local]--[hash:base64:5]',
+              modules: {
+                localIdentName:
+                  process.env.NODE_ENV === 'production'
+                    ? '[hash:base64:5]'
+                    : '[name]__[local]--[hash:base64:5]',
+              },
               importLoaders: 2,
               sourceMap: process.env.NODE_ENV !== 'production',
             },
@@ -54,8 +56,10 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: ['client/src/sass'],
               sourceMap: process.env.NODE_ENV !== 'production',
+              sassOptions: {
+                includePaths: ['src/client/sass'],
+              },
             },
           },
         ],
@@ -63,10 +67,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: /node_modules/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/,
@@ -74,25 +75,19 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        exclude: [path.resolve('client/src/images/icons')],
-        use: [
-          'file-loader',
-          'image-webpack-loader',
-        ],
+        exclude: [path.resolve('src/client/images/icons')],
+        use: ['file-loader', 'image-webpack-loader'],
       },
       {
         test: /\.svg$/,
-        include: [/node_modules/, path.resolve('client/src/images/icons')],
-        use: [
-          'svg-sprite-loader',
-          'svgo-loader',
-        ],
+        include: [/node_modules/, path.resolve('src/client/images/icons')],
+        use: ['svg-sprite-loader', 'svgo-loader'],
       },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx'],
-    modules: [path.resolve('client/src'), 'node_modules'],
+    modules: [path.resolve('src/client'), 'node_modules'],
   },
   optimization: {
     splitChunks: {
@@ -111,7 +106,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'client/src/index.html',
+      template: 'src/client/index.html',
     }),
     new CopyWebpackPlugin([
       {
@@ -121,12 +116,12 @@ module.exports = {
       },
     ]),
     new WebappWebpackPlugin({
-      logo: path.resolve('client/src/images/favicon-master.png'),
+      logo: path.resolve('src/client/images/favicon-master.png'),
       cache: true,
       inject: true,
       favicons: {
         appName: 'Edward Cobbold',
-        appDescription: 'Edward Cobbold\'s personal website',
+        appDescription: "Edward Cobbold's personal website",
         developerName: 'Edward Cobbold',
         developerURL: 'https://edwardcobbold.co.uk/',
         lang: 'en-GB',
