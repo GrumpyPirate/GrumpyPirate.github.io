@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioPage should render as expected, without crashing 1`] = `
+<withRouter(Page)>
+  <div
+    className="portfolio-page"
+  >
+    <PortfolioPageHeader
+      bgImage="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+      tech={
+        Array [
+          Object {
+            "icon": "Glycolaldehyde",
+            "name": "youngling",
+          },
+        ]
+      }
+      title="Scrupulum Misphrase"
+    />
+    <PortfolioPageContent>
+      <Container>
+        <Row
+          align={null}
+          alignLG={null}
+          alignMD={null}
+          alignSM={null}
+          alignXL={null}
+          justify="center"
+          justifyLG={null}
+          justifyMD={null}
+          justifySM={null}
+          justifyXL={null}
+        >
+          <Column
+            pull={null}
+            pullLG={null}
+            pullMD={null}
+            pullSM={null}
+            pullXL={null}
+            push={null}
+            pushLG={null}
+            pushMD={null}
+            pushSM={null}
+            pushXL={null}
+            span={null}
+            spanLG={null}
+            spanMD={null}
+            spanSM={10}
+            spanXL={null}
+          >
+            <Row
+              align={null}
+              alignLG="middle"
+              alignMD={null}
+              alignSM={null}
+              alignXL={null}
+              justify={null}
+              justifyLG={null}
+              justifyMD={null}
+              justifySM={null}
+              justifyXL={null}
+            >
+              <Column
+                pull={null}
+                pullLG={null}
+                pullMD={null}
+                pullSM={null}
+                pullXL={null}
+                push={null}
+                pushLG={null}
+                pushMD={null}
+                pushSM={null}
+                pushXL={null}
+                span={12}
+                spanLG={null}
+                spanMD="auto"
+                spanSM={null}
+                spanXL={6}
+              >
+                <ReactMarkdown
+                  astPlugins={Array []}
+                  escapeHtml={true}
+                  parserOptions={Object {}}
+                  plugins={Array []}
+                  rawSourcePos={false}
+                  renderers={Object {}}
+                  skipHtml={false}
+                  source="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati."
+                  sourcePos={false}
+                  transformLinkUri={[Function]}
+                />
+              </Column>
+              <Column
+                pull={null}
+                pullLG={null}
+                pullMD={null}
+                pullSM={null}
+                pullXL={null}
+                push={null}
+                pushLG={null}
+                pushMD={null}
+                pushSM={null}
+                pushXL={1}
+                span={12}
+                spanLG={null}
+                spanMD={6}
+                spanSM={null}
+                spanXL={5}
+              >
+                <figure
+                  className="portfolio-page__supporting-image"
+                >
+                  <img
+                    alt=""
+                    src="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse"
+                  />
+                </figure>
+              </Column>
+            </Row>
+            <hr
+              className="portfolio-page__content-divider"
+            />
+            <PortfolioCarousel
+              desktopImage="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+              mobileImage="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+              tabletImage="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
+            />
+            <PortfolioDeviceLineup
+              desktopImage="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+              mobileImage="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+              tabletImage="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
+            />
+            <hr
+              className="portfolio-page__content-divider"
+            />
+            <div
+              className="portfolio-page__external-link"
+            >
+              <Button
+                external={true}
+                primary={true}
+                secondary={true}
+                to="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+              >
+                Visit 
+                Scrupulum Misphrase
+              </Button>
+            </div>
+          </Column>
+        </Row>
+      </Container>
+    </PortfolioPageContent>
+  </div>
+</withRouter(Page)>
+`;

@@ -1,0 +1,110 @@
+@import 'core';
+
+@keyframes scrollButton {
+  from {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+
+  40%,
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+}
+
+$selector: page-header;
+
+.#{$selector} {
+  $page-padding: 3rem;
+  $header-bg: palette('theme-dark-shades');
+
+  background-color: $header-bg;
+  border-bottom: solid rem(6px) palette('theme-accent-light');
+  text-align: center;
+  text-transform: uppercase;
+
+  @include respond-up('lg') {
+    border-bottom-width: rem(8px);
+  }
+
+  &__title {
+    color: palette('theme-accent-light');
+    padding: 1rem 0;
+    position: relative;
+
+    @include respond-up('md') {
+      padding-top: 2rem;
+    }
+
+    &__text {
+      @include heading(1);
+
+      cursor: default;
+      font-size: 12vmin;
+      font-weight: weight('extralight');
+      margin: 0;
+      user-select: none;
+
+      &::first-letter {
+        margin-left: $headings-letter-spacing + 0.05em;
+      }
+    }
+  }
+
+  &__scroll-button {
+    @include button-reset;
+    @include no-outline;
+    @include heading(5);
+
+    bottom: 0;
+    color: transparentize(palette('theme-light-shades'), 0.5);
+    left: 50%;
+    margin-bottom: 2rem;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    transition: color $anim-dur;
+
+    &__label,
+    &__icon {
+      display: block;
+    }
+
+    &__icon {
+      font-size: 1.75em;
+      position: relative;
+
+      svg {
+        animation: scrollButton 1.5s ease('ease-in-out-quart') 0s infinite;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: palette('theme-light-shades');
+    }
+  }
+
+  // Modifiers
+  &--is-fullscreen {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+    position: relative;
+
+    .#{$selector}__content {
+      @include respond-down('md') {
+        margin-bottom: $paragraph-margin-bottom * 2;
+      }
+    }
+  }
+}

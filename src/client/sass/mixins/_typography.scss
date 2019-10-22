@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'mixins/media-queries';
+
+@mixin heading($level: 5) {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  letter-spacing: $headings-letter-spacing;
+  line-height: $headings-line-height;
+  margin: 0 0 $headings-margin-bottom;
+  text-transform: uppercase;
+
+  @if $level == 1 {
+    font-size: $font-size-h1-mobile;
+    @include respond-up('md') {
+      font-size: $font-size-h1;
+    }
+  }
+
+  @if $level == 2 {
+    font-size: $font-size-h2-mobile;
+    @include respond-up('md') {
+      font-size: $font-size-h2;
+    }
+  }
+
+  @if $level == 3 {
+    font-size: $font-size-h3-mobile;
+    @include respond-up('md') {
+      font-size: $font-size-h3;
+    }
+  }
+
+  @if $level == 4 {
+    font-size: $font-size-h4-mobile;
+    @include respond-up('md') {
+      font-size: $font-size-h4;
+    }
+  }
+
+  @if $level == 5 {
+    font-size: $font-size-h5-mobile;
+    @include respond-up('md') {
+      font-size: $font-size-h5;
+    }
+  }
+
+  @if $level == 6 {
+    font-size: $font-size-h6-mobile;
+    @include respond-up('md') {
+      font-size: $font-size-h6;
+    }
+  }
+}
