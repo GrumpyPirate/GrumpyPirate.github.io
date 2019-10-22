@@ -1,6 +1,7 @@
 const path = require('path');
 const { EnvironmentPlugin } = require('webpack');
 
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -9,7 +10,8 @@ const WebappWebpackPlugin = require('webapp-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/client/index.jsx'),
+  context: __dirname,
+  entry: path.resolve(__dirname, 'src/client/index.tsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
@@ -18,13 +20,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: 'ts-loader',
             options: {
-              cacheDirectory: true,
+              transpileOnly: true,
             },
           },
         ],
@@ -86,7 +88,18 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.index.js', '.index.jsx'],
+    extensions: [
+      '.js',
+      '.jsx',
+      '.json',
+      '.index.js',
+      '.index.jsx',
+      '.ts',
+      '.tsx',
+      '.index.ts',
+      '.index.d.ts',
+      '.index.tsx',
+    ],
     modules: [path.resolve('src/client'), 'node_modules'],
   },
   optimization: {
@@ -115,6 +128,10 @@ module.exports = {
         toType: 'file',
       },
     ]),
+    new ForkTsCheckerWebpackPlugin({
+      // async: false,
+      eslint: true,
+    }),
     new WebappWebpackPlugin({
       logo: path.resolve('src/client/images/favicon-master.png'),
       cache: true,

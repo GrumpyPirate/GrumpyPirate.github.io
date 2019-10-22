@@ -6,6 +6,7 @@ const devConfig = {
   devServer: {
     contentBase: 'build',
     historyApiFallback: true,
+    overlay: true,
     publicPath: '/',
     port: 3000,
     host: '0.0.0.0',

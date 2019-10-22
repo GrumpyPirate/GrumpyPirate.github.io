@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Button should render as expected, without crashing 1`] = `
+<button
+  className="button"
+  type="button"
+>
+  <span>
+    Test button
+  </span>
+</button>
+`;

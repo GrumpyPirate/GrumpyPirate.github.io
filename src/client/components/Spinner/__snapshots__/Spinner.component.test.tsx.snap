@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Spinner should render as expected, without crashing 1`] = `
+<div
+  className="spinner spinner--is-loading"
+>
+  <figure
+    className="spinner__icon"
+  >
+    <Icon
+      altText="Loading..."
+      glyph="loader"
+    />
+  </figure>
+  <h6
+    className="spinner__loading-text"
+  >
+    Loading...
+  </h6>
+</div>
+`;

@@ -1,0 +1,27 @@
+{
+  "exclude": ["node_modules", "src/**/*.scss", "*.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+  "compilerOptions": {
+    "baseUrl": "./src/client",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "components/*": ["src/client/components/*"],
+      "config/*": ["src/client/config/*"],
+      "hooks/*": ["src/client/hooks/*"],
+      "images/*": ["src/client/images/*"],
+      "sass/*": ["src/client/sass/*"],
+      "services/*": ["src/client/services/*"],
+      "store/*": ["src/client/store/*"],
+      "utils/*": ["src/client/utils/*"]
+    },
+    "strict": true,
+    "target": "es5"
+  }
+}

@@ -1,20 +1,6 @@
+const path = require('path');
+
 module.exports = {
-  plugins: ['jest', 'react-hooks', 'prettier'],
-  extends: [
-    'eslint:recommended',
-    'plugin:jest/recommended',
-    'airbnb',
-    'prettier',
-    'prettier/react',
-  ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  globals: {
-    jest: true,
-  },
   env: {
     browser: true,
     node: true,
@@ -22,20 +8,32 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  settings: {
-    'import/resolver': {
-      node: {
-        'config-index': 1,
-      },
-      webpack: {
-        config: './webpack.config.common.js',
-        'config-index': 2,
-      },
-    },
+  extends: [
+    'eslint:recommended',
+    'airbnb',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:jest/recommended',
+    'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
+  ],
+  globals: {
+    jest: true,
   },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: path.resolve(__dirname, './tsconfig.json'),
+    sourceType: 'module',
+    tsconfigRootDir: __dirname,
+  },
+  plugins: ['jest', 'react-hooks', '@typescript-eslint', 'prettier'],
   rules: {
     'dot-notation': 'off',
-    'implicit-arrow-linebreak': 0,
     'import/no-extraneous-dependencies': 0,
     'max-len': [
       'error',
@@ -52,8 +50,18 @@ module.exports = {
     'prettier/prettier': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/no-unescaped-entities': ['off', "'"],
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        'config-index': 1,
+      },
+      webpack: {
+        config: './webpack.config.common.js',
+        'config-index': 2,
+      },
+    },
   },
 };

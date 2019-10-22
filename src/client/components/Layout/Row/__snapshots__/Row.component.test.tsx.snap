@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Row should render as expected, without crashing 1`] = `
+<div
+  className="row"
+>
+  <Column>
+    <div>
+      Test
+    </div>
+  </Column>
+</div>
+`;
