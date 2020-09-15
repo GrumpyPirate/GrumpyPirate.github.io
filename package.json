@@ -19,7 +19,7 @@
     "lint:styles": "stylelint \"./src/**/*.scss\" --quiet --config ./.stylelintrc",
     "lint": "npm run lint:ts && npm run lint:styles",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "classnames": "2.2.6",
