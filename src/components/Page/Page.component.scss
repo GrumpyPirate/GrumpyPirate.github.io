@@ -1,5 +1,5 @@
 @import 'core';
 
 .page {
-  background-color: $body-bg;
+  background-color: darken(map-get($palette, 'white'), 5%);
 }

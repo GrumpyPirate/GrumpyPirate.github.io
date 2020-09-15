@@ -49,13 +49,17 @@ $selector: sidebar;
   }
 
   &__brand {
+    @include no-outline;
     @include heading(5);
 
+    display: flex;
+    align-items: center;
     letter-spacing: normal;
     margin-bottom: 0;
 
     @include respond-up('lg') {
       font-size: $font-size-h4;
+      display: block;
     }
 
     &__image {
@@ -63,18 +67,16 @@ $selector: sidebar;
 
       background: url('./head-sprite.png') top left no-repeat transparent;
       background-size: rem(32px) rem(64px);
-      display: inline-block;
+      display: block;
       filter: drop-shadow(#{$filter-shadow-right-down-sm});
       height: rem(32px);
       image-rendering: crisp-edges;
       margin: 0;
       transition: transform $anim-dur;
-      vertical-align: middle;
       width: rem(32px);
 
       @include respond-up('lg') {
         background-size: rem(48px) rem(96px);
-        display: block;
         height: rem(48px);
         margin-left: auto;
         width: rem(48px);

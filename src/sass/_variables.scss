@@ -127,7 +127,7 @@ $gutter-widths: (
   'md': $grid-gutter-width-base,
 );
 
-$body-bg: darken(map-get($palette, 'white'), 5%);
+$body-bg: map-get($palette, 'theme-dark-shades');
 $body-color: map-get($palette, 'theme-dark-shades');
 
 // Border radius
