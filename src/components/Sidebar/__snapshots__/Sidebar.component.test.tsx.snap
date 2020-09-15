@@ -12,11 +12,8 @@ exports[`Components Sidebar should render as expected, without crashing 1`] = `
         className="sidebar__brand"
         to="/"
       >
-        <img
-          alt=""
+        <figure
           className="sidebar__brand__image"
-          height="52"
-          width="52"
         />
         <span
           className="sidebar__brand__name"

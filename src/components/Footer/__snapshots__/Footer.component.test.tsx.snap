@@ -56,7 +56,7 @@ exports[`Components Footer should render as expected, without crashing 1`] = `
        
       <a
         className="footer__link"
-        href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
+        href="https://github.com/GrumpyPirate/GrumpyPirate.github.io"
         rel="noreferrer noopener"
         target="_blank"
       >
