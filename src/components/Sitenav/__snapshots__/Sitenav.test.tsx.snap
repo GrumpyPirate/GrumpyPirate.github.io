@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Sitenav should render as expected, without crashing 1`] = `
+.c1 a {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  color: #dc8381;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  margin-bottom: 0;
+  padding-bottom: 0.125em;
+}
+
+.c1 a,
+.c1 a:hover,
+.c1 a:focus,
+.c1 a:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 a,
+.c1 a:hover,
+.c1 a:focus,
+.c1 a:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 a::before {
+  background-color: currentColor;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.15s ease;
+  -webkit-transition: transform 0.15s ease;
+  transition: transform 0.15s ease;
+}
+
+.c1 a:focus::before,
+.c1 a:hover::before,
+.c1 a:active::before {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.c1 a::before,
+.c1 a::after {
+  background-color: currentColor;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.15s ease;
+  -webkit-transition: transform 0.15s ease;
+  transition: transform 0.15s ease;
+  width: 50%;
+}
+
+.c1 a::before {
+  left: 0;
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.c1 a::after {
+  right: 0;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.c1 a:focus::before,
+.c1 a:hover::before,
+.c1 a:active::before,
+.c1 a:focus::after,
+.c1 a:hover::after,
+.c1 a:active::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.c1 a:hover,
+.c1 a:focus,
+.c1 a.active {
+  color: #fff;
+}
+
+.c1 a.active::before,
+.c1 a.active::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.c1:not(:last-child) {
+  margin: 0 0 0.75rem;
+}
+
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width:48em) {
+  .c1 a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c1:not(:last-child) {
+    margin: 0 0.75rem 0 0;
+  }
+}
+
+@media (min-width:75em) {
+  .c1:not(:last-child) {
+    margin: 0;
+  }
+}
+
+@media (min-width:48em) and (max-width:74.9375em) {
+  .c0 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+<ul
+  class="c0"
+  role="navigation"
+>
+  <li
+    class="c1"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+    >
+      About
+    </a>
+  </li>
+  <li
+    class="c1"
+  >
+    <a
+      class=""
+      href="/portfolio"
+    >
+      Portfolio
+    </a>
+  </li>
+</ul>
+`;

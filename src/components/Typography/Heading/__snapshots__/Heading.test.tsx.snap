@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Heading should render as expected, without crashing 1`] = `
+.c0 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+@media (min-width:48em) {
+  .c0 {
+    font-size: 1rem;
+  }
+}
+
+<h5
+  class="c0"
+>
+  Facilis dicta totam assumenda
+</h5>
+`;

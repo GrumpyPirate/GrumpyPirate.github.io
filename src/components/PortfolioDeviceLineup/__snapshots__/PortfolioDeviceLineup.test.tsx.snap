@@ -1,0 +1,292 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioDeviceLineup should render as expected, without crashing 1`] = `
+.c7 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c3 {
+  margin: 0;
+  position: relative;
+}
+
+.c4 {
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.c6 {
+  display: block;
+  margin: 0;
+  overflow-y: auto;
+  position: relative;
+  background-color: #333;
+  z-index: 1;
+}
+
+.c6 img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.c1 {
+  left: 50%;
+  position: absolute;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 .c2 {
+  height: 19.409584980237156rem;
+  width: 33.75rem;
+}
+
+.c1 .c5 {
+  height: 82%;
+  left: 12.4%;
+  top: 6%;
+  width: 75.125%;
+}
+
+.c8 {
+  left: 50%;
+  position: absolute;
+  bottom: 10px;
+  -webkit-transform: translateX(66%);
+  -ms-transform: translateX(66%);
+  transform: translateX(66%);
+}
+
+.c8 .c2 {
+  height: 16.665372670807454rem;
+  width: 11.25rem;
+}
+
+.c8 .c5 {
+  height: 79.85%;
+  left: 5.75%;
+  top: 9.4%;
+  width: 88.95%;
+}
+
+.c9 {
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(75%);
+  -ms-transform: translateX(75%);
+  transform: translateX(75%);
+}
+
+.c9 .c2 {
+  height: 11.864864864864865rem;
+  width: 6rem;
+}
+
+.c9 .c5 {
+  height: 74.75%;
+  left: 6.8%;
+  top: 13.125%;
+  width: 86.25%;
+}
+
+.c0 {
+  height: 22.5rem;
+  position: relative;
+}
+
+@media (min-width:90em) {
+  .c1 .c2 {
+    height: 23.291501976284586rem;
+    width: 40.5rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c8 .c2 {
+    height: 19.998447204968944rem;
+    width: 13.5rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c9 .c2 {
+    height: 14.237837837837837rem;
+    width: 7.199999999999999rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c0 {
+    height: 26.25rem;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: none;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+    type="desktop"
+  >
+    <figure
+      class="c2 c3"
+    >
+      <img
+        alt=""
+        class="c4"
+        src="frame-laptop.svg"
+      />
+      <figure
+        class="c5 c6"
+      >
+        <picture>
+          <source
+            sizes="486px"
+            srcset="http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=webp&w=486 486w, http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=webp&w=972 972w"
+            type="image/webp"
+          />
+          <source
+            sizes="486px"
+            srcset="http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=jpg&w=486 486w, http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=jpg&w=972 972w"
+            type="image/jpeg"
+          />
+          <source
+            sizes="406px"
+            srcset="http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=webp&w=406 406w, http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=webp&w=812 812w"
+            type="image/webp"
+          />
+          <source
+            sizes="406px"
+            srcset="http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=jpg&w=406 406w, http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch?fm=jpg&w=812 812w"
+            type="image/jpeg"
+          />
+          <img
+            alt=""
+            class="c7"
+            data-testid="loadable-image"
+            loading="lazy"
+            src="http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch"
+          />
+        </picture>
+      </figure>
+    </figure>
+  </div>
+  <div
+    class="c8"
+    type="tablet"
+  >
+    <figure
+      class="c2 c3"
+    >
+      <img
+        alt=""
+        class="c4"
+        src="frame-tablet.svg"
+      />
+      <figure
+        class="c5 c6"
+      >
+        <picture>
+          <source
+            sizes="486px"
+            srcset="http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=webp&w=486 486w, http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=webp&w=972 972w"
+            type="image/webp"
+          />
+          <source
+            sizes="486px"
+            srcset="http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=jpg&w=486 486w, http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=jpg&w=972 972w"
+            type="image/jpeg"
+          />
+          <source
+            sizes="406px"
+            srcset="http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=webp&w=406 406w, http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=webp&w=812 812w"
+            type="image/webp"
+          />
+          <source
+            sizes="406px"
+            srcset="http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=jpg&w=406 406w, http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly?fm=jpg&w=812 812w"
+            type="image/jpeg"
+          />
+          <img
+            alt=""
+            class="c7"
+            data-testid="loadable-image"
+            loading="lazy"
+            src="http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly"
+          />
+        </picture>
+      </figure>
+    </figure>
+  </div>
+  <div
+    class="c9"
+    type="mobile"
+  >
+    <figure
+      class="c2 c3"
+    >
+      <img
+        alt=""
+        class="c4"
+        src="frame-mobile.svg"
+      />
+      <figure
+        class="c5 c6"
+      >
+        <picture>
+          <source
+            sizes="486px"
+            srcset="https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=webp&w=486 486w, https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=webp&w=972 972w"
+            type="image/webp"
+          />
+          <source
+            sizes="486px"
+            srcset="https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=jpg&w=486 486w, https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=jpg&w=972 972w"
+            type="image/jpeg"
+          />
+          <source
+            sizes="406px"
+            srcset="https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=webp&w=406 406w, https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=webp&w=812 812w"
+            type="image/webp"
+          />
+          <source
+            sizes="406px"
+            srcset="https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=jpg&w=406 406w, https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting?fm=jpg&w=812 812w"
+            type="image/jpeg"
+          />
+          <img
+            alt=""
+            class="c7"
+            data-testid="loadable-image"
+            loading="lazy"
+            src="https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting"
+          />
+        </picture>
+      </figure>
+    </figure>
+  </div>
+</div>
+`;

@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioPageHeader should render as expected, without crashing 1`] = `
+.c6 {
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+}
+
+.c2 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c7 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 2.475rem;
+}
+
+.c10 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.c1 {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c1::after {
+  background-color: hsla(348,27.9%,9.7%,0.8);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.c1 img {
+  height: 125%;
+  object-fit: cover;
+  position: absolute;
+  -webkit-transform: rotateZ(-4deg) translateX(-12.5%);
+  -ms-transform: rotateZ(-4deg) translateX(-12.5%);
+  transform: rotateZ(-4deg) translateX(-12.5%);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 125%;
+}
+
+.c3 {
+  position: relative;
+  z-index: 1;
+}
+
+.c8 {
+  background-color: rgba(48,36,69,0.8);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #b54259;
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+  vertical-align: top;
+}
+
+.c4 a {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: #b54259;
+  color: #f2f1f3;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  vertical-align: bottom;
+  z-index: 1;
+}
+
+.c4 a:hover,
+.c4 a:focus {
+  color: #f2f1f3;
+}
+
+.c9 {
+  background-color: rgba(48,36,69,0.8);
+  color: #fff;
+  padding: 0 0.75rem;
+}
+
+.c11 {
+  margin: 0;
+}
+
+.c12 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c13 {
+  display: inline-block;
+  padding: 0.5rem 0;
+  vertical-align: middle;
+}
+
+.c13:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.c13 .c5 {
+  height: 3rem;
+  width: 4rem;
+}
+
+.c0 {
+  background-color: #302445;
+  border-bottom: solid 0.375rem #dc8381;
+  min-height: 22.5rem;
+  position: relative;
+  padding: 3rem 0 2rem;
+}
+
+@media (min-width:48em) {
+  .c7 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c10 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c8 {
+    word-break: normal;
+  }
+}
+
+@media (min-width:48em) {
+  .c8 {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c4 a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c4 a {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c9 {
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+@media (min-width:48em) {
+  .c9 {
+    padding: 0 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c12 {
+    border-left: solid 1px #dc8381;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width:75em) {
+  .c0 {
+    border-bottom-width: 0.5rem;
+  }
+}
+
+<header
+  class="c0"
+>
+  <figure
+    class="c1"
+  >
+    <picture>
+      <source
+        media="(min-width: 48em)"
+        sizes="768px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=768 768w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=1536 1536w"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 48em)"
+        sizes="768px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=768 768w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=1536 1536w"
+        type="image/jpeg"
+      />
+      <source
+        media="(min-width: 30em)"
+        sizes="480px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=480 480w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=720 720w"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 30em)"
+        sizes="480px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=480 480w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=720 720w"
+        type="image/jpeg"
+      />
+      <source
+        sizes="360px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=360&h=450&fit=thumb 360w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=720&h=900&fit=thumb 720w"
+        type="image/webp"
+      />
+      <source
+        sizes="360px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=360&h=900&fit=thumb 360w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=720&h=900&fit=thumb 720w"
+        type="image/jpeg"
+      />
+      <img
+        alt=""
+        class="c2"
+        data-testid="loadable-image"
+        loading="lazy"
+        src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+      />
+    </picture>
+  </figure>
+  <div
+    class="c3"
+  >
+    <div
+      class="c4"
+    >
+      <a
+        href="/portfolio"
+      >
+        <svg
+          aria-label=""
+          class="c5 c6"
+        >
+          <use
+            xlink:href="#chevron-left"
+          />
+        </svg>
+        Portfolio
+      </a>
+    </div>
+    <div>
+      <h1
+        class="c7 c8"
+      >
+        Alias rem cumque laudantium
+      </h1>
+    </div>
+    <div
+      class="c9"
+    >
+      <h2
+        class="c10 c11"
+      >
+        Technologies
+      </h2>
+      <ul
+        class="c12"
+      >
+        <li
+          class="c13"
+        >
+          <svg
+            aria-label="Ex ullam"
+            class="c5 c6"
+          >
+            <use
+              xlink:href="#react"
+            />
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+`;

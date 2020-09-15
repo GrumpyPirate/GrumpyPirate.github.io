@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/LoadableImage should fade the image in, if the image is already cached in the user's browser 1`] = `
+.c0 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+<img
+  alt="Test img element"
+  class="c0"
+  data-testid="loadable-image"
+  loading="lazy"
+  src="39mc.jpg"
+/>
+`;
+
+exports[`Components/LoadableImage should fade the image in, when the load event fires 1`] = `
+.c0 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+<img
+  alt="Test img element"
+  class="c0"
+  data-testid="loadable-image"
+  loading="lazy"
+  src="39mc.jpg"
+/>
+`;
+
+exports[`Components/LoadableImage should render as expected, without crashing 1`] = `
+.c0 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+<img
+  alt=""
+  class="c0"
+  data-testid="loadable-image"
+  loading="lazy"
+  src="39mc.jpg"
+/>
+`;

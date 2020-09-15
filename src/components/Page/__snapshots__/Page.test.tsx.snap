@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Page should render as expected, without crashing 1`] = `
+.c0 {
+  background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
+}
+
+<div
+  class="c0"
+>
+  <div>
+    Test
+  </div>
+</div>
+`;

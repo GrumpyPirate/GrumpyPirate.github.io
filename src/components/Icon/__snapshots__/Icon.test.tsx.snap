@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Icon should render as expected, without crashing 1`] = `
+.c0 {
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+}
+
+<svg
+  aria-label="Unduelling Lawnlet"
+  class="c0 teamman-billian__pilgrimatic teamman-billian__pilgrimatic--mesadenia"
+>
+  <use
+    xlink:href="#nextjs"
+  />
+</svg>
+`;

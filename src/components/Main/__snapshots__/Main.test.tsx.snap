@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Main should render as expected, without crashing 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  position: relative;
+}
+
+@media (min-width:75em) {
+  .c0 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-left: 13.75rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c0 {
+    padding-left: 16.25rem;
+  }
+}
+
+<main
+  class="c0"
+  id="main-content"
+>
+  <div
+    class="c1"
+  />
+</main>
+`;

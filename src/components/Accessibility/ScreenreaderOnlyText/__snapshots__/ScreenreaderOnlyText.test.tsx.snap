@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components ScreenreaderOnlyText should render as expected, without crashing 1`] = `
+.c0 {
+  position: absolute;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+<span
+  class="c0"
+>
+  Nobis doloribus quidem
+</span>
+`;

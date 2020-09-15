@@ -1,0 +1,716 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Portfolio should render as expected, without crashing 1`] = `
+.c0 {
+  background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.c10 {
+  position: relative;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.c8 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c3 {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  background-color: #302445;
+  border-bottom: solid 0.375rem #dc8381;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.c4 {
+  color: #dc8381;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.c5 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 2.475rem;
+  font-size: 12vmin;
+  font-weight: 300;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5::first-letter {
+  margin-left: 0.25em;
+}
+
+.c6 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: rgba(242,241,243,0.5);
+  margin: 0;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.c6 a {
+  color: #dc8381;
+}
+
+.c6 a:hover,
+.c6 a:focus {
+  color: hsl(1.3000000000000114,56.5%,75.3%);
+}
+
+.c6 a:active {
+  color: hsl(1.3000000000000114,56.5%,61.6%);
+}
+
+.c18 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c20 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.c17 {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.15s ease;
+  -webkit-transition: transform 0.15s ease;
+  transition: transform 0.15s ease;
+}
+
+.c17 img {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.c19 {
+  background-image: linear-gradient( to top, rgba(48,36,69,0.8), rgba(48,36,69,0.4) 40%, rgba(48,36,69,0) );
+  color: #fff;
+  padding: 15vmax 0.9375rem 0.9375rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.c21 {
+  margin-bottom: 0;
+}
+
+.c16 {
+  display: block;
+}
+
+.c16 a {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 calc(100% - 0.75rem);
+  -ms-flex: 1 1 calc(100% - 0.75rem);
+  flex: 1 1 calc(100% - 0.75rem);
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: left;
+  overflow: hidden;
+  font-weight: 300;
+  border: 0.375rem solid #b54259;
+  border-style: none none solid;
+  border-radius: 0.25rem;
+  background-color: #333;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+}
+
+.c16 a:hover,
+.c16 a:focus {
+  -webkit-transform: translateY(-0.25rem);
+  -ms-transform: translateY(-0.25rem);
+  transform: translateY(-0.25rem);
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+.c11 {
+  display: grid;
+  grid-gap: 0.75rem;
+  padding: 0.75rem 0.75rem 0;
+  text-align: left;
+}
+
+.c13 {
+  margin-right: 0.5rem;
+}
+
+.c14 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.c15 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 0.75rem;
+  padding: 0.75rem 0.75rem 0;
+}
+
+.c1 .c9 {
+  padding-top: 0;
+}
+
+@media (min-width:48em) {
+  .c10 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c8 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c8 {
+    -webkit-flex-basis: 83.33333333333334%;
+    -ms-flex-preferred-size: 83.33333333333334%;
+    flex-basis: 83.33333333333334%;
+    max-width: 83.33333333333334%;
+  }
+}
+
+@media (min-width:48em) {
+  .c8 {
+    -webkit-flex-basis: 66.66666666666666%;
+    -ms-flex-preferred-size: 66.66666666666666%;
+    flex-basis: 66.66666666666666%;
+    max-width: 66.66666666666666%;
+  }
+}
+
+@media (min-width:48em) {
+  .c3 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c7 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+@media (min-width:75em) {
+  .c2 {
+    border-bottom-width: 0.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c4 {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c5 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c6 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c6 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c20 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c16 {
+    opacity: 0;
+    -webkit-animation: hpzHus 0.15s ease 0s 1 forwards;
+    animation: hpzHus 0.15s ease 0s 1 forwards;
+  }
+}
+
+@media (min-width:75em) {
+  .c16 a {
+    border-bottom-width: 0.46875rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c11 {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.9375rem;
+    padding: 0.9375rem 0.9375rem 0;
+  }
+}
+
+@media (min-width:75em) {
+  .c11 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:48em) {
+  .c12 {
+    grid-column-start: 2;
+  }
+}
+
+@media (min-width:75em) {
+  .c12 {
+    grid-column-start: 3;
+  }
+}
+
+@media (min-width:48em) {
+  .c15 {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.9375rem;
+    padding: 0.9375rem 0.9375rem 0;
+  }
+}
+
+@media (min-width:75em) {
+  .c15 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:48em) {
+
+}
+
+<div
+  class="c0 c1"
+>
+  <header
+    class="c2"
+  >
+    <div
+      class="c3"
+    >
+      <div
+        class=""
+      >
+        <div
+          class="c4"
+        >
+          <h1
+            class="c5"
+          >
+            Portfolio
+          </h1>
+        </div>
+        <h2
+          class="c6"
+        >
+          <div
+            class="c3"
+          >
+            <div
+              class="c7"
+            >
+              <div
+                class="c8"
+              >
+                Projects I've worked on
+              </div>
+            </div>
+          </div>
+        </h2>
+      </div>
+    </div>
+  </header>
+  <div
+    class="c9 c10"
+  >
+    <div
+      class="c11"
+    >
+      <div
+        class="c12"
+      >
+        <label
+          class="c13"
+          for="sort-select"
+        >
+          Sort by:
+        </label>
+        <div
+          class="c14"
+        >
+          <div
+            class=" css-b62m3t-container"
+          >
+            <span
+              class="css-1f43avz-a11yText-A11yText"
+              id="react-select-2-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              class="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              class=" css-wv0ayz-control"
+            >
+              <div
+                class=" css-319lph-ValueContainer"
+              >
+                <div
+                  class=" css-qc6sy-singleValue"
+                >
+                  Date (Newest first)
+                </div>
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-select-2-listbox"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-owns="react-select-2-listbox"
+                  aria-readonly="true"
+                  class="css-mohuvp-dummyInput-DummyInput"
+                  id="sort-select"
+                  inputmode="none"
+                  role="combobox"
+                  tabindex="0"
+                  value=""
+                />
+              </div>
+              <div
+                class=" css-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  class=" css-1okebmr-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  class=" css-tlfecz-indicatorContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="css-tj5bde-Svg"
+                    focusable="false"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul
+      class="c15"
+    >
+      <li
+        class="c16"
+        data-testid="portfolio-page__list__item"
+        style="animation-delay: 0s;"
+      >
+        <a
+          href="/portfolio/scrupulum-misphrase"
+          role="listitem"
+        >
+          <figure
+            class="c17"
+          >
+            <picture>
+              <source
+                sizes="360px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
+                type="image/webp"
+              />
+              <source
+                sizes="360px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
+                type="image/jpeg"
+              />
+              <source
+                sizes="600px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1200 1200w"
+                type="image/webp"
+              />
+              <source
+                sizes="600px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1200 1200w"
+                type="image/jpeg"
+              />
+              <img
+                alt=""
+                class="c18"
+                data-testid="loadable-image"
+                loading="lazy"
+                src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+              />
+            </picture>
+          </figure>
+          <div
+            class="c19"
+          >
+            <h3
+              class="c20"
+            >
+              Scrupulum Misphrase
+            </h3>
+            <p
+              class="c21"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class="c16"
+        data-testid="portfolio-page__list__item"
+        style="animation-delay: 0.0375s;"
+      >
+        <a
+          href="/portfolio/scrupulum-misphrase"
+          role="listitem"
+        >
+          <figure
+            class="c17"
+          >
+            <picture>
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=720 720w"
+                type="image/webp"
+              />
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=720 720w"
+                type="image/jpeg"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=1200 1200w"
+                type="image/webp"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=1200 1200w"
+                type="image/jpeg"
+              />
+              <img
+                alt=""
+                class="c18"
+                data-testid="loadable-image"
+                loading="lazy"
+                src="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+              />
+            </picture>
+          </figure>
+          <div
+            class="c19"
+          >
+            <h3
+              class="c20"
+            >
+              Scrupulum Misphrase
+            </h3>
+            <p
+              class="c21"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class="c16"
+        data-testid="portfolio-page__list__item"
+        style="animation-delay: 0.075s;"
+      >
+        <a
+          href="/portfolio/scrupulum-misphrase"
+          role="listitem"
+        >
+          <figure
+            class="c17"
+          >
+            <picture>
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=720 720w"
+                type="image/webp"
+              />
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=720 720w"
+                type="image/jpeg"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=1200 1200w"
+                type="image/webp"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=1200 1200w"
+                type="image/jpeg"
+              />
+              <img
+                alt=""
+                class="c18"
+                data-testid="loadable-image"
+                loading="lazy"
+                src="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+              />
+            </picture>
+          </figure>
+          <div
+            class="c19"
+          >
+            <h3
+              class="c20"
+            >
+              Scrupulum Misphrase
+            </h3>
+            <p
+              class="c21"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

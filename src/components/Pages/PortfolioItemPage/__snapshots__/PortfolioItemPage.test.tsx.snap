@@ -1,0 +1,1708 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioPage should render as expected, without crashing 1`] = `
+.c45 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  background-color: #dc8381;
+  border: solid 1px #dc8381;
+  border-radius: 2rem;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.375;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-property: -webkit-transform,color,background-color;
+  -webkit-transition-property: transform,color,background-color;
+  transition-property: transform,color,background-color;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #b54259;
+  border-color: #b54259;
+}
+
+.c45::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.c45,
+.c45:hover,
+.c45:focus,
+.c45:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c45:disabled,
+.c45[disabled],
+.c45:disabled:hover,
+.c45[disabled]:hover,
+.c45:disabled:focus,
+.c45[disabled]:focus,
+.c45:disabled:active,
+.c45[disabled]:active {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c45,
+.c45:hover,
+.c45:focus,
+.c45:active {
+  color: #fff;
+}
+
+.c45:hover,
+.c45:focus {
+  background-color: hsl(348,46.6%,46%);
+  border-color: hsl(348,46.6%,46%);
+}
+
+.c45:active {
+  background-color: #b54259;
+  border-color: #b54259;
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+  -webkit-transition-duration: 0s,0.15s,0.15s;
+  transition-duration: 0s,0.15s,0.15s;
+}
+
+.c45:disabled,
+.c45[disabled],
+.c45:disabled:hover,
+.c45[disabled]:hover,
+.c45:disabled:focus,
+.c45[disabled]:focus,
+.c45:disabled:active,
+.c45[disabled]:active {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c20 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c22 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c23 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  -webkit-flex-basis: 83.33333333333334%;
+  -ms-flex-preferred-size: 83.33333333333334%;
+  flex-basis: 83.33333333333334%;
+  max-width: 83.33333333333334%;
+  left: 8.333333333333332%;
+}
+
+.c18 {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c4 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c0 {
+  background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.c17 {
+  position: relative;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.c29 {
+  display: block;
+  max-width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.c31 {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  position: absolute;
+  background-color: #333;
+  z-index: 1;
+}
+
+.c31 img {
+  display: block;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.c33 {
+  position: relative;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c27 .c28 {
+  height: 10.423666007905139rem;
+  width: 18.125rem;
+}
+
+.c27 .c30 {
+  height: 8.482258213932806rem;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 0.656578125rem;
+  width: 13.59375rem;
+}
+
+.c32 .c28 {
+  height: 23.72972972972973rem;
+  width: 12rem;
+}
+
+.c32 .c30 {
+  height: 17.732040540540538rem;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 3.09rem;
+  width: 10.41rem;
+}
+
+.c34 .c28 {
+  height: 20.73913043478261rem;
+  width: 14rem;
+}
+
+.c34 .c30 {
+  height: 16.617228260869567rem;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 1.9250000000000003rem;
+  width: 12.424999999999999rem;
+}
+
+.c26 .carousel {
+  position: relative;
+  width: 100%;
+}
+
+.c26 .carousel * {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c26 .carousel button {
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.c26 .carousel img {
+  pointer-events: none;
+}
+
+.c26 .carousel .carousel {
+  position: relative;
+}
+
+.c26 .carousel .control-arrow {
+  font-size: 18px;
+  margin-top: -13px;
+  top: 50%;
+}
+
+.c26 .carousel .thumbs-wrapper {
+  margin: 20px;
+  overflow: hidden;
+}
+
+.c26 .carousel .thumbs {
+  list-style: none;
+  position: relative;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  white-space: nowrap;
+}
+
+.c26 .carousel .thumb {
+  border: 3px solid #fff;
+  display: inline-block;
+  margin-right: 6px;
+  overflow: hidden;
+  padding: 2px;
+  -webkit-transition: border 0.15s ease-in;
+  transition: border 0.15s ease-in;
+  white-space: nowrap;
+  width: 80px;
+}
+
+.c26 .carousel .thumb.selected,
+.c26 .carousel .thumb:hover {
+  border: 3px solid #333;
+  padding: 2px;
+}
+
+.c26 .carousel .thumb img {
+  vertical-align: top;
+}
+
+.c26 .carousel .control-dots {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.c26 .carousel .control-dots .dot {
+  background: #dc8381;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 0 8px;
+  opacity: 0.5;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-property: border,opacity,-webkit-transform,background-color;
+  -webkit-transition-property: border,opacity,transform,background-color;
+  transition-property: border,opacity,transform,background-color;
+  width: 8px;
+}
+
+.c26 .carousel .control-dots .dot:hover,
+.c26 .carousel .control-dots .dot.selected {
+  background-color: transparent;
+  border: solid 1px #dc8381;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c26 .carousel .control-dots .dot.selected {
+  opacity: 1;
+}
+
+.c26 .carousel .control-arrow,
+.c26 .carousel.carousel-slider .control-arrow {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 32px;
+  opacity: 0.4;
+  position: absolute;
+  top: 20px;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  z-index: 2;
+}
+
+.c26 .carousel .control-arrow .control-arrow:hover,
+.c26 .carousel.carousel-slider .control-arrow .control-arrow:hover {
+  opacity: 1;
+}
+
+.c26 .carousel .control-arrow .control-arrow::before,
+.c26 .carousel.carousel-slider .control-arrow .control-arrow::before {
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  content: '';
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.c26 .carousel .control-disabled.control-arrow {
+  cursor: inherit;
+  display: none;
+  opacity: 0;
+}
+
+.c26 .carousel .control-prev.control-arrow {
+  left: 0;
+}
+
+.c26 .carousel .control-prev.control-arrow::before {
+  border-right: 8px solid #fff;
+}
+
+.c26 .carousel .control-next.control-arrow {
+  right: 0;
+}
+
+.c26 .carousel .control-next.control-arrow::before {
+  border-left: 8px solid #fff;
+}
+
+.c26 .carousel.carousel-slider {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.c26 .carousel.carousel-slider .control-arrow {
+  bottom: 0;
+  color: #fff;
+  font-size: 26px;
+  margin-top: 0;
+  padding: 5px;
+  top: 0;
+}
+
+.c26 .carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.c26 .carousel .slider-wrapper {
+  margin: auto;
+  overflow: hidden;
+  -webkit-transition: height 0.15s ease-in;
+  transition: height 0.15s ease-in;
+  width: 100%;
+}
+
+.c26 .carousel .slider-wrapper.axis-horizontal .slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c26 .carousel .slider-wrapper.axis-horizontal .slider .slide {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.c26 .carousel .slider-wrapper.axis-vertical {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c26 .carousel .slider-wrapper.axis-vertical .slider {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c26 .carousel .slider {
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+.c26 .carousel .slider.animated {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.c26 .carousel .slide {
+  margin: 0;
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.c26 .carousel .slide img {
+  border: 0;
+  vertical-align: top;
+}
+
+.c26 .carousel .slide iframe {
+  border: 0;
+  display: inline-block;
+  margin: 0 40px 40px;
+  width: calc(100% - 80px);
+}
+
+.c26 .carousel .slide .legend {
+  background: #000;
+  border-radius: 10px;
+  bottom: 40px;
+  color: #fff;
+  font-size: 12px;
+  left: 50%;
+  margin-left: -45%;
+  opacity: 0.25;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+  width: 90%;
+}
+
+.c26 .carousel .carousel-status {
+  color: #fff;
+  font-size: 10px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  top: 0;
+}
+
+.c26 .carousel:hover .slide .legend {
+  opacity: 1;
+}
+
+.c38 {
+  margin: 0;
+  position: relative;
+}
+
+.c39 {
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.c41 {
+  display: block;
+  margin: 0;
+  overflow-y: auto;
+  position: relative;
+  background-color: #333;
+  z-index: 1;
+}
+
+.c41 img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.c36 {
+  left: 50%;
+  position: absolute;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c36 .c37 {
+  height: 19.409584980237156rem;
+  width: 33.75rem;
+}
+
+.c36 .c40 {
+  height: 82%;
+  left: 12.4%;
+  top: 6%;
+  width: 75.125%;
+}
+
+.c42 {
+  left: 50%;
+  position: absolute;
+  bottom: 10px;
+  -webkit-transform: translateX(66%);
+  -ms-transform: translateX(66%);
+  transform: translateX(66%);
+}
+
+.c42 .c37 {
+  height: 16.665372670807454rem;
+  width: 11.25rem;
+}
+
+.c42 .c40 {
+  height: 79.85%;
+  left: 5.75%;
+  top: 9.4%;
+  width: 88.95%;
+}
+
+.c43 {
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(75%);
+  -ms-transform: translateX(75%);
+  transform: translateX(75%);
+}
+
+.c43 .c37 {
+  height: 11.864864864864865rem;
+  width: 6rem;
+}
+
+.c43 .c40 {
+  height: 74.75%;
+  left: 6.8%;
+  top: 13.125%;
+  width: 86.25%;
+}
+
+.c35 {
+  height: 22.5rem;
+  position: relative;
+}
+
+.c8 {
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+}
+
+.c9 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 2.475rem;
+}
+
+.c12 {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.c3 {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c3::after {
+  background-color: hsla(348,27.9%,9.7%,0.8);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.c3 img {
+  height: 125%;
+  object-fit: cover;
+  position: absolute;
+  -webkit-transform: rotateZ(-4deg) translateX(-12.5%);
+  -ms-transform: rotateZ(-4deg) translateX(-12.5%);
+  transform: rotateZ(-4deg) translateX(-12.5%);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 125%;
+}
+
+.c5 {
+  position: relative;
+  z-index: 1;
+}
+
+.c10 {
+  background-color: rgba(48,36,69,0.8);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #b54259;
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+  vertical-align: top;
+}
+
+.c6 a {
+  font-family: 'Barlow',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: #b54259;
+  color: #f2f1f3;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  vertical-align: bottom;
+  z-index: 1;
+}
+
+.c6 a:hover,
+.c6 a:focus {
+  color: #f2f1f3;
+}
+
+.c11 {
+  background-color: rgba(48,36,69,0.8);
+  color: #fff;
+  padding: 0 0.75rem;
+}
+
+.c13 {
+  margin: 0;
+}
+
+.c14 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c15 {
+  display: inline-block;
+  padding: 0.5rem 0;
+  vertical-align: middle;
+}
+
+.c15:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.c15 .c7 {
+  height: 3rem;
+  width: 4rem;
+}
+
+.c2 {
+  background-color: #302445;
+  border-bottom: solid 0.375rem #dc8381;
+  min-height: 22.5rem;
+  position: relative;
+  padding: 3rem 0 2rem;
+}
+
+.c46 .c7 {
+  -webkit-animation: iUEjna 2.25s linear 0s infinite;
+  animation: iUEjna 2.25s linear 0s infinite;
+  display: block;
+  height: 3rem;
+  margin: auto;
+  width: 3rem;
+}
+
+.c24 {
+  border-radius: 0.5rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.c24 > img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.c25 {
+  border-color: currentColor;
+  border-style: solid none none;
+  border-width: 1px;
+  margin: 2rem 0;
+  opacity: 0.25;
+}
+
+.c44 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.c1 .c16 {
+  text-align: left;
+}
+
+@media (min-width:48em) {
+  .c20 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c20 {
+    -webkit-flex-basis: 83.33333333333334%;
+    -ms-flex-preferred-size: 83.33333333333334%;
+    flex-basis: 83.33333333333334%;
+    max-width: 83.33333333333334%;
+  }
+}
+
+@media (min-width:48em) {
+  .c22 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c22 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:90em) {
+  .c22 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:48em) {
+  .c23 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c23 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:90em) {
+  .c23 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+  }
+}
+
+@media (min-width:90em) {
+  .c23 {
+    left: 8.333333333333332%;
+  }
+}
+
+@media (min-width:48em) {
+  .c18 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c19 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c21 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c17 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c27 .c28 {
+    height: 15.096343873517787rem;
+    width: 26.25rem;
+  }
+
+  .c27 .c30 {
+    height: 12.284649827075098rem;
+    top: 0.95090625rem;
+    width: 19.6875rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c32 .c28 {
+    height: 23.72972972972973rem;
+    width: 12rem;
+  }
+
+  .c32 .c30 {
+    height: 17.732040540540538rem;
+    top: 3.09rem;
+    width: 10.41rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c34 .c28 {
+    height: 29.627329192546586rem;
+    width: 20rem;
+  }
+
+  .c34 .c30 {
+    height: 23.738897515527952rem;
+    top: 2.75rem;
+    width: 17.75rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c26 {
+    display: none;
+  }
+}
+
+@media (min-width:90em) {
+  .c36 .c37 {
+    height: 23.291501976284586rem;
+    width: 40.5rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c42 .c37 {
+    height: 19.998447204968944rem;
+    width: 13.5rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c43 .c37 {
+    height: 14.237837837837837rem;
+    width: 7.199999999999999rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c35 {
+    height: 26.25rem;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c35 {
+    display: none;
+  }
+}
+
+@media (min-width:48em) {
+  .c9 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c12 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c10 {
+    word-break: normal;
+  }
+}
+
+@media (min-width:48em) {
+  .c10 {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c6 a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c6 a {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c11 {
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+@media (min-width:48em) {
+  .c11 {
+    padding: 0 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c14 {
+    border-left: solid 1px #dc8381;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width:75em) {
+  .c2 {
+    border-bottom-width: 0.5rem;
+  }
+}
+
+@media (min-width:48em) {
+
+}
+
+@media (min-width:48em) {
+  .c44 {
+    margin-top: 4rem;
+  }
+}
+
+<div
+  class="c0 c1"
+>
+  <header
+    class="c2"
+  >
+    <figure
+      class="c3"
+    >
+      <picture>
+        <source
+          media="(min-width: 48em)"
+          sizes="768px"
+          srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=768 768w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1536 1536w"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 48em)"
+          sizes="768px"
+          srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=768 768w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1536 1536w"
+          type="image/jpeg"
+        />
+        <source
+          media="(min-width: 30em)"
+          sizes="480px"
+          srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=480 480w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 30em)"
+          sizes="480px"
+          srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=480 480w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
+          type="image/jpeg"
+        />
+        <source
+          sizes="360px"
+          srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360&h=450&fit=thumb 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720&h=900&fit=thumb 720w"
+          type="image/webp"
+        />
+        <source
+          sizes="360px"
+          srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360&h=900&fit=thumb 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720&h=900&fit=thumb 720w"
+          type="image/jpeg"
+        />
+        <img
+          alt=""
+          class="c4"
+          data-testid="loadable-image"
+          loading="lazy"
+          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+        />
+      </picture>
+    </figure>
+    <div
+      class="c5"
+    >
+      <div
+        class="c6"
+      >
+        <a
+          href="/portfolio"
+        >
+          <svg
+            aria-label=""
+            class="c7 c8"
+          >
+            <use
+              xlink:href="#chevron-left"
+            />
+          </svg>
+          Portfolio
+        </a>
+      </div>
+      <div>
+        <h1
+          class="c9 c10"
+        >
+          Scrupulum Misphrase
+        </h1>
+      </div>
+      <div
+        class="c11"
+      >
+        <h2
+          class="c12 c13"
+        >
+          Technologies
+        </h2>
+        <ul
+          class="c14"
+        >
+          <li
+            class="c15"
+          >
+            <svg
+              aria-label="youngling"
+              class="c7 c8"
+            >
+              <use
+                xlink:href="#storybook"
+              />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div
+    class="c16 c17"
+  >
+    <div
+      class="c18"
+    >
+      <div
+        class="c19"
+      >
+        <div
+          class="c20"
+        >
+          <div
+            class="c21"
+          >
+            <div
+              class="c22"
+            >
+              <div>
+                Markdown output is currently mocked
+              </div>
+            </div>
+            <div
+              class="c23"
+            >
+              <figure
+                class="c24"
+              >
+                <picture>
+                  <source
+                    sizes="290px"
+                    srcset="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=webp&w=290 290w, http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=webp&w=580 580w"
+                    type="image/webp"
+                  />
+                  <source
+                    sizes="290px"
+                    srcset="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=jpg&w=290 290w, http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=jpg&w=580 580w"
+                    type="image/jpeg"
+                  />
+                  <source
+                    sizes="336px"
+                    srcset="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=webp&w=336 336w, http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=webp&w=672 672w"
+                    type="image/webp"
+                  />
+                  <source
+                    sizes="336px"
+                    srcset="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=jpg&w=336 336w, http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=jpg&w=672 672w"
+                    type="image/jpeg"
+                  />
+                  <source
+                    sizes="380px"
+                    srcset="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=webp&w=380 380w, http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=webp&w=760 760w"
+                    type="image/webp"
+                  />
+                  <source
+                    sizes="380px"
+                    srcset="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=jpg&w=380 380w, http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse?fm=jpg&w=760 760w"
+                    type="image/jpeg"
+                  />
+                  <img
+                    alt=""
+                    class="c4"
+                    data-testid="loadable-image"
+                    loading="lazy"
+                    src="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse"
+                  />
+                </picture>
+              </figure>
+            </div>
+          </div>
+          <hr
+            class="c25"
+          />
+          <div
+            class="c26"
+          >
+            <div
+              class="carousel-root"
+              tabindex="0"
+            >
+              <div
+                class="carousel carousel-slider"
+                style="width: 100%;"
+              >
+                <ul
+                  class="control-dots"
+                >
+                  <li
+                    aria-label="slide item 1"
+                    class="dot selected"
+                    role="button"
+                    tabindex="0"
+                    value="0"
+                  />
+                  <li
+                    aria-label="slide item 2"
+                    class="dot"
+                    role="button"
+                    tabindex="0"
+                    value="1"
+                  />
+                  <li
+                    aria-label="slide item 3"
+                    class="dot"
+                    role="button"
+                    tabindex="0"
+                    value="2"
+                  />
+                </ul>
+                <button
+                  aria-label="previous slide / item"
+                  class="control-arrow control-prev control-disabled"
+                  type="button"
+                />
+                <div
+                  class="slider-wrapper axis-horizontal"
+                  style="height: auto;"
+                >
+                  <ul
+                    class="slider animated"
+                    style="transform: translate3d(-100%,0,0); transition-duration: 0.3ms;"
+                  >
+                    <li
+                      class="slide"
+                    >
+                      <div
+                        class="c27"
+                      >
+                        <img
+                          alt=""
+                          class="c28 c29"
+                          src="frame-laptop.svg"
+                        />
+                        <figure
+                          class="c30 c31"
+                        >
+                          <picture>
+                            <source
+                              sizes="218px"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=436 436w"
+                              type="image/webp"
+                            />
+                            <source
+                              sizes="218px"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=436 436w"
+                              type="image/jpeg"
+                            />
+                            <img
+                              alt=""
+                              class="c4"
+                              data-testid="loadable-image"
+                              loading="lazy"
+                              src="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                            />
+                          </picture>
+                        </figure>
+                      </div>
+                    </li>
+                    <li
+                      class="slide selected previous"
+                    >
+                      <div
+                        class="c32"
+                      >
+                        <figure
+                          class="c33"
+                        >
+                          <img
+                            alt=""
+                            class="c28 c29"
+                            src="frame-mobile.svg"
+                          />
+                          <figure
+                            class="c30 c31"
+                          >
+                            <picture>
+                              <source
+                                sizes="166px"
+                                srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=166 166w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=332 332w"
+                                type="image/webp"
+                              />
+                              <source
+                                sizes="166px"
+                                srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=166 166w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=332 332w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt=""
+                                class="c4"
+                                data-testid="loadable-image"
+                                loading="lazy"
+                                src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+                              />
+                            </picture>
+                          </figure>
+                        </figure>
+                      </div>
+                    </li>
+                    <li
+                      class="slide"
+                    >
+                      <div
+                        class="c34"
+                      >
+                        <img
+                          alt=""
+                          class="c28 c29"
+                          src="frame-tablet.svg"
+                        />
+                        <figure
+                          class="c30 c31"
+                        >
+                          <picture>
+                            <source
+                              sizes="200px"
+                              srcset="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=webp&w=200 200w, https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=webp&w=400 400w"
+                              type="image/webp"
+                            />
+                            <source
+                              sizes="200px"
+                              srcset="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=jpg&w=200 200w, https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=jpg&w=400 400w"
+                              type="image/jpeg"
+                            />
+                            <img
+                              alt=""
+                              class="c4"
+                              data-testid="loadable-image"
+                              loading="lazy"
+                              src="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
+                            />
+                          </picture>
+                        </figure>
+                      </div>
+                    </li>
+                    <li
+                      class="slide"
+                    >
+                      <div
+                        class="c27"
+                      >
+                        <img
+                          alt=""
+                          class="c28 c29"
+                          src="frame-laptop.svg"
+                        />
+                        <figure
+                          class="c30 c31"
+                        >
+                          <picture>
+                            <source
+                              sizes="218px"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=436 436w"
+                              type="image/webp"
+                            />
+                            <source
+                              sizes="218px"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=436 436w"
+                              type="image/jpeg"
+                            />
+                            <img
+                              alt=""
+                              class="c4"
+                              data-testid="loadable-image"
+                              loading="lazy"
+                              src="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                            />
+                          </picture>
+                        </figure>
+                      </div>
+                    </li>
+                    <li
+                      class="slide selected previous"
+                    >
+                      <div
+                        class="c32"
+                      >
+                        <figure
+                          class="c33"
+                        >
+                          <img
+                            alt=""
+                            class="c28 c29"
+                            src="frame-mobile.svg"
+                          />
+                          <figure
+                            class="c30 c31"
+                          >
+                            <picture>
+                              <source
+                                sizes="166px"
+                                srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=166 166w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=332 332w"
+                                type="image/webp"
+                              />
+                              <source
+                                sizes="166px"
+                                srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=166 166w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=332 332w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt=""
+                                class="c4"
+                                data-testid="loadable-image"
+                                loading="lazy"
+                                src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+                              />
+                            </picture>
+                          </figure>
+                        </figure>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <button
+                  aria-label="next slide / item"
+                  class="control-arrow control-next control-disabled"
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="c35"
+          >
+            <div
+              class="c36"
+              type="desktop"
+            >
+              <figure
+                class="c37 c38"
+              >
+                <img
+                  alt=""
+                  class="c39"
+                  src="frame-laptop.svg"
+                />
+                <figure
+                  class="c40 c41"
+                >
+                  <picture>
+                    <source
+                      sizes="486px"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=486 486w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=972 972w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="486px"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=486 486w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=972 972w"
+                      type="image/jpeg"
+                    />
+                    <source
+                      sizes="406px"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=406 406w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=812 812w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="406px"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=406 406w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=812 812w"
+                      type="image/jpeg"
+                    />
+                    <img
+                      alt=""
+                      class="c4"
+                      data-testid="loadable-image"
+                      loading="lazy"
+                      src="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                    />
+                  </picture>
+                </figure>
+              </figure>
+            </div>
+            <div
+              class="c42"
+              type="tablet"
+            >
+              <figure
+                class="c37 c38"
+              >
+                <img
+                  alt=""
+                  class="c39"
+                  src="frame-tablet.svg"
+                />
+                <figure
+                  class="c40 c41"
+                >
+                  <picture>
+                    <source
+                      sizes="486px"
+                      srcset="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=webp&w=486 486w, https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=webp&w=972 972w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="486px"
+                      srcset="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=jpg&w=486 486w, https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=jpg&w=972 972w"
+                      type="image/jpeg"
+                    />
+                    <source
+                      sizes="406px"
+                      srcset="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=webp&w=406 406w, https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=webp&w=812 812w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="406px"
+                      srcset="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=jpg&w=406 406w, https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow?fm=jpg&w=812 812w"
+                      type="image/jpeg"
+                    />
+                    <img
+                      alt=""
+                      class="c4"
+                      data-testid="loadable-image"
+                      loading="lazy"
+                      src="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
+                    />
+                  </picture>
+                </figure>
+              </figure>
+            </div>
+            <div
+              class="c43"
+              type="mobile"
+            >
+              <figure
+                class="c37 c38"
+              >
+                <img
+                  alt=""
+                  class="c39"
+                  src="frame-mobile.svg"
+                />
+                <figure
+                  class="c40 c41"
+                >
+                  <picture>
+                    <source
+                      sizes="486px"
+                      srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=486 486w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=972 972w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="486px"
+                      srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=486 486w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=972 972w"
+                      type="image/jpeg"
+                    />
+                    <source
+                      sizes="406px"
+                      srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=406 406w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=webp&w=812 812w"
+                      type="image/webp"
+                    />
+                    <source
+                      sizes="406px"
+                      srcset="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=406 406w, https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander?fm=jpg&w=812 812w"
+                      type="image/jpeg"
+                    />
+                    <img
+                      alt=""
+                      class="c4"
+                      data-testid="loadable-image"
+                      loading="lazy"
+                      src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+                    />
+                  </picture>
+                </figure>
+              </figure>
+            </div>
+          </div>
+          <hr
+            class="c25"
+          />
+          <div
+            class="c44"
+          >
+            <a
+              class="c45"
+              href="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Visit 
+              Scrupulum Misphrase
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
