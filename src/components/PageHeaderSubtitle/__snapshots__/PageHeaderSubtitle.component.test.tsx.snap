@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PageHeaderSubtitle should render as expected, without crashing 1`] = `
+<h2
+  className="page-header-subtitle"
+>
+  <Container>
+    <Row
+      justify="center"
+    >
+      <Column
+        spanMD={8}
+        spanSM={10}
+      >
+        <div>
+          Test
+        </div>
+      </Column>
+    </Row>
+  </Container>
+</h2>
+`;

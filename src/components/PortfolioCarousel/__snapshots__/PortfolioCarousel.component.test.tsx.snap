@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioCarousel should render as expected, without crashing 1`] = `
+<div
+  className="portfolio-carousel"
+>
+  <Carousel
+    dynamicHeight={true}
+    emulateTouch={true}
+    infiniteLoop={true}
+    showArrows={false}
+    showStatus={false}
+    showThumbs={false}
+    swipeScrollTolerance={75}
+    transitionTime={300}
+    useKeyboardArrows={true}
+  >
+    <div
+      className="portfolio-carousel__slide portfolio-carousel__slide--mobile"
+    >
+      <figure
+        className="portfolio-carousel__figure portfolio-carousel__figure--mobile"
+      >
+        <img
+          alt=""
+          className="portfolio-carousel__device-frame"
+          src="frame-mobile.svg"
+        />
+        <div
+          className="portfolio-carousel__device-img portfolio-carousel__device-img--mobile"
+        >
+          <img
+            alt=""
+            src="https://maremmatic.com/versation/frigorimeter?a=septocosta&b=blastie#pleasurehood"
+          />
+        </div>
+      </figure>
+    </div>
+    <div
+      className="portfolio-carousel__slide portfolio-carousel__slide--tablet"
+    >
+      <figure
+        className="portfolio-carousel__figure portfolio-carousel__figure--tablet"
+      >
+        <img
+          alt=""
+          className="portfolio-carousel__device-frame"
+          src="frame-tablet.svg"
+        />
+        <div
+          className="portfolio-carousel__device-img portfolio-carousel__device-img--tablet"
+        >
+          <img
+            alt=""
+            src="http://ossify.com/spectacularism/zigzagged?a=communalization&b=sharky#nephrogastric"
+          />
+        </div>
+      </figure>
+    </div>
+    <div
+      className="portfolio-carousel__slide portfolio-carousel__slide--desktop"
+    >
+      <figure
+        className="portfolio-carousel__figure portfolio-carousel__figure--desktop"
+      >
+        <img
+          alt=""
+          className="portfolio-carousel__device-frame"
+          src="frame-laptop.svg"
+        />
+        <div
+          className="portfolio-carousel__device-img portfolio-carousel__device-img--desktop"
+        >
+          <img
+            alt=""
+            src="http://yellowy.com/azocochineal/sourjack?a=overcomplete&b=phlegmless#tempi"
+          />
+        </div>
+      </figure>
+    </div>
+  </Carousel>
+</div>
+`;

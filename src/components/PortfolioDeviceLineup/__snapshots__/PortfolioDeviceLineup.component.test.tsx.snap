@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PortfolioDeviceLineup should render as expected, without crashing 1`] = `
+<div
+  className="portfolio-device-lineup"
+>
+  <div
+    className="portfolio-device-lineup__item portfolio-device-lineup__item--desktop"
+    key="1"
+  >
+    <figure
+      className="portfolio-device-lineup__figure"
+    >
+      <img
+        alt=""
+        className="portfolio-device-lineup__device-frame"
+        src="frame-laptop.svg"
+      />
+      <div
+        className="portfolio-device-lineup__device-img"
+      >
+        <img
+          alt=""
+          src="http://lobola.com/gonothecal/backiebird?a=waldsteinia&b=exorcistic#ketch"
+        />
+      </div>
+    </figure>
+  </div>
+  <div
+    className="portfolio-device-lineup__item portfolio-device-lineup__item--tablet"
+    key="2"
+  >
+    <figure
+      className="portfolio-device-lineup__figure"
+    >
+      <img
+        alt=""
+        className="portfolio-device-lineup__device-frame"
+        src="frame-tablet.svg"
+      />
+      <div
+        className="portfolio-device-lineup__device-img"
+      >
+        <img
+          alt=""
+          src="http://sanguineous.com/subquadrangular/pararosaniline?a=baalize&b=scaramouch#unsickly"
+        />
+      </div>
+    </figure>
+  </div>
+  <div
+    className="portfolio-device-lineup__item portfolio-device-lineup__item--mobile"
+    key="3"
+  >
+    <figure
+      className="portfolio-device-lineup__figure"
+    >
+      <img
+        alt=""
+        className="portfolio-device-lineup__device-frame"
+        src="frame-mobile.svg"
+      />
+      <div
+        className="portfolio-device-lineup__device-img"
+      >
+        <img
+          alt=""
+          src="https://inconcinnately.com/amputate/nebelist?a=bepill&b=smokelessness#vaulting"
+        />
+      </div>
+    </figure>
+  </div>
+</div>
+`;

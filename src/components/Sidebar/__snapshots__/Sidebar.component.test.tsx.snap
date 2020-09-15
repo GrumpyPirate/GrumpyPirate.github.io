@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Sidebar should render as expected, without crashing 1`] = `
+<aside
+  className="sidebar"
+>
+  <Container>
+    <div
+      className="sidebar__content"
+    >
+      <Link
+        className="sidebar__brand"
+        to="/"
+      >
+        <img
+          alt=""
+          className="sidebar__brand__image"
+          height="52"
+          width="52"
+        />
+        <span
+          className="sidebar__brand__name"
+        >
+          Edward Cobbold
+        </span>
+      </Link>
+      <span
+        className="sidebar__brand__job-title"
+      >
+        Frontend Developer
+      </span>
+      <hr
+        className="sidebar__divider"
+      />
+      <div
+        className="sidebar__btn-sitenav-container"
+      >
+        <button
+          aria-expanded={false}
+          className="sidebar__btn-sitenav"
+          onClick={[MockFunction]}
+          type="button"
+        >
+          <span
+            className="burger-bar"
+          />
+          <ScreenreaderOnlyText
+            text="Toggle menu"
+          />
+        </button>
+      </div>
+      <div
+        className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--desktop"
+      >
+        <withRouter(Connect(Sitenav)) />
+      </div>
+    </div>
+  </Container>
+  <menu
+    className="sidebar__sitenav-wrapper sidebar__sitenav-wrapper--mobile sidebar__sitenav-wrapper--mobile--is--closed"
+  >
+    <Container>
+      <withRouter(Connect(Sitenav)) />
+    </Container>
+  </menu>
+</aside>
+`;

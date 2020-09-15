@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components PageHeader should render as expected, without crashing 1`] = `
+<header
+  className="page-header"
+  style={Object {}}
+>
+  <Container>
+    <div
+      className="page-header__content"
+    >
+      <div
+        className="page-header__title"
+      >
+        <h1
+          className="page-header__title__text"
+        >
+          Puture Marsh Ankylose
+        </h1>
+      </div>
+      <div>
+        Test
+      </div>
+    </div>
+  </Container>
+</header>
+`;
