@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import classnames from 'classnames';
 import React, { FunctionComponent } from 'react';
 

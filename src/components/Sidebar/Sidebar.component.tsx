@@ -17,7 +17,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
     <Container>
       <div className={classes['sidebar__content']}>
         <Link to="/" className={classes['sidebar__brand']}>
-          <img className={classes['sidebar__brand__image']} alt="" width="52" height="52" />
+          <figure className={classes['sidebar__brand__image']} />
           <span className={classes['sidebar__brand__name']}>Edward Cobbold</span>
         </Link>
         <span className={classes['sidebar__brand__job-title']}>Frontend Developer</span>

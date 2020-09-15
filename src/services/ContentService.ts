@@ -60,7 +60,7 @@ class ContentService {
               .map(formatPortfolioItem)
               .sort(
                 (itemA, itemB) =>
-                  new Date(itemA.createdAt).getTime() - new Date(itemB.createdAt).getTime(),
+                  new Date(itemB.createdAt).getTime() - new Date(itemA.createdAt).getTime(),
               ),
           ),
         )

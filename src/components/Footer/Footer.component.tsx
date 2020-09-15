@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react';
 
 import Icon from 'components/Icon/Icon.component';
 import Container from 'components/Layout/Container/Container.component';
+import REPO_URL from 'config/urls';
 
 import classes from './Footer.component.scss';
 
@@ -46,7 +47,7 @@ const Footer: FunctionComponent = () => {
           </a>
           .{' '}
           <a
-            href="https://bitbucket.org/GrumpyPirate/portfolio-2017"
+            href={REPO_URL}
             className={classes['footer__link']}
             target="_blank"
             rel="noreferrer noopener"
