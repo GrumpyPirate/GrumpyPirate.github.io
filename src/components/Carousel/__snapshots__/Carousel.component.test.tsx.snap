@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Carousel should render as expected, without crashing 1`] = `
+<Carousel
+  autoPlay={false}
+  axis="horizontal"
+  centerMode={false}
+  centerSlidePercentage={80}
+  dynamicHeight={true}
+  emulateTouch={true}
+  infiniteLoop={true}
+  interval={3000}
+  onChange={[Function]}
+  onClickItem={[Function]}
+  onClickThumb={[Function]}
+  selectedItem={0}
+  showArrows={false}
+  showIndicators={true}
+  showStatus={false}
+  showThumbs={false}
+  statusFormatter={[Function]}
+  stopOnHover={true}
+  swipeScrollTolerance={75}
+  swipeable={true}
+  transitionTime={500}
+  useKeyboardArrows={true}
+  verticalSwipe="standard"
+  width="100%"
+>
+  <div>
+    Test
+  </div>
+</Carousel>
+`;

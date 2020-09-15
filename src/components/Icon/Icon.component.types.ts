@@ -1,0 +1,42 @@
+export type IconGlyph =
+  | 'airplay'
+  | 'angular'
+  | 'babel'
+  | 'bootstrap'
+  | 'bulma'
+  | 'chevron-down'
+  | 'chevron-left'
+  | 'contentful'
+  | 'divio'
+  | 'django'
+  | 'foundation'
+  | 'grunt'
+  | 'gulp'
+  | 'hash'
+  | 'heart'
+  | 'html5'
+  | 'illustrator'
+  | 'image'
+  | 'invision'
+  | 'javascript'
+  | 'laravel'
+  | 'loader'
+  | 'nextjs'
+  | 'photoshop'
+  | 'postcss'
+  | 'react'
+  | 'reactivex'
+  | 'redux'
+  | 'sass'
+  | 'shopify'
+  | 'sketch'
+  | 'storybook'
+  | 'styled-components'
+  | 'typescript'
+  | 'webpack';
+
+export interface IconProps {
+  glyph: IconGlyph;
+  className?: string;
+  altText?: string;
+}

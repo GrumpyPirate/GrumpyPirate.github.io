@@ -11,7 +11,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  entry: path.resolve(__dirname, 'src/client/index.tsx'),
+  entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
@@ -60,7 +60,7 @@ module.exports = {
             options: {
               sourceMap: process.env.NODE_ENV !== 'production',
               sassOptions: {
-                includePaths: ['src/client/sass'],
+                includePaths: ['src/sass'],
               },
             },
           },
@@ -77,12 +77,12 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        exclude: [path.resolve('src/client/images/icons')],
+        exclude: [path.resolve('src/images/icons')],
         use: ['file-loader', 'image-webpack-loader'],
       },
       {
         test: /\.svg$/,
-        include: [/node_modules/, path.resolve('src/client/images/icons')],
+        include: [/node_modules/, path.resolve('src/images/icons')],
         use: ['svg-sprite-loader', 'svgo-loader'],
       },
     ],
@@ -100,7 +100,7 @@ module.exports = {
       '.index.d.ts',
       '.index.tsx',
     ],
-    modules: [path.resolve('src/client'), 'node_modules'],
+    modules: [path.resolve('src'), 'node_modules'],
   },
   optimization: {
     splitChunks: {
@@ -119,7 +119,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/client/index.html',
+      template: 'src/index.html',
     }),
     new CopyWebpackPlugin([
       {
@@ -133,7 +133,7 @@ module.exports = {
       eslint: true,
     }),
     new WebappWebpackPlugin({
-      logo: path.resolve('src/client/images/favicon-master.png'),
+      logo: path.resolve('src/images/favicon-master.png'),
       cache: true,
       inject: true,
       favicons: {

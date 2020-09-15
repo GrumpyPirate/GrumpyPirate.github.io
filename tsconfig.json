@@ -1,8 +1,6 @@
 {
-  "exclude": ["node_modules", "src/**/*.scss", "*.js"],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
   "compilerOptions": {
-    "baseUrl": "./src/client",
+    "baseUrl": ".",
     "esModuleInterop": true,
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -12,16 +10,17 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "components/*": ["src/client/components/*"],
-      "config/*": ["src/client/config/*"],
-      "hooks/*": ["src/client/hooks/*"],
-      "images/*": ["src/client/images/*"],
-      "sass/*": ["src/client/sass/*"],
-      "services/*": ["src/client/services/*"],
-      "store/*": ["src/client/store/*"],
-      "utils/*": ["src/client/utils/*"]
+      "*": ["src/*"]
     },
     "strict": true,
-    "target": "es5"
-  }
+    "target": "es5",
+    "typeRoots": ["node_modules/@types", "src/types"]
+  },
+  "exclude": [
+    "node_modules",
+    "src/**/*.css",
+    "src/**/*.scss",
+    "*.js"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"]
 }

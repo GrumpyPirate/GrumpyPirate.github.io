@@ -21,7 +21,4 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 - [ ] Migrate completely over to Babel 7 (including deprecating babel-polyfill)
 - [ ] Implement `styled-components`
 - [ ] Implement `react-storybook`
-- [ ] Migrate from Redux to Storeon
-- [ ] Migrate from react-router to reach-router
-- [ ] Implement server-side rendering
 - [ ] Replace portfolio page item previews with dependency-free solution
