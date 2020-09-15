@@ -13,7 +13,7 @@ module.exports = {
   context: __dirname,
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     publicPath: '/',
     filename: '[name].[hash].bundle.js',
   },
