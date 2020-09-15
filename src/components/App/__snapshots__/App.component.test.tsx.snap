@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components App should render as expected, without crashing 1`] = `
-<BrowserRouter
+<HashRouter
   basename="/"
 >
   <div
@@ -14,5 +14,5 @@ exports[`Components App should render as expected, without crashing 1`] = `
       <Footer />
     </withRouter(Connect(Main))>
   </div>
-</BrowserRouter>
+</HashRouter>
 `;
