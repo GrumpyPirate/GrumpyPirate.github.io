@@ -1,11 +1,12 @@
-import { ReactNode } from 'react';
-import { ChildrenProps } from 'types/common';
+import { Location } from 'history';
+import { ReactElement } from 'react';
 import { RouteComponentProps } from 'react-router';
-import { LocationState } from 'history';
+
+import { ChildrenProps } from 'types/common';
 
 export interface MainProps extends ChildrenProps, RouteComponentProps {
   isLoading: boolean;
   isMobileNavigationOpen: boolean;
-  renderLocation: (location: LocationState) => ReactNode;
+  renderLocation: (location: Location) => ReactElement;
   closeMobileNavigation: () => void;
 }

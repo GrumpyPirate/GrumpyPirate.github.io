@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import { Action } from 'redux';
+import { ThunkAction } from 'redux-thunk';
 
 import { IconGlyph } from 'components/Icon/Icon.component.types';
 
@@ -43,6 +45,7 @@ export interface PortfolioItemFormatted {
   createdAt: string;
 }
 
+export type AppThunk = ThunkAction<void, any, unknown, Action<string>>;
 export interface GenericActionError {
   message?: string;
 }

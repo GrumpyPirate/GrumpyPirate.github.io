@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { AnyAction } from 'redux';
 
 import {
@@ -18,9 +19,7 @@ export const defaultState: AboutState = {
 };
 
 const aboutReducer = (state = defaultState, action: AnyAction): AboutState => {
-  const { type } = action;
-
-  switch (type) {
+  switch (action.type) {
     case ABOUT_SECTIONS_LOAD:
       return {
         ...state,

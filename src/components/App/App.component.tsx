@@ -1,4 +1,3 @@
-import { LocationState } from 'history';
 import React, { FunctionComponent } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import CSSTransition from 'react-transition-group/CSSTransition';
@@ -20,7 +19,7 @@ const App: FunctionComponent = () => (
     <div className={classes['app']}>
       <Sidebar />
       <Main
-        renderLocation={(location: LocationState) => {
+        renderLocation={(location) => {
           const { pathname } = location;
 
           return (

@@ -1,6 +1,6 @@
-import { ChildrenProps } from 'types/common';
+import { ReactChild } from 'react';
 
-export interface CarouselProps extends ChildrenProps {
+export interface CarouselProps {
   showStatus: boolean;
   showThumbs: boolean;
   infiniteLoop: boolean;
@@ -10,4 +10,5 @@ export interface CarouselProps extends ChildrenProps {
   showArrows: false;
   emulateTouch: boolean;
   swipeScrollTolerance: number;
+  children: ReactChild[];
 }

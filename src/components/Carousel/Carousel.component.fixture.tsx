@@ -3,7 +3,7 @@ import React from 'react';
 import { CarouselProps } from './Carousel.component.types';
 
 const carouselProps: CarouselProps = {
-  children: <div>Test</div>,
+  children: [<div>Test</div>],
   showStatus: false,
   showThumbs: false,
   infiniteLoop: true,

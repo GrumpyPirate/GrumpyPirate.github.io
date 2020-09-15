@@ -2,17 +2,30 @@
 
 exports[`Components Carousel should render as expected, without crashing 1`] = `
 <Carousel
-  autoPlay={false}
   axis="horizontal"
-  centerMode={false}
   centerSlidePercentage={80}
   dynamicHeight={true}
   emulateTouch={true}
   infiniteLoop={true}
   interval={3000}
+  labels={
+    Object {
+      "item": "slide item",
+      "leftArrow": "previous slide / item",
+      "rightArrow": "next slide / item",
+    }
+  }
   onChange={[Function]}
   onClickItem={[Function]}
   onClickThumb={[Function]}
+  onSwipeEnd={[Function]}
+  onSwipeMove={[Function]}
+  onSwipeStart={[Function]}
+  renderArrowNext={[Function]}
+  renderArrowPrev={[Function]}
+  renderIndicator={[Function]}
+  renderItem={[Function]}
+  renderThumbs={[Function]}
   selectedItem={0}
   showArrows={false}
   showIndicators={true}

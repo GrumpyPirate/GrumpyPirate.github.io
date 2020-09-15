@@ -10,6 +10,9 @@ exports[`Components Main should render as expected, without crashing 1`] = `
   >
     <Connect(Spinner) />
     <div>
+      Test Location
+    </div>
+    <div>
       Test
     </div>
   </div>

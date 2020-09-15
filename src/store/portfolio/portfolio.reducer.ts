@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { AnyAction } from 'redux';
 
 import {
@@ -20,9 +21,7 @@ const portfolioReducer = (
   state: PortfolioState = defaultState,
   action: AnyAction,
 ): PortfolioState => {
-  const { type } = action;
-
-  switch (type) {
+  switch (action.type) {
     case PORTFOLIO_ITEMS_LOAD:
       return {
         ...state,

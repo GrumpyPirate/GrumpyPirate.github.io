@@ -1,5 +1,6 @@
-import { OPEN_MOBILE_NAVIGATION, CLOSE_MOBILE_NAVIGATION } from 'store/ui/ui.actions';
-import { Action } from 'redux';
+import { AnyAction } from 'redux';
+
+import { CLOSE_MOBILE_NAVIGATION, OPEN_MOBILE_NAVIGATION } from 'store/ui/ui.actions';
 
 import { UIState } from './ui.types';
 
@@ -7,10 +8,8 @@ const defaultState: UIState = {
   isMobileNavigationOpen: false,
 };
 
-const uiReducer = (state: UIState = defaultState, action: Action): any => {
-  const { type } = action;
-
-  switch (type) {
+const uiReducer = (state: UIState = defaultState, action: AnyAction): UIState => {
+  switch (action.type) {
     case OPEN_MOBILE_NAVIGATION:
       return { ...state, isMobileNavigationOpen: true };
     case CLOSE_MOBILE_NAVIGATION:

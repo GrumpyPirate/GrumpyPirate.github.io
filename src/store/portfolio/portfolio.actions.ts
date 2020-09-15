@@ -1,10 +1,7 @@
 import { AnyAction } from 'redux';
-import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
 import contentService, { ContentService } from 'services/ContentService';
-import { GenericActionError, PortfolioItemFormatted } from 'types/common';
-
-import { PortfolioAction, PortfolioState } from './portfolio.types';
+import { AppThunk, GenericActionError, PortfolioItemFormatted } from 'types/common';
 
 const PORTFOLIO_ITEMS_LOAD = 'PORTFOLIO_ITEMS_LOAD';
 const PORTFOLIO_ITEMS_REQUEST = 'PORTFOLIO_ITEMS_REQUEST';
@@ -25,11 +22,9 @@ const failedPortfolioItemsRequest = (error: GenericActionError): AnyAction => ({
   error,
 });
 
-const requestPortfolioItems = (
-  service: ContentService = contentService,
-): ThunkAction<{}, PortfolioState, {}, PortfolioAction> => (
-  dispatch: ThunkDispatch<{}, {}, PortfolioAction>,
-): Promise<PortfolioAction> => {
+const requestPortfolioItems = (service: ContentService = contentService): AppThunk => (
+  dispatch,
+) => {
   dispatch(loadPortfolioItems());
 
   return service

@@ -21,5 +21,5 @@ export default {
     path: '',
     url: '',
   },
-  renderLocation: () => null,
+  renderLocation: () => <div>Test Location</div>,
 };

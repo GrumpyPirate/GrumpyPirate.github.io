@@ -1,5 +1,7 @@
-import { Action, AnyAction, Dispatch } from 'redux';
-import { ThunkAction } from 'redux-thunk';
+import { Action } from 'redux';
+
+import { AppThunk } from 'types/common';
+
 import { UIState } from './ui.types';
 
 const CLOSE_MOBILE_NAVIGATION = 'CLOSE_MOBILE_NAVIGATION';
@@ -14,10 +16,7 @@ const openMobileNavigation = (): Action => ({
   type: OPEN_MOBILE_NAVIGATION,
 });
 
-const toggleMobileNavigation = (): ThunkAction<{}, UIState, {}, AnyAction> => (
-  dispatch: Dispatch<AnyAction>,
-  getState: Function,
-): any => {
+const toggleMobileNavigation = (): AppThunk => (dispatch, getState: () => { ui: UIState }) => {
   const {
     ui: { isMobileNavigationOpen },
   } = getState();

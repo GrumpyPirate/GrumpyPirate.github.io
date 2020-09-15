@@ -5,8 +5,9 @@
 
   background-color: $header-bg;
   border-bottom: solid rem(6px) palette('theme-accent-light');
-  height: rem(360px);
+  min-height: rem(360px);
   position: relative;
+  padding: rem(48px) 0 rem(32px);
 
   @include respond-up('lg') {
     border-bottom-width: rem(8px);
@@ -50,14 +51,12 @@
 
   // Title
   &__copy {
-    bottom: 2rem;
-    left: 0;
-    position: absolute;
+    position: relative;
     z-index: 1;
   }
 
   &__title {
-    background: palette('theme-dark-shades');
+    background: transparentize(palette('theme-dark-shades'), 0.2);
     box-decoration-break: clone;
     color: palette('theme-accent-dark');
     display: inline-block;
@@ -97,7 +96,7 @@
   }
 
   &__tech {
-    background: palette('theme-dark-shades');
+    background-color: transparentize(palette('theme-dark-shades'), 0.2);
     color: palette('white');
     padding: 0 (map-get($gutter-widths, 'xs') / 2);
 

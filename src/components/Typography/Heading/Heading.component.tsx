@@ -1,8 +1,9 @@
-import React, { FunctionComponent } from 'react';
+/* eslint-disable no-use-before-define */
 import classnames from 'classnames';
+import React, { FunctionComponent } from 'react';
 
-import { HeadingProps } from './Heading.component.types';
 import classes from './Heading.component.scss';
+import { HeadingProps } from './Heading.component.types';
 
 const Heading: FunctionComponent<HeadingProps> = ({
   className,

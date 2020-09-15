@@ -131,8 +131,9 @@ module.exports = {
       },
     ]),
     new ForkTsCheckerWebpackPlugin({
-      // async: false,
-      eslint: true,
+      eslint: {
+        files: './src/**/*.{ts,tsx,js,jsx}',
+      },
     }),
     new WebappWebpackPlugin({
       logo: path.resolve('src/images/favicon-master.png'),
