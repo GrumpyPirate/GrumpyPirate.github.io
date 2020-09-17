@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 
-import { IconGlyph } from 'components/Icon/Icon.component.types';
+import { IconGlyph } from 'components/Icon/Icon.types';
 
 export interface ChildrenProps {
   children: ReactNode;

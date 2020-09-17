@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "description": "Personal portfolio website of Edward Cobbold, a Frontend Web Developer",
-  "main": "server.js",
+  "main": "src/index.tsx",
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
