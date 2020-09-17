@@ -9,7 +9,7 @@ import {
 
 import { AboutState } from './about.types';
 
-export const defaultState: AboutState = {
+export const initialState: AboutState = {
   aboutSections: [],
   isFetching: false,
   hasFetched: false,
@@ -18,7 +18,7 @@ export const defaultState: AboutState = {
   errorCount: 0,
 };
 
-const aboutReducer = (state = defaultState, action: AnyAction): AboutState => {
+const aboutReducer = (state = initialState, action: AnyAction): AboutState => {
   switch (action.type) {
     case ABOUT_SECTIONS_LOAD:
       return {

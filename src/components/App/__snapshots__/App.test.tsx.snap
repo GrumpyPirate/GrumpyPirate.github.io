@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components App should render as expected, without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <HashRouter
+    basename="/"
+  >
+    <div
+      className="app"
+    >
+      <Sidebar />
+      <Main>
+        <Switch>
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/portfolio"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/portfolio/:slug"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/404"
+          />
+          <Route
+            component={[Function]}
+          />
+        </Switch>
+        <Footer />
+      </Main>
+    </div>
+  </HashRouter>
+</Provider>
+`;

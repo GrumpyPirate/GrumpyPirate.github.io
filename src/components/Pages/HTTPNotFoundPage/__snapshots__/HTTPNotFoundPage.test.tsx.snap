@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components HTTPNotFoundPage should render as expected, without crashing 1`] = `
+<Page>
+  <PageHeader
+    title="404"
+  >
+    <PageHeaderSubtitle>
+      Not Found
+    </PageHeaderSubtitle>
+  </PageHeader>
+  <PageContent>
+    <section
+      className="http-not-found-page"
+    >
+      <div
+        className="http-not-found-page__heading"
+      >
+        <Heading
+          level={4}
+          text="That page doesn't exist."
+        />
+      </div>
+      <div
+        className="http-not-found-page__heading"
+      >
+        <Heading
+          level={5}
+          text="（╯°□°）╯︵( .o.)"
+        />
+      </div>
+      <div>
+        <Button
+          to="/"
+        >
+          Home
+        </Button>
+      </div>
+    </section>
+  </PageContent>
+</Page>
+`;

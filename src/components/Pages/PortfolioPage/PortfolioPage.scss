@@ -1,0 +1,102 @@
+@import 'core';
+
+$selector: 'portfolio-page';
+
+.#{$selector} {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 rem(map-get($gutter-widths, 'xs') / -4);
+    padding-top: rem(map-get($gutter-widths, 'xs') / 2);
+
+    @include respond-up('md') {
+      margin: 0 rem(map-get($gutter-widths, 'md') / -4);
+      padding-top: rem(map-get($gutter-widths, 'md') / 2);
+    }
+  }
+
+  &__list-item {
+    border: solid (map-get($gutter-widths, 'xs') / 4) palette('theme-accent-dark');
+    border-style: none none solid;
+    display: flex;
+    flex: 1 1 calc(100% - #{map-get($gutter-widths, 'xs') / 2});
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: map-get($gutter-widths, 'xs') / 4;
+    margin-right: map-get($gutter-widths, 'xs') / 4;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+
+    @include respond-only('xs') {
+      margin-bottom: map-get($gutter-widths, 'xs') / 2;
+    }
+
+    @include respond-up('sm') {
+      flex-basis: calc(50% - #{map-get($gutter-widths, 'xs') / 2});
+      margin-bottom: map-get($gutter-widths, 'xs') / 2;
+      margin-left: map-get($gutter-widths, 'xs') / 4;
+      margin-right: map-get($gutter-widths, 'xs') / 4;
+    }
+
+    // md up
+    @include respond-up('md') {
+      flex-basis: calc(50% - #{map-get($gutter-widths, 'md') / 2});
+      margin-bottom: map-get($gutter-widths, 'md') / 2;
+      margin-left: map-get($gutter-widths, 'md') / 4;
+      margin-right: map-get($gutter-widths, 'md') / 4;
+    }
+
+    // lg up
+    @include respond-up('lg') {
+      border-bottom-width: map-get($gutter-widths, 'md') / 4;
+    }
+
+    &:hover,
+    &:focus {
+      .#{$selector}__list-item__media {
+        transform: scale(1.0625);
+      }
+    }
+
+    &__media {
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: transform $anim-dur ease;
+
+      img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    &__copy {
+      $copy-padding: $grid-gutter-width-base / 2;
+
+      background-image: linear-gradient(
+        to top,
+        transparentize(palette('theme-dark-shades'), 0.2),
+        transparentize(palette('theme-dark-shades'), 0.6) 40%,
+        transparentize(palette('theme-dark-shades'), 1)
+      );
+      color: palette('white');
+      padding: 15vmax $copy-padding $copy-padding;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__desc {
+      margin-bottom: 0;
+    }
+  }
+}

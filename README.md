@@ -11,15 +11,11 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 
 ### TODO
 
-- [x] Drop bootstrap, move over to 100% custom CSS
-- [x] Code splitting (vendor)
-- [x] Migrate from `sass-lint` to `stylelint`
-- [x] Flesh out tests
-- [x] Convert class components to functional components w/hooks
 - [ ] Switch Redux implementation over to `@reduxjs/toolkit`
+- [ ] Implement `styled-components`
+- [ ] Switch tests over to `@testing-library/react`
+- [ ] Use contentful image resizer to thumbnail the huge webpage preview images
+- [ ] Replace portfolio page item previews with dependency-free solution
 - [ ] Sort/group portfolio items in some way, perhaps by creation date
 - [ ] Code splitting via lazy-loading components with @loadable/component
 - [ ] Migrate completely over to Babel 7 (including deprecating babel-polyfill)
-- [ ] Implement `styled-components`
-- [ ] Implement `react-storybook`
-- [ ] Replace portfolio page item previews with dependency-free solution

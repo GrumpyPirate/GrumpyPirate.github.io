@@ -1,17 +1,10 @@
-import './polyfills';
-
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-import App from 'components/App/App.component';
-import Store from 'components/Store/Store.component';
+import App from 'components/App/App';
 
+import './polyfills';
 import 'sanitize.css';
 import 'sass/global.scss';
 
-ReactDOM.render(
-  <Store>
-    <App />
-  </Store>,
-  document.getElementById('root'),
-);
+render(<App />, document.getElementById('root'));

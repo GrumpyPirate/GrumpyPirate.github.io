@@ -8,7 +8,7 @@ import {
 } from './portfolio.actions';
 import { PortfolioState } from './portfolio.types';
 
-const defaultState: PortfolioState = {
+const initialState: PortfolioState = {
   portfolioItems: [],
   isFetching: false,
   hasFetched: false,
@@ -18,7 +18,7 @@ const defaultState: PortfolioState = {
 };
 
 const portfolioReducer = (
-  state: PortfolioState = defaultState,
+  state: PortfolioState = initialState,
   action: AnyAction,
 ): PortfolioState => {
   switch (action.type) {
@@ -49,4 +49,4 @@ const portfolioReducer = (
   }
 };
 export default portfolioReducer;
-export { defaultState };
+export { initialState };

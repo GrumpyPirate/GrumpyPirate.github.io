@@ -4,11 +4,11 @@ import { CLOSE_MOBILE_NAVIGATION, OPEN_MOBILE_NAVIGATION } from 'store/ui/ui.act
 
 import { UIState } from './ui.types';
 
-const defaultState: UIState = {
+const initialState: UIState = {
   isMobileNavigationOpen: false,
 };
 
-const uiReducer = (state: UIState = defaultState, action: AnyAction): UIState => {
+const uiReducer = (state: UIState = initialState, action: AnyAction): UIState => {
   switch (action.type) {
     case OPEN_MOBILE_NAVIGATION:
       return { ...state, isMobileNavigationOpen: true };
@@ -20,4 +20,4 @@ const uiReducer = (state: UIState = defaultState, action: AnyAction): UIState =>
 };
 
 export default uiReducer;
-export { defaultState };
+export { initialState };

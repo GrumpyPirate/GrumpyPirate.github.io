@@ -1,0 +1,7 @@
+@import 'core';
+
+.http-not-found-page {
+  &__heading {
+    margin-bottom: $paragraph-margin-bottom * 2;
+  }
+}
