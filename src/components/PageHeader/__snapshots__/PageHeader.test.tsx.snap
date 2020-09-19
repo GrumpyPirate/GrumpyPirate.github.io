@@ -1,19 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components PageHeader should render as expected, without crashing 1`] = `
+.c1 {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c0 {
+  background-color: #302445;
+  border-bottom: solid 0.375rem #dc8381;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.c2 {
+  color: #dc8381;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.c3 {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 2.475rem;
+  font-size: 12vmin;
+  font-weight: 200;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3::first-letter {
+  margin-left: 0.25em;
+}
+
+@media (min-width:48em) {
+  .c1 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:75em) {
+  .c0 {
+    border-bottom-width: 0.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c2 {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c3 {
+    font-size: 4.5rem;
+  }
+}
+
 <header
-  className="page-header"
-  style={Object {}}
+  class="c0"
 >
-  <Container>
+  <div
+    class="c1"
+  >
     <div
-      className="page-header__content"
+      class=""
     >
       <div
-        className="page-header__title"
+        class="c2"
       >
         <h1
-          className="page-header__title__text"
+          class="c3"
         >
           Puture Marsh Ankylose
         </h1>
@@ -22,6 +91,6 @@ exports[`Components PageHeader should render as expected, without crashing 1`] =
         Test
       </div>
     </div>
-  </Container>
+  </div>
 </header>
 `;

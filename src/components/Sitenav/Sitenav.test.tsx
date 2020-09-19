@@ -1,16 +1,16 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
-import { withMockStore } from 'utils/testing';
+import { withMockRouter, withMockStore } from 'utils/testing';
 
 import Sitenav from './Sitenav';
 
 describe('Components', () => {
   describe('Sitenav', () => {
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(withMockStore(<Sitenav />));
+      const { container } = render(withMockRouter(withMockStore(<Sitenav />)));
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

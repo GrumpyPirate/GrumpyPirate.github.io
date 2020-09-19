@@ -1,19 +1,26 @@
-import classnames from 'classnames';
 import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
 import frameLaptop from 'images/device-frames/frame-laptop.svg';
 import frameMobile from 'images/device-frames/frame-mobile.svg';
 import frameTablet from 'images/device-frames/frame-tablet.svg';
+import { mediaQueries, rem } from 'styles';
 
-import classes from './PortfolioDeviceLineup.scss';
-import { LineupItem, PortfolioDeviceLineupProps } from './PortfolioDeviceLineup.types';
+import {
+  DeviceFrame,
+  DeviceImage,
+  DevicePreview,
+  LineupItem,
+} from './PortfolioDeviceLineup.constants';
+import { LineupItemData, PortfolioDeviceLineupProps } from './PortfolioDeviceLineup.types';
 
 const PortfolioDeviceLineup: FunctionComponent<PortfolioDeviceLineupProps> = ({
+  className,
   desktopImage,
   tabletImage,
   mobileImage,
 }) => {
-  const items: LineupItem[] = [
+  const items: LineupItemData[] = [
     {
       key: 1,
       type: 'desktop',
@@ -35,29 +42,30 @@ const PortfolioDeviceLineup: FunctionComponent<PortfolioDeviceLineupProps> = ({
   ];
 
   return (
-    <div className={classes['portfolio-device-lineup']}>
-      {items.map(({ frameSrc, imageSrc, key, type }: LineupItem) => (
-        <div
-          key={key}
-          className={classnames(
-            classes['portfolio-device-lineup__item'],
-            classes[`portfolio-device-lineup__item--${type}`],
-          )}
-        >
-          <figure className={classes['portfolio-device-lineup__figure']}>
-            <img
-              src={frameSrc}
-              alt=""
-              className={classes['portfolio-device-lineup__device-frame']}
-            />
-            <div className={classes['portfolio-device-lineup__device-img']}>
+    <div className={className}>
+      {items.map(({ frameSrc, imageSrc, key, type }) => (
+        <LineupItem key={key} type={type}>
+          <DevicePreview>
+            <DeviceFrame src={frameSrc} alt="" />
+            <DeviceImage>
               <img src={imageSrc} alt="" />
-            </div>
-          </figure>
-        </div>
+            </DeviceImage>
+          </DevicePreview>
+        </LineupItem>
       ))}
     </div>
   );
 };
 
-export default PortfolioDeviceLineup;
+export default styled(PortfolioDeviceLineup)`
+  height: ${rem(360)};
+  position: relative;
+
+  @media ${mediaQueries.xl} {
+    height: ${rem(420)};
+  }
+
+  @media ${mediaQueries.smDown} {
+    display: none;
+  }
+`;

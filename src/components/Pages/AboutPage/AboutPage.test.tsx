@@ -1,16 +1,26 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
-import { withMockStore } from 'utils/testing';
+import { initialRootState, RootState } from 'store';
+import { withMockRouter, withMockStore } from 'utils/testing';
 
 import AboutPage from './AboutPage';
+import aboutSections from './AboutPage.fixture';
 
 describe('Components', () => {
   describe('About', () => {
-    it('should render as expected, without crashing', () => {
-      const wrapper = shallow(withMockStore(<AboutPage />));
+    const mockState: RootState = {
+      ...initialRootState,
+      about: {
+        ...initialRootState.about,
+        aboutSections,
+      },
+    };
 
-      expect(wrapper).toMatchSnapshot();
+    it('should render as expected, without crashing', () => {
+      const { container } = render(withMockRouter(withMockStore(<AboutPage />, mockState)));
+
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

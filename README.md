@@ -12,8 +12,6 @@ Personal portfolio website, written in [React](https://reactjs.org/) and built u
 ### TODO
 
 - [ ] Switch Redux implementation over to `@reduxjs/toolkit`
-- [ ] Implement `styled-components`
-- [ ] Switch tests over to `@testing-library/react`
 - [ ] Use contentful image resizer to thumbnail the huge webpage preview images
 - [ ] Replace portfolio page item previews with dependency-free solution
 - [ ] Sort/group portfolio items in some way, perhaps by creation date

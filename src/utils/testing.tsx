@@ -2,7 +2,8 @@ import React, { ReactElement, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouterProps } from 'react-router';
 import { MemoryRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 
 import { initialRootState, rootReducer, RootState } from 'store';
 
@@ -30,10 +31,14 @@ export const withMockStore = (
   children: ReactElement,
   customState: Partial<RootState> = {},
 ): ReactElement => {
-  const store = createStore(rootReducer, {
-    ...initialRootState,
-    ...customState,
-  });
+  const store = createStore(
+    rootReducer,
+    {
+      ...initialRootState,
+      ...customState,
+    },
+    applyMiddleware(thunk),
+  );
 
   return <Provider store={store}>{children}</Provider>;
 };

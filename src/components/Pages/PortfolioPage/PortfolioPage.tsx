@@ -1,18 +1,27 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import Container from 'components/Layout/Container/Container';
+import { Container } from 'components/Grid';
 import Page from 'components/Page/Page';
+import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 import Heading from 'components/Typography/Heading/Heading';
 import { AppDispatch, RootState } from 'store';
 import { requestPortfolioItems } from 'store/portfolio/portfolio.actions';
+import { ClassNameProps } from 'types/common';
 
-import classes from './PortfolioPage.scss';
+import {
+  List,
+  ListItem,
+  ListItemCopy,
+  ListItemDescription,
+  ListItemImage,
+} from './PortfolioPage.constant';
 
-const PortfolioPage: FunctionComponent = () => {
+const PortfolioPage: FunctionComponent<ClassNameProps> = ({ className }) => {
   const portfolioItems = useSelector((state: RootState) => state.portfolio.portfolioItems);
   const dispatch: AppDispatch = useDispatch();
 
@@ -23,41 +32,40 @@ const PortfolioPage: FunctionComponent = () => {
   }, [dispatch, portfolioItems.length]);
 
   return (
-    <Page>
+    <Page className={className}>
       <PageHeader title="Portfolio">
         <PageHeaderSubtitle>Projects I&apos;ve worked on</PageHeaderSubtitle>
       </PageHeader>
 
-      <section className={classes['portfolio-page']}>
+      <PageContent>
         {portfolioItems.length > 0 && (
           <Container>
-            <div className={classes['portfolio-page__list']} role="list">
+            <List>
               {portfolioItems.map((item) => (
-                <Link
-                  key={`portfolio__list-item--${item.slug}--${item.id}`}
-                  to={`/portfolio/${item.slug}`}
-                  className={classes['portfolio-page__list-item']}
-                  role="listitem"
-                >
-                  <figure className={classes['portfolio-page__list-item__media']}>
-                    <img src={item.headerImgSrc} alt="" />
-                  </figure>
+                <ListItem key={`portfolio__list-item--${item.slug}--${item.id}`}>
+                  <Link to={`/portfolio/${item.slug}`} role="listitem">
+                    <ListItemImage>
+                      <img src={item.headerImgSrc} alt="" />
+                    </ListItemImage>
 
-                  <div className={classes['portfolio-page__list-item__copy']}>
-                    <Heading level={3} displayLevel={5} text={item.title} />
+                    <ListItemCopy>
+                      <Heading level={3} displayLevel={5} text={item.title} />
 
-                    <p className={classes['portfolio-page__list-item__desc']}>
-                      {item.descriptionShort}
-                    </p>
-                  </div>
-                </Link>
+                      <ListItemDescription>{item.descriptionShort}</ListItemDescription>
+                    </ListItemCopy>
+                  </Link>
+                </ListItem>
               ))}
-            </div>
+            </List>
           </Container>
         )}
-      </section>
+      </PageContent>
     </Page>
   );
 };
 
-export default PortfolioPage;
+export default styled(PortfolioPage)`
+  ${PageContent} {
+    padding-top: 0;
+  }
+`;

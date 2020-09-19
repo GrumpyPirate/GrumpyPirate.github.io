@@ -1,14 +1,14 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import App from './App';
 
 describe('Components', () => {
   describe('App', () => {
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<App />);
+      const { container } = render(<App />);
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

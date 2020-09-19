@@ -1,7 +1,10 @@
-import { ChildrenProps } from 'types/common';
+import { PropsWithChildren } from 'react';
 
-export interface PageHeaderProps extends ChildrenProps {
-  isFullscreen?: boolean;
-  scrollLabel?: string;
-  title: string;
-}
+import { ClassNameProps } from 'types/common';
+
+export type PageHeaderProps = ClassNameProps &
+  PropsWithChildren<{
+    isFullscreen?: boolean;
+    scrollLabel?: string;
+    title: string;
+  }>;

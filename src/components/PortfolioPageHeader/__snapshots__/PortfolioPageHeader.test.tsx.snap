@@ -1,11 +1,236 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components PortfolioPageHeader should render as expected, without crashing 1`] = `
+.c5 {
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+}
+
+.c6 {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 2.475rem;
+}
+
+.c9 {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.c1 {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c1::after {
+  background-color: hsla(348,27.9%,9.7%,0.8);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.c1 img {
+  height: 125%;
+  object-fit: cover;
+  position: absolute;
+  -webkit-transform: rotateZ(-4deg) translateX(-12.5%);
+  -ms-transform: rotateZ(-4deg) translateX(-12.5%);
+  transform: rotateZ(-4deg) translateX(-12.5%);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 125%;
+}
+
+.c2 {
+  position: relative;
+  z-index: 1;
+}
+
+.c7 {
+  background-color: rgba(48,36,69,0.8);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #b54259;
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+  vertical-align: top;
+}
+
+.c3 a {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: #b54259;
+  color: #f2f1f3;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  vertical-align: bottom;
+  z-index: 1;
+}
+
+.c3 a:hover,
+.c3 a:focus {
+  color: #f2f1f3;
+}
+
+.c8 {
+  background-color: rgba(48,36,69,0.8);
+  color: #fff;
+  padding: 0 0.75rem;
+}
+
+.c10 {
+  margin: 0;
+}
+
+.c11 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c12 {
+  display: inline-block;
+  padding: 0.5rem 0;
+  vertical-align: middle;
+}
+
+.c12:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.c12 .c4 {
+  height: 3rem;
+  width: 4rem;
+}
+
+.c0 {
+  background-color: #302445;
+  border-bottom: solid 0.375rem #dc8381;
+  min-height: 22.5rem;
+  position: relative;
+  padding: 3rem 0 2rem;
+}
+
+@media (min-width:48em) {
+  .c6 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c9 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c7 {
+    word-break: normal;
+  }
+}
+
+@media (min-width:48em) {
+  .c7 {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c3 a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c3 a {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c8 {
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+@media (min-width:48em) {
+  .c8 {
+    padding: 0 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c11 {
+    border-left: solid 1px #dc8381;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width:75em) {
+  .c0 {
+    border-bottom-width: 0.5rem;
+  }
+}
+
 <header
-  className="portfolio-page-header"
+  class="c0"
 >
   <figure
-    className="portfolio-page-header__media"
+    class="c1"
   >
     <img
       alt="Alias rem cumque laudantium"
@@ -13,46 +238,54 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
     />
   </figure>
   <div
-    className="portfolio-page-header__copy"
+    class="c2"
   >
-    <div>
-      <Link
-        className="portfolio-page-header__back"
-        to="/portfolio"
+    <div
+      class="c3"
+    >
+      <a
+        href="/portfolio"
       >
-        <Icon
-          glyph="chevron-left"
-        />
+        <svg
+          aria-label=""
+          class="c4 c5"
+        >
+          <use
+            xlink:href="#chevron-left"
+          />
+        </svg>
         Portfolio
-      </Link>
+      </a>
     </div>
     <div>
-      <Heading
-        className="portfolio-page-header__title"
-        level={1}
-        text="Alias rem cumque laudantium"
-      />
+      <h1
+        class="c6 c7"
+      >
+        Alias rem cumque laudantium
+      </h1>
     </div>
     <div
-      className="portfolio-page-header__tech"
+      class="c8"
     >
-      <Heading
-        className="portfolio-page-header__tech__heading"
-        displayLevel={5}
-        level={2}
-        text="Technologies"
-      />
+      <h2
+        class="c9 c10"
+      >
+        Technologies
+      </h2>
       <ul
-        className="portfolio-page-header__tech__list"
+        class="c11"
       >
         <li
-          className="portfolio-page-header__tech__list-item"
-          key="tech-item__Ex ullam"
+          class="c12"
         >
-          <Icon
-            altText="Ex ullam"
-            glyph="react"
-          />
+          <svg
+            aria-label="Ex ullam"
+            class="c4 c5"
+          >
+            <use
+              xlink:href="#react"
+            />
+          </svg>
         </li>
       </ul>
     </div>

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
-import classes from './Icon.scss';
 import { IconProps } from './Icon.types';
 
 // Brand icons
@@ -43,14 +43,20 @@ import 'images/icons/styled-components.svg';
 import 'images/icons/typescript.svg';
 import 'images/icons/webpack.svg';
 
-const Icon: FunctionComponent<IconProps> = ({
-  glyph,
-  className = classes['icon'],
-  altText = '',
-}) => (
+const Icon: FunctionComponent<IconProps> = ({ glyph, className, altText = '' }) => (
   <svg className={className} aria-label={altText}>
     <use xlinkHref={`#${glyph}`} />
   </svg>
 );
 
-export default Icon;
+export default styled(Icon)`
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+`;

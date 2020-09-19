@@ -4,7 +4,6 @@ const { EnvironmentPlugin } = require('webpack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebappWebpackPlugin = require('webapp-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
@@ -26,41 +25,6 @@ module.exports = {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: [
-          process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName:
-                  process.env.NODE_ENV === 'production'
-                    ? '[hash:base64:5]'
-                    : '[name]__[local]--[hash:base64:5]',
-              },
-              importLoaders: 2,
-              sourceMap: process.env.NODE_ENV !== 'production',
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: process.env.NODE_ENV !== 'production',
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: process.env.NODE_ENV !== 'production',
-              sassOptions: {
-                includePaths: ['src/sass'],
-              },
             },
           },
         ],
@@ -142,8 +106,5 @@ module.exports = {
       },
     }),
     new SWPrecacheWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'styles.[hash].css',
-    }),
   ],
 };

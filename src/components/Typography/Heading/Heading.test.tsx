@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
 import Heading from './Heading';
@@ -11,28 +11,23 @@ describe('Components', () => {
     };
 
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<Heading {...props} />);
+      const { container } = render(<Heading {...props} />);
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     describe('props: level', () => {
       it('should render an h5 element, by default', () => {
-        const wrapper = shallow(<Heading {...props} />);
-        expect(wrapper.find('h5').exists()).toBe(true);
+        const { container } = render(<Heading {...props} />);
+
+        expect(container.querySelectorAll('h5')).toHaveLength(1);
       });
 
       it('should render appropriate heading elements, when given level props of 1-6', () => {
         [1, 2, 3, 4, 5, 6].forEach((level) => {
-          const wrapper = shallow(<Heading {...{ ...props, level }} />);
-          expect(wrapper.find(`h${level}`).exists()).toBe(true);
-        });
-      });
+          const { container } = render(<Heading {...{ ...props, level }} />);
 
-      it('should render heading elements with appropriate classes, when given level props of 1-6', () => {
-        [1, 2, 3, 4, 5, 6].forEach((level) => {
-          const wrapper = shallow(<Heading {...{ ...props, level }} />);
-          expect(wrapper.hasClass(`heading--level-${level}`)).toBe(true);
+          expect(container.querySelectorAll(`h${level}`)).toHaveLength(1);
         });
       });
     });

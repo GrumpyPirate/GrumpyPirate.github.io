@@ -1,17 +1,19 @@
-import React, { FunctionComponent } from 'react';
+import Color from 'color';
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import styled from 'styled-components';
 
-import Column from 'components/Layout/Column/Column';
-import Container from 'components/Layout/Container/Container';
-import Row from 'components/Layout/Row/Row';
-import { ChildrenProps } from 'types/common';
+import { Column, Container, Row } from 'components/Grid';
+import { createHeading, createLinkStyle, mediaQueries, palette } from 'styles';
+import { ClassNameProps } from 'types/common';
 
-import classes from './PageHeaderSubtitle.scss';
-
-const PageHeaderSubtitle: FunctionComponent<ChildrenProps> = ({ children }) => (
-  <h2 className={classes['page-header-subtitle']}>
+const PageHeaderSubtitle: FunctionComponent<ClassNameProps & PropsWithChildren<{}>> = ({
+  children,
+  className,
+}) => (
+  <h2 className={className}>
     <Container>
-      <Row justify="center">
-        <Column spanSM={10} spanMD={8}>
+      <Row xAlign="center">
+        <Column sm={10} md={8}>
           {children}
         </Column>
       </Row>
@@ -19,4 +21,22 @@ const PageHeaderSubtitle: FunctionComponent<ChildrenProps> = ({ children }) => (
   </h2>
 );
 
-export default PageHeaderSubtitle;
+export default styled(PageHeaderSubtitle)`
+  ${createHeading(4)}
+
+  color: ${Color(palette.themeLightShades).alpha(0.5).string()};
+  margin: 0;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+
+  @media ${mediaQueries.md} {
+    padding-bottom: 2rem;
+  }
+
+  a {
+    ${createLinkStyle({
+      color: palette.themeAccentLight,
+      lighten: true,
+    })}
+  }
+`;

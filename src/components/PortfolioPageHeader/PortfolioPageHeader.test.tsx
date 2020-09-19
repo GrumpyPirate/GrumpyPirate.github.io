@@ -1,8 +1,9 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
+
+import { withMockRouter } from 'utils/testing';
 
 import PortfolioPageHeader from './PortfolioPageHeader';
-
 import fixture from './PortfolioPageHeader.fixture';
 
 describe('Components', () => {
@@ -12,9 +13,9 @@ describe('Components', () => {
     };
 
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<PortfolioPageHeader {...props} />);
+      const { container } = render(withMockRouter(<PortfolioPageHeader {...props} />));
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

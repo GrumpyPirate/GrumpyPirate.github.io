@@ -1,8 +1,7 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import Page from './Page';
-
 import fixture from './Page.fixture';
 
 describe('Components', () => {
@@ -12,9 +11,9 @@ describe('Components', () => {
     };
 
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<Page {...props} />);
+      const { container } = render(<Page {...props} />);
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

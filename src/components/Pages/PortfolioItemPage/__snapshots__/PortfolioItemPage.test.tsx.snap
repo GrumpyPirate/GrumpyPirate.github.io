@@ -1,50 +1,1451 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components PortfolioPage should render as expected, without crashing 1`] = `
-<Router
-  history={
-    Object {
-      "action": "POP",
-      "block": [Function],
-      "canGo": [Function],
-      "createHref": [Function],
-      "entries": Array [
-        Object {
-          "hash": "",
-          "key": "a-static-key",
-          "pathname": "/",
-          "search": "",
-        },
-      ],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "index": 0,
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "key": "a-static-key",
-        "pathname": "/",
-        "search": "",
-      },
-      "push": [Function],
-      "replace": [Function],
-    }
+.c42 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  background-color: #dc8381;
+  border: solid 1px #dc8381;
+  border-radius: 2rem;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.375;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-property: -webkit-transform,color,background-color;
+  -webkit-transition-property: transform,color,background-color;
+  transition-property: transform,color,background-color;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #b54259;
+  border-color: #b54259;
+}
+
+.c42::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.c42,
+.c42:hover,
+.c42:focus,
+.c42:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c42:disabled,
+.c42[disabled],
+.c42:disabled:hover,
+.c42[disabled]:hover,
+.c42:disabled:focus,
+.c42[disabled]:focus,
+.c42:disabled:active,
+.c42[disabled]:active {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c42,
+.c42:hover,
+.c42:focus,
+.c42:active {
+  color: #fff;
+}
+
+.c42:hover,
+.c42:focus {
+  background-color: hsl(348,46.6%,46%);
+  border-color: hsl(348,46.6%,46%);
+}
+
+.c42:active {
+  background-color: #b54259;
+  border-color: #b54259;
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+  -webkit-transition-duration: 0s,0.15s,0.15s;
+  transition-duration: 0s,0.15s,0.15s;
+}
+
+.c42:disabled,
+.c42[disabled],
+.c42:disabled:hover,
+.c42[disabled]:hover,
+.c42:disabled:focus,
+.c42[disabled]:focus,
+.c42:disabled:active,
+.c42[disabled]:active {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c17 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c19 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c20 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c15 {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c0 {
+  background-color: hsl(0,0%,95%);
+}
+
+.c26 {
+  display: block;
+  max-width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.c28 {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  position: absolute;
+  z-index: 1;
+}
+
+.c28 img {
+  display: block;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.c30 {
+  position: relative;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c24 .c25 {
+  height: 10.423666007905139rem;
+  width: 18.125rem;
+}
+
+.c24 .c27 {
+  height: 8.482258213932806rem;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 0.656578125rem;
+  width: 13.59375rem;
+}
+
+.c29 .c25 {
+  height: 23.72972972972973rem;
+  width: 12rem;
+}
+
+.c29 .c27 {
+  height: 17.732040540540538rem;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 3.09rem;
+  width: 10.41rem;
+}
+
+.c31 .c25 {
+  height: 20.73913043478261rem;
+  width: 14rem;
+}
+
+.c31 .c27 {
+  height: 16.617228260869567rem;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 1.9250000000000003rem;
+  width: 12.424999999999999rem;
+}
+
+.c23 .carousel {
+  position: relative;
+  width: 100%;
+}
+
+.c23 .carousel * {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c23 .carousel button {
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.c23 .carousel img {
+  pointer-events: none;
+}
+
+.c23 .carousel .carousel {
+  position: relative;
+}
+
+.c23 .carousel .control-arrow {
+  font-size: 18px;
+  margin-top: -13px;
+  top: 50%;
+}
+
+.c23 .carousel .thumbs-wrapper {
+  margin: 20px;
+  overflow: hidden;
+}
+
+.c23 .carousel .thumbs {
+  list-style: none;
+  position: relative;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  white-space: nowrap;
+}
+
+.c23 .carousel .thumb {
+  border: 3px solid #fff;
+  display: inline-block;
+  margin-right: 6px;
+  overflow: hidden;
+  padding: 2px;
+  -webkit-transition: border 0.15s ease-in;
+  transition: border 0.15s ease-in;
+  white-space: nowrap;
+  width: 80px;
+}
+
+.c23 .carousel .thumb.selected,
+.c23 .carousel .thumb:hover {
+  border: 3px solid #333;
+  padding: 2px;
+}
+
+.c23 .carousel .thumb img {
+  vertical-align: top;
+}
+
+.c23 .carousel .control-dots {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.c23 .carousel .control-dots .dot {
+  background: #dc8381;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 0 8px;
+  opacity: 0.5;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-property: border,opacity,-webkit-transform,background-color;
+  -webkit-transition-property: border,opacity,transform,background-color;
+  transition-property: border,opacity,transform,background-color;
+  width: 8px;
+}
+
+.c23 .carousel .control-dots .dot:hover,
+.c23 .carousel .control-dots .dot.selected {
+  background-color: transparent;
+  border: solid 1px #dc8381;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c23 .carousel .control-dots .dot.selected {
+  opacity: 1;
+}
+
+.c23 .carousel .control-arrow,
+.c23 .carousel.carousel-slider .control-arrow {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 32px;
+  opacity: 0.4;
+  position: absolute;
+  top: 20px;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  z-index: 2;
+}
+
+.c23 .carousel .control-arrow .control-arrow:hover,
+.c23 .carousel.carousel-slider .control-arrow .control-arrow:hover {
+  opacity: 1;
+}
+
+.c23 .carousel .control-arrow .control-arrow::before,
+.c23 .carousel.carousel-slider .control-arrow .control-arrow::before {
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  content: '';
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.c23 .carousel .control-disabled.control-arrow {
+  cursor: inherit;
+  display: none;
+  opacity: 0;
+}
+
+.c23 .carousel .control-prev.control-arrow {
+  left: 0;
+}
+
+.c23 .carousel .control-prev.control-arrow::before {
+  border-right: 8px solid #fff;
+}
+
+.c23 .carousel .control-next.control-arrow {
+  right: 0;
+}
+
+.c23 .carousel .control-next.control-arrow::before {
+  border-left: 8px solid #fff;
+}
+
+.c23 .carousel.carousel-slider {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.c23 .carousel.carousel-slider .control-arrow {
+  bottom: 0;
+  color: #fff;
+  font-size: 26px;
+  margin-top: 0;
+  padding: 5px;
+  top: 0;
+}
+
+.c23 .carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.c23 .carousel .slider-wrapper {
+  margin: auto;
+  overflow: hidden;
+  -webkit-transition: height 0.15s ease-in;
+  transition: height 0.15s ease-in;
+  width: 100%;
+}
+
+.c23 .carousel .slider-wrapper.axis-horizontal .slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c23 .carousel .slider-wrapper.axis-horizontal .slider .slide {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.c23 .carousel .slider-wrapper.axis-vertical {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c23 .carousel .slider-wrapper.axis-vertical .slider {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c23 .carousel .slider {
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+.c23 .carousel .slider.animated {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.c23 .carousel .slide {
+  margin: 0;
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.c23 .carousel .slide img {
+  border: 0;
+  vertical-align: top;
+}
+
+.c23 .carousel .slide iframe {
+  border: 0;
+  display: inline-block;
+  margin: 0 40px 40px;
+  width: calc(100% - 80px);
+}
+
+.c23 .carousel .slide .legend {
+  background: #000;
+  border-radius: 10px;
+  bottom: 40px;
+  color: #fff;
+  font-size: 12px;
+  left: 50%;
+  margin-left: -45%;
+  opacity: 0.25;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+  width: 90%;
+}
+
+.c23 .carousel .carousel-status {
+  color: #fff;
+  font-size: 10px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  top: 0;
+}
+
+.c23 .carousel:hover .slide .legend {
+  opacity: 1;
+}
+
+.c35 {
+  margin: 0;
+  position: relative;
+}
+
+.c36 {
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.c38 {
+  display: block;
+  margin: 0;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.c38 img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.c33 {
+  left: 50%;
+  position: absolute;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c33 .c34 {
+  height: 19.409584980237156rem;
+  width: 33.75rem;
+}
+
+.c33 .c37 {
+  height: 82%;
+  left: 12.4%;
+  top: 6%;
+  width: 75.125%;
+}
+
+.c39 {
+  left: 50%;
+  position: absolute;
+  bottom: 10px;
+  -webkit-transform: translateX(66%);
+  -ms-transform: translateX(66%);
+  transform: translateX(66%);
+}
+
+.c39 .c34 {
+  height: 16.665372670807454rem;
+  width: 11.25rem;
+}
+
+.c39 .c37 {
+  height: 79.85%;
+  left: 5.75%;
+  top: 9.4%;
+  width: 88.95%;
+}
+
+.c40 {
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(75%);
+  -ms-transform: translateX(75%);
+  transform: translateX(75%);
+}
+
+.c40 .c34 {
+  height: 11.864864864864865rem;
+  width: 6rem;
+}
+
+.c40 .c37 {
+  height: 74.75%;
+  left: 6.8%;
+  top: 13.125%;
+  width: 86.25%;
+}
+
+.c32 {
+  height: 22.5rem;
+  position: relative;
+}
+
+.c6 {
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+}
+
+.c7 {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 2.475rem;
+}
+
+.c10 {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.c2 {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c2::after {
+  background-color: hsla(348,27.9%,9.7%,0.8);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.c2 img {
+  height: 125%;
+  object-fit: cover;
+  position: absolute;
+  -webkit-transform: rotateZ(-4deg) translateX(-12.5%);
+  -ms-transform: rotateZ(-4deg) translateX(-12.5%);
+  transform: rotateZ(-4deg) translateX(-12.5%);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 125%;
+}
+
+.c3 {
+  position: relative;
+  z-index: 1;
+}
+
+.c8 {
+  background-color: rgba(48,36,69,0.8);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #b54259;
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+  vertical-align: top;
+}
+
+.c4 a {
+  font-family: 'Titillium Web',sans-serif;
+  font-weight: 300;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: #b54259;
+  color: #f2f1f3;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  vertical-align: bottom;
+  z-index: 1;
+}
+
+.c4 a:hover,
+.c4 a:focus {
+  color: #f2f1f3;
+}
+
+.c9 {
+  background-color: rgba(48,36,69,0.8);
+  color: #fff;
+  padding: 0 0.75rem;
+}
+
+.c11 {
+  margin: 0;
+}
+
+.c12 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c13 {
+  display: inline-block;
+  padding: 0.5rem 0;
+  vertical-align: middle;
+}
+
+.c13:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.c13 .c5 {
+  height: 3rem;
+  width: 4rem;
+}
+
+.c1 {
+  background-color: #302445;
+  border-bottom: solid 0.375rem #dc8381;
+  min-height: 22.5rem;
+  position: relative;
+  padding: 3rem 0 2rem;
+}
+
+.c14 {
+  padding: 2rem 0;
+}
+
+.c21 {
+  border-radius: 0.25rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.c21 > img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.c22 {
+  border-color: currentColor;
+  border-style: solid none none;
+  border-width: 1px;
+  margin: 2rem 0;
+  opacity: 0.25;
+}
+
+.c41 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (min-width:48em) {
+  .c17 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
+}
+
+@media (min-width:30em) {
+  .c17 {
+    -webkit-flex-basis: 83.33333333333334%;
+    -ms-flex-preferred-size: 83.33333333333334%;
+    flex-basis: 83.33333333333334%;
+    max-width: 83.33333333333334%;
+  }
+}
+
+@media (min-width:48em) {
+  .c19 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c19 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:90em) {
+  .c19 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:48em) {
+  .c20 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c20 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:90em) {
+  .c20 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+  }
+}
+
+@media (min-width:90em) {
+  .c20 {
+    left: 8.333333333333332%;
+  }
+}
+
+@media (min-width:48em) {
+  .c15 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c16 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c18 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c24 .c25 {
+    height: 15.096343873517787rem;
+    width: 26.25rem;
+  }
+
+  .c24 .c27 {
+    height: 12.284649827075098rem;
+    top: 0.95090625rem;
+    width: 19.6875rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c29 .c25 {
+    height: 23.72972972972973rem;
+    width: 12rem;
+  }
+
+  .c29 .c27 {
+    height: 17.732040540540538rem;
+    top: 3.09rem;
+    width: 10.41rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c31 .c25 {
+    height: 29.627329192546586rem;
+    width: 20rem;
+  }
+
+  .c31 .c27 {
+    height: 23.738897515527952rem;
+    top: 2.75rem;
+    width: 17.75rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (min-width:90em) {
+  .c33 .c34 {
+    height: 23.291501976284586rem;
+    width: 40.5rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c39 .c34 {
+    height: 19.998447204968944rem;
+    width: 13.5rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c40 .c34 {
+    height: 14.237837837837837rem;
+    width: 7.199999999999999rem;
+  }
+}
+
+@media (min-width:90em) {
+  .c32 {
+    height: 26.25rem;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c32 {
+    display: none;
+  }
+}
+
+@media (min-width:48em) {
+  .c7 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c10 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c8 {
+    word-break: normal;
+  }
+}
+
+@media (min-width:48em) {
+  .c8 {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c4 a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c4 a {
+    padding: 0.25rem 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c9 {
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+@media (min-width:48em) {
+  .c9 {
+    padding: 0 0.9375rem;
+  }
+}
+
+@media (min-width:30em) {
+  .c12 {
+    border-left: solid 1px #dc8381;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width:75em) {
+  .c1 {
+    border-bottom-width: 0.5rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c14 {
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:48em) {
+  .c41 {
+    margin-top: 4rem;
+  }
+}
+
+<div
+  class="c0"
 >
-  <Provider
-    store={
-      Object {
-        "dispatch": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-        Symbol(observable): [Function],
-      }
-    }
-  >
-    <PortfolioItemPage />
-  </Provider>
-</Router>
+  <div>
+    <header
+      class="c1"
+    >
+      <figure
+        class="c2"
+      >
+        <img
+          alt="Scrupulum Misphrase"
+          src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+        />
+      </figure>
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <a
+            href="/portfolio"
+          >
+            <svg
+              aria-label=""
+              class="c5 c6"
+            >
+              <use
+                xlink:href="#chevron-left"
+              />
+            </svg>
+            Portfolio
+          </a>
+        </div>
+        <div>
+          <h1
+            class="c7 c8"
+          >
+            Scrupulum Misphrase
+          </h1>
+        </div>
+        <div
+          class="c9"
+        >
+          <h2
+            class="c10 c11"
+          >
+            Technologies
+          </h2>
+          <ul
+            class="c12"
+          >
+            <li
+              class="c13"
+            >
+              <svg
+                aria-label="youngling"
+                class="c5 c6"
+              >
+                <use
+                  xlink:href="#storybook"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div
+      class="c14"
+    >
+      <div
+        class="c15"
+      >
+        <div
+          class="c16"
+        >
+          <div
+            class="c17"
+          >
+            <div
+              class="c18"
+            >
+              <div
+                class="c19"
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
+                </p>
+              </div>
+              <div
+                class="c20"
+              >
+                <figure
+                  class="c21"
+                >
+                  <img
+                    alt=""
+                    src="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse"
+                  />
+                </figure>
+              </div>
+            </div>
+            <hr
+              class="c22"
+            />
+            <div
+              class="c23"
+            >
+              <div
+                class="carousel-root"
+                tabindex="0"
+              >
+                <div
+                  class="carousel carousel-slider"
+                  style="width: 100%;"
+                >
+                  <button
+                    aria-label="previous slide / item"
+                    class="control-arrow control-prev control-disabled"
+                    type="button"
+                  />
+                  <div
+                    class="slider-wrapper axis-horizontal"
+                    style="height: auto;"
+                  >
+                    <ul
+                      class="slider animated"
+                      style="transform: translate3d(-100%,0,0); transition-duration: 300ms; height: auto;"
+                    >
+                      <li
+                        class="slide"
+                      >
+                        <div
+                          class="c24"
+                        >
+                          <img
+                            alt=""
+                            class="c25 c26"
+                            src="frame-laptop.svg"
+                          />
+                          <figure
+                            class="c27 c28"
+                          >
+                            <img
+                              alt=""
+                              src="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                            />
+                          </figure>
+                        </div>
+                      </li>
+                      <li
+                        class="slide selected"
+                      >
+                        <div
+                          class="c29"
+                        >
+                          <figure
+                            class="c30"
+                          >
+                            <img
+                              alt=""
+                              class="c25 c26"
+                              src="frame-mobile.svg"
+                            />
+                            <figure
+                              class="c27 c28"
+                            >
+                              <img
+                                alt=""
+                                src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+                              />
+                            </figure>
+                          </figure>
+                        </div>
+                      </li>
+                      <li
+                        class="slide"
+                      >
+                        <div
+                          class="c31"
+                        >
+                          <img
+                            alt=""
+                            class="c25 c26"
+                            src="frame-tablet.svg"
+                          />
+                          <figure
+                            class="c27 c28"
+                          >
+                            <img
+                              alt=""
+                              src="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
+                            />
+                          </figure>
+                        </div>
+                      </li>
+                      <li
+                        class="slide"
+                      >
+                        <div
+                          class="c24"
+                        >
+                          <img
+                            alt=""
+                            class="c25 c26"
+                            src="frame-laptop.svg"
+                          />
+                          <figure
+                            class="c27 c28"
+                          >
+                            <img
+                              alt=""
+                              src="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                            />
+                          </figure>
+                        </div>
+                      </li>
+                      <li
+                        class="slide selected"
+                      >
+                        <div
+                          class="c29"
+                        >
+                          <figure
+                            class="c30"
+                          >
+                            <img
+                              alt=""
+                              class="c25 c26"
+                              src="frame-mobile.svg"
+                            />
+                            <figure
+                              class="c27 c28"
+                            >
+                              <img
+                                alt=""
+                                src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+                              />
+                            </figure>
+                          </figure>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <button
+                    aria-label="next slide / item"
+                    class="control-arrow control-next control-disabled"
+                    type="button"
+                  />
+                  <ul
+                    class="control-dots"
+                  >
+                    <li
+                      aria-label="slide item 1"
+                      class="dot selected"
+                      role="button"
+                      tabindex="0"
+                      value="0"
+                    />
+                    <li
+                      aria-label="slide item 2"
+                      class="dot"
+                      role="button"
+                      tabindex="0"
+                      value="1"
+                    />
+                    <li
+                      aria-label="slide item 3"
+                      class="dot"
+                      role="button"
+                      tabindex="0"
+                      value="2"
+                    />
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c32"
+            >
+              <div
+                class="c33"
+                type="desktop"
+              >
+                <figure
+                  class="c34 c35"
+                >
+                  <img
+                    alt=""
+                    class="c36"
+                    src="frame-laptop.svg"
+                  />
+                  <figure
+                    class="c37 c38"
+                  >
+                    <img
+                      alt=""
+                      src="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                    />
+                  </figure>
+                </figure>
+              </div>
+              <div
+                class="c39"
+                type="tablet"
+              >
+                <figure
+                  class="c34 c35"
+                >
+                  <img
+                    alt=""
+                    class="c36"
+                    src="frame-tablet.svg"
+                  />
+                  <figure
+                    class="c37 c38"
+                  >
+                    <img
+                      alt=""
+                      src="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
+                    />
+                  </figure>
+                </figure>
+              </div>
+              <div
+                class="c40"
+                type="mobile"
+              >
+                <figure
+                  class="c34 c35"
+                >
+                  <img
+                    alt=""
+                    class="c36"
+                    src="frame-mobile.svg"
+                  />
+                  <figure
+                    class="c37 c38"
+                  >
+                    <img
+                      alt=""
+                      src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
+                    />
+                  </figure>
+                </figure>
+              </div>
+            </div>
+            <hr
+              class="c22"
+            />
+            <div
+              class="c41"
+            >
+              <a
+                class="c42"
+                href="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Visit 
+                Scrupulum Misphrase
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

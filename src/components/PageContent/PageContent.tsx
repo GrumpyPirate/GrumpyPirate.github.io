@@ -1,11 +1,16 @@
-import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
-import { ChildrenProps } from 'types/common';
+import { mediaQueries, rem } from 'styles';
 
-import classes from './PageContent.scss';
+const PageContent = styled.div`
+  padding-bottom: ${rem(48 / 2)};
+  padding-top: ${rem(48 / 2)};
+  text-align: center;
 
-const PageContent: FunctionComponent<ChildrenProps> = ({ children }) => (
-  <div className={classes['page-content']}>{children}</div>
-);
+  @media ${mediaQueries.md} {
+    padding-bottom: ${rem(48)};
+    padding-top: ${rem(48)};
+  }
+`;
 
 export default PageContent;

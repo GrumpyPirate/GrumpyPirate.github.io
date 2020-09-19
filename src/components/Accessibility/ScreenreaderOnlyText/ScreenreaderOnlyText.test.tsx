@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
 import ScreenreaderOnlyText from './ScreenreaderOnlyText';
@@ -11,9 +11,9 @@ describe('Components', () => {
     };
 
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<ScreenreaderOnlyText {...props} />);
+      const { container } = render(<ScreenreaderOnlyText {...props} />);
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

@@ -1,12 +1,46 @@
-import { ReactNode } from 'react';
 import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 
-import { IconGlyph } from 'components/Icon/Icon.types';
-
-export interface ChildrenProps {
-  children: ReactNode;
+export interface ClassNameProps {
+  className?: string;
 }
+
+export type IconGlyph =
+  | 'airplay'
+  | 'angular'
+  | 'babel'
+  | 'bootstrap'
+  | 'bulma'
+  | 'chevron-down'
+  | 'chevron-left'
+  | 'contentful'
+  | 'divio'
+  | 'django'
+  | 'foundation'
+  | 'grunt'
+  | 'gulp'
+  | 'hash'
+  | 'heart'
+  | 'html5'
+  | 'illustrator'
+  | 'image'
+  | 'invision'
+  | 'javascript'
+  | 'laravel'
+  | 'loader'
+  | 'nextjs'
+  | 'photoshop'
+  | 'postcss'
+  | 'react'
+  | 'reactivex'
+  | 'redux'
+  | 'sass'
+  | 'shopify'
+  | 'sketch'
+  | 'storybook'
+  | 'styled-components'
+  | 'typescript'
+  | 'webpack';
 
 export interface AboutSectionIcon {
   name: IconGlyph;

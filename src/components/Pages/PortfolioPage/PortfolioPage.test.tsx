@@ -1,16 +1,26 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
-import { withMockStore } from 'utils/testing';
+import { initialRootState, RootState } from 'store';
+import { withMockRouter, withMockStore } from 'utils/testing';
 
 import PortfolioPage from './PortfolioPage';
+import portfolioItems from './PortfolioPage.fixture';
 
 describe('Components', () => {
   describe('Portfolio', () => {
-    it('should render as expected, without crashing', () => {
-      const wrapper = shallow(withMockStore(<PortfolioPage />));
+    const mockState: RootState = {
+      ...initialRootState,
+      portfolio: {
+        ...initialRootState.portfolio,
+        portfolioItems,
+      },
+    };
 
-      expect(wrapper).toMatchSnapshot();
+    it('should render as expected, without crashing', () => {
+      const { container } = render(withMockRouter(withMockStore(<PortfolioPage />, mockState)));
+
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

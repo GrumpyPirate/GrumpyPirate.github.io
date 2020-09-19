@@ -1,84 +1,85 @@
-import classnames from 'classnames';
+import Color from 'color';
 import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
+import { Container } from 'components/Grid';
 import Icon from 'components/Icon/Icon';
-import Container from 'components/Layout/Container/Container';
 import REPO_URL from 'config/urls';
+import { mediaQueries, palette, rem } from 'styles';
+import { ClassNameProps } from 'types/common';
 
-import classes from './Footer.scss';
+import { Copyright, FooterLink, FooterLinkWithIcon, Tech } from './Footer.constants';
 
-const Footer: FunctionComponent = () => {
+const Footer: FunctionComponent<ClassNameProps> = ({ className }) => {
   const creationYear = 2017;
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={classes['footer']}>
+    <footer className={className}>
       <Container>
-        <p className={classes['footer__tech']}>
+        <Tech>
           Made with{' '}
-          <a
+          <FooterLinkWithIcon
             href="https://facebook.github.io/react/"
             target="_blank"
             rel="noopener noreferrer"
             title="React"
-            className={classnames(classes['footer__link'], classes['footer__link--icon'])}
           >
             <Icon glyph="react" altText="React" />
-          </a>{' '}
+          </FooterLinkWithIcon>{' '}
           ,{' '}
-          <a
+          <FooterLinkWithIcon
             href="https://webpack.js.org/"
             target="_blank"
             rel="noopener noreferrer"
             title="Webpack"
-            className={classnames(classes['footer__link'], classes['footer__link--icon'])}
           >
             <Icon glyph="webpack" altText="Webpack" />
-          </a>{' '}
+          </FooterLinkWithIcon>{' '}
           and{' '}
-          <a
+          <FooterLinkWithIcon
             href="https://www.contentful.com/"
             target="_blank"
             rel="noopener noreferrer"
             title="Contentful"
-            className={classnames(classes['footer__link'], classes['footer__link--icon'])}
           >
             <Icon glyph="contentful" altText="Contentful" />
-          </a>
+          </FooterLinkWithIcon>
           .{' '}
-          <a
-            href={REPO_URL}
-            className={classes['footer__link']}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <FooterLink href={REPO_URL} target="_blank" rel="noreferrer noopener">
             Source code
-          </a>
+          </FooterLink>
           .
-        </p>
+        </Tech>
 
-        <p className={classes['footer__copyright']}>
+        <Copyright>
           &copy;{' '}
-          {currentYear > creationYear ? (
-            <span className={classes['footer__copyright__date']}>
-              {creationYear}&mdash;{currentYear}
-            </span>
-          ) : (
-            <span className={classes['footer__copyright__date']}>{currentYear}</span>
-          )}{' '}
-          <a
-            className={classes['footer__link']}
+          <span>
+            {currentYear > creationYear && <>{creationYear} &mdash; </>}
+            {currentYear}
+          </span>{' '}
+          <FooterLink
             href="https://github.com/grumpypirate"
             target="_blank"
             rel="noopener noreferrer"
           >
             Edward Cobbold
-          </a>
+          </FooterLink>
           .
-        </p>
+        </Copyright>
       </Container>
     </footer>
   );
 };
 
-export default Footer;
+export default styled(Footer)`
+  background-color: ${palette.themeDarkShades};
+  color: ${Color(palette.themeLightShades).alpha(0.5).string()};
+  font-size: ${rem(12)};
+  padding: ${rem(24)} 0;
+  text-align: center;
+
+  @media ${mediaQueries.md} {
+    padding: 2rem 0;
+  }
+`;

@@ -1,27 +1,22 @@
-import classnames from 'classnames';
 import React, { FunctionComponent } from 'react';
 import { useSelector } from 'react-redux';
 
 import Icon from 'components/Icon/Icon';
 import { RootState } from 'store';
 
-import classes from './Spinner.scss';
+import { Image, Text, Wrapper } from './Spinner.constants';
 
 const Spinner: FunctionComponent = () => {
   const isLoading = useSelector((state: RootState) => state.portfolio.isFetching);
 
   return (
-    <div
-      className={classnames(classes['spinner'], {
-        [classes['spinner--is-loading']]: isLoading,
-      })}
-    >
-      <figure className={classes['spinner__icon']}>
+    <Wrapper isLoading={isLoading}>
+      <Image>
         <Icon glyph="loader" altText="Loading..." />
-      </figure>
+      </Image>
 
-      <h6 className={classes['spinner__loading-text']}>Loading...</h6>
-    </div>
+      <Text>Loading...</Text>
+    </Wrapper>
   );
 };
 export default Spinner;
