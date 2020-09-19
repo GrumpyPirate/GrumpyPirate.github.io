@@ -1,10 +1,15 @@
 import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
-import classes from './ScreenreaderOnlyText.scss';
+import { visuallyHidden } from 'styles';
+
 import { ScreenreaderOnlyTextProps } from './ScreenreaderOnlyText.types';
 
-const ScreenreaderOnlyText: FunctionComponent<ScreenreaderOnlyTextProps> = ({ text }) => (
-  <span className={classes['screenreader-only']}>{text}</span>
-);
+const ScreenreaderOnlyText: FunctionComponent<ScreenreaderOnlyTextProps> = ({
+  className,
+  text,
+}) => <span className={className}>{text}</span>;
 
-export default ScreenreaderOnlyText;
+export default styled(ScreenreaderOnlyText)`
+  ${visuallyHidden}
+`;

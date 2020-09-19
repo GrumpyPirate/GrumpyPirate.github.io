@@ -1,16 +1,16 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
-import { withMockStore } from 'utils/testing';
+import { withMockRouter, withMockStore } from 'utils/testing';
 
 import Sidebar from './Sidebar';
 
 describe('Components', () => {
   describe('Sidebar', () => {
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(withMockStore(<Sidebar />));
+      const { container } = render(withMockRouter(withMockStore(<Sidebar />)));
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

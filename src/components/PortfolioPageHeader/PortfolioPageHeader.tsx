@@ -1,59 +1,71 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
+import Icon from 'components/Icon/Icon';
+import { mediaQueries, palette, rem } from 'styles';
 import { PortfolioItemTech } from 'types/common';
 
-import Heading from 'components/Typography/Heading/Heading';
-import Icon from 'components/Icon/Icon';
-
+import {
+  Back,
+  BackgroundImage,
+  Content,
+  Tech,
+  TechHeading,
+  TechList,
+  TechListItem,
+  Title,
+} from './PortfolioPageHeader.constants';
 import { PortfolioPageHeaderProps } from './PortfolioPageHeader.types';
-import classes from './PortfolioPageHeader.scss';
 
 const PortfolioPageHeader: FunctionComponent<PortfolioPageHeaderProps> = ({
   bgImage,
-  title,
+  className,
   tech = [],
+  title,
 }) => (
-  <header className={classes['portfolio-page-header']}>
-    <figure className={classes['portfolio-page-header__media']}>
+  <header className={className}>
+    <BackgroundImage>
       <img src={bgImage} alt={title} />
-    </figure>
+    </BackgroundImage>
 
-    <div className={classes['portfolio-page-header__copy']}>
-      <div>
-        <Link to="/portfolio" className={classes['portfolio-page-header__back']}>
+    <Content>
+      <Back>
+        <Link to="/portfolio">
           <Icon glyph="chevron-left" />
           Portfolio
         </Link>
-      </div>
+      </Back>
 
       <div>
-        <Heading level={1} text={title} className={classes['portfolio-page-header__title']} />
+        <Title level={1} text={title} />
       </div>
 
-      <div className={classes['portfolio-page-header__tech']}>
-        <Heading
-          level={2}
-          displayLevel={5}
-          text="Technologies"
-          className={classes['portfolio-page-header__tech__heading']}
-        />
+      <Tech>
+        <TechHeading level={2} displayLevel={5} text="Technologies" />
 
         {tech.length > 0 && (
-          <ul className={classes['portfolio-page-header__tech__list']}>
+          <TechList>
             {tech.map(({ icon, name }: PortfolioItemTech) => (
-              <li
-                key={`tech-item__${name}`}
-                className={classes['portfolio-page-header__tech__list-item']}
-              >
+              <TechListItem key={`tech-item__${name}`}>
                 <Icon glyph={icon} altText={name} />
-              </li>
+              </TechListItem>
             ))}
-          </ul>
+          </TechList>
         )}
-      </div>
-    </div>
+      </Tech>
+    </Content>
   </header>
 );
 
-export default PortfolioPageHeader;
+export default styled(PortfolioPageHeader)`
+  background-color: ${palette.themeDarkShades};
+  border-bottom: solid ${rem(6)} ${palette.themeAccentLight};
+  min-height: ${rem(360)};
+  position: relative;
+  padding: ${rem(48)} 0 ${rem(32)};
+
+  @media ${mediaQueries.lg} {
+    border-bottom-width: ${rem(8)};
+  }
+`;

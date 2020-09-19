@@ -1,21 +1,24 @@
-import classnames from 'classnames';
-import { debounce } from 'lodash-es';
+import debounce from 'lodash/debounce';
 import React, { FunctionComponent, useCallback, useEffect, useRef, useState } from 'react';
 
+import { Container } from 'components/Grid';
 import Icon from 'components/Icon/Icon';
-import Container from 'components/Layout/Container/Container';
 
-import classes from './PageHeader.scss';
+import {
+  Content,
+  getFullscreenHeight,
+  Header,
+  ScrollButton,
+  ScrollButtonIcon,
+  ScrollButtonLabel,
+  Title,
+  TitleText,
+} from './PageHeader.constants';
 import { PageHeaderProps } from './PageHeader.types';
-
-const getFullscreenHeight = (): string => {
-  const windowHeight = window.innerHeight;
-
-  return window.innerWidth < 992 ? `calc(${windowHeight - 50}px)` : `${windowHeight}px`;
-};
 
 const PageHeader: FunctionComponent<PageHeaderProps> = ({
   children,
+  className,
   isFullscreen = false,
   scrollLabel = 'Scroll for more',
   title,
@@ -46,36 +49,31 @@ const PageHeader: FunctionComponent<PageHeaderProps> = ({
   });
 
   return (
-    <header
-      className={classnames(classes['page-header'], {
-        [classes['page-header--is-fullscreen']]: isFullscreen,
-      })}
+    <Header
+      className={className}
+      isFullscreen={isFullscreen}
       style={{ ...(isFullscreen && { height }) }}
       ref={headerElement}
     >
       <Container>
-        <div className={classes['page-header__content']}>
-          <div className={classes['page-header__title']}>
-            <h1 className={classes['page-header__title__text']}>{title}</h1>
-          </div>
+        <Content>
+          <Title>
+            <TitleText>{title}</TitleText>
+          </Title>
 
           {children}
-        </div>
+        </Content>
       </Container>
 
       {isFullscreen && (
-        <button
-          type="button"
-          className={classes['page-header__scroll-button']}
-          onClick={onScrollDownClick}
-        >
-          <span className={classes['page-header__scroll-button__label']}>{scrollLabel}</span>
-          <span className={classes['page-header__scroll-button__icon']}>
+        <ScrollButton type="button" onClick={onScrollDownClick}>
+          <ScrollButtonLabel>{scrollLabel}</ScrollButtonLabel>
+          <ScrollButtonIcon>
             <Icon glyph="chevron-down" />
-          </span>
-        </button>
+          </ScrollButtonIcon>
+        </ScrollButton>
       )}
-    </header>
+    </Header>
   );
 };
 

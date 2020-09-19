@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
 import { withMockRouter, withMockStore } from 'utils/testing';
@@ -8,9 +8,9 @@ import Main from './Main';
 describe('Components', () => {
   describe('Main', () => {
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(withMockRouter(withMockStore(<Main />)));
+      const { container } = render(withMockRouter(withMockStore(<Main />)));
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

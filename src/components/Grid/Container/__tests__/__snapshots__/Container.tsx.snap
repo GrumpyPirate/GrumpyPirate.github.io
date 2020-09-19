@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Grid/Container should render as expected, without crashing 1`] = `
+.c2 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c0 {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+@media (min-width:48em) {
+  .c2 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c0 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c1 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      Column 1
+    </div>
+    <div
+      class="c2"
+    >
+      Column 2
+    </div>
+    <div
+      class="c2"
+    >
+      Column 3
+    </div>
+  </div>
+</div>
+`;

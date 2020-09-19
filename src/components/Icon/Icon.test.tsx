@@ -1,8 +1,7 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import Icon from './Icon';
-
 import fixture from './Icon.fixture';
 
 describe('Components', () => {
@@ -12,9 +11,9 @@ describe('Components', () => {
     };
 
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<Icon {...props} />);
+      const { container } = render(<Icon {...props} />);
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

@@ -1,35 +1,44 @@
 import React, { FunctionComponent } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { AppDispatch } from 'store';
 import { closeMobileNavigation } from 'store/ui/ui.actions';
+import { mediaQueries } from 'styles';
+import { ClassNameProps } from 'types/common';
 
-import navItems from './Sitenav.constants';
-import classes from './Sitenav.scss';
+import { Item, navItems } from './Sitenav.constants';
 
-const Sitenav: FunctionComponent = () => {
+const Sitenav: FunctionComponent<ClassNameProps> = ({ className }) => {
   const dispatch: AppDispatch = useDispatch();
 
   return (
-    <ul className={classes['sitenav']} role="navigation">
+    <ul className={className} role="navigation">
       {navItems.map(({ key, label, to }) => (
-        <li key={`sitenav__nav-item__${key}`} className={classes['sitenav__nav-item']}>
+        <Item key={`sitenav__nav-item__${key}`}>
           <NavLink
             to={to}
-            exact={Boolean(to === '/')}
-            className={classes['sitenav__nav-link']}
-            activeClassName={classes['sitenav__nav-link--active']}
+            exact={to === '/'}
             onClick={() => {
               dispatch(closeMobileNavigation());
             }}
           >
             {label}
           </NavLink>
-        </li>
+        </Item>
       ))}
     </ul>
   );
 };
 
-export default Sitenav;
+export default styled(Sitenav)`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media ${mediaQueries.mdOnly} {
+    align-items: stretch;
+    display: flex;
+  }
+`;

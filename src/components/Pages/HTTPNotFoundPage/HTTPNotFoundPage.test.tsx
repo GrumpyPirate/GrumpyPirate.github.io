@@ -1,14 +1,16 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
+
+import { withMockRouter } from 'utils/testing';
 
 import HTTPNotFoundPage from './HTTPNotFoundPage';
 
 describe('Components', () => {
   describe('HTTPNotFoundPage', () => {
     it('should render as expected, without crashing', () => {
-      const wrapper = shallow(<HTTPNotFoundPage />);
+      const { container } = render(withMockRouter(<HTTPNotFoundPage />));
 
-      expect(wrapper).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

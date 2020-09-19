@@ -1,8 +1,7 @@
-import React, { FunctionComponent } from 'react';
+import Color from 'color';
+import styled from 'styled-components';
 
-import { ChildrenProps } from 'types/common';
-
-import classes from './Page.scss';
+import { palette } from 'styles';
 
 /**
  * Renders a Page component.
@@ -11,8 +10,8 @@ import classes from './Page.scss';
  *
  * @returns {ReactNode}
  */
-const Page: FunctionComponent<ChildrenProps> = ({ children }) => (
-  <div className={classes['page']}>{children}</div>
-);
+const Page = styled.div`
+  background-color: ${Color(palette.white).darken(0.05).string()};
+`;
 
 export default Page;

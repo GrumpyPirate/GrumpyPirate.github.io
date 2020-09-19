@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Button should render as expected, without crashing 1`] = `
+.c0 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  background-color: #dc8381;
+  border: solid 1px #dc8381;
+  border-radius: 2rem;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.375;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-property: -webkit-transform,color,background-color;
+  -webkit-transition-property: transform,color,background-color;
+  transition-property: transform,color,background-color;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.c0,
+.c0:hover,
+.c0:focus,
+.c0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:disabled,
+.c0[disabled],
+.c0:disabled:hover,
+.c0[disabled]:hover,
+.c0:disabled:focus,
+.c0[disabled]:focus,
+.c0:disabled:active,
+.c0[disabled]:active {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+  class="c0"
+  type="button"
+>
+  <span>
+    Test button
+  </span>
+</button>
+`;

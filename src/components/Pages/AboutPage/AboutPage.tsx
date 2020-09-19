@@ -1,23 +1,20 @@
-import classnames from 'classnames';
-import React, { FunctionComponent, useEffect } from 'react';
+import React, { FunctionComponent, ReactElement, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import AboutIcon from 'components/AboutIcon/AboutIcon';
-import AboutSection from 'components/AboutSection/AboutSection';
-import Column from 'components/Layout/Column/Column';
-import Container from 'components/Layout/Container/Container';
-import Row from 'components/Layout/Row/Row';
+import { Column, Container, Row } from 'components/Grid';
+import Icon from 'components/Icon/Icon';
 import Page from 'components/Page/Page';
 import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
+import Heading from 'components/Typography/Heading/Heading';
 import { AppDispatch, RootState } from 'store';
 import { aboutSectionsRequest } from 'store/about/about.actions';
-import { AboutSectionFormatted, AboutSectionIcon } from 'types/common';
+import { AboutSectionIcon } from 'types/common';
 
-import classes from './AboutPage.scss';
+import { AboutIcon, AboutSection, PageHeaderDivider, SectionGraphic } from './AboutPage.constants';
 
 const AboutPage: FunctionComponent = () => {
   const { aboutSections, hasFetched } = useSelector((state: RootState) => ({
@@ -40,44 +37,39 @@ const AboutPage: FunctionComponent = () => {
         </PageHeaderSubtitle>
 
         <PageHeaderSubtitle>
-          <hr className={classes['about-page__page-header__divider']} />
+          <PageHeaderDivider />
           <Link to="/portfolio">Portfolio</Link>
         </PageHeaderSubtitle>
       </PageHeader>
 
       <PageContent>
-        <section className={classes['about-page__page-content']}>
+        <section>
           <Container>
-            <Row justify="center">
-              <Column spanSM={10} spanLG={12} spanXL={10}>
-                {aboutSections.map(
-                  ({ content, icons = [], id, slug, title }: AboutSectionFormatted) => (
-                    <AboutSection key={`about-section--${id}`} title={title}>
-                      {/* If 1 icon, house content in columns */}
+            <Row xAlign="center">
+              <Column xs={12} sm={10} lg={12} xl={10}>
+                {aboutSections.map(({ content, icons = [], id, title }) => {
+                  const iconContent: ReactElement = (
+                    <>
+                      {icons.map((icon: AboutSectionIcon) => (
+                        <AboutIcon key={`${id}__icon--${icon.name}`} large={icon.large}>
+                          <Icon glyph={icon.name} />
+                        </AboutIcon>
+                      ))}
+                    </>
+                  );
+
+                  return (
+                    <AboutSection key={`about-section--${id}`}>
+                      <Heading level={2} displayLevel={3} text={title} />
+
                       {icons.length === 1 ? (
-                        <Row justify="center">
-                          <Column spanMD={8}>
-                            <Row alignMD="middle">
-                              {!!icons.length && (
-                                <Column span={12} spanMD={4} pushMD={8}>
-                                  <figure
-                                    className={classnames(
-                                      classes['about-page__section-graphic'],
-                                      classes[`about__section-graphic--${slug}`],
-                                      classes['about-page__section-graphic--single'],
-                                    )}
-                                  >
-                                    {icons.map((icon: AboutSectionIcon) => (
-                                      <AboutIcon
-                                        key={`${id}__icon--${icon.name}`}
-                                        iconName={icon.name}
-                                        large={icon.large}
-                                      />
-                                    ))}
-                                  </figure>
-                                </Column>
-                              )}
-                              <Column span={12} spanMD={8} pullMD={4}>
+                        <Row xAlign="center">
+                          <Column md={8}>
+                            <Row yAlign="center">
+                              <Column xs={12} md={4} pushMd={8}>
+                                <SectionGraphic single>{iconContent}</SectionGraphic>
+                              </Column>
+                              <Column xs={12} md={8} pullMd={4}>
                                 <ReactMarkdown source={content} />
                               </Column>
                             </Row>
@@ -85,33 +77,18 @@ const AboutPage: FunctionComponent = () => {
                         </Row>
                       ) : (
                         <>
-                          {icons.length > 0 && (
-                            <figure
-                              className={classnames(
-                                classes['about-page__section-graphic'],
-                                classes[`about__section-graphic--${slug}`],
-                              )}
-                            >
-                              {icons.map((icon: AboutSectionIcon) => (
-                                <AboutIcon
-                                  key={`${id}__icon--${icon.name}`}
-                                  iconName={icon.name}
-                                  large={icon.large}
-                                />
-                              ))}
-                            </figure>
-                          )}
+                          {icons.length > 0 && <SectionGraphic>{iconContent}</SectionGraphic>}
 
-                          <Row justify="center">
-                            <Column spanMD={8}>
+                          <Row xAlign="center">
+                            <Column md={8}>
                               <ReactMarkdown source={content} />
                             </Column>
                           </Row>
                         </>
                       )}
                     </AboutSection>
-                  ),
-                )}
+                  );
+                })}
               </Column>
             </Row>
           </Container>

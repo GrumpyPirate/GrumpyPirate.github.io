@@ -1,61 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components Footer should render as expected, without crashing 1`] = `
+.c1 {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+}
+
+.c2 {
+  margin-bottom: 0;
+}
+
+.c6 {
+  margin-bottom: 0;
+}
+
+.c3 {
+  color: inherit;
+  font: inherit;
+}
+
+.c3,
+.c3:hover,
+.c3:focus,
+.c3:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover,
+.c3:focus {
+  color: #dc8381;
+}
+
+.c4 {
+  font-size: 1.75em;
+  vertical-align: middle;
+}
+
+.c0 {
+  background-color: #302445;
+  color: rgba(242,241,243,0.5);
+  font-size: 0.75rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+@media (min-width:48em) {
+  .c1 {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c0 {
+    padding: 2rem 0;
+  }
+}
+
 <footer
-  className="footer"
+  class="c0"
 >
-  <Container>
+  <div
+    class="c1"
+  >
     <p
-      className="footer__tech"
+      class="c2"
     >
       Made with
        
       <a
-        className="footer__link footer__link--icon"
+        class="c3 c4"
         href="https://facebook.github.io/react/"
         rel="noopener noreferrer"
         target="_blank"
         title="React"
       >
-        <Icon
-          altText="React"
-          glyph="react"
-        />
+        <svg
+          aria-label="React"
+          class="c5"
+        >
+          <use
+            xlink:href="#react"
+          />
+        </svg>
       </a>
        
       ,
        
       <a
-        className="footer__link footer__link--icon"
+        class="c3 c4"
         href="https://webpack.js.org/"
         rel="noopener noreferrer"
         target="_blank"
         title="Webpack"
       >
-        <Icon
-          altText="Webpack"
-          glyph="webpack"
-        />
+        <svg
+          aria-label="Webpack"
+          class="c5"
+        >
+          <use
+            xlink:href="#webpack"
+          />
+        </svg>
       </a>
        
       and
        
       <a
-        className="footer__link footer__link--icon"
+        class="c3 c4"
         href="https://www.contentful.com/"
         rel="noopener noreferrer"
         target="_blank"
         title="Contentful"
       >
-        <Icon
-          altText="Contentful"
-          glyph="contentful"
-        />
+        <svg
+          aria-label="Contentful"
+          class="c5"
+        >
+          <use
+            xlink:href="#contentful"
+          />
+        </svg>
       </a>
       .
        
       <a
-        className="footer__link"
+        class="c3"
         href="https://github.com/GrumpyPirate/GrumpyPirate.github.io"
         rel="noreferrer noopener"
         target="_blank"
@@ -65,20 +149,18 @@ exports[`Components Footer should render as expected, without crashing 1`] = `
       .
     </p>
     <p
-      className="footer__copyright"
+      class="c6"
     >
       ©
        
-      <span
-        className="footer__copyright__date"
-      >
+      <span>
         2017
-        —
+         — 
         2020
       </span>
        
       <a
-        className="footer__link"
+        class="c3"
         href="https://github.com/grumpypirate"
         rel="noopener noreferrer"
         target="_blank"
@@ -87,6 +169,6 @@ exports[`Components Footer should render as expected, without crashing 1`] = `
       </a>
       .
     </p>
-  </Container>
+  </div>
 </footer>
 `;

@@ -1,6 +1,8 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 
+/** @typedef {import('ts-jest')} */
+/** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -22,7 +24,12 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be
   // collected
-  // collectCoverageFrom: null,
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.types.{ts,tsx}',
+    '!src/**/utils/testing/**/*',
+    '!src/**/*.{fixture,stories}.{ts,tsx}',
+  ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -60,15 +67,10 @@ module.exports = {
   // globals: {},
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: ['node_modules', 'src'],
+  moduleDirectories: ['node_modules', '<rootDir>/src'],
 
   // An array of file extensions your modules use
-  // moduleFileExtensions: [
-  //   'js',
-  //   'json',
-  //   'jsx',
-  //   'node'
-  // ],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
 
   // A map from regular expressions to module names that allow to stub out resources with a single
   // module
@@ -122,13 +124,13 @@ module.exports = {
 
   // The path to a module that runs some code to configure or set up the testing framework before
   // each test
-  setupFilesAfterEnv: ['<rootDir>/jest.setupFramework.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.after-env.ts'],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -166,21 +168,20 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
     '^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/jest.fileTransformer.js',
+      '<rootDir>/jest.setup.asset-transformer.ts',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched
   // files will skip transformation
-  transformIgnorePatterns: ['<rootDir>/node_modules/(?!lodash-es)'],
+  // transformIgnorePatterns: [],
 
   // An array of regexp pattern strings that are matched against all modules before the module
   // loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
-  verbose: true,
+  // verbose: true,
 
   // An array of regexp patterns that are matched against all source file paths before re-running
   // tests in watch mode
@@ -188,4 +189,5 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 };

@@ -1,22 +1,24 @@
-import isEmpty from 'lodash-es/isEmpty';
+import isEmpty from 'lodash/isEmpty';
 import React, { FunctionComponent, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
-import Button from 'components/Layout/Button/Button';
-import Column from 'components/Layout/Column/Column';
-import Container from 'components/Layout/Container/Container';
-import Row from 'components/Layout/Row/Row';
+import Button from 'components/Button/Button';
+import { Column, Container, Row } from 'components/Grid';
 import Page from 'components/Page/Page';
 import PortfolioCarousel from 'components/PortfolioCarousel/PortfolioCarousel';
 import PortfolioDeviceLineup from 'components/PortfolioDeviceLineup/PortfolioDeviceLineup';
-import PortfolioPageContent from 'components/PortfolioPageContent/PortfolioPageContent';
 import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';
 import { AppDispatch, RootState } from 'store';
 import { requestPortfolioItems } from 'store/portfolio/portfolio.actions';
 
-import classes from './PortfolioItemPage.scss';
+import {
+  Content,
+  ContentDivider,
+  ExternalLinkWrapper,
+  SupportingImage,
+} from './PortfolioItemPage.constants';
 
 const PortfolioItemPage: FunctionComponent = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -45,34 +47,34 @@ const PortfolioItemPage: FunctionComponent = () => {
 
   return (
     <Page>
-      <div className={classes['portfolio-item-page']}>
+      <div>
         <PortfolioPageHeader
           bgImage={portfolioItem.headerImgSrc}
           title={portfolioItem.title}
           tech={portfolioItem.tech}
         />
 
-        <PortfolioPageContent>
+        <Content>
           <Container>
-            <Row justify="center">
-              <Column spanSM={10}>
+            <Row xAlign="center">
+              <Column sm={10}>
                 {portfolioItem.supportingImageSrc ? (
-                  <Row alignLG="middle">
-                    <Column span={12} spanMD="auto" spanXL={6}>
+                  <Row yAlign="top">
+                    <Column xs={12} md={6} xl={6}>
                       <ReactMarkdown source={portfolioItem.description} />
                     </Column>
 
-                    <Column span={12} spanMD={6} spanXL={5} pushXL={1}>
-                      <figure className={classes['portfolio-item-page__supporting-image']}>
+                    <Column xs={12} md={6} xl={5} pushXl={1}>
+                      <SupportingImage>
                         <img src={portfolioItem.supportingImageSrc} alt="" />
-                      </figure>
+                      </SupportingImage>
                     </Column>
                   </Row>
                 ) : (
                   <ReactMarkdown source={portfolioItem.description} />
                 )}
 
-                <hr className={classes['portfolio-item-page__content-divider']} />
+                <ContentDivider />
 
                 <PortfolioCarousel
                   desktopImage={portfolioItem.previews.desktop}
@@ -86,17 +88,17 @@ const PortfolioItemPage: FunctionComponent = () => {
                   mobileImage={portfolioItem.previews.mobile}
                 />
 
-                <hr className={classes['portfolio-item-page__content-divider']} />
+                <ContentDivider />
 
-                <div className={classes['portfolio-item-page__external-link']}>
+                <ExternalLinkWrapper>
                   <Button to={portfolioItem.url} external secondary>
                     Visit {portfolioItem.title}
                   </Button>
-                </div>
+                </ExternalLinkWrapper>
               </Column>
             </Row>
           </Container>
-        </PortfolioPageContent>
+        </Content>
       </div>
     </Page>
   );

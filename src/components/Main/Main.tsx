@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import React, { FunctionComponent, PropsWithChildren, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
@@ -7,10 +6,14 @@ import Spinner from 'components/Spinner/Spinner';
 import usePrevious from 'hooks/usePrevious';
 import { AppDispatch, RootState } from 'store';
 import { closeMobileNavigation } from 'store/ui/ui.actions';
+import { ClassNameProps } from 'types/common';
 
-import classes from './Main.scss';
+import { Content, MainWrapper } from './Main.constants';
 
-const Main: FunctionComponent<PropsWithChildren<{}>> = ({ children }) => {
+const Main: FunctionComponent<ClassNameProps & PropsWithChildren<{}>> = ({
+  children,
+  className,
+}) => {
   const history = useHistory();
   const { pathname } = useLocation();
   const prevPathname = usePrevious(pathname);
@@ -51,17 +54,12 @@ const Main: FunctionComponent<PropsWithChildren<{}>> = ({ children }) => {
   });
 
   return (
-    <main
-      className={classnames(classes['main'], {
-        [classes['main--is-loading']]: isLoading,
-      })}
-      id="main-content"
-    >
-      <div className={classes['main__content']}>
+    <MainWrapper className={className} isLoading={isLoading} id="main-content">
+      <Content>
         <Spinner />
         {children}
-      </div>
-    </main>
+      </Content>
+    </MainWrapper>
   );
 };
 

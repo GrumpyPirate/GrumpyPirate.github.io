@@ -1,9 +1,0 @@
-@import 'core';
-
-.portfolio-page-content {
-  padding: 2rem 0;
-
-  @include respond-up('md') {
-    padding: 4rem 0;
-  }
-}

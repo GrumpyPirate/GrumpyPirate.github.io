@@ -2,7 +2,8 @@
 /* eslint-disable no-console */
 // Contentful
 import { ContentfulClientApi, createClient } from 'contentful';
-import { get, uniqueId } from 'lodash-es';
+import get from 'lodash/get';
+import uniqueId from 'lodash/uniqueId';
 
 import ContentfulSettings from 'config/contentful';
 import { AboutSectionFormatted, PortfolioItemFormatted } from 'types/common';
