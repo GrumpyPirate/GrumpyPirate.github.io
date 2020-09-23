@@ -108,6 +108,6 @@ export const ListItem = styled.li`
     overflow: hidden;
     border: ${rem(gutterWidths.xs / 4)} solid ${palette.themeAccentDark};
     border-style: none none solid;
-    background-color: ${palette.themeAccentDark};
+    background-color: ${palette.greyDark};
   }
 `;

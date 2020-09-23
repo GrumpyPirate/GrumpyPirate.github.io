@@ -21,7 +21,7 @@ import {
   ListItemCopy,
   ListItemDescription,
   ListItemImage,
-} from './PortfolioPage.constant';
+} from './PortfolioPage.constants';
 
 const PortfolioPage: FunctionComponent<ClassNameProps> = ({ className }) => {
   const portfolioItems = useSelector((state: RootState) => state.portfolio.portfolioItems);

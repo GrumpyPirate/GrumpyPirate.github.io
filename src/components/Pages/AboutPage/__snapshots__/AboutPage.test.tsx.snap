@@ -574,7 +574,7 @@ exports[`Components About should render as expected, without crashing 1`] = `
       <span
         class="c10"
       >
-        Scroll for about
+        More
       </span>
       <div
         class="c11"

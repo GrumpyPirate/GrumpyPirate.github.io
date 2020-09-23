@@ -1,6 +1,6 @@
 ## README
 
-A very basic portfolio site, written in [React](https://reactjs.org/) and built using [webpack](https://webpack.js.org/).
+A very basic portfolio site, written in [React](https://reactjs.org/), built using [webpack](https://webpack.js.org/) with content from a headless CMS ([Contentful](contentful.com/)).
 
 ### Key technologies used:
 
@@ -12,9 +12,9 @@ A very basic portfolio site, written in [React](https://reactjs.org/) and built 
 
 ### TODO
 
-- [ ] Use contentful image resizer to thumbnail the huge webpage preview images
+- [ ] Replace deprecated `webapp-webpack-plugin` with `favicons-webpack-plugin`
 - [ ] Replace portfolio page item previews with dependency-free solution
+- [ ] Switch Contenful API queries over to GraphQL (likely via [apollo-client](https://www.npmjs.com/package/apollo-client))
 - [ ] Sort/group portfolio items in some way, perhaps by creation date
 - [ ] Code splitting via lazy-loading components with @loadable/component
-- [ ] Migrate completely over to Babel 7 (including deprecating babel-polyfill)
 - [ ] Tidy up ContentService, deprecate use of `lodash.get`

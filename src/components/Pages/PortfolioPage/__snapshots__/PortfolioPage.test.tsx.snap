@@ -217,7 +217,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   overflow: hidden;
   border: 0.375rem solid #b54259;
   border-style: none none solid;
-  background-color: #b54259;
+  background-color: #333;
 }
 
 .c1 .c9 {
