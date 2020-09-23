@@ -1276,7 +1276,7 @@ exports[`Components App should render as expected, without crashing 1`] = `
             <span
               class="c35"
             >
-              Scroll for about
+              More
             </span>
             <div
               class="c36"
