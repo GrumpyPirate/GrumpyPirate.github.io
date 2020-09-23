@@ -6,7 +6,7 @@ const { EnvironmentPlugin } = require('webpack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
@@ -86,10 +86,9 @@ module.exports = {
         files: './src/**/*.{ts,tsx,js,jsx}',
       },
     }),
-    new WebappWebpackPlugin({
-      logo: path.resolve('src/images/favicon-master.png'),
-      cache: true,
-      inject: true,
+
+    new FaviconsWebpackPlugin({
+      logo: './src/images/favicon-master.png',
       favicons: {
         appName: 'Edward Cobbold',
         appDescription: "Edward Cobbold's personal website",
