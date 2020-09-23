@@ -11,7 +11,7 @@ import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 import Heading from 'components/Typography/Heading/Heading';
 import { AppDispatch, RootState } from 'store';
-import { aboutSectionsRequest } from 'store/about/about.actions';
+import { getAboutSections } from 'store/about';
 import { AboutSectionIcon } from 'types/common';
 
 import { AboutIcon, AboutSection, PageHeaderDivider, SectionGraphic } from './AboutPage.constants';
@@ -25,7 +25,7 @@ const AboutPage: FunctionComponent = () => {
 
   useEffect(() => {
     if (!hasFetched && aboutSections.length === 0) {
-      dispatch(aboutSectionsRequest());
+      dispatch(getAboutSections());
     }
   }, [aboutSections.length, dispatch, hasFetched]);
 

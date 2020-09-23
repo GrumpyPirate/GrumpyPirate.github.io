@@ -10,7 +10,7 @@ import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 import Heading from 'components/Typography/Heading/Heading';
 import { AppDispatch, RootState } from 'store';
-import { requestPortfolioItems } from 'store/portfolio/portfolio.actions';
+import { getPortfolioItems } from 'store/portfolio';
 import { ClassNameProps } from 'types/common';
 
 import {
@@ -27,7 +27,7 @@ const PortfolioPage: FunctionComponent<ClassNameProps> = ({ className }) => {
 
   useEffect(() => {
     if (portfolioItems.length === 0) {
-      dispatch(requestPortfolioItems());
+      dispatch(getPortfolioItems());
     }
   }, [dispatch, portfolioItems.length]);
 

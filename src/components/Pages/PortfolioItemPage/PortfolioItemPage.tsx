@@ -11,7 +11,7 @@ import PortfolioCarousel from 'components/PortfolioCarousel/PortfolioCarousel';
 import PortfolioDeviceLineup from 'components/PortfolioDeviceLineup/PortfolioDeviceLineup';
 import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';
 import { AppDispatch, RootState } from 'store';
-import { requestPortfolioItems } from 'store/portfolio/portfolio.actions';
+import { getPortfolioItems } from 'store/portfolio';
 
 import {
   Content,
@@ -33,7 +33,7 @@ const PortfolioItemPage: FunctionComponent = () => {
     const shouldFetchItems = Boolean(isEmpty(portfolioItem) && !hasFetched);
 
     if (shouldFetchItems) {
-      dispatch(requestPortfolioItems());
+      dispatch(getPortfolioItems());
     }
   }, [dispatch, hasFetched, portfolioItem]);
 
