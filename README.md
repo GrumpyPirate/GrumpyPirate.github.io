@@ -12,7 +12,6 @@ A very basic portfolio site, written in [React](https://reactjs.org/), built usi
 
 ### TODO
 
-- [ ] Replace deprecated `webapp-webpack-plugin` with `favicons-webpack-plugin`
 - [ ] Replace portfolio page item previews with dependency-free solution
 - [ ] Switch Contenful API queries over to GraphQL (likely via [apollo-client](https://www.npmjs.com/package/apollo-client))
 - [ ] Sort/group portfolio items in some way, perhaps by creation date
