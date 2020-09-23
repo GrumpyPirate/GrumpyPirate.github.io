@@ -31,7 +31,7 @@ const AboutPage: FunctionComponent = () => {
 
   return (
     <Page>
-      <PageHeader title="Hello" scrollLabel="Scroll for about" isFullscreen>
+      <PageHeader title="Hello" scrollLabel="More" isFullscreen>
         <PageHeaderSubtitle>
           I&apos;m a Frontend developer from Kent, working in London.
         </PageHeaderSubtitle>

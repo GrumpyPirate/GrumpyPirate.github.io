@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": ".",
     "esModuleInterop": true,
     "jsx": "react",
@@ -18,5 +19,5 @@
     "typeRoots": ["node_modules/@types", "src/types"]
   },
   "exclude": ["node_modules"],
-  "include": ["jest.*.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.types.ts", "src/**/*.tsx"]
+  "include": ["./*.js", "jest.*.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.types.ts", "src/**/*.tsx"]
 }
