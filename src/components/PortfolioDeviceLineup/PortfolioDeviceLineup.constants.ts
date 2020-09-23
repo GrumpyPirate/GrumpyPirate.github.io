@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { mediaQueries, rem } from 'styles';
+import { mediaQueries, palette, rem } from 'styles';
 
 import { LineupItemType } from './PortfolioDeviceLineup.types';
 
@@ -37,6 +37,7 @@ export const DeviceImage = styled.figure`
   margin: 0;
   overflow-y: auto;
   position: relative;
+  background-color: ${palette.greyDark};
   z-index: 1;
 
   img {

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components PortfolioPageHeader should render as expected, without crashing 1`] = `
-.c5 {
+.c6 {
   position: relative;
   bottom: 0.125em;
   display: inline-block;
@@ -13,7 +13,18 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
   vertical-align: middle;
 }
 
-.c6 {
+.c2 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c7 {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -26,7 +37,7 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
   font-size: 2.475rem;
 }
 
-.c9 {
+.c10 {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -76,12 +87,12 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
   width: 125%;
 }
 
-.c2 {
+.c3 {
   position: relative;
   z-index: 1;
 }
 
-.c7 {
+.c8 {
   background-color: rgba(48,36,69,0.8);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -92,7 +103,7 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
   vertical-align: top;
 }
 
-.c3 a {
+.c4 a {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -113,38 +124,38 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
   z-index: 1;
 }
 
-.c3 a:hover,
-.c3 a:focus {
+.c4 a:hover,
+.c4 a:focus {
   color: #f2f1f3;
 }
 
-.c8 {
+.c9 {
   background-color: rgba(48,36,69,0.8);
   color: #fff;
   padding: 0 0.75rem;
 }
 
-.c10 {
+.c11 {
   margin: 0;
 }
 
-.c11 {
+.c12 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.c12 {
+.c13 {
   display: inline-block;
   padding: 0.5rem 0;
   vertical-align: middle;
 }
 
-.c12:not(:last-child) {
+.c13:not(:last-child) {
   margin-right: 1rem;
 }
 
-.c12 .c4 {
+.c13 .c5 {
   height: 3rem;
   width: 4rem;
 }
@@ -158,43 +169,43 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
 }
 
 @media (min-width:48em) {
-  .c6 {
+  .c7 {
     font-size: 4.5rem;
   }
 }
 
 @media (min-width:48em) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
   }
 }
 
 @media (min-width:30em) {
-  .c7 {
+  .c8 {
     word-break: normal;
   }
 }
 
 @media (min-width:48em) {
-  .c7 {
+  .c8 {
     padding: 0.25rem 0.9375rem;
   }
 }
 
 @media (min-width:48em) {
-  .c3 a {
+  .c4 a {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:48em) {
-  .c3 a {
+  .c4 a {
     padding: 0.25rem 0.9375rem;
   }
 }
 
 @media (min-width:30em) {
-  .c8 {
+  .c9 {
     -webkit-align-items: baseline;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
@@ -207,13 +218,13 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
 }
 
 @media (min-width:48em) {
-  .c8 {
+  .c9 {
     padding: 0 0.9375rem;
   }
 }
 
 @media (min-width:30em) {
-  .c11 {
+  .c12 {
     border-left: solid 1px #dc8381;
     margin-left: 1rem;
     padding-left: 1rem;
@@ -232,23 +243,62 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
   <figure
     class="c1"
   >
-    <img
-      alt="Alias rem cumque laudantium"
-      src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
-    />
+    <picture>
+      <source
+        media="(min-width: 48em)"
+        sizes="768px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=768 768w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=1536 1536w"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 48em)"
+        sizes="768px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=768 768w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=1536 1536w"
+        type="image/jpeg"
+      />
+      <source
+        media="(min-width: 30em)"
+        sizes="480px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=480 480w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=720 720w"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 30em)"
+        sizes="480px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=480 480w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=720 720w"
+        type="image/jpeg"
+      />
+      <source
+        sizes="360px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=360&h=450&fit=thumb 360w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=webp&w=720&h=900&fit=thumb 720w"
+        type="image/webp"
+      />
+      <source
+        sizes="360px"
+        srcset="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=360&h=900&fit=thumb 360w, https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous?fm=jpg&w=720&h=900&fit=thumb 720w"
+        type="image/jpeg"
+      />
+      <img
+        alt=""
+        class="c2"
+        data-testid="loadable-image"
+        loading="lazy"
+        src="https://arachnidan.com/grasping/ultimately?a=projector&b=marlberry#monotonous"
+      />
+    </picture>
   </figure>
   <div
-    class="c2"
+    class="c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <a
         href="/portfolio"
       >
         <svg
           aria-label=""
-          class="c4 c5"
+          class="c5 c6"
         >
           <use
             xlink:href="#chevron-left"
@@ -259,28 +309,28 @@ exports[`Components PortfolioPageHeader should render as expected, without crash
     </div>
     <div>
       <h1
-        class="c6 c7"
+        class="c7 c8"
       >
         Alias rem cumque laudantium
       </h1>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c9 c10"
+        class="c10 c11"
       >
         Technologies
       </h2>
       <ul
-        class="c11"
+        class="c12"
       >
         <li
-          class="c12"
+          class="c13"
         >
           <svg
             aria-label="Ex ullam"
-            class="c4 c5"
+            class="c5 c6"
           >
             <use
               xlink:href="#react"

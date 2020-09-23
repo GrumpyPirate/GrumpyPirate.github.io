@@ -1,14 +1,16 @@
-import React, { FunctionComponent, useEffect } from 'react';
+import React, { Fragment, FunctionComponent, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Container } from 'components/Grid';
+import LoadableImage from 'components/LoadableImage/LoadableImage';
 import Page from 'components/Page/Page';
 import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
 import Heading from 'components/Typography/Heading/Heading';
+import { ContentService } from 'services/ContentService';
 import { AppDispatch, RootState } from 'store';
 import { getPortfolioItems } from 'store/portfolio';
 import { ClassNameProps } from 'types/common';
@@ -41,17 +43,46 @@ const PortfolioPage: FunctionComponent<ClassNameProps> = ({ className }) => {
         {portfolioItems.length > 0 && (
           <Container>
             <List>
-              {portfolioItems.map((item) => (
-                <ListItem key={`portfolio__list-item--${item.slug}--${item.id}`}>
-                  <Link to={`/portfolio/${item.slug}`} role="listitem">
+              {portfolioItems.map(({ id, slug, headerImgSrc, title, descriptionShort }) => (
+                <ListItem key={`portfolio__list-item--${slug}--${id}`}>
+                  <Link to={`/portfolio/${slug}`} role="listitem">
                     <ListItemImage>
-                      <img src={item.headerImgSrc} alt="" />
+                      <picture>
+                        {[360, 600].map((imageSize) => (
+                          <Fragment key={`list-item--${id}__image--size-${imageSize}`}>
+                            <source
+                              type="image/webp"
+                              srcSet={`${ContentService.getResizedImage(headerImgSrc, {
+                                format: 'webp',
+                                width: imageSize,
+                              })} ${imageSize}w, ${ContentService.getResizedImage(headerImgSrc, {
+                                format: 'webp',
+                                width: imageSize * 2,
+                              })} ${imageSize * 2}w`}
+                              sizes={`${imageSize}px`}
+                            />
+                            <source
+                              type="image/jpeg"
+                              srcSet={`${ContentService.getResizedImage(headerImgSrc, {
+                                format: 'jpg',
+                                width: imageSize,
+                              })} ${imageSize}w, ${ContentService.getResizedImage(headerImgSrc, {
+                                format: 'jpg',
+                                width: imageSize * 2,
+                              })} ${imageSize * 2}w`}
+                              sizes={`${imageSize}px`}
+                            />
+                          </Fragment>
+                        ))}
+
+                        <LoadableImage loading="lazy" src={headerImgSrc} alt="" />
+                      </picture>
                     </ListItemImage>
 
                     <ListItemCopy>
-                      <Heading level={3} displayLevel={5} text={item.title} />
+                      <Heading level={3} displayLevel={5} text={title} />
 
-                      <ListItemDescription>{item.descriptionShort}</ListItemDescription>
+                      <ListItemDescription>{descriptionShort}</ListItemDescription>
                     </ListItemCopy>
                   </Link>
                 </ListItem>
