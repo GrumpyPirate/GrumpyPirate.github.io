@@ -7,7 +7,7 @@ import ScreenreaderOnlyText from 'components/Accessibility/ScreenreaderOnlyText/
 import { Container } from 'components/Grid';
 import Sitenav from 'components/Sitenav/Sitenav';
 import { AppDispatch, RootState } from 'store';
-import { toggleMobileNavigation } from 'store/ui/ui.actions';
+import { toggleTouchNavigation } from 'store/ui';
 import { mediaQueries, palette, rem, sidebarWidth, sidebarWidthXl } from 'styles';
 import { ClassNameProps } from 'types/common';
 
@@ -26,7 +26,7 @@ import {
 } from './Sidebar.constants';
 
 const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
-  const isMobileNavigationOpen = useSelector((state: RootState) => state.ui.isMobileNavigationOpen);
+  const isTouchNavigationOpen = useSelector((state: RootState) => state.ui.isTouchNavigationOpen);
   const dispatch: AppDispatch = useDispatch();
 
   return (
@@ -47,9 +47,9 @@ const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
             <BurgerButton
               type="button"
               onClick={() => {
-                dispatch(toggleMobileNavigation());
+                dispatch(toggleTouchNavigation());
               }}
-              aria-expanded={isMobileNavigationOpen}
+              aria-expanded={isTouchNavigationOpen}
             >
               <BurgerButtonBar />
               <ScreenreaderOnlyText text="Toggle menu" />
@@ -62,7 +62,7 @@ const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
         </Content>
       </Container>
 
-      <MobileSitenavWrapper isClosed={!isMobileNavigationOpen}>
+      <MobileSitenavWrapper isClosed={!isTouchNavigationOpen}>
         <Container>
           <Sitenav />
         </Container>

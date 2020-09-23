@@ -1,5 +1,4 @@
-import { Action } from 'redux';
-import { ThunkAction } from 'redux-thunk';
+import { Action, ThunkAction } from '@reduxjs/toolkit';
 
 export interface ClassNameProps {
   className?: string;

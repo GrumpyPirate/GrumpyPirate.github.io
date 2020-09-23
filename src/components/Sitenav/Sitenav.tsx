@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { AppDispatch } from 'store';
-import { closeMobileNavigation } from 'store/ui/ui.actions';
+import { closeTouchNavigation } from 'store/ui';
 import { mediaQueries } from 'styles';
 import { ClassNameProps } from 'types/common';
 
@@ -21,7 +21,7 @@ const Sitenav: FunctionComponent<ClassNameProps> = ({ className }) => {
             to={to}
             exact={to === '/'}
             onClick={() => {
-              dispatch(closeMobileNavigation());
+              dispatch(closeTouchNavigation());
             }}
           >
             {label}

@@ -5,7 +5,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import Spinner from 'components/Spinner/Spinner';
 import usePrevious from 'hooks/usePrevious';
 import { AppDispatch, RootState } from 'store';
-import { closeMobileNavigation } from 'store/ui/ui.actions';
+import { closeTouchNavigation } from 'store/ui';
 import { ClassNameProps } from 'types/common';
 
 import { Content, MainWrapper } from './Main.constants';
@@ -17,9 +17,9 @@ const Main: FunctionComponent<ClassNameProps & PropsWithChildren<{}>> = ({
   const history = useHistory();
   const { pathname } = useLocation();
   const prevPathname = usePrevious(pathname);
-  const { isLoading, isMobileNavigationOpen } = useSelector((state: RootState) => ({
+  const { isLoading, isTouchNavigationOpen } = useSelector((state: RootState) => ({
     isLoading: Boolean(state.about.isFetching || state.portfolio.isFetching),
-    isMobileNavigationOpen: state.ui.isMobileNavigationOpen,
+    isTouchNavigationOpen: state.ui.isTouchNavigationOpen,
   }));
   const dispatch: AppDispatch = useDispatch();
 
@@ -37,8 +37,8 @@ const Main: FunctionComponent<ClassNameProps & PropsWithChildren<{}>> = ({
   }, [history, pathname, prevPathname]);
 
   useEffect(() => {
-    if (prevPathname !== pathname && isMobileNavigationOpen) {
-      dispatch(closeMobileNavigation());
+    if (prevPathname !== pathname && isTouchNavigationOpen) {
+      dispatch(closeTouchNavigation());
     }
   });
 

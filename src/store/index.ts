@@ -1,12 +1,8 @@
-import { AnyAction, applyMiddleware, combineReducers, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk, { ThunkDispatch } from 'redux-thunk';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import aboutReducer, { initialState as initialAboutState } from './about/about.reducer';
-import portfolioReducer, {
-  initialState as initialPortfolioState,
-} from './portfolio/portfolio.reducer';
-import uiReducer, { initialState as initialUiState } from './ui/ui.reducer';
+import aboutReducer, { initialState as initialAboutState } from './about';
+import portfolioReducer, { initialState as initialPortfolioState } from './portfolio';
+import uiReducer, { initialState as initialUiState } from './ui';
 
 export const rootReducer = combineReducers({
   ui: uiReducer,
@@ -22,8 +18,11 @@ export const initialRootState: RootState = {
 
 export type RootState = ReturnType<typeof rootReducer>;
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState: initialRootState,
+});
 
-export type AppDispatch = ThunkDispatch<RootState, {}, AnyAction>;
+export type AppDispatch = typeof store.dispatch;
 
 export default store;
