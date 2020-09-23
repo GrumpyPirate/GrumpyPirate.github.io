@@ -13,7 +13,7 @@
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "analyze-bundle": "NODE_ENV=production webpack --config webpack.config.analyze.js",
-    "test": "jest --watch",
+    "test": "jest --watch --verbose",
     "test:ci": "jest --ci --bail",
     "lint:ts": "eslint \"./src/**/*.{ts,tsx}\" -c ./.eslintrc.json",
     "lint": "npm run lint:ts",

@@ -34,6 +34,17 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   justify-content: center;
 }
 
+.c15 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
 .c0 {
   background-color: hsl(0,0%,95%);
 }
@@ -111,7 +122,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   color: hsl(1.3000000000000114,56.5%,61.6%);
 }
 
-.c16 {
+.c17 {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -155,7 +166,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   width: 100%;
 }
 
-.c15 {
+.c16 {
   background-image: linear-gradient( to top, rgba(48,36,69,0.8), rgba(48,36,69,0.4) 40%, rgba(48,36,69,0) );
   color: #fff;
   padding: 15vmax 0.9375rem 0.9375rem;
@@ -166,7 +177,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   z-index: 1;
 }
 
-.c17 {
+.c18 {
   margin-bottom: 0;
 }
 
@@ -206,6 +217,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   overflow: hidden;
   border: 0.375rem solid #b54259;
   border-style: none none solid;
+  background-color: #b54259;
 }
 
 .c1 .c9 {
@@ -289,7 +301,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
 }
 
 @media (min-width:48em) {
-  .c16 {
+  .c17 {
     font-size: 1rem;
   }
 }
@@ -396,21 +408,46 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
             <figure
               class="c13 c14"
             >
-              <img
-                alt=""
-                src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
-              />
+              <picture>
+                <source
+                  sizes="360px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="360px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
+                  type="image/jpeg"
+                />
+                <source
+                  sizes="600px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1200 1200w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="600px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1200 1200w"
+                  type="image/jpeg"
+                />
+                <img
+                  alt=""
+                  class="c15"
+                  data-testid="loadable-image"
+                  loading="lazy"
+                  src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                />
+              </picture>
             </figure>
             <div
-              class="c15"
+              class="c16"
             >
               <h3
-                class="c16"
+                class="c17"
               >
                 Scrupulum Misphrase
               </h3>
               <p
-                class="c17"
+                class="c18"
               >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
               </p>
@@ -427,21 +464,46 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
             <figure
               class="c13 c14"
             >
-              <img
-                alt=""
-                src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
-              />
+              <picture>
+                <source
+                  sizes="360px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="360px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
+                  type="image/jpeg"
+                />
+                <source
+                  sizes="600px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1200 1200w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="600px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1200 1200w"
+                  type="image/jpeg"
+                />
+                <img
+                  alt=""
+                  class="c15"
+                  data-testid="loadable-image"
+                  loading="lazy"
+                  src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                />
+              </picture>
             </figure>
             <div
-              class="c15"
+              class="c16"
             >
               <h3
-                class="c16"
+                class="c17"
               >
                 Scrupulum Misphrase
               </h3>
               <p
-                class="c17"
+                class="c18"
               >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
               </p>
@@ -458,21 +520,46 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
             <figure
               class="c13 c14"
             >
-              <img
-                alt=""
-                src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
-              />
+              <picture>
+                <source
+                  sizes="360px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="360px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
+                  type="image/jpeg"
+                />
+                <source
+                  sizes="600px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1200 1200w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="600px"
+                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1200 1200w"
+                  type="image/jpeg"
+                />
+                <img
+                  alt=""
+                  class="c15"
+                  data-testid="loadable-image"
+                  loading="lazy"
+                  src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+                />
+              </picture>
             </figure>
             <div
-              class="c15"
+              class="c16"
             >
               <h3
-                class="c16"
+                class="c17"
               >
                 Scrupulum Misphrase
               </h3>
               <p
-                class="c17"
+                class="c18"
               >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
               </p>

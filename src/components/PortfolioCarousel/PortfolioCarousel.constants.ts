@@ -285,6 +285,7 @@ export const DevicePreview = styled.figure`
   ${overflowYScroll}
   touch-action: pan-y;
   position: absolute;
+  background-color: ${palette.greyDark};
   z-index: 1;
 
   img {

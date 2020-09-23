@@ -8,6 +8,18 @@ import uniqueId from 'lodash/uniqueId';
 import ContentfulSettings from 'config/contentful';
 import { AboutSectionFormatted, PortfolioItemFormatted } from 'types/common';
 
+type ContentfulImageAPIResizeBehavior = 'pad' | 'fill' | 'scale' | 'crop' | 'thumb';
+type ContentfulImageAPIFormat = 'jpg' | 'png' | 'webp';
+
+interface ContentfulImageAPIOptions {
+  width?: number;
+  height?: number;
+  resizeBehavior?: ContentfulImageAPIResizeBehavior;
+  format?: ContentfulImageAPIFormat;
+  quality?: number;
+  backgroundColor?: string;
+}
+
 const formatPortfolioItem = (portfolioItem: any): PortfolioItemFormatted => ({
   id: get(portfolioItem, 'sys.id', ''),
   slug: get(portfolioItem, 'fields.slug', ''),
@@ -45,38 +57,31 @@ class ContentService {
     });
   }
 
-  // Fetch all entries for a given content type
+  /**
+   * Fetches all entries for a given content type.
+   * @param  {string} contentTypeSysId
+   * @returns Promise
+   */
   private fetchEntriesForContentType(contentTypeSysId: string): Promise<any> {
     return this.contentfulClient
       .getEntries({ content_type: contentTypeSysId })
       .then((response) => response.items);
   }
 
-  public getPortfolioItems(): Promise<PortfolioItemFormatted[]> {
-    return new Promise((resolve) => {
-      this.fetchEntriesForContentType('portfolioItem')
-        .then((items: any[]) =>
-          resolve(
-            [...items]
-              .map(formatPortfolioItem)
-              .sort(
-                (itemA, itemB) =>
-                  new Date(itemB.createdAt).getTime() - new Date(itemA.createdAt).getTime(),
-              ),
-          ),
-        )
-        .catch((error) => console.error(error));
-    });
+  public async getPortfolioItems(): Promise<PortfolioItemFormatted[]> {
+    const items: any[] = await this.fetchEntriesForContentType('portfolioItem');
+
+    return items
+      .map(formatPortfolioItem)
+      .sort(
+        (itemA, itemB) => new Date(itemB.createdAt).getTime() - new Date(itemA.createdAt).getTime(),
+      );
   }
 
-  public getAboutSections(): Promise<AboutSectionFormatted[]> {
-    return new Promise((resolve) => {
-      this.fetchEntriesForContentType('aboutPageSection')
-        .then((items) =>
-          resolve([...items].map(formatAboutSectionItem).sort((a, b) => a.order - b.order)),
-        )
-        .catch((error) => console.error(error));
-    });
+  public async getAboutSections(): Promise<AboutSectionFormatted[]> {
+    const items: any[] = await this.fetchEntriesForContentType('aboutPageSection');
+
+    return items.map(formatAboutSectionItem).sort((a, b) => a.order - b.order);
   }
 
   public async getSinglePortfolioItem(slug: string): Promise<PortfolioItemFormatted> {
@@ -91,6 +96,51 @@ class ContentService {
 
     return formatPortfolioItem(matchedItem);
   }
+
+  /**
+   * Adds querystring params to a contentful image URL.
+   * https://www.contentful.com/developers/docs/references/images-api/
+   *
+   * @param  {string} url
+   * @param  {ContentfulImageAPIOptions} options
+   * @returns string
+   */
+  public static getResizedImage = (
+    url: string,
+    { format, width, height, resizeBehavior, quality, backgroundColor }: ContentfulImageAPIOptions,
+  ): string => {
+    let qsSegments: string[] = [];
+
+    // Format
+    if (format !== undefined) {
+      qsSegments = [...qsSegments, `fm=${format}`];
+    }
+
+    // Resizing
+    if (width !== undefined) {
+      qsSegments = [...qsSegments, `w=${width}`];
+    }
+
+    if (height !== undefined) {
+      qsSegments = [...qsSegments, `h=${height}`];
+    }
+
+    if (resizeBehavior !== undefined) {
+      qsSegments = [...qsSegments, `fit=${resizeBehavior}`];
+    }
+
+    // Quality
+    if (quality !== undefined) {
+      qsSegments = [...qsSegments, `q=${quality}`];
+    }
+
+    // Background (for `pad` resizing)
+    if (backgroundColor !== undefined) {
+      qsSegments = [...qsSegments, `bg=${backgroundColor}`];
+    }
+
+    return `${url}${qsSegments.length > 0 && `?${qsSegments.join('&')}`}`;
+  };
 }
 
 export default new ContentService();

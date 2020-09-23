@@ -2,6 +2,7 @@ export const palette = {
   // Greyscale
   white: '#fff',
   black: '#000',
+  greyDark: '#333',
   grey: '#666',
   greyLight: '#ccc',
   // Colour Themes
