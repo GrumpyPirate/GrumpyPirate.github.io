@@ -1,24 +1,37 @@
-import { render } from '@testing-library/react';
+import { MockedProvider } from '@apollo/client/testing';
+import { render, waitFor } from '@testing-library/react';
 import React from 'react';
 
-import { initialRootState, RootState } from 'store';
-import { withMockRouter, withMockStore } from 'utils/testing';
+import { GET_ABOUT_SECTIONS } from 'queries';
+import withMockRouter from 'utils/testing';
 
 import AboutPage from './AboutPage';
-import aboutSections from './AboutPage.fixture';
+import mockGetAboutSectionsResponse from './AboutPage.fixture';
 
 describe('Components', () => {
   describe('About', () => {
-    const mockState: RootState = {
-      ...initialRootState,
-      about: {
-        ...initialRootState.about,
-        aboutSections,
-      },
-    };
+    it('should render as expected, without crashing', async () => {
+      const { container, getByText } = render(
+        withMockRouter(
+          <MockedProvider
+            mocks={[
+              {
+                request: { query: GET_ABOUT_SECTIONS },
+                result: { data: mockGetAboutSectionsResponse },
+              },
+            ]}
+            addTypename={false}
+          >
+            <AboutPage />
+          </MockedProvider>,
+        ),
+      );
 
-    it('should render as expected, without crashing', () => {
-      const { container } = render(withMockRouter(withMockStore(<AboutPage />, mockState)));
+      await waitFor(() =>
+        expect(
+          getByText(mockGetAboutSectionsResponse.aboutPageSectionCollection.items[0].title),
+        ).toBeTruthy(),
+      );
 
       expect(container.firstChild).toMatchSnapshot();
     });

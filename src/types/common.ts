@@ -1,5 +1,3 @@
-import { Action, ThunkAction } from '@reduxjs/toolkit';
-
 export interface ClassNameProps {
   className?: string;
 }
@@ -46,39 +44,7 @@ export interface AboutSectionIcon {
   large?: boolean;
 }
 
-export interface AboutSectionFormatted {
-  id: string;
-  title: string;
-  icons?: AboutSectionIcon[];
-  slug: string;
-  content: string;
-  order: number;
-}
-
 export interface PortfolioItemTech {
   icon: IconGlyph;
   name: string;
-}
-
-export interface PortfolioItemFormatted {
-  id: string;
-  slug: string;
-  title: string;
-  descriptionShort: string;
-  description: string;
-  url: string;
-  tech: PortfolioItemTech[];
-  supportingImageSrc: string;
-  headerImgSrc: string;
-  previews: {
-    desktop: string;
-    tablet: string;
-    mobile: string;
-  };
-  createdAt: string;
-}
-
-export type AppThunk = ThunkAction<void, any, unknown, Action<string>>;
-export interface GenericActionError {
-  message?: string;
 }

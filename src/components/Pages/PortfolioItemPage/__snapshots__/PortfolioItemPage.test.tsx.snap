@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components PortfolioPage should render as expected, without crashing 1`] = `
-.c43 {
+.c45 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: none;
@@ -41,27 +41,27 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   border-color: #b54259;
 }
 
-.c43::-moz-focus-inner {
+.c45::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.c43,
-.c43:hover,
-.c43:focus,
-.c43:active {
+.c45,
+.c45:hover,
+.c45:focus,
+.c45:active {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c43:disabled,
-.c43[disabled],
-.c43:disabled:hover,
-.c43[disabled]:hover,
-.c43:disabled:focus,
-.c43[disabled]:focus,
-.c43:disabled:active,
-.c43[disabled]:active {
+.c45:disabled,
+.c45[disabled],
+.c45:disabled:hover,
+.c45[disabled]:hover,
+.c45:disabled:focus,
+.c45[disabled]:focus,
+.c45:disabled:active,
+.c45[disabled]:active {
   background-color: #ccc;
   border-color: #ccc;
   color: #fff;
@@ -69,20 +69,20 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   pointer-events: none;
 }
 
-.c43,
-.c43:hover,
-.c43:focus,
-.c43:active {
+.c45,
+.c45:hover,
+.c45:focus,
+.c45:active {
   color: #fff;
 }
 
-.c43:hover,
-.c43:focus {
+.c45:hover,
+.c45:focus {
   background-color: hsl(348,46.6%,46%);
   border-color: hsl(348,46.6%,46%);
 }
 
-.c43:active {
+.c45:active {
   background-color: #b54259;
   border-color: #b54259;
   -webkit-transform: translateY(1px);
@@ -92,30 +92,19 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   transition-duration: 0s,0.15s,0.15s;
 }
 
-.c43:disabled,
-.c43[disabled],
-.c43:disabled:hover,
-.c43[disabled]:hover,
-.c43:disabled:focus,
-.c43[disabled]:focus,
-.c43:disabled:active,
-.c43[disabled]:active {
+.c45:disabled,
+.c45[disabled],
+.c45:disabled:hover,
+.c45[disabled]:hover,
+.c45:disabled:focus,
+.c45[disabled]:focus,
+.c45:disabled:active,
+.c45[disabled]:active {
   background-color: #ccc;
   border-color: #ccc;
   color: #fff;
   cursor: not-allowed;
   pointer-events: none;
-}
-
-.c18 {
-  position: relative;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  max-width: 100%;
-  min-height: 1px;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
 }
 
 .c20 {
@@ -127,13 +116,9 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   min-height: 1px;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  max-width: 100%;
 }
 
-.c21 {
+.c22 {
   position: relative;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
@@ -148,13 +133,29 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   max-width: 100%;
 }
 
-.c16 {
+.c23 {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  -webkit-flex-basis: 83.33333333333334%;
+  -ms-flex-preferred-size: 83.33333333333334%;
+  flex-basis: 83.33333333333334%;
+  max-width: 83.33333333333334%;
+  left: 8.333333333333332%;
+}
+
+.c18 {
   width: 100%;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
 
-.c17 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,7 +171,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   justify-content: center;
 }
 
-.c19 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,7 +187,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   align-items: flex-start;
 }
 
-.c3 {
+.c4 {
   opacity: 0;
   visibility: hidden;
   -webkit-transition-property: visibility,opacity;
@@ -199,9 +200,19 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 
 .c0 {
   background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
 }
 
-.c27 {
+.c17 {
+  position: relative;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.c29 {
   display: block;
   max-width: 100%;
   position: relative;
@@ -213,7 +224,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   margin: 0 auto;
 }
 
-.c29 {
+.c31 {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
@@ -222,14 +233,14 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   z-index: 1;
 }
 
-.c29 img {
+.c31 img {
   display: block;
   height: auto;
   width: 100%;
   margin: 0 auto;
 }
 
-.c31 {
+.c33 {
   position: relative;
   margin: 0;
   -webkit-user-select: none;
@@ -238,12 +249,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   user-select: none;
 }
 
-.c25 .c26 {
+.c27 .c28 {
   height: 10.423666007905139rem;
   width: 18.125rem;
 }
 
-.c25 .c28 {
+.c27 .c30 {
   height: 8.482258213932806rem;
   left: 0;
   margin: 0 auto;
@@ -252,12 +263,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 13.59375rem;
 }
 
-.c30 .c26 {
+.c32 .c28 {
   height: 23.72972972972973rem;
   width: 12rem;
 }
 
-.c30 .c28 {
+.c32 .c30 {
   height: 17.732040540540538rem;
   left: 0;
   margin: 0 auto;
@@ -266,12 +277,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 10.41rem;
 }
 
-.c32 .c26 {
+.c34 .c28 {
   height: 20.73913043478261rem;
   width: 14rem;
 }
 
-.c32 .c28 {
+.c34 .c30 {
   height: 16.617228260869567rem;
   left: 0;
   margin: 0 auto;
@@ -280,42 +291,42 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 12.424999999999999rem;
 }
 
-.c24 .carousel {
+.c26 .carousel {
   position: relative;
   width: 100%;
 }
 
-.c24 .carousel * {
+.c26 .carousel * {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c24 .carousel button {
+.c26 .carousel button {
   background: none;
   border: 0;
   outline: 0;
 }
 
-.c24 .carousel img {
+.c26 .carousel img {
   pointer-events: none;
 }
 
-.c24 .carousel .carousel {
+.c26 .carousel .carousel {
   position: relative;
 }
 
-.c24 .carousel .control-arrow {
+.c26 .carousel .control-arrow {
   font-size: 18px;
   margin-top: -13px;
   top: 50%;
 }
 
-.c24 .carousel .thumbs-wrapper {
+.c26 .carousel .thumbs-wrapper {
   margin: 20px;
   overflow: hidden;
 }
 
-.c24 .carousel .thumbs {
+.c26 .carousel .thumbs {
   list-style: none;
   position: relative;
   -webkit-transform: translate3d(0,0,0);
@@ -326,7 +337,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   white-space: nowrap;
 }
 
-.c24 .carousel .thumb {
+.c26 .carousel .thumb {
   border: 3px solid #fff;
   display: inline-block;
   margin-right: 6px;
@@ -338,22 +349,22 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 80px;
 }
 
-.c24 .carousel .thumb.selected,
-.c24 .carousel .thumb:hover {
+.c26 .carousel .thumb.selected,
+.c26 .carousel .thumb:hover {
   border: 3px solid #333;
   padding: 2px;
 }
 
-.c24 .carousel .thumb img {
+.c26 .carousel .thumb img {
   vertical-align: top;
 }
 
-.c24 .carousel .control-dots {
+.c26 .carousel .control-dots {
   margin: 0.5rem 0;
   text-align: center;
 }
 
-.c24 .carousel .control-dots .dot {
+.c26 .carousel .control-dots .dot {
   background: #dc8381;
   border-radius: 50%;
   cursor: pointer;
@@ -369,8 +380,8 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 8px;
 }
 
-.c24 .carousel .control-dots .dot:hover,
-.c24 .carousel .control-dots .dot.selected {
+.c26 .carousel .control-dots .dot:hover,
+.c26 .carousel .control-dots .dot.selected {
   background-color: transparent;
   border: solid 1px #dc8381;
   -webkit-transform: scale(2);
@@ -378,12 +389,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   transform: scale(2);
 }
 
-.c24 .carousel .control-dots .dot.selected {
+.c26 .carousel .control-dots .dot.selected {
   opacity: 1;
 }
 
-.c24 .carousel .control-arrow,
-.c24 .carousel.carousel-slider .control-arrow {
+.c26 .carousel .control-arrow,
+.c26 .carousel.carousel-slider .control-arrow {
   background: none;
   border: 0;
   cursor: pointer;
@@ -396,13 +407,13 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   z-index: 2;
 }
 
-.c24 .carousel .control-arrow .control-arrow:hover,
-.c24 .carousel.carousel-slider .control-arrow .control-arrow:hover {
+.c26 .carousel .control-arrow .control-arrow:hover,
+.c26 .carousel.carousel-slider .control-arrow .control-arrow:hover {
   opacity: 1;
 }
 
-.c24 .carousel .control-arrow .control-arrow::before,
-.c24 .carousel.carousel-slider .control-arrow .control-arrow::before {
+.c26 .carousel .control-arrow .control-arrow::before,
+.c26 .carousel.carousel-slider .control-arrow .control-arrow::before {
   border-bottom: 8px solid transparent;
   border-top: 8px solid transparent;
   content: '';
@@ -410,35 +421,35 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   margin: 0 5px;
 }
 
-.c24 .carousel .control-disabled.control-arrow {
+.c26 .carousel .control-disabled.control-arrow {
   cursor: inherit;
   display: none;
   opacity: 0;
 }
 
-.c24 .carousel .control-prev.control-arrow {
+.c26 .carousel .control-prev.control-arrow {
   left: 0;
 }
 
-.c24 .carousel .control-prev.control-arrow::before {
+.c26 .carousel .control-prev.control-arrow::before {
   border-right: 8px solid #fff;
 }
 
-.c24 .carousel .control-next.control-arrow {
+.c26 .carousel .control-next.control-arrow {
   right: 0;
 }
 
-.c24 .carousel .control-next.control-arrow::before {
+.c26 .carousel .control-next.control-arrow::before {
   border-left: 8px solid #fff;
 }
 
-.c24 .carousel.carousel-slider {
+.c26 .carousel.carousel-slider {
   margin: 0;
   overflow: hidden;
   position: relative;
 }
 
-.c24 .carousel.carousel-slider .control-arrow {
+.c26 .carousel.carousel-slider .control-arrow {
   bottom: 0;
   color: #fff;
   font-size: 26px;
@@ -447,11 +458,11 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   top: 0;
 }
 
-.c24 .carousel.carousel-slider .control-arrow:hover {
+.c26 .carousel.carousel-slider .control-arrow:hover {
   background: rgba(0,0,0,0.2);
 }
 
-.c24 .carousel .slider-wrapper {
+.c26 .carousel .slider-wrapper {
   margin: auto;
   overflow: hidden;
   -webkit-transition: height 0.15s ease-in;
@@ -459,14 +470,14 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 100%;
 }
 
-.c24 .carousel .slider-wrapper.axis-horizontal .slider {
+.c26 .carousel .slider-wrapper.axis-horizontal .slider {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c24 .carousel .slider-wrapper.axis-horizontal .slider .slide {
+.c26 .carousel .slider-wrapper.axis-horizontal .slider .slide {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -475,50 +486,50 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   flex-flow: column;
 }
 
-.c24 .carousel .slider-wrapper.axis-vertical {
+.c26 .carousel .slider-wrapper.axis-vertical {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c24 .carousel .slider-wrapper.axis-vertical .slider {
+.c26 .carousel .slider-wrapper.axis-vertical .slider {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.c24 .carousel .slider {
+.c26 .carousel .slider {
   list-style: none;
   position: relative;
   width: 100%;
 }
 
-.c24 .carousel .slider.animated {
+.c26 .carousel .slider.animated {
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
-.c24 .carousel .slide {
+.c26 .carousel .slide {
   margin: 0;
   min-width: 100%;
   position: relative;
   text-align: center;
 }
 
-.c24 .carousel .slide img {
+.c26 .carousel .slide img {
   border: 0;
   vertical-align: top;
 }
 
-.c24 .carousel .slide iframe {
+.c26 .carousel .slide iframe {
   border: 0;
   display: inline-block;
   margin: 0 40px 40px;
   width: calc(100% - 80px);
 }
 
-.c24 .carousel .slide .legend {
+.c26 .carousel .slide .legend {
   background: #000;
   border-radius: 10px;
   bottom: 40px;
@@ -537,7 +548,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 90%;
 }
 
-.c24 .carousel .carousel-status {
+.c26 .carousel .carousel-status {
   color: #fff;
   font-size: 10px;
   padding: 5px;
@@ -547,16 +558,16 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   top: 0;
 }
 
-.c24 .carousel:hover .slide .legend {
+.c26 .carousel:hover .slide .legend {
   opacity: 1;
 }
 
-.c36 {
+.c38 {
   margin: 0;
   position: relative;
 }
 
-.c37 {
+.c39 {
   display: block;
   height: 100%;
   left: 0;
@@ -567,7 +578,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   z-index: 2;
 }
 
-.c39 {
+.c41 {
   display: block;
   margin: 0;
   overflow-y: auto;
@@ -576,13 +587,13 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   z-index: 1;
 }
 
-.c39 img {
+.c41 img {
   display: block;
   height: auto;
   width: 100%;
 }
 
-.c34 {
+.c36 {
   left: 50%;
   position: absolute;
   bottom: 20px;
@@ -591,19 +602,19 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   transform: translateX(-50%);
 }
 
-.c34 .c35 {
+.c36 .c37 {
   height: 19.409584980237156rem;
   width: 33.75rem;
 }
 
-.c34 .c38 {
+.c36 .c40 {
   height: 82%;
   left: 12.4%;
   top: 6%;
   width: 75.125%;
 }
 
-.c40 {
+.c42 {
   left: 50%;
   position: absolute;
   bottom: 10px;
@@ -612,19 +623,19 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   transform: translateX(66%);
 }
 
-.c40 .c35 {
+.c42 .c37 {
   height: 16.665372670807454rem;
   width: 11.25rem;
 }
 
-.c40 .c38 {
+.c42 .c40 {
   height: 79.85%;
   left: 5.75%;
   top: 9.4%;
   width: 88.95%;
 }
 
-.c41 {
+.c43 {
   left: 50%;
   position: absolute;
   bottom: 0;
@@ -633,24 +644,24 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   transform: translateX(75%);
 }
 
-.c41 .c35 {
+.c43 .c37 {
   height: 11.864864864864865rem;
   width: 6rem;
 }
 
-.c41 .c38 {
+.c43 .c40 {
   height: 74.75%;
   left: 6.8%;
   top: 13.125%;
   width: 86.25%;
 }
 
-.c33 {
+.c35 {
   height: 22.5rem;
   position: relative;
 }
 
-.c7 {
+.c8 {
   position: relative;
   bottom: 0.125em;
   display: inline-block;
@@ -662,7 +673,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   vertical-align: middle;
 }
 
-.c8 {
+.c9 {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -675,7 +686,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   font-size: 2.475rem;
 }
 
-.c11 {
+.c12 {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -688,7 +699,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   font-size: 1rem;
 }
 
-.c2 {
+.c3 {
   height: 100%;
   left: 0;
   margin: 0;
@@ -698,7 +709,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 100%;
 }
 
-.c2::after {
+.c3::after {
   background-color: hsla(348,27.9%,9.7%,0.8);
   bottom: 0;
   content: '';
@@ -712,7 +723,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   z-index: 1;
 }
 
-.c2 img {
+.c3 img {
   height: 125%;
   object-fit: cover;
   position: absolute;
@@ -725,12 +736,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   width: 125%;
 }
 
-.c4 {
+.c5 {
   position: relative;
   z-index: 1;
 }
 
-.c9 {
+.c10 {
   background-color: rgba(48,36,69,0.8);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -741,7 +752,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   vertical-align: top;
 }
 
-.c5 a {
+.c6 a {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -762,43 +773,43 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   z-index: 1;
 }
 
-.c5 a:hover,
-.c5 a:focus {
+.c6 a:hover,
+.c6 a:focus {
   color: #f2f1f3;
 }
 
-.c10 {
+.c11 {
   background-color: rgba(48,36,69,0.8);
   color: #fff;
   padding: 0 0.75rem;
 }
 
-.c12 {
+.c13 {
   margin: 0;
 }
 
-.c13 {
+.c14 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.c14 {
+.c15 {
   display: inline-block;
   padding: 0.5rem 0;
   vertical-align: middle;
 }
 
-.c14:not(:last-child) {
+.c15:not(:last-child) {
   margin-right: 1rem;
 }
 
-.c14 .c6 {
+.c15 .c7 {
   height: 3rem;
   width: 4rem;
 }
 
-.c1 {
+.c2 {
   background-color: #302445;
   border-bottom: solid 0.375rem #dc8381;
   min-height: 22.5rem;
@@ -806,23 +817,28 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   padding: 3rem 0 2rem;
 }
 
-.c15 {
-  padding: 2rem 0;
+.c46 .c7 {
+  -webkit-animation: iUEjna 2.25s linear 0s infinite;
+  animation: iUEjna 2.25s linear 0s infinite;
+  display: block;
+  height: 3rem;
+  margin: auto;
+  width: 3rem;
 }
 
-.c22 {
-  border-radius: 0.25rem;
+.c24 {
+  border-radius: 0.5rem;
   margin: 0;
   overflow: hidden;
 }
 
-.c22 > img {
+.c24 > img {
   display: block;
   height: auto;
   width: 100%;
 }
 
-.c23 {
+.c25 {
   border-color: currentColor;
   border-style: solid none none;
   border-width: 1px;
@@ -830,20 +846,24 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   opacity: 0.25;
 }
 
-.c42 {
+.c44 {
   margin-top: 2rem;
   text-align: center;
 }
 
+.c1 .c16 {
+  text-align: left;
+}
+
 @media (min-width:48em) {
-  .c18 {
+  .c20 {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
 }
 
 @media (min-width:30em) {
-  .c18 {
+  .c20 {
     -webkit-flex-basis: 83.33333333333334%;
     -ms-flex-preferred-size: 83.33333333333334%;
     flex-basis: 83.33333333333334%;
@@ -852,14 +872,14 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:48em) {
-  .c20 {
+  .c22 {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
 }
 
 @media (min-width:48em) {
-  .c20 {
+  .c22 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -868,7 +888,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:90em) {
-  .c20 {
+  .c22 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -877,14 +897,14 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:48em) {
-  .c21 {
+  .c23 {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
 }
 
 @media (min-width:48em) {
-  .c21 {
+  .c23 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -893,7 +913,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:90em) {
-  .c21 {
+  .c23 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -902,22 +922,15 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:90em) {
-  .c21 {
+  .c23 {
     left: 8.333333333333332%;
   }
 }
 
 @media (min-width:48em) {
-  .c16 {
+  .c18 {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
-  }
-}
-
-@media (min-width:48em) {
-  .c17 {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
   }
 }
 
@@ -928,13 +941,27 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   }
 }
 
+@media (min-width:48em) {
+  .c21 {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+}
+
+@media (min-width:48em) {
+  .c17 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
 @media (min-width:30em) {
-  .c25 .c26 {
+  .c27 .c28 {
     height: 15.096343873517787rem;
     width: 26.25rem;
   }
 
-  .c25 .c28 {
+  .c27 .c30 {
     height: 12.284649827075098rem;
     top: 0.95090625rem;
     width: 19.6875rem;
@@ -942,12 +969,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:30em) {
-  .c30 .c26 {
+  .c32 .c28 {
     height: 23.72972972972973rem;
     width: 12rem;
   }
 
-  .c30 .c28 {
+  .c32 .c30 {
     height: 17.732040540540538rem;
     top: 3.09rem;
     width: 10.41rem;
@@ -955,12 +982,12 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:30em) {
-  .c32 .c26 {
+  .c34 .c28 {
     height: 29.627329192546586rem;
     width: 20rem;
   }
 
-  .c32 .c28 {
+  .c34 .c30 {
     height: 23.738897515527952rem;
     top: 2.75rem;
     width: 17.75rem;
@@ -968,82 +995,82 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:48em) {
-  .c24 {
+  .c26 {
     display: none;
   }
 }
 
 @media (min-width:90em) {
-  .c34 .c35 {
+  .c36 .c37 {
     height: 23.291501976284586rem;
     width: 40.5rem;
   }
 }
 
 @media (min-width:90em) {
-  .c40 .c35 {
+  .c42 .c37 {
     height: 19.998447204968944rem;
     width: 13.5rem;
   }
 }
 
 @media (min-width:90em) {
-  .c41 .c35 {
+  .c43 .c37 {
     height: 14.237837837837837rem;
     width: 7.199999999999999rem;
   }
 }
 
 @media (min-width:90em) {
-  .c33 {
+  .c35 {
     height: 26.25rem;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c33 {
+  .c35 {
     display: none;
   }
 }
 
 @media (min-width:48em) {
-  .c8 {
+  .c9 {
     font-size: 4.5rem;
   }
 }
 
 @media (min-width:48em) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
   }
 }
 
 @media (min-width:30em) {
-  .c9 {
+  .c10 {
     word-break: normal;
   }
 }
 
 @media (min-width:48em) {
-  .c9 {
+  .c10 {
     padding: 0.25rem 0.9375rem;
   }
 }
 
 @media (min-width:48em) {
-  .c5 a {
+  .c6 a {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:48em) {
-  .c5 a {
+  .c6 a {
     padding: 0.25rem 0.9375rem;
   }
 }
 
 @media (min-width:30em) {
-  .c10 {
+  .c11 {
     -webkit-align-items: baseline;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
@@ -1056,13 +1083,13 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:48em) {
-  .c10 {
+  .c11 {
     padding: 0 0.9375rem;
   }
 }
 
 @media (min-width:30em) {
-  .c13 {
+  .c14 {
     border-left: solid 1px #dc8381;
     margin-left: 1rem;
     padding-left: 1rem;
@@ -1070,31 +1097,29 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 @media (min-width:75em) {
-  .c1 {
+  .c2 {
     border-bottom-width: 0.5rem;
   }
 }
 
 @media (min-width:48em) {
-  .c15 {
-    padding: 4rem 0;
-  }
+
 }
 
 @media (min-width:48em) {
-  .c42 {
+  .c44 {
     margin-top: 4rem;
   }
 }
 
 <div
-  class="c0"
+  class="c0 c1"
 >
   <header
-    class="c1"
+    class="c2"
   >
     <figure
-      class="c2"
+      class="c3"
     >
       <picture>
         <source
@@ -1133,7 +1158,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
         />
         <img
           alt=""
-          class="c3"
+          class="c4"
           data-testid="loadable-image"
           loading="lazy"
           src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
@@ -1141,17 +1166,17 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
       </picture>
     </figure>
     <div
-      class="c4"
+      class="c5"
     >
       <div
-        class="c5"
+        class="c6"
       >
         <a
           href="/portfolio"
         >
           <svg
             aria-label=""
-            class="c6 c7"
+            class="c7 c8"
           >
             <use
               xlink:href="#chevron-left"
@@ -1162,28 +1187,28 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
       </div>
       <div>
         <h1
-          class="c8 c9"
+          class="c9 c10"
         >
           Scrupulum Misphrase
         </h1>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <h2
-          class="c11 c12"
+          class="c12 c13"
         >
           Technologies
         </h2>
         <ul
-          class="c13"
+          class="c14"
         >
           <li
-            class="c14"
+            class="c15"
           >
             <svg
               aria-label="youngling"
-              class="c6 c7"
+              class="c7 c8"
             >
               <use
                 xlink:href="#storybook"
@@ -1195,22 +1220,22 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
     </div>
   </header>
   <div
-    class="c15"
+    class="c16 c17"
   >
     <div
-      class="c16"
+      class="c18"
     >
       <div
-        class="c17"
+        class="c19"
       >
         <div
-          class="c18"
+          class="c20"
         >
           <div
-            class="c19"
+            class="c21"
           >
             <div
-              class="c20"
+              class="c22"
             >
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deserunt veritatis dolore sit ea, illum quae omnis placeat, natus est sapiente atque eaque obcaecati.
@@ -1220,10 +1245,10 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
               </p>
             </div>
             <div
-              class="c21"
+              class="c23"
             >
               <figure
-                class="c22"
+                class="c24"
               >
                 <picture>
                   <source
@@ -1258,7 +1283,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                   />
                   <img
                     alt=""
-                    class="c3"
+                    class="c4"
                     data-testid="loadable-image"
                     loading="lazy"
                     src="http://autotomic.com/envious/israelitish?a=rhonchal&b=tetrahydro#piehouse"
@@ -1268,10 +1293,10 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
             </div>
           </div>
           <hr
-            class="c23"
+            class="c25"
           />
           <div
-            class="c24"
+            class="c26"
           >
             <div
               class="carousel-root"
@@ -1298,33 +1323,33 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                       class="slide"
                     >
                       <div
-                        class="c25"
+                        class="c27"
                       >
                         <img
                           alt=""
-                          class="c26 c27"
+                          class="c28 c29"
                           src="frame-laptop.svg"
                         />
                         <figure
-                          class="c28 c29"
+                          class="c30 c31"
                         >
                           <picture>
                             <source
                               sizes="218px"
-                              srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=218 218w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=436 436w"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=436 436w"
                               type="image/webp"
                             />
                             <source
                               sizes="218px"
-                              srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=218 218w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=436 436w"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=436 436w"
                               type="image/jpeg"
                             />
                             <img
                               alt=""
-                              class="c3"
+                              class="c4"
                               data-testid="loadable-image"
                               loading="lazy"
-                              src="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                              src="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
                             />
                           </picture>
                         </figure>
@@ -1334,18 +1359,18 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                       class="slide selected"
                     >
                       <div
-                        class="c30"
+                        class="c32"
                       >
                         <figure
-                          class="c31"
+                          class="c33"
                         >
                           <img
                             alt=""
-                            class="c26 c27"
+                            class="c28 c29"
                             src="frame-mobile.svg"
                           />
                           <figure
-                            class="c28 c29"
+                            class="c30 c31"
                           >
                             <picture>
                               <source
@@ -1360,7 +1385,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                               />
                               <img
                                 alt=""
-                                class="c3"
+                                class="c4"
                                 data-testid="loadable-image"
                                 loading="lazy"
                                 src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
@@ -1374,15 +1399,15 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                       class="slide"
                     >
                       <div
-                        class="c32"
+                        class="c34"
                       >
                         <img
                           alt=""
-                          class="c26 c27"
+                          class="c28 c29"
                           src="frame-tablet.svg"
                         />
                         <figure
-                          class="c28 c29"
+                          class="c30 c31"
                         >
                           <picture>
                             <source
@@ -1397,7 +1422,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                             />
                             <img
                               alt=""
-                              class="c3"
+                              class="c4"
                               data-testid="loadable-image"
                               loading="lazy"
                               src="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
@@ -1410,33 +1435,33 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                       class="slide"
                     >
                       <div
-                        class="c25"
+                        class="c27"
                       >
                         <img
                           alt=""
-                          class="c26 c27"
+                          class="c28 c29"
                           src="frame-laptop.svg"
                         />
                         <figure
-                          class="c28 c29"
+                          class="c30 c31"
                         >
                           <picture>
                             <source
                               sizes="218px"
-                              srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=218 218w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=436 436w"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=436 436w"
                               type="image/webp"
                             />
                             <source
                               sizes="218px"
-                              srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=218 218w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=436 436w"
+                              srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=218 218w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=436 436w"
                               type="image/jpeg"
                             />
                             <img
                               alt=""
-                              class="c3"
+                              class="c4"
                               data-testid="loadable-image"
                               loading="lazy"
-                              src="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                              src="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
                             />
                           </picture>
                         </figure>
@@ -1446,18 +1471,18 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                       class="slide selected"
                     >
                       <div
-                        class="c30"
+                        class="c32"
                       >
                         <figure
-                          class="c31"
+                          class="c33"
                         >
                           <img
                             alt=""
-                            class="c26 c27"
+                            class="c28 c29"
                             src="frame-mobile.svg"
                           />
                           <figure
-                            class="c28 c29"
+                            class="c30 c31"
                           >
                             <picture>
                               <source
@@ -1472,7 +1497,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                               />
                               <img
                                 alt=""
-                                class="c3"
+                                class="c4"
                                 data-testid="loadable-image"
                                 loading="lazy"
                                 src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
@@ -1518,69 +1543,69 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
             </div>
           </div>
           <div
-            class="c33"
+            class="c35"
           >
             <div
-              class="c34"
+              class="c36"
               type="desktop"
             >
               <figure
-                class="c35 c36"
+                class="c37 c38"
               >
                 <img
                   alt=""
-                  class="c37"
+                  class="c39"
                   src="frame-laptop.svg"
                 />
                 <figure
-                  class="c38 c39"
+                  class="c40 c41"
                 >
                   <picture>
                     <source
                       sizes="486px"
-                      srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=486 486w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=972 972w"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=486 486w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=972 972w"
                       type="image/webp"
                     />
                     <source
                       sizes="486px"
-                      srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=486 486w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=972 972w"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=486 486w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=972 972w"
                       type="image/jpeg"
                     />
                     <source
                       sizes="406px"
-                      srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=406 406w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=812 812w"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=406 406w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=webp&w=812 812w"
                       type="image/webp"
                     />
                     <source
                       sizes="406px"
-                      srcset="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=406 406w, http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=812 812w"
+                      srcset="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=406 406w, https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia?fm=jpg&w=812 812w"
                       type="image/jpeg"
                     />
                     <img
                       alt=""
-                      class="c3"
+                      class="c4"
                       data-testid="loadable-image"
                       loading="lazy"
-                      src="http://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
+                      src="https://hyperterrestrial.com/unconspiringness/uncreeping?a=pasterer&b=hemen#timalia"
                     />
                   </picture>
                 </figure>
               </figure>
             </div>
             <div
-              class="c40"
+              class="c42"
               type="tablet"
             >
               <figure
-                class="c35 c36"
+                class="c37 c38"
               >
                 <img
                   alt=""
-                  class="c37"
+                  class="c39"
                   src="frame-tablet.svg"
                 />
                 <figure
-                  class="c38 c39"
+                  class="c40 c41"
                 >
                   <picture>
                     <source
@@ -1605,7 +1630,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                     />
                     <img
                       alt=""
-                      class="c3"
+                      class="c4"
                       data-testid="loadable-image"
                       loading="lazy"
                       src="https://subtilism.com/dermatoscopy/nombril?a=phlebolithiasis&b=blancher#downthrow"
@@ -1615,19 +1640,19 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
               </figure>
             </div>
             <div
-              class="c41"
+              class="c43"
               type="mobile"
             >
               <figure
-                class="c35 c36"
+                class="c37 c38"
               >
                 <img
                   alt=""
-                  class="c37"
+                  class="c39"
                   src="frame-mobile.svg"
                 />
                 <figure
-                  class="c38 c39"
+                  class="c40 c41"
                 >
                   <picture>
                     <source
@@ -1652,7 +1677,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
                     />
                     <img
                       alt=""
-                      class="c3"
+                      class="c4"
                       data-testid="loadable-image"
                       loading="lazy"
                       src="https://quadrupedan.com/inroader/ohmmeter?a=proseuche&b=provisorily#coriander"
@@ -1663,13 +1688,13 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
             </div>
           </div>
           <hr
-            class="c23"
+            class="c25"
           />
           <div
-            class="c42"
+            class="c44"
           >
             <a
-              class="c43"
+              class="c45"
               href="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
               rel="noreferrer noopener"
               target="_blank"

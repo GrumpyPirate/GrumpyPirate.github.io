@@ -2,9 +2,11 @@
 
 exports[`Components PageContent should render as expected, without crashing 1`] = `
 .c0 {
+  position: relative;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
   text-align: center;
+  min-height: 100vh;
 }
 
 @media (min-width:48em) {

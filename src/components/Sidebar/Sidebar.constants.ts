@@ -194,7 +194,7 @@ export const DesktopSitenavWrapper = styled.div`
   }
 `;
 
-export const MobileSitenavWrapper = styled.div<{ isClosed: boolean }>`
+export const MobileSitenavWrapper = styled.div<{ isOpen: boolean }>`
   background-color: ${palette.themeMainBrand};
   border-bottom: solid ${rem(1)} ${palette.themeAccentLight};
   border-top: solid ${rem(1)} ${Color(palette.themeAccentLight).alpha(0.25).string()};
@@ -211,8 +211,8 @@ export const MobileSitenavWrapper = styled.div<{ isClosed: boolean }>`
     display: none;
   }
 
-  ${({ isClosed }) =>
-    isClosed &&
+  ${({ isOpen }) =>
+    !isOpen &&
     css`
       opacity: 0;
       pointer-events: none;

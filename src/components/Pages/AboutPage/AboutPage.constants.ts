@@ -1,6 +1,7 @@
 import Color from 'color';
 import styled, { css } from 'styled-components';
 
+// Styled components
 import Icon from 'components/Icon/Icon';
 import Heading from 'components/Typography/Heading/Heading';
 import {

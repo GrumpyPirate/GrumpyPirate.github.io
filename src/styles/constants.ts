@@ -1,3 +1,5 @@
+import Color from 'color';
+
 export const palette = {
   // Greyscale
   white: '#fff',
@@ -30,6 +32,7 @@ export const palette = {
 
 export const bodyBgDark = palette.themeDarkShades;
 export const bodyColorDark = palette.themeDarkShades;
+export const pageBg = Color(palette.white).darken(0.05).string();
 
 // Sidebar
 export const sidebarHeightMobile = 50;

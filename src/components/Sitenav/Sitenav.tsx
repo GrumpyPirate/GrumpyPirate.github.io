@@ -1,29 +1,18 @@
 import React, { FunctionComponent } from 'react';
-import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { AppDispatch } from 'store';
-import { closeTouchNavigation } from 'store/ui';
 import { mediaQueries } from 'styles';
 import { ClassNameProps } from 'types/common';
 
 import { Item, navItems } from './Sitenav.constants';
 
 const Sitenav: FunctionComponent<ClassNameProps> = ({ className }) => {
-  const dispatch: AppDispatch = useDispatch();
-
   return (
     <ul className={className} role="navigation">
       {navItems.map(({ key, label, to }) => (
         <Item key={`sitenav__nav-item__${key}`}>
-          <NavLink
-            to={to}
-            exact={to === '/'}
-            onClick={() => {
-              dispatch(closeTouchNavigation());
-            }}
-          >
+          <NavLink to={to} exact={to === '/'}>
             {label}
           </NavLink>
         </Item>

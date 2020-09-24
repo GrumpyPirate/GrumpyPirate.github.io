@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { withMockRouter } from 'utils/testing';
+import withMockRouter from 'utils/testing';
 
 import HTTPNotFoundPage from './HTTPNotFoundPage';
 
