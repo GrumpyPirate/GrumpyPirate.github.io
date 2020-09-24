@@ -1,6 +1,8 @@
 import '@testing-library/jest-dom/extend-expect';
 import 'jest-styled-components';
 
+import 'cross-fetch/polyfill';
+
 // Make `resizeTo` event available to all tests.
 // Credit and thanks go to: https://gist.github.com/javierarques/d95948ac7e9ddc8097612866ecc63a4b
 const resizeEvent = document.createEvent('Event');

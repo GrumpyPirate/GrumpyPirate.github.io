@@ -1,12 +1,13 @@
-import { render } from '@testing-library/react';
+import { MockedProvider } from '@apollo/client/testing';
+import { render, waitFor } from '@testing-library/react';
 import React from 'react';
 import * as reactRouterDom from 'react-router-dom';
 
-import { initialRootState, RootState } from 'store';
-import { withMockRouter, withMockStore } from 'utils/testing';
+import { GET_PORTFOLIO_ITEM_BY_SLUG } from 'queries';
+import withMockRouter from 'utils/testing';
 
 import PortfolioItemPage from './PortfolioItemPage';
-import portfolioItem from './PortfolioItemPage.fixture';
+import mockGetPortfolioItemBySlugResponse from './PortfolioItemPage.fixture';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -15,22 +16,39 @@ jest.mock('react-router-dom', () => ({
 
 describe('Components', () => {
   describe('PortfolioPage', () => {
-    const mockState: RootState = {
-      ...initialRootState,
-      portfolio: {
-        ...initialRootState.portfolio,
-        portfolioItems: [portfolioItem],
-      },
-    };
-
     beforeEach(() => {
       jest.spyOn(reactRouterDom, 'useParams').mockReturnValue({
-        slug: portfolioItem.slug,
+        slug: mockGetPortfolioItemBySlugResponse.portfolioItemCollection.items[0].slug,
       });
     });
 
-    it('should render as expected, without crashing', () => {
-      const { container } = render(withMockRouter(withMockStore(<PortfolioItemPage />, mockState)));
+    it('should render as expected, without crashing', async () => {
+      const { container, getByText } = render(
+        withMockRouter(
+          <MockedProvider
+            mocks={[
+              {
+                request: {
+                  query: GET_PORTFOLIO_ITEM_BY_SLUG,
+                  variables: {
+                    slug: mockGetPortfolioItemBySlugResponse.portfolioItemCollection.items[0].slug,
+                  },
+                },
+                result: { data: mockGetPortfolioItemBySlugResponse },
+              },
+            ]}
+            addTypename={false}
+          >
+            <PortfolioItemPage />
+          </MockedProvider>,
+        ),
+      );
+
+      await waitFor(() =>
+        expect(
+          getByText(mockGetPortfolioItemBySlugResponse.portfolioItemCollection.items[0].title),
+        ).toBeTruthy(),
+      );
 
       expect(container.firstChild).toMatchSnapshot();
     });

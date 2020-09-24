@@ -12,6 +12,7 @@ import {
   rem,
 } from 'styles';
 
+// Styled components
 export const List = styled.ul`
   ${listReset}
   margin: 0 ${rem(gutterWidths.xs * -0.25)};

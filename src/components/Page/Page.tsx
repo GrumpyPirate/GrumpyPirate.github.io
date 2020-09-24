@@ -1,7 +1,6 @@
-import Color from 'color';
 import styled from 'styled-components';
 
-import { palette } from 'styles';
+import { pageBg } from 'styles';
 
 /**
  * Renders a Page component.
@@ -11,7 +10,9 @@ import { palette } from 'styles';
  * @returns {ReactNode}
  */
 const Page = styled.div`
-  background-color: ${Color(palette.white).darken(0.05).string()};
+  background-color: ${pageBg};
+  min-height: 100vh;
+  position: relative;
 `;
 
 export default Page;

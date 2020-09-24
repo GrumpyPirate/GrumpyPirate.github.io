@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { mediaQueries, rem, sidebarHeightMobile, sidebarWidth, sidebarWidthXl } from 'styles';
 
-export const MainWrapper = styled.main<{ isLoading: boolean }>`
+export const MainWrapper = styled.main`
   position: relative;
   top: ${rem(sidebarHeightMobile)};
 
@@ -15,12 +15,6 @@ export const MainWrapper = styled.main<{ isLoading: boolean }>`
   @media ${mediaQueries.xl} {
     padding-left: ${rem(sidebarWidthXl)};
   }
-
-  ${({ isLoading }) =>
-    isLoading &&
-    css`
-      overflow: hidden;
-    `}
 `;
 
 export const Content = styled.div`

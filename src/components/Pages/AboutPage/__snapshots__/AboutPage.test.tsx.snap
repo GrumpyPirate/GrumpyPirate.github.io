@@ -74,12 +74,16 @@ exports[`Components About should render as expected, without crashing 1`] = `
 
 .c0 {
   background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
 }
 
 .c14 {
+  position: relative;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
   text-align: center;
+  min-height: 100vh;
 }
 
 .c10 {
@@ -236,6 +240,15 @@ exports[`Components About should render as expected, without crashing 1`] = `
 
 .c5 a:active {
   color: hsl(1.3000000000000114,56.5%,61.6%);
+}
+
+.c23 .c12 {
+  -webkit-animation: iUEjna 2.25s linear 0s infinite;
+  animation: iUEjna 2.25s linear 0s infinite;
+  display: block;
+  height: 3rem;
+  margin: auto;
+  width: 3rem;
 }
 
 .c18 {
@@ -462,6 +475,10 @@ exports[`Components About should render as expected, without crashing 1`] = `
   .c5 {
     padding-bottom: 2rem;
   }
+}
+
+@media (min-width:48em) {
+
 }
 
 @media (min-width:48em) {

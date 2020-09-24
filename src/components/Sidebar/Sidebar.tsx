@@ -1,13 +1,10 @@
-import React, { FunctionComponent } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 import ScreenreaderOnlyText from 'components/Accessibility/ScreenreaderOnlyText/ScreenreaderOnlyText';
 import { Container } from 'components/Grid';
 import Sitenav from 'components/Sitenav/Sitenav';
-import { AppDispatch, RootState } from 'store';
-import { toggleTouchNavigation } from 'store/ui';
 import { mediaQueries, palette, rem, sidebarWidth, sidebarWidthXl } from 'styles';
 import { ClassNameProps } from 'types/common';
 
@@ -26,8 +23,24 @@ import {
 } from './Sidebar.constants';
 
 const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
-  const isTouchNavigationOpen = useSelector((state: RootState) => state.ui.isTouchNavigationOpen);
-  const dispatch: AppDispatch = useDispatch();
+  const [isTouchNavigationOpen, setIsTouchNavigationOpen] = useState(false);
+  const history = useHistory();
+
+  /**
+   * Use a side-effect to:
+   *  - Close the touch navigation, when the route changes
+   */
+  useEffect(() => {
+    const clearHistoryListener = history.listen(() => {
+      if (isTouchNavigationOpen) {
+        setIsTouchNavigationOpen(false);
+      }
+    });
+
+    return () => {
+      clearHistoryListener();
+    };
+  }, [history, isTouchNavigationOpen]);
 
   return (
     <aside className={className}>
@@ -47,7 +60,7 @@ const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
             <BurgerButton
               type="button"
               onClick={() => {
-                dispatch(toggleTouchNavigation());
+                setIsTouchNavigationOpen(!isTouchNavigationOpen);
               }}
               aria-expanded={isTouchNavigationOpen}
             >
@@ -62,7 +75,7 @@ const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
         </Content>
       </Container>
 
-      <MobileSitenavWrapper isClosed={!isTouchNavigationOpen}>
+      <MobileSitenavWrapper isOpen={isTouchNavigationOpen}>
         <Container>
           <Sitenav />
         </Container>

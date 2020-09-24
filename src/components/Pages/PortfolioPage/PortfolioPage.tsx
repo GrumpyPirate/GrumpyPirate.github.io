@@ -1,5 +1,5 @@
-import React, { Fragment, FunctionComponent, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useQuery } from '@apollo/client';
+import React, { Fragment, FunctionComponent, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -9,10 +9,10 @@ import Page from 'components/Page/Page';
 import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
+import Spinner from 'components/Spinner/Spinner';
 import Heading from 'components/Typography/Heading/Heading';
+import { GET_PORTFOLIO_ITEM_LIST, GetPortfolioItemListResponse } from 'queries';
 import { ContentService } from 'services/ContentService';
-import { AppDispatch, RootState } from 'store';
-import { getPortfolioItems } from 'store/portfolio';
 import { ClassNameProps } from 'types/common';
 
 import {
@@ -24,14 +24,19 @@ import {
 } from './PortfolioPage.constants';
 
 const PortfolioPage: FunctionComponent<ClassNameProps> = ({ className }) => {
-  const portfolioItems = useSelector((state: RootState) => state.portfolio.portfolioItems);
-  const dispatch: AppDispatch = useDispatch();
+  const { data, loading } = useQuery<GetPortfolioItemListResponse>(GET_PORTFOLIO_ITEM_LIST);
 
-  useEffect(() => {
-    if (portfolioItems.length === 0) {
-      dispatch(getPortfolioItems());
-    }
-  }, [dispatch, portfolioItems.length]);
+  const formattedPortfolioItems = useMemo(
+    () =>
+      !data
+        ? []
+        : [...data.portfolioItemCollection.items].sort(
+            (itemA, itemB) =>
+              new Date(itemB.sys.firstPublishedAt).getTime() -
+              new Date(itemA.sys.firstPublishedAt).getTime(),
+          ),
+    [data],
+  );
 
   return (
     <Page className={className}>
@@ -40,53 +45,71 @@ const PortfolioPage: FunctionComponent<ClassNameProps> = ({ className }) => {
       </PageHeader>
 
       <PageContent>
-        {portfolioItems.length > 0 && (
+        {loading && <Spinner />}
+        {formattedPortfolioItems.length > 0 && (
           <Container>
             <List>
-              {portfolioItems.map(({ id, slug, headerImgSrc, title, descriptionShort }) => (
-                <ListItem key={`portfolio__list-item--${slug}--${id}`}>
-                  <Link to={`/portfolio/${slug}`} role="listitem">
-                    <ListItemImage>
-                      <picture>
-                        {[360, 600].map((imageSize) => (
-                          <Fragment key={`list-item--${id}__image--size-${imageSize}`}>
-                            <source
-                              type="image/webp"
-                              srcSet={`${ContentService.getResizedImage(headerImgSrc, {
-                                format: 'webp',
-                                width: imageSize,
-                              })} ${imageSize}w, ${ContentService.getResizedImage(headerImgSrc, {
-                                format: 'webp',
-                                width: imageSize * 2,
-                              })} ${imageSize * 2}w`}
-                              sizes={`${imageSize}px`}
-                            />
-                            <source
-                              type="image/jpeg"
-                              srcSet={`${ContentService.getResizedImage(headerImgSrc, {
-                                format: 'jpg',
-                                width: imageSize,
-                              })} ${imageSize}w, ${ContentService.getResizedImage(headerImgSrc, {
-                                format: 'jpg',
-                                width: imageSize * 2,
-                              })} ${imageSize * 2}w`}
-                              sizes={`${imageSize}px`}
-                            />
-                          </Fragment>
-                        ))}
+              {formattedPortfolioItems.map(
+                ({
+                  sys: { id },
+                  slug,
+                  headerImage: { url: headerImageUrl },
+                  title,
+                  descriptionShort,
+                }) => (
+                  <ListItem
+                    key={`portfolio-page__list__item--${slug}--${id}`}
+                    data-testid="portfolio-page__list__item"
+                  >
+                    <Link to={`/portfolio/${slug}`} role="listitem">
+                      <ListItemImage>
+                        <picture>
+                          {[360, 600].map((imageSize) => (
+                            <Fragment key={`list-item--${id}__image--size-${imageSize}`}>
+                              <source
+                                type="image/webp"
+                                srcSet={`${ContentService.getResizedImage(headerImageUrl, {
+                                  format: 'webp',
+                                  width: imageSize,
+                                })} ${imageSize}w, ${ContentService.getResizedImage(
+                                  headerImageUrl,
+                                  {
+                                    format: 'webp',
+                                    width: imageSize * 2,
+                                  },
+                                )} ${imageSize * 2}w`}
+                                sizes={`${imageSize}px`}
+                              />
+                              <source
+                                type="image/jpeg"
+                                srcSet={`${ContentService.getResizedImage(headerImageUrl, {
+                                  format: 'jpg',
+                                  width: imageSize,
+                                })} ${imageSize}w, ${ContentService.getResizedImage(
+                                  headerImageUrl,
+                                  {
+                                    format: 'jpg',
+                                    width: imageSize * 2,
+                                  },
+                                )} ${imageSize * 2}w`}
+                                sizes={`${imageSize}px`}
+                              />
+                            </Fragment>
+                          ))}
 
-                        <LoadableImage loading="lazy" src={headerImgSrc} alt="" />
-                      </picture>
-                    </ListItemImage>
+                          <LoadableImage loading="lazy" src={headerImageUrl} alt="" />
+                        </picture>
+                      </ListItemImage>
 
-                    <ListItemCopy>
-                      <Heading level={3} displayLevel={5} text={title} />
+                      <ListItemCopy>
+                        <Heading level={3} displayLevel={5} text={title} />
 
-                      <ListItemDescription>{descriptionShort}</ListItemDescription>
-                    </ListItemCopy>
-                  </Link>
-                </ListItem>
-              ))}
+                        <ListItemDescription>{descriptionShort}</ListItemDescription>
+                      </ListItemCopy>
+                    </Link>
+                  </ListItem>
+                ),
+              )}
             </List>
           </Container>
         )}

@@ -69,12 +69,16 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
 
 .c0 {
   background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
 }
 
 .c8 {
+  position: relative;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
   text-align: center;
+  min-height: 100vh;
 }
 
 .c7 {

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { withMockRouter } from 'utils/testing';
+import withMockRouter from 'utils/testing';
 
 import PortfolioPageHeader from './PortfolioPageHeader';
 import fixture from './PortfolioPageHeader.fixture';

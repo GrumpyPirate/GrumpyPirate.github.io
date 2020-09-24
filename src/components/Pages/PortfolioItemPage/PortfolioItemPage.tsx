@@ -1,139 +1,155 @@
-import isEmpty from 'lodash/isEmpty';
-import React, { Fragment, FunctionComponent, useEffect } from 'react';
+import { useQuery } from '@apollo/client';
+import React, { Fragment, FunctionComponent, useEffect, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Button from 'components/Button/Button';
 import { Column, Container, Row } from 'components/Grid';
 import LoadableImage from 'components/LoadableImage/LoadableImage';
 import Page from 'components/Page/Page';
+import PageContent from 'components/PageContent/PageContent';
 import PortfolioCarousel from 'components/PortfolioCarousel/PortfolioCarousel';
 import PortfolioDeviceLineup from 'components/PortfolioDeviceLineup/PortfolioDeviceLineup';
 import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHeader';
+import Spinner from 'components/Spinner/Spinner';
+import { GET_PORTFOLIO_ITEM_BY_SLUG, GetPortfolioItemBySlugResponse } from 'queries';
 import { ContentService } from 'services/ContentService';
-import { AppDispatch, RootState } from 'store';
-import { getPortfolioItems } from 'store/portfolio';
+import { ClassNameProps } from 'types/common';
 
 import {
-  Content,
   ContentDivider,
   ExternalLinkWrapper,
   SupportingImage,
 } from './PortfolioItemPage.constants';
 
-const PortfolioItemPage: FunctionComponent = () => {
+const PortfolioItemPage: FunctionComponent<ClassNameProps> = ({ className }) => {
   const { slug } = useParams<{ slug: string }>();
+  const { data, error, loading } = useQuery<GetPortfolioItemBySlugResponse>(
+    GET_PORTFOLIO_ITEM_BY_SLUG,
+    {
+      variables: { slug },
+    },
+  );
   const history = useHistory();
-  const { portfolioItem, hasFetched } = useSelector((state: RootState) => ({
-    portfolioItem: state.portfolio.portfolioItems.find((item) => item.slug === slug),
-    hasFetched: state.portfolio.hasFetched,
-  }));
-  const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
-    const shouldFetchItems = Boolean(isEmpty(portfolioItem) && !hasFetched);
-
-    if (shouldFetchItems) {
-      dispatch(getPortfolioItems());
-    }
-  }, [dispatch, hasFetched, portfolioItem]);
-
-  useEffect(() => {
-    if (hasFetched && isEmpty(portfolioItem)) {
+    if (error) {
       history.push('/404');
     }
-  }, [hasFetched, portfolioItem, history]);
+  }, [error, history]);
 
-  if (!portfolioItem) return null;
+  const [portfolioItem] = useMemo(() => (!data ? [] : data.portfolioItemCollection.items), [data]);
+  const [mobilePreviewImage, tabletPreviewImage, desktopPreviewImage] = useMemo(() => {
+    const {
+      devicePreviewsCollection: {
+        items: [
+          { url: mobileImageUrl = '' } = {},
+          { url: tabletImageUrl = '' } = {},
+          { url: desktopImageUrl = '' } = {},
+        ] = [],
+      } = {},
+    } = portfolioItem || {};
+
+    return [mobileImageUrl, tabletImageUrl, desktopImageUrl];
+  }, [portfolioItem]);
 
   return (
-    <Page>
-      <PortfolioPageHeader
-        bgImage={portfolioItem.headerImgSrc}
-        title={portfolioItem.title}
-        tech={portfolioItem.tech}
-      />
+    <Page className={className}>
+      {loading || !portfolioItem ? (
+        <Spinner />
+      ) : (
+        <>
+          <PortfolioPageHeader
+            bgImage={portfolioItem.headerImage.url}
+            title={portfolioItem.title}
+            tech={portfolioItem.tech}
+          />
+          <PageContent>
+            <Container>
+              <Row xAlign="center">
+                <Column sm={10}>
+                  {portfolioItem.supportingImage.url ? (
+                    <Row yAlign="top">
+                      <Column xs={12} md={6} xl={6}>
+                        <ReactMarkdown source={portfolioItem.description} />
+                      </Column>
 
-      <Content>
-        <Container>
-          <Row xAlign="center">
-            <Column sm={10}>
-              {portfolioItem.supportingImageSrc ? (
-                <Row yAlign="top">
-                  <Column xs={12} md={6} xl={6}>
+                      <Column xs={10} md={6} xl={5} push={1} pushMd={0} pushXl={1}>
+                        <SupportingImage>
+                          <picture>
+                            {[290, 336, 380].map((imageSize) => (
+                              <Fragment key={`supporting-image--size-${imageSize}`}>
+                                <source
+                                  type="image/webp"
+                                  srcSet={`${ContentService.getResizedImage(
+                                    portfolioItem.supportingImage.url,
+                                    { format: 'webp', width: imageSize },
+                                  )} ${imageSize}w, ${ContentService.getResizedImage(
+                                    portfolioItem.supportingImage.url,
+                                    { format: 'webp', width: imageSize * 2 },
+                                  )} ${imageSize * 2}w`}
+                                  sizes={`${imageSize}px`}
+                                />
+                                <source
+                                  type="image/jpeg"
+                                  srcSet={`${ContentService.getResizedImage(
+                                    portfolioItem.supportingImage.url,
+                                    { format: 'jpg', width: imageSize },
+                                  )} ${imageSize}w, ${ContentService.getResizedImage(
+                                    portfolioItem.supportingImage.url,
+                                    { format: 'jpg', width: imageSize * 2 },
+                                  )} ${imageSize * 2}w`}
+                                  sizes={`${imageSize}px`}
+                                />
+                              </Fragment>
+                            ))}
+                            <LoadableImage
+                              loading="lazy"
+                              src={portfolioItem.supportingImage.url}
+                              alt=""
+                            />
+                          </picture>
+                        </SupportingImage>
+                      </Column>
+                    </Row>
+                  ) : (
                     <ReactMarkdown source={portfolioItem.description} />
-                  </Column>
+                  )}
 
-                  <Column xs={12} md={6} xl={5} pushXl={1}>
-                    <SupportingImage>
-                      <picture>
-                        {[290, 336, 380].map((imageSize) => (
-                          <Fragment key={`supporting-image--size-${imageSize}`}>
-                            <source
-                              type="image/webp"
-                              srcSet={`${ContentService.getResizedImage(
-                                portfolioItem.supportingImageSrc,
-                                { format: 'webp', width: imageSize },
-                              )} ${imageSize}w, ${ContentService.getResizedImage(
-                                portfolioItem.supportingImageSrc,
-                                { format: 'webp', width: imageSize * 2 },
-                              )} ${imageSize * 2}w`}
-                              sizes={`${imageSize}px`}
-                            />
-                            <source
-                              type="image/jpeg"
-                              srcSet={`${ContentService.getResizedImage(
-                                portfolioItem.supportingImageSrc,
-                                { format: 'jpg', width: imageSize },
-                              )} ${imageSize}w, ${ContentService.getResizedImage(
-                                portfolioItem.supportingImageSrc,
-                                { format: 'jpg', width: imageSize * 2 },
-                              )} ${imageSize * 2}w`}
-                              sizes={`${imageSize}px`}
-                            />
-                          </Fragment>
-                        ))}
-                        <LoadableImage
-                          loading="lazy"
-                          src={portfolioItem.supportingImageSrc}
-                          alt=""
-                        />
-                      </picture>
-                    </SupportingImage>
-                  </Column>
-                </Row>
-              ) : (
-                <ReactMarkdown source={portfolioItem.description} />
-              )}
+                  <ContentDivider />
 
-              <ContentDivider />
+                  <PortfolioCarousel
+                    desktopImage={desktopPreviewImage}
+                    tabletImage={tabletPreviewImage}
+                    mobileImage={mobilePreviewImage}
+                  />
 
-              <PortfolioCarousel
-                desktopImage={portfolioItem.previews.desktop}
-                tabletImage={portfolioItem.previews.tablet}
-                mobileImage={portfolioItem.previews.mobile}
-              />
+                  <PortfolioDeviceLineup
+                    desktopImage={desktopPreviewImage}
+                    tabletImage={tabletPreviewImage}
+                    mobileImage={mobilePreviewImage}
+                  />
 
-              <PortfolioDeviceLineup
-                desktopImage={portfolioItem.previews.desktop}
-                tabletImage={portfolioItem.previews.tablet}
-                mobileImage={portfolioItem.previews.mobile}
-              />
+                  <ContentDivider />
 
-              <ContentDivider />
-
-              <ExternalLinkWrapper>
-                <Button to={portfolioItem.url} external secondary>
-                  Visit {portfolioItem.title}
-                </Button>
-              </ExternalLinkWrapper>
-            </Column>
-          </Row>
-        </Container>
-      </Content>
+                  <ExternalLinkWrapper>
+                    <Button to={portfolioItem.url} external secondary>
+                      Visit {portfolioItem.title}
+                    </Button>
+                  </ExternalLinkWrapper>
+                </Column>
+              </Row>
+            </Container>
+          </PageContent>
+        </>
+      )}
     </Page>
   );
 };
 
-export default PortfolioItemPage;
+export default styled(PortfolioItemPage)`
+  ${PageContent} {
+    text-align: left;
+  }
+`;

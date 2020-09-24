@@ -1,6 +1,6 @@
-import React, { FunctionComponent, ReactElement, useEffect } from 'react';
+import { useQuery } from '@apollo/client';
+import React, { FunctionComponent, ReactElement, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { Column, Container, Row } from 'components/Grid';
@@ -9,25 +9,20 @@ import Page from 'components/Page/Page';
 import PageContent from 'components/PageContent/PageContent';
 import PageHeader from 'components/PageHeader/PageHeader';
 import PageHeaderSubtitle from 'components/PageHeaderSubtitle/PageHeaderSubtitle';
+import Spinner from 'components/Spinner/Spinner';
 import Heading from 'components/Typography/Heading/Heading';
-import { AppDispatch, RootState } from 'store';
-import { getAboutSections } from 'store/about';
-import { AboutSectionIcon } from 'types/common';
+import { GET_ABOUT_SECTIONS, GetAboutSectionsResponse } from 'queries';
 
 import { AboutIcon, AboutSection, PageHeaderDivider, SectionGraphic } from './AboutPage.constants';
 
 const AboutPage: FunctionComponent = () => {
-  const { aboutSections, hasFetched } = useSelector((state: RootState) => ({
-    aboutSections: state.about.aboutSections,
-    hasFetched: state.about.hasFetched,
-  }));
-  const dispatch: AppDispatch = useDispatch();
+  const { data, loading } = useQuery<GetAboutSectionsResponse>(GET_ABOUT_SECTIONS);
 
-  useEffect(() => {
-    if (!hasFetched && aboutSections.length === 0) {
-      dispatch(getAboutSections());
-    }
-  }, [aboutSections.length, dispatch, hasFetched]);
+  const formattedAboutSections = useMemo(
+    () =>
+      !data ? [] : [...data.aboutPageSectionCollection.items].sort((a, b) => a.order - b.order),
+    [data],
+  );
 
   return (
     <Page>
@@ -43,14 +38,15 @@ const AboutPage: FunctionComponent = () => {
       </PageHeader>
 
       <PageContent>
+        {loading && <Spinner />}
         <section>
           <Container>
             <Row xAlign="center">
               <Column xs={12} sm={10} lg={12} xl={10}>
-                {aboutSections.map(({ content, icons = [], id, title }) => {
+                {formattedAboutSections.map(({ sys: { id }, content, icons = [], title }) => {
                   const iconContent: ReactElement = (
                     <>
-                      {icons.map((icon: AboutSectionIcon) => (
+                      {icons.map((icon) => (
                         <AboutIcon key={`${id}__icon--${icon.name}`} large={icon.large}>
                           <Icon glyph={icon.name} />
                         </AboutIcon>

@@ -2,16 +2,8 @@ import styled from 'styled-components';
 
 import { mediaQueries, rem } from 'styles';
 
-export const Content = styled.div`
-  padding: 2rem 0;
-
-  @media ${mediaQueries.md} {
-    padding: 4rem 0;
-  }
-`;
-
 export const SupportingImage = styled.figure`
-  border-radius: 0.25rem;
+  border-radius: ${rem(8)};
   margin: 0;
   overflow: hidden;
 

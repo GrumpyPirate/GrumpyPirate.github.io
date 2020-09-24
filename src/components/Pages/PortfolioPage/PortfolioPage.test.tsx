@@ -1,24 +1,37 @@
-import { render } from '@testing-library/react';
+import { MockedProvider } from '@apollo/client/testing';
+import { render, waitFor } from '@testing-library/react';
 import React from 'react';
 
-import { initialRootState, RootState } from 'store';
-import { withMockRouter, withMockStore } from 'utils/testing';
+import { GET_PORTFOLIO_ITEM_LIST } from 'queries';
+import withMockRouter from 'utils/testing';
 
 import PortfolioPage from './PortfolioPage';
-import portfolioItems from './PortfolioPage.fixture';
+import mockGetPortfolioItemListResponse from './PortfolioPage.fixture';
 
 describe('Components', () => {
   describe('Portfolio', () => {
-    const mockState: RootState = {
-      ...initialRootState,
-      portfolio: {
-        ...initialRootState.portfolio,
-        portfolioItems,
-      },
-    };
+    it('should render as expected, without crashing', async () => {
+      const { container, getAllByTestId } = render(
+        withMockRouter(
+          <MockedProvider
+            mocks={[
+              {
+                request: { query: GET_PORTFOLIO_ITEM_LIST },
+                result: { data: mockGetPortfolioItemListResponse },
+              },
+            ]}
+            addTypename={false}
+          >
+            <PortfolioPage />
+          </MockedProvider>,
+        ),
+      );
 
-    it('should render as expected, without crashing', () => {
-      const { container } = render(withMockRouter(withMockStore(<PortfolioPage />, mockState)));
+      await waitFor(() =>
+        expect(getAllByTestId('portfolio-page__list__item')).toHaveLength(
+          mockGetPortfolioItemListResponse.portfolioItemCollection.items.length,
+        ),
+      );
 
       expect(container.firstChild).toMatchSnapshot();
     });

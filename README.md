@@ -12,8 +12,10 @@ A very basic portfolio site, written in [React](https://reactjs.org/), built usi
 
 ### TODO
 
-- [ ] Replace portfolio page item previews with dependency-free solution
 - [ ] Switch Contenful API queries over to GraphQL (likely via [apollo-client](https://www.npmjs.com/package/apollo-client))
+- [ ] Add a decent page transition
+- [ ] Sort out page spinner
+- [ ] Replace portfolio page item previews with dependency-free solution
 - [ ] Sort/group portfolio items in some way, perhaps by creation date
 - [ ] Code splitting via lazy-loading components with @loadable/component
 - [ ] Tidy up ContentService, deprecate use of `lodash.get`
