@@ -10,6 +10,9 @@ const prodConfig = {
     minimizer: [new TerserPlugin()],
     usedExports: true,
     sideEffects: true,
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 };
 

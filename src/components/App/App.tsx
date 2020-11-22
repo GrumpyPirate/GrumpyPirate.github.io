@@ -1,20 +1,23 @@
 import { ApolloProvider } from '@apollo/client';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, lazy, Suspense } from 'react';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Footer from 'components/Footer/Footer';
 import Main from 'components/Main/Main';
-import AboutPage from 'components/Pages/AboutPage/AboutPage';
-import HTTPNotFoundPage from 'components/Pages/HTTPNotFoundPage/HTTPNotFoundPage';
-import PortfolioItemPage from 'components/Pages/PortfolioItemPage/PortfolioItemPage';
-import PortfolioPage from 'components/Pages/PortfolioPage/PortfolioPage';
 import Sidebar from 'components/Sidebar/Sidebar';
 import contentService from 'services/ContentService';
-import { mediaQueries } from 'styles';
+import { mediaQueries, rem, sidebarHeightMobile } from 'styles';
 import { PropsWithClassName } from 'types/common';
 
-import GlobalStyles from './App.constants';
+import { GlobalStyles, RouteFallbackSpinner } from './App.constants';
+
+const AboutPage = lazy(() => import('components/Pages/AboutPage/AboutPage'));
+const PortfolioPage = lazy(() => import('components/Pages/PortfolioPage/PortfolioPage'));
+const PortfolioItemPage = lazy(
+  () => import('components/Pages/PortfolioItemPage/PortfolioItemPage'),
+);
+const HTTPNotFoundPage = lazy(() => import('components/Pages/HTTPNotFoundPage/HTTPNotFoundPage'));
 
 const App: FunctionComponent<PropsWithClassName> = ({ className }) => (
   <ApolloProvider client={contentService.client}>
@@ -23,14 +26,16 @@ const App: FunctionComponent<PropsWithClassName> = ({ className }) => (
       <div className={className}>
         <Sidebar />
         <Main>
-          <Switch>
-            <Route exact path="/" component={AboutPage} />
-            <Route exact path="/portfolio" component={PortfolioPage} />
-            <Route exact path="/portfolio/:slug" component={PortfolioItemPage} />
-            <Route exact path="/404" component={HTTPNotFoundPage} />
-            <Route component={HTTPNotFoundPage} />
-          </Switch>
-          <Footer />
+          <Suspense fallback={<RouteFallbackSpinner />}>
+            <Switch>
+              <Route exact path="/" component={AboutPage} />
+              <Route exact path="/portfolio" component={PortfolioPage} />
+              <Route exact path="/portfolio/:slug" component={PortfolioItemPage} />
+              <Route exact path="/404" component={HTTPNotFoundPage} />
+              <Route component={HTTPNotFoundPage} />
+            </Switch>
+            <Footer />
+          </Suspense>
         </Main>
       </div>
     </Router>
@@ -38,7 +43,7 @@ const App: FunctionComponent<PropsWithClassName> = ({ className }) => (
 );
 
 export default styled(App)`
-  padding-top: $sidebar-height-mobile;
+  padding-top: ${rem(sidebarHeightMobile)};
 
   @media ${mediaQueries.lg} {
     align-items: stretch;

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import Icon from 'components/Icon/Icon';
-import { createHeading, pageBg, palette, paragraphMarginBottom, rem } from 'styles';
+import { createHeading, paragraphMarginBottom, rem } from 'styles';
 
 const spin = keyframes`
   from {
@@ -32,20 +32,4 @@ export const Text = styled.h6`
   margin: 0;
   position: relative;
   text-transform: uppercase;
-`;
-
-export const Wrapper = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  background-color: ${pageBg};
-  color: ${palette.themeDarkShades};
-  user-select: none;
-  z-index: 2;
 `;

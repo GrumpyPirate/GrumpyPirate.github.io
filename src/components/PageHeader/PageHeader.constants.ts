@@ -15,6 +15,7 @@ import {
   sidebarHeightMobile,
 } from 'styles';
 
+// Animations
 export const scrollButtonAnimation = keyframes`
   from {
     opacity: 0;
@@ -33,6 +34,7 @@ export const scrollButtonAnimation = keyframes`
   }
 `;
 
+// Components
 export const ScrollButtonLabel = styled.span`
   display: block;
 `;
@@ -85,8 +87,12 @@ export const Header = styled.header<{ isFullscreen: boolean }>`
       align-items: center;
       display: flex;
       flex-flow: row wrap;
-      height: 100vh;
+      height: calc(100vh - ${rem(sidebarHeightMobile)});
       position: relative;
+
+      @media ${mediaQueries.lg} {
+        height: 100vh;
+      }
 
       ${Content} {
         @media ${mediaQueries.mdDown} {
@@ -118,9 +124,3 @@ export const TitleText = styled.h1`
     margin-left: 0.25em;
   }
 `;
-
-export const getFullscreenHeight = (): string => {
-  const windowHeight = window.innerHeight;
-
-  return window.innerWidth < 992 ? `calc(${windowHeight - 50}px)` : `${windowHeight}px`;
-};

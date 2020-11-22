@@ -1,12 +1,10 @@
-import debounce from 'lodash/debounce';
-import React, { FunctionComponent, useCallback, useEffect, useRef, useState } from 'react';
+import React, { FunctionComponent, useCallback, useRef } from 'react';
 
 import { Container } from 'components/Grid';
 import Icon from 'components/Icon/Icon';
 
 import {
   Content,
-  getFullscreenHeight,
   Header,
   ScrollButton,
   ScrollButtonIcon,
@@ -24,11 +22,6 @@ const PageHeader: FunctionComponent<PageHeaderProps> = ({
   title,
 }) => {
   const headerElement = useRef<HTMLElement>(null);
-  const [height, setHeight] = useState(getFullscreenHeight());
-
-  const onResize = debounce(() => {
-    setHeight(getFullscreenHeight());
-  }, 300);
 
   const onScrollDownClick = useCallback(() => {
     if (headerElement && headerElement.current) {
@@ -39,22 +32,8 @@ const PageHeader: FunctionComponent<PageHeaderProps> = ({
     }
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('resize', onResize);
-    onResize();
-
-    return () => {
-      window.removeEventListener('resize', onResize);
-    };
-  });
-
   return (
-    <Header
-      className={className}
-      isFullscreen={isFullscreen}
-      style={{ ...(isFullscreen && { height }) }}
-      ref={headerElement}
-    >
+    <Header className={className} isFullscreen={isFullscreen} ref={headerElement}>
       <Container>
         <Content>
           <Title>
