@@ -1,5 +1,5 @@
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
-export interface ScreenreaderOnlyTextProps extends ClassNameProps {
+export type ScreenreaderOnlyTextProps = PropsWithClassName<{
   text: string;
-}
+}>;

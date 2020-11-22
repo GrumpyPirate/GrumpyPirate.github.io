@@ -2,7 +2,7 @@ import Color from 'color';
 import { css, SimpleInterpolation } from 'styled-components';
 
 import { animDur } from './animation';
-import { mediaQueries } from './media-queries';
+import mediaQueries from './media-queries';
 import { noUnderline } from './mixins';
 import {
   fontSizeH1,

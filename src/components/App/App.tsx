@@ -12,11 +12,11 @@ import PortfolioPage from 'components/Pages/PortfolioPage/PortfolioPage';
 import Sidebar from 'components/Sidebar/Sidebar';
 import contentService from 'services/ContentService';
 import { mediaQueries } from 'styles';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 import GlobalStyles from './App.constants';
 
-const App: FunctionComponent<ClassNameProps> = ({ className }) => (
+const App: FunctionComponent<PropsWithClassName> = ({ className }) => (
   <ApolloProvider client={contentService.client}>
     <GlobalStyles />
     <Router basename="/">

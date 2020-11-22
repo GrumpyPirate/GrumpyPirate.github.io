@@ -15,7 +15,7 @@ import PortfolioPageHeader from 'components/PortfolioPageHeader/PortfolioPageHea
 import Spinner from 'components/Spinner/Spinner';
 import { GET_PORTFOLIO_ITEM_BY_SLUG, GetPortfolioItemBySlugResponse } from 'queries';
 import { ContentService } from 'services/ContentService';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 import {
   ContentDivider,
@@ -23,7 +23,7 @@ import {
   SupportingImage,
 } from './PortfolioItemPage.constants';
 
-const PortfolioItemPage: FunctionComponent<ClassNameProps> = ({ className }) => {
+const PortfolioItemPage: FunctionComponent<PropsWithClassName> = ({ className }) => {
   const { slug } = useParams<{ slug: string }>();
   const { data, error, loading } = useQuery<GetPortfolioItemBySlugResponse>(
     GET_PORTFOLIO_ITEM_BY_SLUG,

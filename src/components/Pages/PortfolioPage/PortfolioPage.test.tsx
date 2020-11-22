@@ -6,7 +6,7 @@ import { GET_PORTFOLIO_ITEM_LIST } from 'queries';
 import withMockRouter from 'utils/testing';
 
 import PortfolioPage from './PortfolioPage';
-import mockGetPortfolioItemListResponse from './PortfolioPage.fixture';
+import mockGetPortfolioItemsResponse from './PortfolioPage.fixture';
 
 describe('Components', () => {
   describe('Portfolio', () => {
@@ -17,7 +17,7 @@ describe('Components', () => {
             mocks={[
               {
                 request: { query: GET_PORTFOLIO_ITEM_LIST },
-                result: { data: mockGetPortfolioItemListResponse },
+                result: { data: mockGetPortfolioItemsResponse },
               },
             ]}
             addTypename={false}
@@ -29,7 +29,7 @@ describe('Components', () => {
 
       await waitFor(() =>
         expect(getAllByTestId('portfolio-page__list__item')).toHaveLength(
-          mockGetPortfolioItemListResponse.portfolioItemCollection.items.length,
+          mockGetPortfolioItemsResponse.portfolioItemCollection.items.length,
         ),
       );
 

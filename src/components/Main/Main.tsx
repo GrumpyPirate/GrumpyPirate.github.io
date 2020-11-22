@@ -2,11 +2,11 @@ import React, { FunctionComponent, PropsWithChildren, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
 import usePrevious from 'hooks/usePrevious';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 import { Content, MainWrapper } from './Main.constants';
 
-const Main: FunctionComponent<ClassNameProps & PropsWithChildren<{}>> = ({
+const Main: FunctionComponent<PropsWithClassName & PropsWithChildren<{}>> = ({
   children,
   className,
 }) => {

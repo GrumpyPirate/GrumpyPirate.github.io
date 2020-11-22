@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
-export type PageHeaderProps = ClassNameProps &
+export type PageHeaderProps = PropsWithClassName &
   PropsWithChildren<{
     isFullscreen?: boolean;
     scrollLabel?: string;

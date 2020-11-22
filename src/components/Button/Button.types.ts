@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
-export type ButtonProps = ClassNameProps &
+export type ButtonProps = PropsWithClassName &
   PropsWithChildren<{
     to?: string;
     external?: boolean;

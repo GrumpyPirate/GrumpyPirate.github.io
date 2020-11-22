@@ -1,8 +1,10 @@
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
-export interface HeadingProps extends ClassNameProps {
-  level?: 1 | 2 | 3 | 4 | 5 | 6 | number;
-  text: string;
-  displayLevel?: 1 | 2 | 3 | 4 | 5 | 6 | number;
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type HeadingProps = PropsWithClassName<{
   className?: string;
-}
+  displayLevel?: HeadingLevel;
+  level?: HeadingLevel;
+  text: string;
+}>;

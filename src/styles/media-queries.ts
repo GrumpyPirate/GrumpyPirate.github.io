@@ -1,23 +1,6 @@
 import { screenSizes } from './screen-sizes';
 
-export interface MediaQueries {
-  sm: string;
-  md: string;
-  lg: string;
-  xl: string;
-  xxl: string;
-  smDown: string;
-  mdDown: string;
-  lgDown: string;
-  xlDown: string;
-  xsOnly: string;
-  smOnly: string;
-  mdOnly: string;
-  lgOnly: string;
-  xlOnly: string;
-}
-
-export const mediaQueries: MediaQueries = {
+const mediaQueries = {
   // 'Up' media queries. E.g. 'For all screen sizes above tabletMin'
   sm: `(min-width: ${screenSizes.largeMobileMin / 16}em)`,
   md: `(min-width: ${screenSizes.tabletMin / 16}em)`,
@@ -44,3 +27,5 @@ export const mediaQueries: MediaQueries = {
     (screenSizes.desktopXxlMin - 1) / 16
   }em)`,
 };
+
+export default mediaQueries;

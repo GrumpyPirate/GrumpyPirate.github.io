@@ -1,6 +1,6 @@
-import { ClassNameProps, IconGlyph } from 'types/common';
+import { PropsWithClassName, IconGlyph } from 'types/common';
 
-export interface IconProps extends ClassNameProps {
+export type IconProps = PropsWithClassName<{
   glyph: IconGlyph;
   altText?: string;
-}
+}>;

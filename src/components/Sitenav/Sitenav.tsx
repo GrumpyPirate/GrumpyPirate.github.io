@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { mediaQueries } from 'styles';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 import { Item, navItems } from './Sitenav.constants';
 
-const Sitenav: FunctionComponent<ClassNameProps> = ({ className }) => {
+const Sitenav: FunctionComponent<PropsWithClassName> = ({ className }) => {
   return (
     <ul className={className} role="navigation">
       {navItems.map(({ key, label, to }) => (

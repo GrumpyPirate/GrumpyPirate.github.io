@@ -6,7 +6,7 @@ import ScreenreaderOnlyText from 'components/Accessibility/ScreenreaderOnlyText/
 import { Container } from 'components/Grid';
 import Sitenav from 'components/Sitenav/Sitenav';
 import { mediaQueries, palette, rem, sidebarWidth, sidebarWidthXl } from 'styles';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 import {
   Brand,
@@ -22,7 +22,7 @@ import {
   MobileSitenavWrapper,
 } from './Sidebar.constants';
 
-const Sidebar: FunctionComponent<ClassNameProps> = ({ className }) => {
+const Sidebar: FunctionComponent<PropsWithClassName> = ({ className }) => {
   const [isTouchNavigationOpen, setIsTouchNavigationOpen] = useState(false);
   const history = useHistory();
 

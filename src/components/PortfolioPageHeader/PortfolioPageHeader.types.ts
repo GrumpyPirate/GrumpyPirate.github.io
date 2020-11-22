@@ -1,7 +1,7 @@
-import { ClassNameProps, PortfolioItemTech } from 'types/common';
+import { PortfolioItemTech, PropsWithClassName } from 'types/common';
 
-export interface PortfolioPageHeaderProps extends ClassNameProps {
+export type PortfolioPageHeaderProps = PropsWithClassName<{
   bgImage: string;
   title: string;
   tech?: PortfolioItemTech[];
-}
+}>;

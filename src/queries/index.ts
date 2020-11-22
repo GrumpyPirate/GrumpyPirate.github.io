@@ -36,7 +36,7 @@ export type GetAboutSectionsResponse = {
 
 // Portfolio
 export const GET_PORTFOLIO_ITEM_LIST = gql`
-  query GetPortfolioItemList {
+  query GetPortfolioItems {
     portfolioItemCollection {
       items {
         title
@@ -53,7 +53,7 @@ export const GET_PORTFOLIO_ITEM_LIST = gql`
     }
   }
 `;
-export type GetPortfolioItemListResponse = {
+export type GetPortfolioItemsResponse = {
   portfolioItemCollection: {
     items: {
       title: string;

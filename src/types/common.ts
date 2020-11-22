@@ -1,6 +1,6 @@
-export interface ClassNameProps {
+export type PropsWithClassName<T = {}> = T & {
   className?: string;
-}
+};
 
 export type IconGlyph =
   | 'airplay'

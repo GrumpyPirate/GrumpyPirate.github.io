@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components Portfolio should render as expected, without crashing 1`] = `
+.c0 {
+  background-color: hsl(0,0%,95%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.c10 {
+  position: relative;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
 .c8 {
   position: relative;
   -webkit-flex: 1 0 auto;
@@ -32,31 +46,6 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c15 {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition-property: visibility,opacity;
-  transition-property: visibility,opacity;
-  -webkit-transition-duration: 0.15s;
-  transition-duration: 0.15s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-
-.c0 {
-  background-color: hsl(0,0%,95%);
-  min-height: 100vh;
-  position: relative;
-}
-
-.c10 {
-  position: relative;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
-  text-align: center;
-  min-height: 100vh;
 }
 
 .c2 {
@@ -126,7 +115,18 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   color: hsl(1.3000000000000114,56.5%,61.6%);
 }
 
-.c17 {
+.c14 {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.c16 {
   font-family: 'Titillium Web',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
@@ -139,15 +139,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   font-size: 1rem;
 }
 
-.c11 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin: 0 -0.375rem;
-  padding-top: 0.75rem;
-}
-
-.c14 {
+.c13 {
   bottom: 0;
   left: 0;
   margin: 0;
@@ -159,7 +151,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   transition: transform 0.15s ease;
 }
 
-.c14 img {
+.c13 img {
   bottom: 0;
   height: 100%;
   left: 0;
@@ -170,7 +162,7 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   width: 100%;
 }
 
-.c16 {
+.c15 {
   background-image: linear-gradient( to top, rgba(48,36,69,0.8), rgba(48,36,69,0.4) 40%, rgba(48,36,69,0) );
   color: #fff;
   padding: 15vmax 0.9375rem 0.9375rem;
@@ -181,23 +173,12 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   z-index: 1;
 }
 
-.c18 {
+.c17 {
   margin-bottom: 0;
 }
 
 .c12 {
   display: block;
-  margin-right: 0.375rem;
-  margin-bottom: 0.75rem;
-  margin-left: 0.375rem;
-  text-align: left;
-}
-
-.c12:hover .c13,
-.c12:focus .c13 {
-  -webkit-transform: scale(1.0625);
-  -ms-transform: scale(1.0625);
-  transform: scale(1.0625);
 }
 
 .c12 a {
@@ -218,14 +199,46 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  text-align: left;
   overflow: hidden;
   border: 0.375rem solid #b54259;
   border-style: none none solid;
+  border-radius: 0.25rem;
   background-color: #333;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+}
+
+.c12 a:hover,
+.c12 a:focus {
+  -webkit-transform: translateY(-0.25rem);
+  -ms-transform: translateY(-0.25rem);
+  transform: translateY(-0.25rem);
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+.c11 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 0.75rem;
+  padding: 0.75rem 0.75rem 0;
 }
 
 .c1 .c9 {
   padding-top: 0;
+}
+
+@media (min-width:48em) {
+  .c10 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
 }
 
 @media (min-width:48em) {
@@ -267,13 +280,6 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   }
 }
 
-@media (min-width:48em) {
-  .c10 {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
-  }
-}
-
 @media (min-width:75em) {
   .c2 {
     border-bottom-width: 0.5rem;
@@ -305,55 +311,40 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
 }
 
 @media (min-width:48em) {
-
-}
-
-@media (min-width:48em) {
-  .c17 {
+  .c16 {
     font-size: 1rem;
   }
 }
 
 @media (min-width:48em) {
-  .c11 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0 -0.46875rem;
-    padding-top: 0.9375rem;
-  }
-}
-
-@media (min-width:30em) {
   .c12 {
-    -webkit-flex-basis: calc(50% - 0.75rem);
-    -ms-flex-preferred-size: calc(50% - 0.75rem);
-    flex-basis: calc(50% - 0.75rem);
-    margin-right: 0.375rem;
-    margin-bottom: 0.75rem;
-    margin-left: 0.375rem;
-  }
-}
-
-@media (min-width:48em) {
-  .c12 {
-    -webkit-flex-basis: calc(50% - 0.9375rem);
-    -ms-flex-preferred-size: calc(50% - 0.9375rem);
-    flex-basis: calc(50% - 0.9375rem);
-    margin-right: 0.46875rem;
-    margin-bottom: 0.9375rem;
-    margin-left: 0.46875rem;
+    opacity: 0;
+    -webkit-animation: hpzHus 0.15s ease 0s 1 forwards;
+    animation: hpzHus 0.15s ease 0s 1 forwards;
   }
 }
 
 @media (min-width:75em) {
-  .c12 {
+  .c12 a {
     border-bottom-width: 0.46875rem;
   }
+}
+
+@media (min-width:48em) {
+  .c11 {
+    grid-template-columns: 1fr 1fr;
+    padding: 0.9375rem 0.9375rem 0;
+  }
+}
+
+@media (min-width:75em) {
+  .c11 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:48em) {
+
 }
 
 <div
@@ -400,185 +391,184 @@ exports[`Components Portfolio should render as expected, without crashing 1`] = 
   <div
     class="c9 c10"
   >
-    <div
-      class="c3"
+    <ul
+      class="c11"
     >
-      <ul
-        class="c11"
+      <li
+        class="c12"
+        data-testid="portfolio-page__list__item"
+        style="animation-delay: 0s;"
       >
-        <li
-          class="c12"
-          data-testid="portfolio-page__list__item"
+        <a
+          href="/portfolio/scrupulum-misphrase"
+          role="listitem"
         >
-          <a
-            href="/portfolio/scrupulum-misphrase"
-            role="listitem"
+          <figure
+            class="c13"
           >
-            <figure
-              class="c13 c14"
-            >
-              <picture>
-                <source
-                  sizes="360px"
-                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
-                  type="image/webp"
-                />
-                <source
-                  sizes="360px"
-                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
-                  type="image/jpeg"
-                />
-                <source
-                  sizes="600px"
-                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1200 1200w"
-                  type="image/webp"
-                />
-                <source
-                  sizes="600px"
-                  srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1200 1200w"
-                  type="image/jpeg"
-                />
-                <img
-                  alt=""
-                  class="c15"
-                  data-testid="loadable-image"
-                  loading="lazy"
-                  src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
-                />
-              </picture>
-            </figure>
-            <div
+            <picture>
+              <source
+                sizes="360px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=720 720w"
+                type="image/webp"
+              />
+              <source
+                sizes="360px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=360 360w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=720 720w"
+                type="image/jpeg"
+              />
+              <source
+                sizes="600px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=webp&w=1200 1200w"
+                type="image/webp"
+              />
+              <source
+                sizes="600px"
+                srcset="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=600 600w, https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience?fm=jpg&w=1200 1200w"
+                type="image/jpeg"
+              />
+              <img
+                alt=""
+                class="c14"
+                data-testid="loadable-image"
+                loading="lazy"
+                src="https://devotement.com/anticorn/pajahuello?a=rhynchophoran&b=toyer#prescience"
+              />
+            </picture>
+          </figure>
+          <div
+            class="c15"
+          >
+            <h3
               class="c16"
             >
-              <h3
-                class="c17"
-              >
-                Scrupulum Misphrase
-              </h3>
-              <p
-                class="c18"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c12"
-          data-testid="portfolio-page__list__item"
-        >
-          <a
-            href="/portfolio/scrupulum-misphrase"
-            role="listitem"
-          >
-            <figure
-              class="c13 c14"
+              Scrupulum Misphrase
+            </h3>
+            <p
+              class="c17"
             >
-              <picture>
-                <source
-                  sizes="360px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=720 720w"
-                  type="image/webp"
-                />
-                <source
-                  sizes="360px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=720 720w"
-                  type="image/jpeg"
-                />
-                <source
-                  sizes="600px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=1200 1200w"
-                  type="image/webp"
-                />
-                <source
-                  sizes="600px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=1200 1200w"
-                  type="image/jpeg"
-                />
-                <img
-                  alt=""
-                  class="c15"
-                  data-testid="loadable-image"
-                  loading="lazy"
-                  src="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
-                />
-              </picture>
-            </figure>
-            <div
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class="c12"
+        data-testid="portfolio-page__list__item"
+        style="animation-delay: 0.0375s;"
+      >
+        <a
+          href="/portfolio/scrupulum-misphrase"
+          role="listitem"
+        >
+          <figure
+            class="c13"
+          >
+            <picture>
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=720 720w"
+                type="image/webp"
+              />
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=720 720w"
+                type="image/jpeg"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=1200 1200w"
+                type="image/webp"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=1200 1200w"
+                type="image/jpeg"
+              />
+              <img
+                alt=""
+                class="c14"
+                data-testid="loadable-image"
+                loading="lazy"
+                src="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+              />
+            </picture>
+          </figure>
+          <div
+            class="c15"
+          >
+            <h3
               class="c16"
             >
-              <h3
-                class="c17"
-              >
-                Scrupulum Misphrase
-              </h3>
-              <p
-                class="c18"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li
-          class="c12"
-          data-testid="portfolio-page__list__item"
-        >
-          <a
-            href="/portfolio/scrupulum-misphrase"
-            role="listitem"
-          >
-            <figure
-              class="c13 c14"
+              Scrupulum Misphrase
+            </h3>
+            <p
+              class="c17"
             >
-              <picture>
-                <source
-                  sizes="360px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=720 720w"
-                  type="image/webp"
-                />
-                <source
-                  sizes="360px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=720 720w"
-                  type="image/jpeg"
-                />
-                <source
-                  sizes="600px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=1200 1200w"
-                  type="image/webp"
-                />
-                <source
-                  sizes="600px"
-                  srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=1200 1200w"
-                  type="image/jpeg"
-                />
-                <img
-                  alt=""
-                  class="c15"
-                  data-testid="loadable-image"
-                  loading="lazy"
-                  src="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
-                />
-              </picture>
-            </figure>
-            <div
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class="c12"
+        data-testid="portfolio-page__list__item"
+        style="animation-delay: 0.075s;"
+      >
+        <a
+          href="/portfolio/scrupulum-misphrase"
+          role="listitem"
+        >
+          <figure
+            class="c13"
+          >
+            <picture>
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=720 720w"
+                type="image/webp"
+              />
+              <source
+                sizes="360px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=360 360w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=720 720w"
+                type="image/jpeg"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=webp&w=1200 1200w"
+                type="image/webp"
+              />
+              <source
+                sizes="600px"
+                srcset="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=600 600w, https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform?fm=jpg&w=1200 1200w"
+                type="image/jpeg"
+              />
+              <img
+                alt=""
+                class="c14"
+                data-testid="loadable-image"
+                loading="lazy"
+                src="https://endocrinopathic.com/pluviometrically/phosphorylase?a=ulnocarpal&b=proreptilia#trochleariform"
+              />
+            </picture>
+          </figure>
+          <div
+            class="c15"
+          >
+            <h3
               class="c16"
             >
-              <h3
-                class="c17"
-              >
-                Scrupulum Misphrase
-              </h3>
-              <p
-                class="c18"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
-              </p>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
+              Scrupulum Misphrase
+            </h3>
+            <p
+              class="c17"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo velit omnis.
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;

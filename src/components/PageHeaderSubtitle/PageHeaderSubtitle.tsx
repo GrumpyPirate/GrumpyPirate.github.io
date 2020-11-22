@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 import { Column, Container, Row } from 'components/Grid';
 import { createHeading, createLinkStyle, mediaQueries, palette } from 'styles';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
-const PageHeaderSubtitle: FunctionComponent<ClassNameProps & PropsWithChildren<{}>> = ({
+const PageHeaderSubtitle: FunctionComponent<PropsWithClassName & PropsWithChildren<{}>> = ({
   children,
   className,
 }) => (

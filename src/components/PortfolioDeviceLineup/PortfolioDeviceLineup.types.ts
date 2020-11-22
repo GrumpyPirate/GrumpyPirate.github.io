@@ -1,4 +1,4 @@
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 export type LineupItemType = 'desktop' | 'tablet' | 'mobile';
 
@@ -9,8 +9,8 @@ export interface LineupItemData {
   imageSrc: string;
 }
 
-export interface PortfolioDeviceLineupProps extends ClassNameProps {
+export type PortfolioDeviceLineupProps = PropsWithClassName<{
   desktopImage: string;
   tabletImage: string;
   mobileImage: string;
-}
+}>;

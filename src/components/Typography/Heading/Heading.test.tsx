@@ -3,6 +3,7 @@ import React from 'react';
 
 import Heading from './Heading';
 import fixture from './Heading.fixture';
+import { HeadingLevel } from './Heading.types';
 
 describe('Components', () => {
   describe('Heading', () => {
@@ -24,7 +25,7 @@ describe('Components', () => {
       });
 
       it('should render appropriate heading elements, when given level props of 1-6', () => {
-        [1, 2, 3, 4, 5, 6].forEach((level) => {
+        ([1, 2, 3, 4, 5, 6] as HeadingLevel[]).forEach((level) => {
           const { container } = render(<Heading {...{ ...props, level }} />);
 
           expect(container.querySelectorAll(`h${level}`)).toHaveLength(1);

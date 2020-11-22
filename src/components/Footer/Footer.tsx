@@ -6,11 +6,11 @@ import { Container } from 'components/Grid';
 import Icon from 'components/Icon/Icon';
 import REPO_URL from 'config/urls';
 import { mediaQueries, palette, rem } from 'styles';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 import { Copyright, FooterLink, FooterLinkWithIcon, Tech } from './Footer.constants';
 
-const Footer: FunctionComponent<ClassNameProps> = ({ className }) => {
+const Footer: FunctionComponent<PropsWithClassName> = ({ className }) => {
   const creationYear = 2017;
   const currentYear = new Date().getFullYear();
 

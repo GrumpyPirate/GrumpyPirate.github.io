@@ -2,7 +2,7 @@ import React, { FunctionComponent, ImgHTMLAttributes, useEffect, useRef, useStat
 import styled, { css } from 'styled-components';
 
 import { animDur, animEase } from 'styles';
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
 const StyledImg = styled.img<{ isLoaded: boolean }>`
   opacity: 0;
@@ -24,7 +24,7 @@ const StyledImg = styled.img<{ isLoaded: boolean }>`
  *
  * @returns {ReactElement}
  */
-const LoadableImage: FunctionComponent<ClassNameProps & ImgHTMLAttributes<{}>> = ({
+const LoadableImage: FunctionComponent<PropsWithClassName & ImgHTMLAttributes<{}>> = ({
   className,
   alt = '',
   ...rest

@@ -1,7 +1,7 @@
-import { ClassNameProps } from 'types/common';
+import { PropsWithClassName } from 'types/common';
 
-export interface PortfolioCarouselProps extends ClassNameProps {
+export type PortfolioCarouselProps = PropsWithClassName<{
   desktopImage: string;
   tabletImage: string;
   mobileImage: string;
-}
+}>;

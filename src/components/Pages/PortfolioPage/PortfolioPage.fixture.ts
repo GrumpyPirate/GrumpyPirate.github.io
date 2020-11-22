@@ -1,6 +1,6 @@
-import { GetPortfolioItemListResponse } from 'queries';
+import { GetPortfolioItemsResponse } from 'queries';
 
-const mockGetPortfolioItemListResponse: GetPortfolioItemListResponse = {
+const mockGetPortfolioItemsResponse: GetPortfolioItemsResponse = {
   portfolioItemCollection: {
     items: [
       {
@@ -50,4 +50,4 @@ const mockGetPortfolioItemListResponse: GetPortfolioItemListResponse = {
   },
 };
 
-export default mockGetPortfolioItemListResponse;
+export default mockGetPortfolioItemsResponse;
