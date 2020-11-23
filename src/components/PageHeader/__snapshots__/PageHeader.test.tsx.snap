@@ -21,7 +21,7 @@ exports[`Components PageHeader should render as expected, without crashing 1`] =
 }
 
 .c3 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
@@ -32,7 +32,7 @@ exports[`Components PageHeader should render as expected, without crashing 1`] =
   text-transform: uppercase;
   font-size: 2.475rem;
   font-size: 12vmin;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
   -webkit-user-select: none;
   -moz-user-select: none;

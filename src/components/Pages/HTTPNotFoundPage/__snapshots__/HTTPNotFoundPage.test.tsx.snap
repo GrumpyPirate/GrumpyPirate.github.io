@@ -26,7 +26,7 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
   display: inline-block;
   font-family: 'Open Sans',sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.375;
   padding: 0.5rem 1.5rem;
   text-transform: uppercase;
@@ -128,7 +128,7 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
 }
 
 .c4 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
@@ -139,7 +139,7 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
   text-transform: uppercase;
   font-size: 2.475rem;
   font-size: 12vmin;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -152,7 +152,7 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
 }
 
 .c5 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
@@ -182,7 +182,7 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
 }
 
 .c9 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
@@ -195,7 +195,7 @@ exports[`Components HTTPNotFoundPage should render as expected, without crashing
 }
 
 .c11 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;

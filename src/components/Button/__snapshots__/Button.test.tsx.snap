@@ -26,7 +26,7 @@ exports[`Components Button should render as expected, without crashing 1`] = `
   display: inline-block;
   font-family: 'Open Sans',sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.375;
   padding: 0.5rem 1.5rem;
   text-transform: uppercase;

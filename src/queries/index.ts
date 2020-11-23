@@ -53,22 +53,23 @@ export const GET_PORTFOLIO_ITEM_LIST = gql`
     }
   }
 `;
-export type GetPortfolioItemsResponse = {
-  portfolioItemCollection: {
-    items: {
-      title: string;
-      headerImage: {
-        url: string;
-      };
-      slug: string;
-      descriptionShort: string;
-      sys: {
-        id: string;
-        firstPublishedAt: string;
-      };
-    }[];
+export interface GetPortfolioItemsResponseItem {
+  title: string;
+  headerImage: {
+    url: string;
   };
-};
+  slug: string;
+  descriptionShort: string;
+  sys: {
+    id: string;
+    firstPublishedAt: string;
+  };
+}
+export interface GetPortfolioItemsResponse {
+  portfolioItemCollection: {
+    items: GetPortfolioItemsResponseItem[];
+  };
+}
 
 export const GET_PORTFOLIO_ITEM_BY_SLUG = gql`
   query GetPortfolioItemBySlug($slug: String!) {

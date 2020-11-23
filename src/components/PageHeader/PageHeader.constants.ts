@@ -116,7 +116,7 @@ export const TitleText = styled.h1`
   ${createHeading(1)}
 
   font-size: 12vmin;
-  font-weight: ${fontWeights.extralight};
+  font-weight: ${fontWeights.light};
   margin: 0;
   user-select: none;
 

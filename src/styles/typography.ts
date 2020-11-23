@@ -15,14 +15,16 @@ export const fontWeights = {
 };
 export const fontFamilyBase = 'sans-serif';
 export const bodyFontFamily = `'Open Sans', ${fontFamilyBase}`;
+export const bodyFontWeight = fontWeights.light;
 export const lineHeight = 1.5;
 export const paragraphMarginBottom = '1rem';
 
 // Headings
-export const headingsFontFamily = `'Titillium Web', ${fontFamilyBase}`;
+// export const headingsFontFamily = `'Titillium Web', ${fontFamilyBase}`;
+export const headingsFontFamily = `'Barlow', ${fontFamilyBase}`;
 export const headingsMarginBottom = paragraphMarginBottom;
 export const headingsLineHeight = 1.2;
-export const headingsFontWeight = 300;
+export const headingsFontWeight = fontWeights.light;
 export const headingsLetterSpacing = '0.2em';
 export const headingsColor = Color(palette.themeAccentDark).desaturate(0.25).string();
 
@@ -43,7 +45,7 @@ export const fontSizeH5Mobile = 16;
 export const fontSizeH6Mobile = 16;
 
 // Links
-export const linkFontWeight = fontWeights.medium;
+export const linkFontWeight = fontWeights.semibold;
 export const linkColor = palette.themeMainBrand;
 export const linkHoverColor = palette.themeAccentLight;
 export const linkActiveColor = Color(linkHoverColor).darken(0.15).string();

@@ -6,6 +6,7 @@ import {
   bodyBgDark,
   bodyColorDark,
   bodyFontFamily,
+  bodyFontWeight,
   fontWeights,
   lineHeight,
   linkActiveColor,
@@ -30,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     color: ${bodyColorDark};
     font-family: ${bodyFontFamily};
-    font-weight: ${fontWeights.light};
+    font-weight: ${bodyFontWeight};
     line-height: ${lineHeight};
   }
 
@@ -69,7 +70,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   strong {
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.semibold};
   }
 
   img {
