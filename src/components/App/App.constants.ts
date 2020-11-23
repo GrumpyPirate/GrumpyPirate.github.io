@@ -1,23 +1,28 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
+import Spinner from 'components/Spinner/Spinner';
 import {
   animDur,
   bodyBgDark,
   bodyColorDark,
   bodyFontFamily,
+  bodyFontWeight,
   fontWeights,
   lineHeight,
   linkActiveColor,
   linkColor,
   linkFontWeight,
   linkHoverColor,
+  mediaQueries,
   noOutline,
   noUnderline,
   palette,
   paragraphMarginBottom,
+  rem,
+  sidebarHeightMobile,
 } from 'styles';
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   html,
   body {
     background-color: ${bodyBgDark};
@@ -26,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     color: ${bodyColorDark};
     font-family: ${bodyFontFamily};
-    font-weight: ${fontWeights.light};
+    font-weight: ${bodyFontWeight};
     line-height: ${lineHeight};
   }
 
@@ -65,7 +70,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   strong {
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.semibold};
   }
 
   img {
@@ -75,4 +80,10 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export default GlobalStyles;
+export const RouteFallbackSpinner = styled(Spinner)`
+  height: calc(100vh - ${rem(sidebarHeightMobile)});
+
+  @media ${mediaQueries.lg} {
+    height: 100vh;
+  }
+`;

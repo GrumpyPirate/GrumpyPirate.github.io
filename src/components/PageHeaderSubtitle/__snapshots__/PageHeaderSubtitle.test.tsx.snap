@@ -35,7 +35,7 @@ exports[`Components PageHeaderSubtitle should render as expected, without crashi
 }
 
 .c0 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;

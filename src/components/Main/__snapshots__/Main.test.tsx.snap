@@ -3,7 +3,6 @@
 exports[`Components Main should render as expected, without crashing 1`] = `
 .c0 {
   position: relative;
-  top: 3.125rem;
 }
 
 .c1 {
@@ -12,7 +11,6 @@ exports[`Components Main should render as expected, without crashing 1`] = `
 
 @media (min-width:75em) {
   .c0 {
-    top: auto;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;

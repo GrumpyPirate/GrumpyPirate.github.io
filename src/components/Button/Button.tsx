@@ -8,7 +8,7 @@ import {
   bodyFontFamily,
   btnFontSize,
   buttonReset,
-  fontWeights,
+  linkFontWeight,
   noUnderline,
   palette,
   rem,
@@ -56,7 +56,7 @@ export default styled(Button)`
   display: inline-block;
   font-family: ${bodyFontFamily};
   font-size: ${rem(btnFontSize)};
-  font-weight: ${fontWeights.bold};
+  font-weight: ${linkFontWeight};
   line-height: ${22 / btnFontSize};
   padding: ${rem(8)} ${rem(24)};
   text-transform: uppercase;

@@ -5,7 +5,15 @@ import styled from 'styled-components';
 import LoadableImage from 'components/LoadableImage/LoadableImage';
 import Heading from 'components/Typography/Heading/Heading';
 import { ContentService } from 'services/ContentService';
-import { animDur, forceAspectRatio, gutterWidths, mediaQueries, palette, rem } from 'styles';
+import {
+  animDur,
+  bodyFontWeight,
+  forceAspectRatio,
+  gutterWidths,
+  mediaQueries,
+  palette,
+  rem,
+} from 'styles';
 
 import { cardIn, Description, Details, Image } from './PortfolioListing.constants';
 import { PortfolioListingProps } from './PortfolioListing.types';
@@ -85,6 +93,7 @@ export default styled(PortfolioListing)`
     justify-content: flex-end;
     text-align: left;
     overflow: hidden;
+    font-weight: ${bodyFontWeight};
     border: ${rem(gutterWidths.xs / 4)} solid ${palette.themeAccentDark};
     border-style: none none solid;
     border-radius: ${rem(4)};

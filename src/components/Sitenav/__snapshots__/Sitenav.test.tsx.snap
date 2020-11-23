@@ -2,7 +2,7 @@
 
 exports[`Components Sitenav should render as expected, without crashing 1`] = `
 .c1 a {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;

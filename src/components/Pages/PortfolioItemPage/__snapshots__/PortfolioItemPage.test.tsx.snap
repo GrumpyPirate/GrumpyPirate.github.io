@@ -26,7 +26,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
   display: inline-block;
   font-family: 'Open Sans',sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.375;
   padding: 0.5rem 1.5rem;
   text-transform: uppercase;
@@ -674,7 +674,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 .c9 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
@@ -687,7 +687,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 .c12 {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
@@ -753,7 +753,7 @@ exports[`Components PortfolioPage should render as expected, without crashing 1`
 }
 
 .c6 a {
-  font-family: 'Titillium Web',sans-serif;
+  font-family: 'Barlow',sans-serif;
   font-weight: 300;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
