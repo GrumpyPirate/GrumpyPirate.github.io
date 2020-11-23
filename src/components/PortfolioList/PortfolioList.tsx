@@ -4,11 +4,7 @@ import React, { FunctionComponent, useCallback, useMemo, useState } from 'react'
 import Select, { ValueType } from 'react-select';
 
 import PortfolioListing from 'components/PortfolioListing/PortfolioListing';
-import {
-  GET_PORTFOLIO_ITEM_LIST,
-  GetPortfolioItemsResponse,
-  GetPortfolioItemsResponseItem,
-} from 'queries';
+import { GET_PORTFOLIO_ITEM_LIST, GetPortfolioItemsResponse } from 'queries';
 import { palette, rem } from 'styles';
 
 import {
@@ -17,31 +13,9 @@ import {
   SelectLabel,
   SelectWrapper,
   SortControls,
+  sortingStrategies,
 } from './PortfolioList.constants';
-
-interface PortfolioItemSortingStrategy {
-  label: string;
-  sortingFn: (a: GetPortfolioItemsResponseItem, b: GetPortfolioItemsResponseItem) => number;
-}
-
-interface PortfolioItemSortingStrategyConfig {
-  [key: string]: PortfolioItemSortingStrategy;
-}
-
-const sortingStrategies: PortfolioItemSortingStrategyConfig = {
-  dateNewestFirst: {
-    label: 'Date (Newest first)',
-    sortingFn: (itemA, itemB) =>
-      new Date(itemB.sys.firstPublishedAt).getTime() -
-      new Date(itemA.sys.firstPublishedAt).getTime(),
-  },
-  dateOldestFirst: {
-    label: 'Date (Oldest first)',
-    sortingFn: (itemA, itemB) =>
-      new Date(itemA.sys.firstPublishedAt).getTime() -
-      new Date(itemB.sys.firstPublishedAt).getTime(),
-  },
-};
+import { PortfolioItemSortingStrategy } from './PortfolioList.types';
 
 const PortfolioList: FunctionComponent = () => {
   const { data: { portfolioItemCollection: { items: portfolioItems = [] } = {} } = {} } = useQuery<

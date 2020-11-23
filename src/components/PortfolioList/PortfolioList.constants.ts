@@ -2,6 +2,25 @@ import styled, { css } from 'styled-components';
 
 import { gutterWidths, listReset, mediaQueries, rem } from 'styles';
 
+import { PortfolioItemSortingStrategyConfig } from './PortfolioList.types';
+
+// Constants
+export const sortingStrategies: PortfolioItemSortingStrategyConfig = {
+  dateNewestFirst: {
+    label: 'Date (Newest first)',
+    sortingFn: (itemA, itemB) =>
+      new Date(itemB.sys.firstPublishedAt).getTime() -
+      new Date(itemA.sys.firstPublishedAt).getTime(),
+  },
+  dateOldestFirst: {
+    label: 'Date (Oldest first)',
+    sortingFn: (itemA, itemB) =>
+      new Date(itemA.sys.firstPublishedAt).getTime() -
+      new Date(itemB.sys.firstPublishedAt).getTime(),
+  },
+};
+
+// Components
 const gridWrapper = css`
   display: grid;
   grid-gap: ${rem(gutterWidths.xs / 2)};
