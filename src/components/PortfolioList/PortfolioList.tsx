@@ -51,7 +51,7 @@ const PortfolioList: FunctionComponent = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <SortControls>
         <SelectWrapper>
           <SelectLabel htmlFor="sort-select">Sort by:</SelectLabel>
@@ -105,7 +105,7 @@ const PortfolioList: FunctionComponent = () => {
           ),
         )}
       </List>
-    </div>
+    </>
   );
 };
 

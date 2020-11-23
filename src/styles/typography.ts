@@ -20,7 +20,6 @@ export const lineHeight = 1.5;
 export const paragraphMarginBottom = '1rem';
 
 // Headings
-// export const headingsFontFamily = `'Titillium Web', ${fontFamilyBase}`;
 export const headingsFontFamily = `'Barlow', ${fontFamilyBase}`;
 export const headingsMarginBottom = paragraphMarginBottom;
 export const headingsLineHeight = 1.2;
